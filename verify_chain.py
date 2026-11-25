@@ -1,0 +1,139 @@
+# -*- coding: utf-8 -*-
+"""verify_chain.py —— 第三方验证链复跑器（只做声明式校验，不执行对方代码）
+
+设计原则（为什么这么做）：
+  1) 不执行对方脚本：拿到陌生代码就跑，等于把机器交出去。默认只做"声明式校验"——
+     重算文件哈希、重算链式哈希、核对期望输出。对方若要求跑脚本，需显式 --run-steps，
+     且只跑 manifest 里声明的命令，逐条打印，不吞输出。
+  2) 白名单：包里出现 manifest 未声明的文件 → 直接判 FAIL（防夹带）。
+  3) 每条判定都要可复算：打印 algo、输入文件、期望、实算，四列齐全。
+
+manifest.json 结构：
+{
+  "package_id": "...",
+  "files": {"inputs/a.txt": "<sha256>", ...},
+  "steps": [
+     {"n":1, "op":"sha256_file", "path":"inputs/a.txt", "expect":"<sha256>"},
+     {"n":2, "op":"spine_hash",  "paths":["inputs/a.txt","inputs/b.txt"], "expect":"<sha256>"}
+  ],
+  "expected": {"outputs/result.txt": "<sha256>"}
+}
+
+退出码：0 全过；3 任一不过；2 manifest 缺失/格式错。
+"""
+import sys, os, json, hashlib, argparse
+
+def sha_bytes(b):
+    return hashlib.sha256(b).hexdigest()
+
+def sha_file(p):
+    h = hashlib.sha256()
+    with open(p, "rb") as f:
+        for c in iter(lambda: f.read(65536), b""):
+            h.update(c)
+    return h.hexdigest()
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--pkg", required=True)
+    ap.add_argument("--json", default=None)
+    a = ap.parse_args()
+    root = os.path.abspath(a.pkg)
+    mpath = os.path.join(root, "manifest.json")
+    if not os.path.exists(mpath):
+        print("FAIL: manifest.json 不存在"); return 2
+    try:
+        m = json.load(open(mpath, encoding="utf-8"))
+    except Exception as ex:
+        print("FAIL: manifest 解析失败", type(ex).__name__); return 2
+
+    results, ok = [], True
+    def add(name, passed, detail):
+        nonlocal ok
+        results.append({"check": name, "pass": bool(passed), "detail": detail})
+        ok = ok and passed
+        print(f"  [{'PASS' if passed else 'FAIL'}] {name} — {detail}")
+
+    print(f"包：{root}\npackage_id：{m.get('package_id','(缺)')}\n")
+
+    # 0) 结构门槛：链为空 / 有未覆盖的声明 → 不得判 PASS（"声明数=实际数"铁律）
+    steps = m.get("steps") or []
+    add("structure（steps 非空）", len(steps) > 0, f"steps={len(steps)}")
+    covered = set()
+    for st in steps:
+        if st.get("op") == "sha256_file":
+            covered.add(st.get("path"))
+        elif st.get("op") == "spine_hash":
+            covered.update(st.get("paths") or [])
+    declared_files = set(m.get("files", {}))
+    orphans = sorted(declared_files - covered)
+    add("coverage（每个声明文件都被链引用）", not orphans, f"未覆盖 {len(orphans)} 个" + (f"：{orphans[:5]}" if orphans else ""))
+    outs = set(m.get("expected", {}))
+    out_unbound = sorted(outs - covered)
+    add("coverage（每个期望输出都被链绑定）", not out_unbound, f"未绑定 {len(out_unbound)} 个" + (f"：{out_unbound}" if out_unbound else ""))
+    # 全哈希：expect 必须 64 位 hex，短前缀一律拒（否则碰撞空间可暴力）
+    bad_len = []
+    for st in steps:
+        e = (st.get("expect") or "")
+        if len(e) != 64 or any(c not in "0123456789abcdefABCDEF" for c in e):
+            bad_len.append(st.get("n"))
+    for rel, e in (m.get("expected") or {}).items():
+        if len(e) != 64 or any(c not in "0123456789abcdefABCDEF" for c in e):
+            bad_len.append(rel)
+    add("hash-length（全部 expect 为 64 位 sha256）", not bad_len, f"不合规 {bad_len[:5]}")
+
+    # 1) 白名单：未声明文件即夹带
+    declared = set(m.get("files", {})) | set(m.get("expected", {})) | {"manifest.json"}
+    on_disk = set()
+    for dirpath, _, files in os.walk(root):
+        for f in files:
+            rel = os.path.relpath(os.path.join(dirpath, f), root).replace("\\", "/")
+            on_disk.add(rel)
+    extra = sorted(on_disk - declared)
+    add("white-list（无夹带）", not extra, f"未声明文件 {len(extra)} 个" + (f"：{extra[:5]}" if extra else ""))
+
+    # 2) 逐文件哈希
+    for rel, exp in m.get("files", {}).items():
+        p = os.path.join(root, rel.replace("/", os.sep))
+        if not os.path.exists(p):
+            add(f"file {rel}", False, "文件缺失"); continue
+        got = sha_file(p)
+        add(f"file {rel}", got == exp.lower(), f"expect {exp[:16]} / got {got[:16]}")
+
+    # 3) 链步骤
+    for st in m.get("steps", []):
+        n, op = st.get("n"), st.get("op")
+        if op == "sha256_file":
+            p = os.path.join(root, st["path"].replace("/", os.sep))
+            got = sha_file(p) if os.path.exists(p) else ""
+            add(f"step{n} sha256_file({st['path']})", got == st["expect"].lower(), f"expect {st['expect'][:16]} / got {got[:16]}")
+        elif op == "spine_hash":
+            h = hashlib.sha256()
+            missing = []
+            for rel in st["paths"]:
+                p = os.path.join(root, rel.replace("/", os.sep))
+                if not os.path.exists(p):
+                    missing.append(rel); continue
+                h.update(open(p, "rb").read())
+            got = h.hexdigest() if not missing else ""
+            add(f"step{n} spine_hash({len(st['paths'])} 文件)", got == st["expect"].lower(),
+                f"expect {st['expect'][:16]} / got {(got or '-')[:16]}" + (f" 缺 {missing}" if missing else ""))
+        else:
+            add(f"step{n} {op}", False, "未知 op，拒绝猜测")
+
+    # 4) 期望输出
+    for rel, exp in m.get("expected", {}).items():
+        p = os.path.join(root, rel.replace("/", os.sep))
+        got = sha_file(p) if os.path.exists(p) else ""
+        add(f"expected {rel}", got == exp.lower(), f"expect {exp[:16]} / got {(got or '-')[:16]}")
+
+    summary = {"pkg": root, "package_id": m.get("package_id"), "pass": ok,
+               "checks": results, "passed": sum(1 for r in results if r["pass"]), "total": len(results)}
+    print(f"\nSUMMARY: {summary['passed']}/{summary['total']} 项通过 → {'PASS' if ok else 'FAIL'}")
+    if a.json:
+        json.dump(summary, open(a.json, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print("saved", a.json)
+    return 0 if ok else 3
+
+if __name__ == "__main__":
+    sys.exit(main())

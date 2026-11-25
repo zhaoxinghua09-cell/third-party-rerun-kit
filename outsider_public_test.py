@@ -12,7 +12,9 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 BASE = "https://raw.githubusercontent.com/zhaoxinghua09-cell/third-party-rerun-kit/main/"
 FILES = ["README.md", "rerun/README.md", "rerun/verify_chain.py", "rerun/redteam.py",
-         "rerun/make_demo_pkg.py", "evidence/demo_run.json", "evidence/outsider_run.json",
+         "rerun/make_demo_pkg.py", "rerun/determinism.py",
+         "evidence/demo_run.json", "evidence/outsider_run.json",
+         "evidence/determinism_stable.json", "evidence/determinism_unstable.json",
          "evidence/io_selftest_clean_venv.log"]
 
 def get(rel, tries=4):
@@ -51,9 +53,15 @@ r2 = subprocess.run([py, os.path.join(work, "rerun", "verify_chain.py"), "--pkg"
 print("[校验]", [l for l in r2.stdout.splitlines() if l.startswith("SUMMARY")], "exit=", r2.returncode)
 r3 = subprocess.run([py, os.path.join(work, "rerun", "redteam.py")], capture_output=True, text=True, encoding="utf-8", errors="replace")
 print("[红队]", [l for l in r3.stdout.splitlines() if l.startswith("SUMMARY")], "exit=", r3.returncode)
-print("\nOUTSIDER_PUBLIC_TEST =", "PASS" if (ok == len(FILES) and r2.returncode == 0 and r3.returncode == 0) else "FAIL")
+r4 = subprocess.run([py, os.path.join(work, "rerun", "determinism.py"),
+                     os.path.join(work, "rerun", "demo_pkg"), "--execute"],
+                    capture_output=True, text=True, encoding="utf-8", errors="replace")
+print("[确定性]", [l for l in r4.stdout.splitlines() if l.startswith("DETERMINISM_TIER")], "exit=", r4.returncode)
+print("\nOUTSIDER_PUBLIC_TEST =", "PASS" if (ok == len(FILES) and r2.returncode == 0 and r3.returncode == 0 and r4.returncode == 0) else "FAIL")
 open(os.path.join(work, "anon_report.json"), "w", encoding="utf-8").write(json.dumps(
     {"files_ok": ok, "total": len(FILES), "verify_exit": r2.returncode, "redteam_exit": r3.returncode,
+     "determinism_exit": r4.returncode,
      "verify_summary": [l for l in r2.stdout.splitlines() if l.startswith("SUMMARY")],
-     "redteam_summary": [l for l in r3.stdout.splitlines() if l.startswith("SUMMARY")]}, ensure_ascii=False, indent=1))
+     "redteam_summary": [l for l in r3.stdout.splitlines() if l.startswith("SUMMARY")],
+     "determinism": [l for l in r4.stdout.splitlines() if l.startswith("DETERMINISM_TIER")]}, ensure_ascii=False, indent=1))
 print("工作目录：", work)

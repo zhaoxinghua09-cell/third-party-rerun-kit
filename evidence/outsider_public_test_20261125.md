@@ -42,6 +42,27 @@ OUTSIDER_PUBLIC_TEST = PASS
 1. **`git clone` 会失败**（`Recv failure: Connection was reset`），但同一台机器上 HTTPS API 与 raw 下载能通。所以外人复跑不要指望 `git clone`，直接走 raw 或 zip。
 2. **必须带重试**。不带重试时 8 个文件里 3 个失败；带 1.5s×n 退避后 8/8。若不加重试，会误判成"仓库缺件"——这和本轮账本的病同型：**把网络抖动当成对方的问题**。
 
+## 第二轮（补签名门 / determinism tier / 真重建之后，同日 20:35）
+
+```
+GET 200  rerun/verify_chain.py        8696 B  sha256=...   重试0次
+GET 200  rerun/redteam.py             5479 B  sha256=98bd37fa3d72375c  重试2次
+GET 200  rerun/make_demo_pkg.py       4859 B  sha256=c457b6efb1837c82  重试3次
+GET 200  rerun/determinism.py         3409 B  sha256=4eaf17ea757b3140  重试0次
+GET 200  evidence/demo_run.json       2333 B  sha256=684ca663ce6dfd28
+GET 200  evidence/determinism_stable.json   268 B  sha256=a2549dd201d3d585
+GET 200  evidence/determinism_unstable.json 290 B  sha256=952df4690794d0cf
+GET 200  evidence/io_selftest_clean_venv.log 1746 B sha256=ffeff38a269e1247 重试2次
+取回 11/11
+[重建 demo 包] spine: 5e60affe1ba88f2c63bba91e81df6015 …（outputs 由 producer 真跑生成）
+[校验]   SUMMARY: 16/16 项通过 → PASS          exit=0
+[红队]   SUMMARY: 8/8 攻击被拦下；baseline PASS  exit=0
+[确定性] DETERMINISM_TIER=byte-identical       exit=0
+OUTSIDER_PUBLIC_TEST = PASS
+```
+
+这一轮比第一轮多验了两件事：**产物是从 inputs 真跑出来的**（不是预先塞进去的 result.txt），以及**同一包跑两次逐字节一致**（tier 能给结论，不是靠人眼）。
+
 ## 边界（不改口径）
 
 - 这次"外人"仍然是我，只是去掉了全部凭据。它证明的是"**公网可取、无凭据可复跑**"，不等于"独立第三方已签署"。真正的 E2 仍然空着。

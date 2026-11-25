@@ -1,0 +1,3 @@
+batch B
+record 3: verdict=partial
+record 4: verdict=false_analog

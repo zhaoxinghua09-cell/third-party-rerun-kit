@@ -7,7 +7,8 @@
    "selfcheck_ok": 5,
    "selfcheck_ok_after_fix": 1
   },
-  "note": "自检脚本实跑；通过不计入 E5 合格，仅证明'能被外人跑通'。其中 1 件为读数后修复并远端复核通过（original_* 保留原判）。"
+  "note": "自检脚本实跑；通过不计入 E5 合格，仅证明'能被外人跑通'。其中 1 件为读数后修复并远端复核通过（original_* 保留原判）。",
+  "machine": "company (client:582478:3880613324794288)"
  },
  "records": [
   {

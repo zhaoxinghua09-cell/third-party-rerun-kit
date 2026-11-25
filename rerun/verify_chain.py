@@ -21,7 +21,7 @@ manifest.json 结构：
 
 退出码：0 全过；3 任一不过；2 manifest 缺失/格式错。
 """
-import sys, os, json, hashlib, argparse
+import sys, os, json, hashlib, argparse, urllib.request
 
 def sha_bytes(b):
     return hashlib.sha256(b).hexdigest()
@@ -37,6 +37,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pkg", required=True)
     ap.add_argument("--json", default=None)
+    ap.add_argument("--online", action="store_true", help="联机核对锚（需网络；取不到判 INCOMPLETE）")
     a = ap.parse_args()
     root = os.path.abspath(a.pkg)
     mpath = os.path.join(root, "manifest.json")
@@ -154,6 +155,35 @@ def main():
                     Ed25519PublicKey.from_public_bytes(base64.b64decode(pub_b64)).verify(
                         base64.b64decode(payload["sig_b64"]), open(art, "rb").read())
                     add("signature（Ed25519 验签）", True, "验签通过（只证明此钥匙签过，不证明钥匙归属）")
+
+                    # 信任锚：把公钥钉在公开仓的某次提交上，用于"检测换钥"
+                    anc_rel = sig.get("anchor")
+                    if anc_rel:
+                        ap = os.path.join(root, anc_rel.replace("/", os.sep))
+                        if not os.path.exists(ap):
+                            add("anchor（锚文件存在）", False, f"声明 {anc_rel} 但文件不在")
+                        else:
+                            anc = _json.load(open(ap, encoding="utf-8"))
+                            got = hashlib.sha256(base64.b64decode(pub_b64)).hexdigest()
+                            add("anchor（公钥与锚一致）", got == (anc.get("key_sha256") or "").lower(),
+                                f"锚 {str(anc.get('key_sha256'))[:16]} / 包内 {got[:16]}（不一致=疑似换钥）")
+                            if a.online:
+                                try:
+                                    url = (f"https://api.github.com/repos/{anc['owner']}/{anc['repo']}"
+                                           f"/contents/{anc['path']}?ref={anc['commit']}")
+                                    req = urllib.request.Request(url, headers={
+                                        "User-Agent": "verify-chain/1.0", "Accept": "application/vnd.github.raw"})
+                                    with urllib.request.urlopen(req, timeout=25) as rr:
+                                        remote = rr.read().decode("utf-8", "replace").strip()
+                                    add("anchor（联机核对公开仓）", remote == pub_b64,
+                                        "远端公钥与包内一致" if remote == pub_b64 else "远端与包内不一致")
+                                except Exception as ex:
+                                    results.append({"check": "anchor（联机核对公开仓）", "pass": False,
+                                                    "detail": f"取不到锚（{type(ex).__name__}）→ UNVERIFIABLE"})
+                                    print(f"  [INCOMPLETE] anchor（联机核对公开仓） — 取不到锚（{type(ex).__name__}）")
+                                    incomplete = True
+                            else:
+                                print("  [INFO] anchor 仅做包内一致性核对；加 --online 可联机核对公开仓")
             except ImportError:
                 results.append({"check": "signature（Ed25519 验签）", "pass": False,
                                 "detail": "cryptography 未安装 → UNVERIFIABLE（不得据此判 PASS）"})

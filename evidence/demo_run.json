@@ -2,11 +2,13 @@
  "pkg": "D:\\Workbuddy\\20261125-国际组织信息收取\\rerun_kit\\demo_pkg",
  "package_id": "DEMO-01-synthetic",
  "pass": true,
+ "signed": false,
+ "incomplete": false,
  "checks": [
   {
    "check": "structure（steps 非空）",
    "pass": true,
-   "detail": "steps=5"
+   "detail": "steps=6"
   },
   {
    "check": "coverage（每个声明文件都被链引用）",
@@ -44,6 +46,11 @@
    "detail": "expect 9bfc8971e77a41d0 / got 9bfc8971e77a41d0"
   },
   {
+   "check": "file producer.py",
+   "pass": true,
+   "detail": "expect 4ae3c14539df78d6 / got 4ae3c14539df78d6"
+  },
+  {
    "check": "step1 sha256_file(inputs/claim.json)",
    "pass": true,
    "detail": "expect b11ca89fc0551a93 / got b11ca89fc0551a93"
@@ -59,12 +66,17 @@
    "detail": "expect 9bfc8971e77a41d0 / got 9bfc8971e77a41d0"
   },
   {
-   "check": "step4 spine_hash(2 文件)",
+   "check": "step4 sha256_file(producer.py)",
+   "pass": true,
+   "detail": "expect 4ae3c14539df78d6 / got 4ae3c14539df78d6"
+  },
+  {
+   "check": "step5 spine_hash(2 文件)",
    "pass": true,
    "detail": "expect 5e60affe1ba88f2c / got 5e60affe1ba88f2c"
   },
   {
-   "check": "step5 sha256_file(outputs/result.txt)",
+   "check": "step6 sha256_file(outputs/result.txt)",
    "pass": true,
    "detail": "expect d39387de0f9b131a / got d39387de0f9b131a"
   },
@@ -74,6 +86,6 @@
    "detail": "expect d39387de0f9b131a / got d39387de0f9b131a"
   }
  ],
- "passed": 14,
- "total": 14
+ "passed": 16,
+ "total": 16
 }

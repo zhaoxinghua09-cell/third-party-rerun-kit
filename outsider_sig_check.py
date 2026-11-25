@@ -18,9 +18,14 @@ NEED = ["rerun/verify_chain.py", "trust/ed25519.pub",
         "rerun/demo_pkg_signed/producer.py"]
 
 def get(rel, tries=4):
+    # 用 GitHub contents API（匿名，Accept: raw）取件：raw.githubusercontent 有 CDN 缓存，
+    # 刚推的文件会拿到旧 blob；API 返回的是当前 main 的真实内容。
+    import time as _t
+    api = f"https://api.github.com/repos/zhaoxinghua09-cell/third-party-rerun-kit/contents/{rel}?ref=main"
     for i in range(tries):
         try:
-            req = urllib.request.Request(BASE + rel, headers={"User-Agent": "outsider-sig/1.0"})
+            req = urllib.request.Request(api, headers={"User-Agent": "outsider-sig/1.0",
+                                                       "Accept": "application/vnd.github.raw"})
             with urllib.request.urlopen(req, timeout=30) as r:
                 return r.read()
         except Exception:

@@ -1,0 +1,14 @@
+{
+ "pkg": "D:\\Workbuddy\\20261125-国际组织信息收取\\rerun_kit\\demo_pkg",
+ "producer": "producer.py",
+ "tier": "byte-identical",
+ "diff": [],
+ "runs": [
+  {
+   "result.txt": "d39387de0f9b131a"
+  },
+  {
+   "result.txt": "d39387de0f9b131a"
+  }
+ ]
+}

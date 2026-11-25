@@ -17,19 +17,22 @@ NEED = ["rerun/verify_chain.py", "trust/ed25519.pub", "trust/anchor.json",
         "rerun/demo_pkg_signed/inputs/evidence_2.txt",
         "rerun/demo_pkg_signed/producer.py"]
 
-def get(rel, tries=4):
-    # 用 GitHub contents API（匿名，Accept: raw）取件：raw.githubusercontent 有 CDN 缓存，
-    # 刚推的文件会拿到旧 blob；API 返回的是当前 main 的真实内容。
+def get(rel, tries=5):
+    # 两条通道：①GitHub contents API（匿名 60 次/小时，易被限流；但不会被 CDN 缓存骗）
+    #           ②raw.githubusercontent（不限流，但有 CDN 缓存 → 加 ?cb= 时间戳穿透）
     import time as _t
     api = f"https://api.github.com/repos/zhaoxinghua09-cell/third-party-rerun-kit/contents/{rel}?ref=main"
     for i in range(tries):
-        try:
-            req = urllib.request.Request(api, headers={"User-Agent": "outsider-sig/1.0",
-                                                       "Accept": "application/vnd.github.raw"})
-            with urllib.request.urlopen(req, timeout=30) as r:
-                return r.read()
-        except Exception:
-            time.sleep(1.5 * (i + 1))
+        for kind, url, hdr in (("api", api, {"User-Agent": "outsider-sig/1.0", "Accept": "application/vnd.github.raw"}),
+                               ("raw", BASE + rel + "?cb=" + str(int(_t.time())), {"User-Agent": "outsider-sig/1.0",
+                                                                                  "Cache-Control": "no-cache"})):
+            try:
+                req = urllib.request.Request(url, headers=hdr)
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    return r.read()
+            except Exception:
+                continue
+        _t.sleep(1.5 * (i + 1))
     raise RuntimeError(rel)
 
 work = tempfile.mkdtemp(prefix="sig_")

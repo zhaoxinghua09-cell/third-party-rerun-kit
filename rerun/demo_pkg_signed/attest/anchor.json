@@ -1,0 +1,15 @@
+{
+ "type": "github-commit",
+ "owner": "zhaoxinghua09-cell",
+ "repo": "third-party-rerun-kit",
+ "path": "trust/ed25519.pub",
+ "commit": "115e4c231cb9b7586b3b35e89cd33208236e776c",
+ "blob": "222ee6d6b93e677f81ea6d950212e4d8d83708e3",
+ "key_sha256": "a73db58f2212ccdcb2dd69c9c6c8e3b1b01ed2e055738bf1715670ae7bf6aaab",
+ "key_b64": "Bla+dUC4MhvK+FiocFDvQGdu2v1l/nYAwaVVdjyUjcY=",
+ "scope": "锚定'公钥在本仓某次提交中首次公开'；不是身份认证",
+ "limits": [
+  "账号被盗可替换",
+  "强推改历史会改变 commit sha，必须重新核对锚"
+ ]
+}

@@ -1,0 +1,5 @@
+{
+ "claim_id": "DEMO-01",
+ "statement": "把两份证据按声明顺序拼接后取 sha256，等于 outputs/result.txt 的哈希",
+ "rule": "spine = sha256(evidence_1 || evidence_2)"
+}

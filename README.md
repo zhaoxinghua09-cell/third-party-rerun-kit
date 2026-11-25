@@ -77,6 +77,21 @@ python rerun/ots_light_verify.py trust/ed25519.pub.ots
 
 实测中还留了一个真实细节：升级当天 `btc.calendar.catallaxy.com` 回了 `Not found`，是 alice/bob 两家给出的 attestation——多日历冗余不是装饰。
 
+## 另一条签名路径：cosign（已跑通，但没进透明日志）
+
+`trust/cosign.pub` 与 `trust/cosign.bundle` 是 cosign v3.1.5 对 `trust/key-statement.json` 的签名；验证：
+
+```bash
+cosign verify-blob --key trust/cosign.pub --bundle trust/cosign.bundle \
+  --insecure-ignore-tlog=true trust/key-statement.json
+# → Verified OK
+```
+
+改一字节即 `invalid signature when validating ASN.1 encoded signature`。
+
+**必须读的限制**：`--insecure-ignore-tlog=true` 意味着这次签名**没有进 Rekor 透明日志**，cosign 自己会打印 "Skipping tlog verification is an insecure practice"。所以它能证明"签名与公钥匹配、内容未改"，**不能**证明"签名发生在何时、第三方能否事后查到"。要补这半截必须真写进 Rekor，本仓目前没做——别把它当成 Sigstore 完整链路。cosign 私钥不在本仓，也不该在任何公开位置。
+
+
 ## 边界（必须读）
 
 这套工具证明的是"**包内声明与包内文件一致**"，加上"**公钥在某个时间点前已公开**"。一句话只到这儿。

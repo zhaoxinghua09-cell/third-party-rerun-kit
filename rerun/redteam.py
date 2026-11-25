@@ -116,6 +116,36 @@ def a9(pkg):
                       "sha256": sha_file(sp), "artifact": "outputs/result.txt", "public_key_b64": other_pub}
     json.dump(m, open(os.path.join(pkg, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
+def a10(pkg):
+    # 换钥但保留锚：签名自洽（用攻击者私钥签的），锚仍指向原公钥 → 必须被锚抓出
+    import base64
+    from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+    from cryptography.hazmat.primitives import serialization
+    os.makedirs(os.path.join(pkg, "attest"), exist_ok=True)
+    art = os.path.join(pkg, "outputs/result.txt")
+    evil = Ed25519PrivateKey.generate()
+    sig = evil.sign(open(art, "rb").read())
+    evil_pub = base64.b64encode(evil.public_key().public_bytes(
+        encoding=serialization.Encoding.Raw, format=serialization.PublicFormat.Raw)).decode()
+    sp = os.path.join(pkg, "attest/new.sig.json")
+    json.dump({"alg": "ed25519", "target": "outputs/result.txt", "target_sha256": sha_file(art),
+               "public_key_b64": evil_pub, "sig_b64": base64.b64encode(sig).decode()},
+              open(sp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    # 锚沿用"正确"的那把（模拟攻击者不敢改锚，只换钥）
+    anc = os.path.join(pkg, "attest/anchor.json")
+    os.makedirs(os.path.dirname(anc), exist_ok=True)
+    json.dump({"type": "github-commit", "owner": "zhaoxinghua09-cell", "repo": "third-party-rerun-kit",
+               "path": "trust/ed25519.pub", "commit": "deadbeef", "blob": "deadbeef",
+               "key_sha256": "0" * 64, "key_b64": "x"}, open(anc, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    m = json.load(open(os.path.join(pkg, "manifest.json"), encoding="utf-8"))
+    for rel, p in [("attest/new.sig.json", sp), ("attest/anchor.json", anc)]:
+        m["files"][rel] = sha_file(p)
+        m["steps"].append({"n": len(m["steps"]) + 1, "op": "sha256_file", "path": rel, "expect": m["files"][rel]})
+    m["signature"] = {"type": "ed25519", "path": "attest/new.sig.json", "sha256": sha_file(sp),
+                      "artifact": "outputs/result.txt", "public_key_b64": evil_pub,
+                      "anchor": "attest/anchor.json"}
+    json.dump(m, open(os.path.join(pkg, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
 def main():
     print("baseline（未篡改）应先 PASS：")
     code, out = run(DEMO)
@@ -135,6 +165,7 @@ def main():
         attack("A7 声明签名但文件缺失", a7),
         attack("A8 签名自洽但无法验证（cosign 缺）", a8),
         attack("A9 签名不动、公钥被换", a9),
+        attack("A10 换私钥重签、锚不改（锚应抓出）", a10),
     ]
     n = sum(caught)
     print(f"\nSUMMARY: {n}/{len(caught)} 攻击被拦下；baseline {'PASS' if ok_base else 'FAIL'}")

@@ -1,0 +1,8 @@
+{
+ "alg": "ed25519",
+ "target": "outputs/result.txt",
+ "target_sha256": "d39387de0f9b131ae23d1d091eafa7b04cb3abb4adb9b019f171f4446d65c29f",
+ "public_key_b64": "Bla+dUC4MhvK+FiocFDvQGdu2v1l/nYAwaVVdjyUjcY=",
+ "sig_b64": "84mZo+1Fp+BEHFqX1hsA1nEvOzqpgeiBJ0yPtGEXB7uhZiMioKlfHj+cdZpEfDLJYfpaEf2K79cjB19mHsMkAg==",
+ "note": "签名只证明'这把私钥签过这份字节'；钥匙归属需外部信任锚"
+}

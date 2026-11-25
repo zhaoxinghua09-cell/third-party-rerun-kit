@@ -1,0 +1,72 @@
+{
+ "package_id": "DEMO-01-synthetic",
+ "note": "合成演示包，用于验证复跑器与确定性分级本身；不含任何真实研究数据",
+ "producer": "producer.py",
+ "volatile": [
+  "built_at"
+ ],
+ "files": {
+  "inputs/claim.json": "b11ca89fc0551a93ad4375b39d6f7acc324222f9c052aa1fbaaaca683200d02f",
+  "inputs/evidence_1.txt": "4f8f9304f78d197d4c21d541cf54639d5778260b9b65ee21b49ed5015f877d77",
+  "inputs/evidence_2.txt": "9bfc8971e77a41d02b5950dab383795f524b96a42d235330bb554f95ff11b429",
+  "producer.py": "4ae3c14539df78d6ae41770cf85bd2237c7a69099d73ee67098023052fd6c4ea",
+  "attest/result.sig.json": "da0b8241b507737553b91530b4f048de15a9bd50e94a14d95e3ce343cdccb6ef"
+ },
+ "steps": [
+  {
+   "n": 1,
+   "op": "sha256_file",
+   "path": "inputs/claim.json",
+   "expect": "b11ca89fc0551a93ad4375b39d6f7acc324222f9c052aa1fbaaaca683200d02f"
+  },
+  {
+   "n": 2,
+   "op": "sha256_file",
+   "path": "inputs/evidence_1.txt",
+   "expect": "4f8f9304f78d197d4c21d541cf54639d5778260b9b65ee21b49ed5015f877d77"
+  },
+  {
+   "n": 3,
+   "op": "sha256_file",
+   "path": "inputs/evidence_2.txt",
+   "expect": "9bfc8971e77a41d02b5950dab383795f524b96a42d235330bb554f95ff11b429"
+  },
+  {
+   "n": 4,
+   "op": "sha256_file",
+   "path": "producer.py",
+   "expect": "4ae3c14539df78d6ae41770cf85bd2237c7a69099d73ee67098023052fd6c4ea"
+  },
+  {
+   "n": 5,
+   "op": "spine_hash",
+   "paths": [
+    "inputs/evidence_1.txt",
+    "inputs/evidence_2.txt"
+   ],
+   "expect": "5e60affe1ba88f2c63bba91e81df6015e74e067f4964dbda2874fb4684a936d1"
+  },
+  {
+   "n": 6,
+   "op": "sha256_file",
+   "path": "outputs/result.txt",
+   "expect": "d39387de0f9b131ae23d1d091eafa7b04cb3abb4adb9b019f171f4446d65c29f"
+  },
+  {
+   "n": 7,
+   "op": "sha256_file",
+   "path": "attest/result.sig.json",
+   "expect": "da0b8241b507737553b91530b4f048de15a9bd50e94a14d95e3ce343cdccb6ef"
+  }
+ ],
+ "expected": {
+  "outputs/result.txt": "d39387de0f9b131ae23d1d091eafa7b04cb3abb4adb9b019f171f4446d65c29f"
+ },
+ "signature": {
+  "type": "ed25519",
+  "path": "attest/result.sig.json",
+  "sha256": "da0b8241b507737553b91530b4f048de15a9bd50e94a14d95e3ce343cdccb6ef",
+  "artifact": "outputs/result.txt",
+  "public_key_b64": "Bla+dUC4MhvK+FiocFDvQGdu2v1l/nYAwaVVdjyUjcY="
+ }
+}

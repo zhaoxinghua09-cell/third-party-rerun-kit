@@ -1,0 +1,2 @@
+spine_sha256=5e60affe1ba88f2c63bba91e81df6015e74e067f4964dbda2874fb4684a936d1
+method=sha256(evidence_1 || evidence_2)

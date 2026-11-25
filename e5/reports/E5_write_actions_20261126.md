@@ -115,6 +115,25 @@ e5/board/E5_outsider_board_20261126.html    看板，零外链
 
 ---
 
+## 五、远端复核 — 对 main 最新提交再跑一次 `--check`
+
+不看本地，直接把远端 `main`（复核时为 `1b861dbb`）重新拉 zipball、解包、跑 `--check`：
+
+```
+OUTSIDER OK: receipt matches this disk (2453 files, c2ab574cdced, content e1f6fbb23435), 4 steps passed
+exit 0
+```
+
+`--check` 会重算整树 digest 并与收据里的 `tree_sha256` 比对，再核四步是否全为干净通过；
+exit 0 表示**远端树上收据成立**，不是只在本地成立。
+
+注意两点，别被数字带偏：
+
+- 这里的 2453 与生成时的 2248 口径不同：生成走 zipball 的 tracked 文件集，`--check` 在磁盘上按同一份忽略表走全树，
+  远端在两次写入之间又被推了新内容（`main` 已不在我最后那个 commit 上）。收据 digest 仍然匹配，
+  说明新增内容落在收据排除的范围之外，收据本身没有失效。
+- 这也说明该仓库有并发写入源在活动；任何人重跑前应先 `git pull`/重取 zipball，否则会拿旧树对不上。
+
 ## 四项状态汇总
 
 | # | 动作 | 状态 | 证据 |

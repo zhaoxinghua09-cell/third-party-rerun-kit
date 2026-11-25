@@ -127,13 +127,48 @@ def main():
         got = sha_file(p) if os.path.exists(p) else ""
         add(f"expected {rel}", got == exp.lower(), f"expect {exp[:16]} / got {(got or '-')[:16]}")
 
-    summary = {"pkg": root, "package_id": m.get("package_id"), "pass": ok,
-               "checks": results, "passed": sum(1 for r in results if r["pass"]), "total": len(results)}
-    print(f"\nSUMMARY: {summary['passed']}/{summary['total']} 项通过 → {'PASS' if ok else 'FAIL'}")
+    # 5) 签名（真实性层）：声明了签名就必须真能验，否则整体判 INCOMPLETE，绝不当 PASS
+    incomplete = False
+    sig = m.get("signature")
+    if not sig:
+        print("  [INFO] UNSIGNED — 本包只声明完整性，不含身份/真实性（这是允许的，但对外只能讲复现性）")
+    else:
+        sp = os.path.join(root, (sig.get("path") or "").replace("/", os.sep))
+        if not sig.get("path") or not os.path.exists(sp):
+            add("signature（声明文件存在）", False, f"声明 {sig.get('path')} 但文件不在")
+        else:
+            if sig.get("sha256"):
+                add("signature（bundle 哈希）", sha_file(sp) == sig["sha256"].lower(), "bundle sha256 与声明一致")
+            import shutil, subprocess
+            cosign = shutil.which("cosign")
+            if not cosign:
+                # "验不了"≠"包错了"：不判 FAIL，判 INCOMPLETE（不污染包本身的对错，但绝不当 PASS）
+                results.append({"check": "signature（可验证）", "pass": False,
+                                "detail": "cosign 未安装 → UNVERIFIABLE（不得据此判 PASS）"})
+                print("  [INCOMPLETE] signature（可验证） — cosign 未安装 → UNVERIFIABLE（不得据此判 PASS）")
+                incomplete = True
+            else:
+                cmd = [cosign, "verify-blob", "--bundle", sp]
+                if sig.get("certificate_identity"):
+                    cmd += ["--certificate-identity", sig["certificate_identity"]]
+                if sig.get("certificate_oidc_issuer"):
+                    cmd += ["--certificate-oidc-issuer", sig["certificate_oidc_issuer"]]
+                art = os.path.join(root, (sig.get("artifact") or "").replace("/", os.sep))
+                if os.path.exists(art):
+                    cmd.append(art)
+                r = subprocess.run(cmd, capture_output=True, text=True)
+                add("signature（cosign verify-blob）", r.returncode == 0,
+                    (r.stdout or r.stderr or "").strip().splitlines()[-1][:120] if (r.stdout or r.stderr) else "no output")
+
+    summary = {"pkg": root, "package_id": m.get("package_id"), "pass": ok and not incomplete,
+               "signed": bool(sig), "incomplete": incomplete, "checks": results,
+               "passed": sum(1 for r in results if r["pass"]), "total": len(results)}
+    verdict = "PASS" if (ok and not incomplete) else ("INCOMPLETE" if ok else "FAIL")
+    print(f"\nSUMMARY: {summary['passed']}/{summary['total']} 项通过 → {verdict}")
     if a.json:
         json.dump(summary, open(a.json, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print("saved", a.json)
-    return 0 if ok else 3
+    return 0 if verdict == "PASS" else (4 if verdict == "INCOMPLETE" else 3)
 
 if __name__ == "__main__":
     sys.exit(main())

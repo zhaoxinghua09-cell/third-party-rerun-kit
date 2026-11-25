@@ -14,16 +14,21 @@
 - 你只重算、只比对，不 import、不执行任何他的东西；
 - 要跑他的脚本必须显式 `--run-steps`，而且逐条打印命令行。
 
-## 它查什么（14 项）
+## 它查什么（16 项，分三层）
 
 | 门 | 规则 | 防什么 |
 |---|---|---|
-| structure | `steps` 不能为空 | 链被抽空了还判 PASS（这是红队第一轮抓到的真漏洞） |
+| structure | `steps` 不能为空 | 链被抽空了还判 PASS（红队第一轮抓到的真漏洞） |
 | coverage | 声明的每个文件必须被某条 step 引用 | 声明 12 个、实际只校验 3 个 |
 | coverage | 每个期望输出必须被链绑定 | 结论与证据脱钩 |
 | hash-length | 期望值必须 64 位 sha256 | 8 位前缀可暴力碰撞 |
 | white-list | 包内未声明文件即 FAIL | 夹带 |
 | 其余 | 逐文件哈希、逐条链步骤、期望输出 | — |
+| signature | 声明了签名就必须真验过；验不了判 **INCOMPLETE**，不是 PASS | 把"有签名文件"当"验签通过" |
+
+退出码：0 PASS / 2 参数问题 / 3 FAIL / **4 INCOMPLETE（验不了，不等于通过）**。
+
+另外两层：`determinism.py` 给重复运行一致性分级（byte-identical / near-identical / unstable）；`make_demo_pkg.py` 的 outputs 由 `producer.py` **真跑**生成，不是塞一个结果文件进去。
 
 ## 快速跑
 
@@ -31,15 +36,18 @@
 python rerun/make_demo_pkg.py
 python rerun/verify_chain.py --pkg rerun/demo_pkg --json my_run.json
 python rerun/redteam.py
+python rerun/determinism.py rerun/demo_pkg --execute
 ```
 
 对方包到手后：`python rerun/verify_chain.py --pkg <他的包>`（manifest 格式见脚本顶部注释）
 
 ## 已实测结果（2026-11-25）
 
-- 基线：14/14 PASS，exit 0
-- 红队六攻：6/6 拦下，exit 3 —— 但**第一版是 5/6**，A6 逃逸；见 `evidence/io_selftest_clean_venv.log` 之外的做法说明在 `rerun/README.md`
-- 干净环境（空 venv 只有 pip、代理指向未开放端口、无密钥、全程不联网）：14/14 + 6/6，两份 run JSON **逐字节一致**（见 `evidence/`）
+- 基线：16/16 PASS，exit 0
+- 红队八攻：8/8 拦下；A8（签名自洽但本机无 cosign）正确判 INCOMPLETE / exit 4。**第一版是 5/6**，A6 逃逸过（抽走 steps 仍 PASS）——历史写在 `rerun/README.md`
+- 确定性：确定性包 byte-identical，写入时间戳的包 unstable（见 `evidence/determinism_stable.json` / `determinism_unstable.json`）
+- 干净环境（空 venv 只有 pip、代理指向未开放端口、无密钥、全程不联网）：与主环境逐字节一致
+- 匿名从本仓库取件重跑：8/8 取回、16/16 通过、8/8 拦下（见 `evidence/outsider_public_test_20261125.md`）
 
 ## 边界（必须读）
 

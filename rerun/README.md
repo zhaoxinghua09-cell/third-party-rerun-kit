@@ -42,12 +42,19 @@ python determinism.py demo_pkg --execute --out determinism_stable.json
 python determinism.py demo_pkg_unstable --execute --out determinism_unstable.json
 ```
 
-## 已实跑（2026-11-25）
+## 实跑（2026-11-25）
 
-- 基线：**16/16 PASS**，exit 0
-- 红队 8 攻：**8/8 拦下**；A8（签名自洽但本机无 cosign）正确判 **INCOMPLETE / exit 4**
-- 确定性：确定性包 `byte-identical`；写入时间戳的包 `unstable`（分级确实能分辨）
-- 干净环境（空 venv 仅 pip、代理指向黑洞、无密钥）：与主环境逐字节一致
+- 未签名包基线：**16/16 PASS**，exit 0
+- 签名包（Ed25519）：**20/20 PASS**，exit 0（含"被签字节未改"与"验签通过"两项）
+- 红队 **9 攻：9/9 拦下**（A8 签名自洽但本机无 cosign → INCOMPLETE/4；A9 换公钥 → InvalidSignature/3）
+- 确定性：确定性包 `byte-identical`；写入时间戳的包 `unstable`
+- 同包两种环境两种结论（设计如此）：有 `cryptography` → PASS/0；空 venv 无 → **INCOMPLETE/4**
+- cosign 路径未通：官方包 191,166,976 B，本机只取到 32,505,856 B（17%），PE 头不全，不可执行
+
+## 签名层能说什么、不能说什么
+
+能说：这份字节被这把私钥签过，且包内可独立验。
+不能说：这把私钥是谁的。攻击者自带密钥+签名+公钥可造 100% 自洽的包，我们照样判 PASS——因为在这个封闭世界里它确实成立。要破这一层必须有外部信任锚（域名 well-known、组织目录、透明日志或别人已知的指纹）。**我们没有这个锚**，所以对外只讲复现性与包内自洽，不讲"这是我做的"。
 
 ## 边界（照抄，别改口气）
 

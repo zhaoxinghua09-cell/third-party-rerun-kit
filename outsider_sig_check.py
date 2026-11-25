@@ -9,9 +9,9 @@ import sys, os, json, urllib.request, subprocess, tempfile, shutil, time
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 BASE = "https://raw.githubusercontent.com/zhaoxinghua09-cell/third-party-rerun-kit/main/"
-NEED = ["rerun/verify_chain.py", "trust/ed25519.pub",
+NEED = ["rerun/verify_chain.py", "trust/ed25519.pub", "trust/anchor.json",
         "rerun/demo_pkg_signed/manifest.json", "rerun/demo_pkg_signed/outputs/result.txt",
-        "rerun/demo_pkg_signed/attest/result.sig.json",
+        "rerun/demo_pkg_signed/attest/result.sig.json", "rerun/demo_pkg_signed/attest/anchor.json",
         "rerun/demo_pkg_signed/inputs/claim.json",
         "rerun/demo_pkg_signed/inputs/evidence_1.txt",
         "rerun/demo_pkg_signed/inputs/evidence_2.txt",

@@ -99,7 +99,8 @@ PR：`https://github.com/LGD-Eval/silent-failure-catalog/pull/2`
 LGD-Eval 版 15 条（有 `SF-015-stale-reference-rot.md`、`release-attestation.yml`），
 84 个文件里 13 个内容不同。覆盖会丢条目，所以只修不一致点。
 
-**已执行**：走 PR 落地（见上），并恢复归档。读数随之更新：自检档 `7 ok / 6 fail`（原 6/7），
+**已执行**：走 PR 落地（见上），并恢复归档。读数随之更新（**家机口径**）：自检档 `7 ok / 6 fail`（原 6/7）；
+公司机原为 5 ok / 8 fail，按同一修复应为 6/7，但未在公司机实跑确认，不得引用为实测值。
 原判 fail 记录保留在 `e5_selfcheck.json` 的 `original_*` 字段，不改写历史。
 
 ---

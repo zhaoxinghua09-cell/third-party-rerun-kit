@@ -87,8 +87,9 @@ python e5_merge.py ; python e5_board.py
 | 3 | LGD-Eval 镜像 | ✅ 已落地 | 解除归档 → 分支 → **PR #2** → squash merge `a22d1a68` → 恢复归档；远端 zipball `check-catalog` exit 0（15 条全索引） |
 | 4 | 八件套与报告 | ✅ 已推送 | `third-party-rerun-kit` commit `9e95e481`（17 文件）+ `8a5db9e0`（补丁与执行记录）+ `71285acc`（远端复核补记） |
 
-**读数变更（自检档，不计入 E5 合格）**：13 件仅自检中，`LGD-Eval/silent-failure-catalog` 由 fail 转为修复后通过，
-家机口径 **7 ok / 6 fail**（原 6/7）；公司机同为 **7 ok / 6 fail**（原 5/8，另有一件环境差异）。
+**读数变更（自检档，不计入 E5 合格）**：13 件仅自检中，`LGD-Eval/silent-failure-catalog` 由 fail 转为修复后通过。
+本机（家机）口径由 **6 ok / 7 fail → 7 ok / 6 fail**；公司机原读数 5 ok / 8 fail，按同一修复应为 **6 ok / 7 fail**，
+但该数字尚未在公司机实跑确认（本次写动作只在家机执行），不得当作实测值引用。
 原始判 fail 的记录保留在 `e5_selfcheck.json` 的 `original_verdict` / `original_exit` / `original_tail` 字段，不改写历史。
 
 **执行层 36/61 合格未变**：上述修复落在自检档与收据，不影响 61 件「有测试」的判定结果。

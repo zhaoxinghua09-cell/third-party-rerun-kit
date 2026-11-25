@@ -1,0 +1,16 @@
+{
+ "pkg": "D:\\Workbuddy\\20261125-国际组织信息收取\\rerun_kit\\demo_pkg_unstable",
+ "producer": "producer.py",
+ "tier": "unstable",
+ "diff": [
+  "result.txt"
+ ],
+ "runs": [
+  {
+   "result.txt": "139900da0dab22c6"
+  },
+  {
+   "result.txt": "af14664fee3fdac6"
+  }
+ ]
+}

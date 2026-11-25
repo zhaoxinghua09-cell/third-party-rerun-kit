@@ -136,6 +136,31 @@ def main():
         sp = os.path.join(root, (sig.get("path") or "").replace("/", os.sep))
         if not sig.get("path") or not os.path.exists(sp):
             add("signature（声明文件存在）", False, f"声明 {sig.get('path')} 但文件不在")
+        elif (sig.get("type") or "") == "ed25519":
+            # 自包含 Ed25519：目标字节的哈希 + 用包内公钥验签
+            try:
+                import base64, json as _json
+                from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
+                payload = _json.load(open(sp, encoding="utf-8"))
+                art = os.path.join(root, (sig.get("artifact") or payload.get("target") or "").replace("/", os.sep))
+                if not os.path.exists(art):
+                    add("signature（被签产物存在）", False, f"产物 {sig.get('artifact')} 不在包内")
+                    incomplete = True
+                else:
+                    actual = sha_file(art)
+                    add("signature（被签字节未被改动）", actual == payload.get("target_sha256", "").lower(),
+                        f"声明 {str(payload.get('target_sha256'))[:16]} / 实算 {actual[:16]}")
+                    pub_b64 = sig.get("public_key_b64") or payload.get("public_key_b64")
+                    Ed25519PublicKey.from_public_bytes(base64.b64decode(pub_b64)).verify(
+                        base64.b64decode(payload["sig_b64"]), open(art, "rb").read())
+                    add("signature（Ed25519 验签）", True, "验签通过（只证明此钥匙签过，不证明钥匙归属）")
+            except ImportError:
+                results.append({"check": "signature（Ed25519 验签）", "pass": False,
+                                "detail": "cryptography 未安装 → UNVERIFIABLE（不得据此判 PASS）"})
+                print("  [INCOMPLETE] signature（Ed25519 验签） — 缺 cryptography，验不了（不得据此判 PASS）")
+                incomplete = True
+            except Exception as ex:
+                add("signature（Ed25519 验签）", False, f"验签失败：{type(ex).__name__}")
         else:
             if sig.get("sha256"):
                 add("signature（bundle 哈希）", sha_file(sp) == sig["sha256"].lower(), "bundle sha256 与声明一致")

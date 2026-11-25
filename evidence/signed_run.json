@@ -8,7 +8,7 @@
   {
    "check": "structure（steps 非空）",
    "pass": true,
-   "detail": "steps=7"
+   "detail": "steps=8"
   },
   {
    "check": "coverage（每个声明文件都被链引用）",
@@ -56,6 +56,11 @@
    "detail": "expect da0b8241b5077375 / got da0b8241b5077375"
   },
   {
+   "check": "file attest/anchor.json",
+   "pass": true,
+   "detail": "expect 024118f8dacecdcf / got 024118f8dacecdcf"
+  },
+  {
    "check": "step1 sha256_file(inputs/claim.json)",
    "pass": true,
    "detail": "expect b11ca89fc0551a93 / got b11ca89fc0551a93"
@@ -91,6 +96,11 @@
    "detail": "expect da0b8241b5077375 / got da0b8241b5077375"
   },
   {
+   "check": "step8 sha256_file(attest/anchor.json)",
+   "pass": true,
+   "detail": "expect 024118f8dacecdcf / got 024118f8dacecdcf"
+  },
+  {
    "check": "expected outputs/result.txt",
    "pass": true,
    "detail": "expect d39387de0f9b131a / got d39387de0f9b131a"
@@ -104,8 +114,13 @@
    "check": "signature（Ed25519 验签）",
    "pass": true,
    "detail": "验签通过（只证明此钥匙签过，不证明钥匙归属）"
+  },
+  {
+   "check": "anchor（公钥与锚一致）",
+   "pass": true,
+   "detail": "锚 a73db58f2212ccdc / 包内 a73db58f2212ccdc（不一致=疑似换钥）"
   }
  ],
- "passed": 20,
- "total": 20
+ "passed": 23,
+ "total": 23
 }

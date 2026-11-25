@@ -1,0 +1,187 @@
+{
+ "summary": {
+  "generated_at": "2026-11-26T07:55:57",
+  "checked": 13,
+  "counts": {
+   "selfcheck_fail": 7,
+   "selfcheck_ok": 5,
+   "selfcheck_ok_after_fix": 1
+  },
+  "note": "自检脚本实跑；通过不计入 E5 合格，仅证明'能被外人跑通'。其中 1 件为读数后修复并远端复核通过（original_* 保留原判）。"
+ },
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/third-party-rerun-kit",
+   "script": "rerun/verify_chain.py",
+   "exit": 2,
+   "seconds": 0.2,
+   "tail": [
+    "usage: verify_chain.py [-h] --pkg PKG [--json JSON] [--online]",
+    "verify_chain.py: error: the following arguments are required: --pkg"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-protocol",
+   "script": "reviews/verified-transition-loop/verify_vtl.mjs",
+   "exit": 1,
+   "seconds": 0.1,
+   "tail": [
+    "  url: 'file:///C:/Users/SZYL/AppData/Local/Temp/e5sc-hr1fz3j0/zhaoxinghua09-cell-evaluation-protocol-04e4cd1/reviews/verified-transition-loop/canonical-runtime-v0.12.mjs'",
+    "}",
+    "",
+    "Node.js v22.23.2"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/assayance",
+   "script": "tools/check-doctrine.py",
+   "exit": 0,
+   "seconds": 0.1,
+   "tail": [
+    "  ok   C3 正文零品牌串（声明块已豁免）",
+    "  ok   C4 无占位残留",
+    "",
+    "check-doctrine: clean"
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/memory-interop-vectors",
+   "script": "retention/check_retention.py",
+   "exit": 1,
+   "seconds": 0.1,
+   "tail": [
+    "usage: python check_retention.py <record.yaml>"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/nti-spec",
+   "script": "scripts/check_links.py",
+   "exit": 1,
+   "seconds": 72.3,
+   "tail": [
+    "❌ Found 3 broken link(s):",
+    "  - File: AIW_Paper_NTI.md | Link: https://nti-leaderboard.vercel.app | Status: 0",
+    "  - File: NTI-1.md | Link: https://github.com/zhaoxinghua09-cell/nti-lgd-transition-contract/blob/679b6e4445fb84e26cc051cda3b0ebed3d5526c3/nti-transition-contract-spec-v0.1.4.md | Status: 0",
+    "  - File: README.md | Link: https://nti-registry.vercel.app | Status: 0"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/publish-quality-gate",
+   "script": "scripts/check_release.py",
+   "exit": 2,
+   "seconds": 0.1,
+   "tail": [
+    "  L3 个人信息:     手机号/邮箱/身份证/微信/QQ/地址",
+    "  L4 机密信息:     API密钥/密码/平台账号/内部代号/外部IP",
+    "",
+    "输出: 命中列表 + 误报判定建议，退出码 0=零真实命中 1=有疑似命中"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "stevenzhao07/medical-ai-toolkit",
+   "script": "scripts/check_portal.py",
+   "exit": 0,
+   "seconds": 0.1,
+   "tail": [
+    "[check_portal] OK — 21 模块，skeleton/agent-card/teamai/llms 四向一致"
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "stevenzhao07/silent-failure-catalog",
+   "script": "tools/check-catalog.py",
+   "exit": 0,
+   "seconds": 0.2,
+   "tail": [
+    "  ids    : SF-001, SF-002, SF-003, SF-004, SF-005, SF-006, SF-007, SF-008, SF-009, SF-010, SF-011, SF-012, SF-013, SF-014",
+    "  entry pages (the only files allowed outbound self-links): docs/where-to-find-us.md, docs/start-here.md",
+    "",
+    "PASS — every required section present, every id indexed, every link resolves."
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "stevenzhao07/awesome-healthcare-agents",
+   "script": ".github/link-check/check_links.py",
+   "exit": 0,
+   "seconds": 48.2,
+   "tail": [
+    "entries: 52",
+    "OK: all 52 repo links open for an outsider"
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "LGD-Eval/evaluation-protocol",
+   "script": "reviews/verified-transition-loop/verify_vtl.mjs",
+   "exit": 1,
+   "seconds": 0.1,
+   "tail": [
+    "  url: 'file:///C:/Users/SZYL/AppData/Local/Temp/e5sc-eoyuqd0o/LGD-Eval-evaluation-protocol-cf15abd/reviews/verified-transition-loop/canonical-runtime-v0.12.mjs'",
+    "}",
+    "",
+    "Node.js v22.23.2"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "LGD-Eval/silent-failure-catalog",
+   "script": "tools/check-catalog.py",
+   "exit": 0,
+   "seconds": 0.2,
+   "tail": [
+    "  ids    : SF-001, SF-002, SF-003, SF-004, SF-005, SF-006, SF-007, SF-008, SF-009, SF-010, SF-011, SF-012, SF-013, SF-014, SF-015",
+    "  entry pages (the only files allowed outbound self-links): docs/where-to-find-us.md, docs/start-here.md",
+    "",
+    "PASS — every required section present, every id indexed, every link resolves."
+   ],
+   "verdict": "selfcheck_ok_after_fix",
+   "original_verdict": "selfcheck_fail",
+   "original_exit": 1,
+   "original_tail": [
+    "  1 problem(s):",
+    "    🔴 README.md                    line 1: outbound link to the account's static-hosting host ('https://zhaoxinghua09-cell.github.io/') — entry pages are docs/where-to-find-us.md and docs/start-here.md",
+    "",
+    "FAIL — a required item is absent or inconsistent."
+   ],
+   "fix": {
+    "at": "2026-11-26",
+    "pr": 2,
+    "pr_url": "https://github.com/LGD-Eval/silent-failure-catalog/pull/2",
+    "commit": "a22d1a68bca5c6178332cab08912707cf1661d9b",
+    "machine": "company",
+    "remote_check": "exit 0, PASS, 15 entries"
+   }
+  },
+  {
+   "repo": "LGD-Eval/wg2-ibea-charter",
+   "script": ".github/link-check/check_links.py",
+   "exit": 0,
+   "seconds": 0.2,
+   "tail": [
+    "entries: 0",
+    "OK: all 0 repo links open for an outsider"
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "LGD-Eval/awesome-agent-skills-1",
+   "script": ".github/link-check/check_links.py",
+   "exit": 1,
+   "seconds": 176.3,
+   "tail": [
+    "entries: 207",
+    "  DEAD    replicate/skills                                           HTTP 404 (README.md)",
+    "",
+    "FAIL: 1 unreachable-for-outsiders"
+   ],
+   "verdict": "selfcheck_fail"
+  }
+ ]
+}

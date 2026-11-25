@@ -10,7 +10,8 @@
   "inputs/evidence_1.txt": "4f8f9304f78d197d4c21d541cf54639d5778260b9b65ee21b49ed5015f877d77",
   "inputs/evidence_2.txt": "9bfc8971e77a41d02b5950dab383795f524b96a42d235330bb554f95ff11b429",
   "producer.py": "4ae3c14539df78d6ae41770cf85bd2237c7a69099d73ee67098023052fd6c4ea",
-  "attest/result.sig.json": "da0b8241b507737553b91530b4f048de15a9bd50e94a14d95e3ce343cdccb6ef"
+  "attest/result.sig.json": "da0b8241b507737553b91530b4f048de15a9bd50e94a14d95e3ce343cdccb6ef",
+  "attest/anchor.json": "024118f8dacecdcfad9089e4791c93e2ed76162aff0ed0e4181a8037f7492b4c"
  },
  "steps": [
   {
@@ -57,6 +58,12 @@
    "op": "sha256_file",
    "path": "attest/result.sig.json",
    "expect": "da0b8241b507737553b91530b4f048de15a9bd50e94a14d95e3ce343cdccb6ef"
+  },
+  {
+   "n": 8,
+   "op": "sha256_file",
+   "path": "attest/anchor.json",
+   "expect": "024118f8dacecdcfad9089e4791c93e2ed76162aff0ed0e4181a8037f7492b4c"
   }
  ],
  "expected": {
@@ -67,6 +74,7 @@
   "path": "attest/result.sig.json",
   "sha256": "da0b8241b507737553b91530b4f048de15a9bd50e94a14d95e3ce343cdccb6ef",
   "artifact": "outputs/result.txt",
-  "public_key_b64": "Bla+dUC4MhvK+FiocFDvQGdu2v1l/nYAwaVVdjyUjcY="
+  "public_key_b64": "Bla+dUC4MhvK+FiocFDvQGdu2v1l/nYAwaVVdjyUjcY=",
+  "anchor": "attest/anchor.json"
  }
 }

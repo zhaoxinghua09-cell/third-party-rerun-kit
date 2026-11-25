@@ -74,6 +74,25 @@ def a6(pkg):
     m["steps"] = []
     json.dump(m, open(os.path.join(pkg, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
+def a7(pkg):
+    # 声明了签名，但文件不存在
+    m = json.load(open(os.path.join(pkg, "manifest.json"), encoding="utf-8"))
+    m["signature"] = {"type": "sigstore-bundle", "path": "attest/none.sigstore.json"}
+    json.dump(m, open(os.path.join(pkg, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+def a8(pkg):
+    # 签名文件存在、哈希自洽、且已在 files/steps 里登记；本机无 cosign → 必须 INCOMPLETE(exit 4)，绝不能 PASS
+    os.makedirs(os.path.join(pkg, "attest"), exist_ok=True)
+    sp = os.path.join(pkg, "attest/fake.sigstore.json")
+    open(sp, "w", encoding="utf-8").write('{"fake":"bundle"}\n')
+    m = json.load(open(os.path.join(pkg, "manifest.json"), encoding="utf-8"))
+    m["files"]["attest/fake.sigstore.json"] = sha_file(sp)
+    m["steps"].append({"n": 7, "op": "sha256_file", "path": "attest/fake.sigstore.json",
+                       "expect": sha_file(sp)})
+    m["signature"] = {"type": "sigstore-bundle", "path": "attest/fake.sigstore.json",
+                      "sha256": sha_file(sp), "artifact": "outputs/result.txt"}
+    json.dump(m, open(os.path.join(pkg, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
 def main():
     print("baseline（未篡改）应先 PASS：")
     code, out = run(DEMO)
@@ -82,7 +101,7 @@ def main():
     if not ok_base:
         print(out[-400:])
         return 2
-    print("\n六种攻击（都必须被拦下）：")
+    print("\n八种攻击（都必须被拦下，或判 INCOMPLETE 而不得 PASS）：")
     caught = [
         attack("A1 改证据一个字节", a1),
         attack("A2 篡改期望输出", a2),
@@ -90,10 +109,12 @@ def main():
         attack("A4 自证循环（改文件+改期望）", a4),
         attack("A5 截断哈希到 8 位", a5),
         attack("A6 抽走链式步骤", a6),
+        attack("A7 声明签名但文件缺失", a7),
+        attack("A8 签名自洽但无法验证（cosign 缺）", a8),
     ]
     n = sum(caught)
-    print(f"\nSUMMARY: {n}/6 攻击被拦下；baseline {'PASS' if ok_base else 'FAIL'}")
-    return 0 if (ok_base and n == 6) else 3
+    print(f"\nSUMMARY: {n}/{len(caught)} 攻击被拦下；baseline {'PASS' if ok_base else 'FAIL'}")
+    return 0 if (ok_base and n == len(caught)) else 3
 
 if __name__ == "__main__":
     sys.exit(main())

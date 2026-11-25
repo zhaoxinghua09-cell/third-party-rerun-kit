@@ -3,8 +3,9 @@
   "generated_at": "2026-11-26T07:25:17",
   "checked": 13,
   "counts": {
-   "selfcheck_fail": 6,
-   "selfcheck_ok": 7
+   "selfcheck_ok": 6,
+   "selfcheck_ok_after_fix": 1,
+   "selfcheck_fail": 6
   },
   "note": "自检脚本实跑；通过不计入 E5 合格，仅证明'能被外人跑通'。其中 1 件（LGD-Eval/silent-failure-catalog）为读数后修复并远端复核通过，原判 fail 保留在 original_* 字段。",
   "fixed_after_readout": {
@@ -12,7 +13,8 @@
    "pr": 2,
    "commit": "a22d1a68",
    "remote_check": "exit 0"
-  }
+  },
+  "machine": "home (client:5822751453223723051)"
  },
  "records": [
   {

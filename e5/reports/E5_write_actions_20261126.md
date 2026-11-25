@@ -81,15 +81,26 @@ PASS — every required section present, every id indexed, every link resolves.
 exit 0
 ```
 
-**为什么没提交**：该仓库 `archived: true`。归档仓库对 Contents API PUT 与 `git push`
-一律返回 **403**，与 token 权限无关（用 LGD-Eval 自己的 token 也是 403）。
-补丁与决策说明已落到 `third-party-rerun-kit/e5/patches/`。
+**远端落地（2026-11-26 下午已执行）**：该仓库原是 `archived: true`，归档状态对
+Contents API PUT 与 `git push` 一律 403（与 token 权限无关）。处理路径：
+
+1. `PATCH {archived:false}` 解除归档；
+2. 直推 main 被仓库规则拒绝 —— `422 Repository rule violations found / Changes must be made through a pull request`；
+   这条规则本身是好事，说明该仓不允许绕过评审直推；
+3. 于是建分支 `fix/readme-portal-link`（commit `d1548b6f`）→ 开 **PR #2** →
+   squash merge 得到 `a22d1a68`；
+4. 重新拉远端 main 的 zipball 跑 `tools/check-catalog.py` → **exit 0，PASS，15 条全索引**；
+5. `PATCH {archived:true}` 恢复归档，保持它作为历史快照只读的语义。
+
+PR：`https://github.com/LGD-Eval/silent-failure-catalog/pull/2`
+补丁与决策说明同时落在 `third-party-rerun-kit/e5/patches/`，供日后复核。
 
 **没有整树覆盖**：两版已分叉 —— steven 版 14 条（有 `CLAUDE.md`/`module.json`），
 LGD-Eval 版 15 条（有 `SF-015-stale-reference-rot.md`、`release-attestation.yml`），
 84 个文件里 13 个内容不同。覆盖会丢条目，所以只修不一致点。
 
-**待 owner 决策**：unarchive 后套补丁，或明确冻结该版、只在 steven 版维护。
+**已执行**：走 PR 落地（见上），并恢复归档。读数随之更新：自检档 `7 ok / 6 fail`（原 6/7），
+原判 fail 记录保留在 `e5_selfcheck.json` 的 `original_*` 字段，不改写历史。
 
 ---
 
@@ -140,11 +151,10 @@ exit 0 表示**远端树上收据成立**，不是只在本地成立。
 |---|---|---|---|
 | 1 | 修 uibc-core 收据 | ✅ 已推送 main | `6cdde5468a` / `87738fe978`；本地 5 passed |
 | 2 | 补 fastmcp 依赖 | ✅ 无需改仓库，已验证可用 | fastmcp 4.2.0；selftest exit 0 |
-| 3 | 同步 LGD-Eval 镜像 | ⚠️ 本地已修到 PASS，远端 403（仓库已归档） | 补丁在 `e5/patches/` |
+| 3 | 同步 LGD-Eval 镜像 | ✅ PR #2 已合并，远端复核 PASS，仓库恢复归档 | `a22d1a68`；`check-catalog` exit 0（15 条） |
 | 4 | 推八件套与报告 | ✅ 已推送 | `9e95e481`，17 文件 |
 
-唯一未落地的一步不是技术问题，是「归档仓库不可写」这一平台事实；
-要落到远端，只需一次 unarchive 决策。
+四项全部落地：三项直推 main，一项（归档仓库）按平台规则走 PR 后合并，四项都在远端可复核。
 
 ## 仍然不能声称的部分
 

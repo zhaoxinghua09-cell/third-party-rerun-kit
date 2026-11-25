@@ -45,11 +45,20 @@ python determinism.py demo_pkg_unstable --execute --out determinism_unstable.jso
 ## 实跑（2026-11-25）
 
 - 未签名包基线：**16/16 PASS**，exit 0
-- 签名包（Ed25519）：**20/20 PASS**，exit 0（含"被签字节未改"与"验签通过"两项）
-- 红队 **9 攻：9/9 拦下**（A8 签名自洽但本机无 cosign → INCOMPLETE/4；A9 换公钥 → InvalidSignature/3）
+- 签名包（Ed25519 + 锚）：**23/23 PASS**（离线）；**24/24 PASS**（`--online` 联机核对锚）
+- 红队 **10 攻：10/10 拦下**（A8 无 cosign → INCOMPLETE/4；A9 换公钥 → InvalidSignature/3；A10 换钥重签但锚不改 → 锚指纹不一致/3）
 - 确定性：确定性包 `byte-identical`；写入时间戳的包 `unstable`
 - 同包两种环境两种结论（设计如此）：有 `cryptography` → PASS/0；空 venv 无 → **INCOMPLETE/4**
-- cosign 路径未通：官方包 191,166,976 B，本机只取到 32,505,856 B（17%），PE 头不全，不可执行
+- cosign 路径未通：官方包 191,166,976 B，本机只取到 32,505,856 B（17%），PE 头不全
+
+## 信任锚（`--online` / `trust/anchor.json`）
+
+签名只证明"这把私钥签过这份字节"，**不证明私钥是谁的**。所以我们加了一层锚，但要如实说清它的强度：
+
+- 锚的形态：`{"type":"github-commit","owner","repo","path":"trust/ed25519.pub","commit","key_sha256"}`
+- 它钉的是"**公钥在某次提交里首次公开**"，于是**换钥会被发现**：新包公钥指纹与锚不一致 → FAIL（A10 实测）。
+- 它**不是身份认证**：GitHub 账号被盗、或强推改历史，都能绕过。DNS 的 `/.well-known/` 锚更硬，但我们没有可挂的域名，所以只能写不能跑——**没跑过的锚我们不当成锚**。
+- 默认离线只比包内一致性；`--online` 才联机核对远端 commit（取不到则 INCOMPLETE）。
 
 ## 签名层能说什么、不能说什么
 

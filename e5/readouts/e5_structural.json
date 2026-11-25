@@ -1,0 +1,4381 @@
+{
+ "summary": {
+  "generated_at": "2026-11-26T00:58:57",
+  "probed": 254,
+  "counts": {
+   "pass_no_entry": 193,
+   "pass_has_entry": 61
+  },
+  "measurable": 61,
+  "note": "结构实测（三层）：顶层 commit+contents；全树 recursive tree 扫描（测试/仅自检/都没有）；仅自检脚本单列，不计入 E5 合格候选",
+  "promoted_by_deep": 0,
+  "selfcheck_only": 13
+ },
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/third-party-rerun-kit",
+   "visibility": "public",
+   "commit": "eafa5c61cd2f101593c1a3aaea8e0a1ef0e471a1",
+   "commit_date": "2026-11-25T16:59:10Z",
+   "rate": "3671",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "rerun/verify_chain.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 1,
+   "selfcheck_samples": [
+    "rerun/verify_chain.py"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-core",
+   "visibility": "public",
+   "commit": "7ff56ab9581376651e24f6f9c2edea0b44278940",
+   "commit_date": "2026-11-25T16:58:18Z",
+   "rate": "3672",
+   "top_entries": 90,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/terminance",
+   "visibility": "public",
+   "commit": "33d800a645ea4af3d0153a3ea4131e214ded53f6",
+   "commit_date": "2026-11-22T13:04:23Z",
+   "rate": "3670",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/xcgs-manifesto",
+   "visibility": "public",
+   "commit": "0366149befc2652b9278f6be07a0926189c7ed31",
+   "commit_date": "2026-11-22T13:04:33Z",
+   "rate": "3669",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/independent-recomputations",
+   "visibility": "public",
+   "commit": "6b14ed70a28709019d323438679b7b100b325022",
+   "commit_date": "2026-11-24T15:51:15Z",
+   "rate": "3668",
+   "top_entries": 17,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-identity",
+   "visibility": "public",
+   "commit": "7a3791b40fe634ce117018132da43e45be98decd",
+   "commit_date": "2026-11-24T00:32:16Z",
+   "rate": "3666",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wimse-p5p6-fixtures",
+   "visibility": "public",
+   "commit": "446e03e67ee2d07866d03f43ff1d508fd3159eec",
+   "commit_date": "2026-11-24T01:18:25Z",
+   "rate": "3661",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/symbioship",
+   "visibility": "public",
+   "commit": "d7c7ada8241786a444ef83db6e6f69ae017dda75",
+   "commit_date": "2026-11-22T15:51:42Z",
+   "rate": "3658",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/d3-composition-cases",
+   "visibility": "public",
+   "commit": "61b88aee5d25c59101c2a12028b469b5c588aa98",
+   "commit_date": "2026-11-22T15:51:39Z",
+   "rate": "3659",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/a28-behavioural-signals",
+   "visibility": "public",
+   "commit": "e289b82e43f3d6611b5553c4a549a3fb69241aa5",
+   "commit_date": "2026-11-22T13:00:02Z",
+   "rate": "3655",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/a18-skill-supply-chain",
+   "visibility": "public",
+   "commit": "c2d9bb37aa9b6ed9f2f47ab667231c93a4b7b0be",
+   "commit_date": "2026-11-22T13:13:43Z",
+   "rate": "3657",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/c45-skill-metrics",
+   "visibility": "public",
+   "commit": "615dcb9156ee5d26b986f7562e91fb9c87d89f6e",
+   "commit_date": "2026-11-22T13:13:50Z",
+   "rate": "3650",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synomos-ai-skills",
+   "visibility": "public",
+   "commit": "84ae3d40842c4e17ec20f6acc0df1ce1471d9619",
+   "commit_date": "2026-11-22T14:10:22Z",
+   "rate": "3646",
+   "top_entries": 17,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-skills",
+   "visibility": "public",
+   "commit": "d0398570768f617b3bac9e66ce3c4e9eb4114cb4",
+   "commit_date": "2026-11-25T03:00:52Z",
+   "rate": "3649",
+   "top_entries": 33,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-registry",
+   "visibility": "public",
+   "commit": "a6fbb1dcd2c59b26e3586a4fb4d93b1dfd748a8d",
+   "commit_date": "2026-11-22T13:14:28Z",
+   "rate": "3647",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skills",
+   "visibility": "public",
+   "commit": "134f6465bd2ada4f2e7c4eaa33f8bc64c2d7f51b",
+   "commit_date": "2026-11-22T13:14:08Z",
+   "rate": "3644",
+   "top_entries": 17,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skillgate",
+   "visibility": "public",
+   "commit": "362c600dfdc386e327e70e1e70e28305139b4841",
+   "commit_date": "2026-11-24T01:18:27Z",
+   "rate": "3639",
+   "top_entries": 133,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-competition",
+   "visibility": "public",
+   "commit": "94c2c6c85b8c5b2912cadac15884fd90c0edc95d",
+   "commit_date": "2026-11-22T14:30:40Z",
+   "rate": "3641",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-trust-identity-spec",
+   "visibility": "public",
+   "commit": "d5952f8ef481fd2156ef0fa3f4951a0651cb14b7",
+   "commit_date": "2026-11-22T14:03:30Z",
+   "rate": "3637",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/xlgd",
+   "visibility": "public",
+   "commit": "dfff37fdbd1e3c03844328bf2cd321bd6c6da566",
+   "commit_date": "2026-11-22T13:04:39Z",
+   "rate": "3633",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-hub",
+   "visibility": "public",
+   "commit": "c6d333087f4ac191361d500b46a02a657d476c48",
+   "commit_date": "2026-11-25T14:52:55Z",
+   "rate": "3636",
+   "top_entries": 41,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-theory",
+   "visibility": "public",
+   "commit": "f50e747ef2e53f3ab0fa6f2422fa787934785121",
+   "commit_date": "2026-11-25T05:40:35Z",
+   "rate": "3634",
+   "top_entries": 42,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/silent-failure-catalog",
+   "visibility": "public",
+   "commit": "1309e1a483227a1f6c61267abd4071f06d26caab",
+   "commit_date": "2026-11-22T14:11:02Z",
+   "rate": "3628",
+   "top_entries": 36,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-governance-vocabulary",
+   "visibility": "public",
+   "commit": "1ae602d530119c651a74ba1403036bbc940d9e41",
+   "commit_date": "2026-11-21T18:04:32Z",
+   "rate": "3626",
+   "top_entries": 22,
+   "verification_entries": [
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-guardrails",
+   "visibility": "public",
+   "commit": "860be3425fa66e42e1edb146e7d1dcad0164e43a",
+   "commit_date": "2026-11-22T13:02:14Z",
+   "rate": "3625",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-xverify",
+   "visibility": "public",
+   "commit": "7ca1b83a496d0276d92a42b7c0fcf5893b679456",
+   "commit_date": "2026-11-22T13:02:34Z",
+   "rate": "3622",
+   "top_entries": 24,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-redteam-suite",
+   "visibility": "public",
+   "commit": "e39ac448d8ec40f895584c6126df6f27856310b9",
+   "commit_date": "2026-11-22T13:14:25Z",
+   "rate": "3621",
+   "top_entries": 17,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-scorecard",
+   "visibility": "public",
+   "commit": "954898516fd7acef71bbbb833eba3a00415b2897",
+   "commit_date": "2026-11-22T13:14:31Z",
+   "rate": "3620",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skill-marketplace",
+   "visibility": "public",
+   "commit": "992f7202f597ddeda87f4141fbfaf94ed4be47f1",
+   "commit_date": "2026-11-22T13:13:57Z",
+   "rate": "3619",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skeleton",
+   "visibility": "public",
+   "commit": "f3aac86e9c562fa35569e7b4e123fc5e010db6f1",
+   "commit_date": "2026-11-22T13:02:29Z",
+   "rate": "3613",
+   "top_entries": 28,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-control-standard",
+   "visibility": "public",
+   "commit": "a9af3defa9b87c235ef896c94e6467002cc305fc",
+   "commit_date": "2026-11-21T13:43:04Z",
+   "rate": "3614",
+   "top_entries": 31,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synomosai-governance-mcp",
+   "visibility": "public",
+   "commit": "dd3784f9a8b5461c3d025dc94b82af6d65eea9bc",
+   "commit_date": "2026-11-22T14:04:32Z",
+   "rate": "3611",
+   "top_entries": 25,
+   "verification_entries": [
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-iverify",
+   "visibility": "public",
+   "commit": "1b67f10dc5a7059843b3903fe56914f36e828107",
+   "commit_date": "2026-11-24T10:03:20Z",
+   "rate": "3610",
+   "top_entries": 9,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skill-review",
+   "visibility": "public",
+   "commit": "7fe24c39c711b652933ee90e4cfd5f4daaa7589e",
+   "commit_date": "2026-11-22T14:38:07Z",
+   "rate": "3609",
+   "top_entries": 19,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-skills",
+   "visibility": "public",
+   "commit": "e5d4cf5aaf26852d3278b5a2ce3ea73a5e190ed8",
+   "commit_date": "2026-11-02T04:15:19Z",
+   "rate": "3604",
+   "top_entries": 9,
+   "verification_entries": [
+    "deep:unittest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 7,
+    "kinds": [
+     "unittest"
+    ],
+    "samples": [
+     "skills/medical-device-clinical-evaluation/medical_device_clinical_eval_security_test.py",
+     "skills/medical-device-compliance-grader/medical-device-compliance-grader_security_test.py",
+     "skills/medical-device-label-ifu/medical-device-label-ifu_security_test.py",
+     "skills/medical-device-postmarket/medical-device-postmarket_security_test.py",
+     "skills/medical-device-risk-management/medical-device-risk-management_security_test.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-audit",
+   "visibility": "public",
+   "commit": "65b6470543ab24943177dbd0ed761f69a98590ff",
+   "commit_date": "2026-11-06T17:27:48Z",
+   "rate": "3600",
+   "top_entries": 44,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-gate",
+   "visibility": "public",
+   "commit": "10b3a223dd78d2150bc186c999bc77682359a456",
+   "commit_date": "2026-11-06T17:48:17Z",
+   "rate": "3601",
+   "top_entries": 27,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/LGD-Eval",
+   "visibility": "public",
+   "commit": "20c179f978717b292c9b27d9d37f380a6b249622",
+   "commit_date": "2026-11-06T17:48:30Z",
+   "rate": "3593",
+   "top_entries": 49,
+   "verification_entries": [
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-protocol",
+   "visibility": "public",
+   "commit": "04e4cd1db198c9dda48c8615dd2c87657846ab97",
+   "commit_date": "2026-11-06T09:35:11Z",
+   "rate": "3599",
+   "top_entries": 49,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "reviews/verified-transition-loop/verify_vtl.mjs"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 1,
+   "selfcheck_samples": [
+    "reviews/verified-transition-loop/verify_vtl.mjs"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-evidence",
+   "visibility": "public",
+   "commit": "387ead9c0d42cdc80c6b544bd5122619d7b0dba0",
+   "commit_date": "2026-11-06T12:41:57Z",
+   "rate": "3598",
+   "top_entries": 52,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aikr",
+   "visibility": "public",
+   "commit": "229d9fb4b24383dcc926353b5a34fed8e583fb43",
+   "commit_date": "2026-11-20T07:34:08Z",
+   "rate": "3596",
+   "top_entries": 42,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/promptshield",
+   "visibility": "public",
+   "commit": "9c395b86150caf91637929f1acb9800e4f7d0d26",
+   "commit_date": "2026-11-22T13:03:44Z",
+   "rate": "3591",
+   "top_entries": 17,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/governanceos",
+   "visibility": "public",
+   "commit": "b9a6ac456655bd6898be62d7b06ff814585a3fc8",
+   "commit_date": "2026-11-22T13:01:46Z",
+   "rate": "3589",
+   "top_entries": 22,
+   "verification_entries": [
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wexp-check",
+   "visibility": "public",
+   "commit": "cfe458b5f90c0a95ad1723b7a0dbba1b8d834fae",
+   "commit_date": "2026-11-18T14:46:44Z",
+   "rate": "3588",
+   "top_entries": 18,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/examples",
+   "visibility": "public",
+   "commit": "727ee03d86fa2c2ca8c534584b870235a1b252df",
+   "commit_date": "2026-06-26T06:26:13Z",
+   "rate": "3584",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aer-1",
+   "visibility": "public",
+   "commit": "0c6a69f6d9b3a90f09ddc1fcd5f2e3c808fbcbbf",
+   "commit_date": "2026-11-18T08:30:56Z",
+   "rate": "3581",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-loop-fixture",
+   "visibility": "public",
+   "commit": "78849b2824e1f6213be35b721fc4ed2cbcd4c143",
+   "commit_date": "2026-11-22T13:31:57Z",
+   "rate": "3580",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/debug-pro",
+   "visibility": "public",
+   "commit": "217d0609aac840f95a87c63ebe57354f4ed6d373",
+   "commit_date": "2026-11-22T13:01:22Z",
+   "rate": "3579",
+   "top_entries": 16,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wechat-viral-topic",
+   "visibility": "public",
+   "commit": "6ef4647b9cadd08bc5e960ba6051fdd1319fff47",
+   "commit_date": "2026-11-22T13:04:26Z",
+   "rate": "3574",
+   "top_entries": 17,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/summarize-pro",
+   "visibility": "public",
+   "commit": "cbb0284e1aae3f996fd1daa2da6c342d50b13d8b",
+   "commit_date": "2026-11-22T13:04:11Z",
+   "rate": "3578",
+   "top_entries": 17,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-hit-list",
+   "visibility": "public",
+   "commit": "877620a966020481aa56c805cadb32124faede04",
+   "commit_date": "2026-11-22T13:02:20Z",
+   "rate": "3575",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/claim-audit",
+   "visibility": "public",
+   "commit": "c1b9ad3dc123d919b927326fe8f75fe9be115bcc",
+   "commit_date": "2026-11-22T13:00:58Z",
+   "rate": "3572",
+   "top_entries": 10,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evidence-anchor",
+   "visibility": "public",
+   "commit": "7f6f2fa192639ee4efcf48d26be0207187231acb",
+   "commit_date": "2026-11-22T13:01:34Z",
+   "rate": "3567",
+   "top_entries": 9,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-improver",
+   "visibility": "public",
+   "commit": "2feaeeb97bcbc10431a964f534a05c81e4ac22ae",
+   "commit_date": "2026-11-22T13:14:19Z",
+   "rate": "3561",
+   "top_entries": 9,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fgtida-contribution-discovery-evidence",
+   "visibility": "public",
+   "commit": "8d1dea2f287bf92a4586b4d541059669a203cc07",
+   "commit_date": "2026-11-22T14:03:42Z",
+   "rate": "3566",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-library-connector",
+   "visibility": "public",
+   "commit": "362cc0f5d044684d0fec97a775e4388b4050238a",
+   "commit_date": "2026-11-22T13:02:56Z",
+   "rate": "3565",
+   "top_entries": 20,
+   "verification_entries": [
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
+   "visibility": "public",
+   "commit": "adf68f3dbc90c6348ce6671e8124574784e32896",
+   "commit_date": "2026-11-22T13:03:04Z",
+   "rate": "3564",
+   "top_entries": 14,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/med-device-compliance-toolkit",
+   "visibility": "public",
+   "commit": "2c19567f941cc702a898a12955e4fdfb06536385",
+   "commit_date": "2026-11-22T13:02:41Z",
+   "rate": "3562",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medical-device-testing-link",
+   "visibility": "public",
+   "commit": "ee8cbe3acb229f8783021fa877095ede6d805bae",
+   "commit_date": "2026-11-22T13:02:50Z",
+   "rate": "3556",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wg1-ra-aai",
+   "visibility": "public",
+   "commit": "272198e0f3c85e28ba59611fda245c209c70a55a",
+   "commit_date": "2026-09-21T01:22:00Z",
+   "rate": "3555",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-glossary",
+   "visibility": "public",
+   "commit": "bdedb729d2405e3960821a174ec4d882e1339a94",
+   "commit_date": "2026-11-22T13:02:09Z",
+   "rate": "3554",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
+   "visibility": "public",
+   "commit": "3221884122909e1c66a9073704b7ad4f0256791f",
+   "commit_date": "2026-11-22T14:03:44Z",
+   "rate": "3552",
+   "top_entries": 27,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/use-cases",
+   "visibility": "public",
+   "commit": "80b2645757a04ba1cc742c9391c764d552878b0a",
+   "commit_date": "2026-09-27T13:49:22Z",
+   "rate": "3553",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skills-index",
+   "visibility": "public",
+   "commit": "a7e9ab9fb1803d253eed9899bae47c0e1aa3dc59",
+   "commit_date": "2026-11-22T13:14:12Z",
+   "rate": "3547",
+   "top_entries": 14,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fg-tida-r04-contrib",
+   "visibility": "public",
+   "commit": "221c597352395420a253a5ade295664ddb6c13ee",
+   "commit_date": "2026-11-22T14:03:38Z",
+   "rate": "3545",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/a22-trust-lifecycle",
+   "visibility": "public",
+   "commit": "440c5dee052e5eb78ec09cf847a6cab6c87d14f0",
+   "commit_date": "2026-11-22T12:59:59Z",
+   "rate": "3543",
+   "top_entries": 7,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/d4-evidence-authorization",
+   "visibility": "public",
+   "commit": "d70fec43fe3ac7170f850591505303ce8e7bfb37",
+   "commit_date": "2026-11-22T13:01:19Z",
+   "rate": "3544",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/runtigil",
+   "visibility": "public",
+   "commit": "0b2f7a63d821f5d88236b86b35340b43c988f907",
+   "commit_date": "2026-11-22T13:04:00Z",
+   "rate": "3538",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/project-ops-protocol",
+   "visibility": "public",
+   "commit": "d0404074a72b15da3a4d3783d017abed4c3b931d",
+   "commit_date": "2026-11-22T14:04:11Z",
+   "rate": "3536",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/mnemoship",
+   "visibility": "public",
+   "commit": "85ac16c82fa76b176e92acdef2b49b4e9b763a8c",
+   "commit_date": "2026-11-22T13:03:27Z",
+   "rate": "3533",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-voice-kb",
+   "visibility": "public",
+   "commit": "175751c3ad313e439912456b2d86d7944cea16cd",
+   "commit_date": "2026-11-22T13:03:21Z",
+   "rate": "3535",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-registration-ops",
+   "visibility": "public",
+   "commit": "2797fd06bf752e2464e46dfe427c449e1033a25d",
+   "commit_date": "2026-11-22T13:03:15Z",
+   "rate": "3532",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-reg-kb",
+   "visibility": "public",
+   "commit": "c80fa40ccc7ed1e710d064c3646c8a1267496bd9",
+   "commit_date": "2026-11-22T13:03:11Z",
+   "rate": "3531",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-llm-library",
+   "visibility": "public",
+   "commit": "ddc8ea447b9f5d78cf32c891fd6f8098c35cb608",
+   "commit_date": "2026-11-22T13:03:00Z",
+   "rate": "3529",
+   "top_entries": 18,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medical-device-reg-expert",
+   "visibility": "public",
+   "commit": "35b8602eb34f569d70dd3592c48a0ef3dd3da387",
+   "commit_date": "2026-11-22T13:02:44Z",
+   "rate": "3524",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-demo-organization",
+   "visibility": "public",
+   "commit": "10ee1433c3984007d57a26837af92c99d287f751",
+   "commit_date": "2026-11-22T13:02:05Z",
+   "rate": "3522",
+   "top_entries": 14,
+   "verification_entries": [
+    "deep:unittest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 1,
+    "kinds": [
+     "unittest"
+    ],
+    "samples": [
+     "evidence/tools/matrix_test.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/identity-verify",
+   "visibility": "public",
+   "commit": "827904f38acc9c58b34af29c3bea01edd997fd82",
+   "commit_date": "2026-11-22T13:01:54Z",
+   "rate": "3523",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fingerprint-delivery",
+   "visibility": "public",
+   "commit": "d52cd831917e48ce1afd2d0dc2c37445b98c275b",
+   "commit_date": "2026-11-22T13:01:39Z",
+   "rate": "3521",
+   "top_entries": 16,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/dsh-secret-leakage-scan",
+   "visibility": "public",
+   "commit": "9f3fe08465ff838eed3b479062edca0bab0a5e33",
+   "commit_date": "2026-11-22T13:01:26Z",
+   "rate": "3514",
+   "top_entries": 9,
+   "verification_entries": [
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/culpachain",
+   "visibility": "public",
+   "commit": "01da4a6bdb9c308ce24e21a44563be246cfbea4e",
+   "commit_date": "2026-11-22T13:01:13Z",
+   "rate": "3517",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/credential-vault-design",
+   "visibility": "public",
+   "commit": "6608d2afa123880d8bb045be91e95baf99f5582a",
+   "commit_date": "2026-11-22T13:01:06Z",
+   "rate": "3513",
+   "top_entries": 20,
+   "verification_entries": [
+    "deep:pytest",
+    "deep:unittest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 2,
+    "kinds": [
+     "pytest",
+     "unittest"
+    ],
+    "samples": [
+     "tools/security_test.py",
+     "tools/test_vault.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/context-token-budget",
+   "visibility": "public",
+   "commit": "ebebab9510654fc94021cf06cc05f05d9ecb9f30",
+   "commit_date": "2026-11-22T13:01:01Z",
+   "rate": "3512",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/a3-law-operational",
+   "visibility": "public",
+   "commit": "1c568e0f181050db5d7bf72a2a35e43905ffae24",
+   "commit_date": "2026-11-22T13:00:04Z",
+   "rate": "3509",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/assayance",
+   "visibility": "public",
+   "commit": "cf2b4b540ce573ffd53f1ef3bc1705e7dfe2aed2",
+   "commit_date": "2026-11-22T13:00:24Z",
+   "rate": "3508",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "tools/check-doctrine.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 1,
+   "selfcheck_samples": [
+    "tools/check-doctrine.py"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/assurability",
+   "visibility": "public",
+   "commit": "7afb0a80303c2e8d68bd82b5b376b5d6ed89a5f4",
+   "commit_date": "2026-11-22T13:00:28Z",
+   "rate": "3505",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/authz-code-design",
+   "visibility": "public",
+   "commit": "fa016bb333774e150a915126f7a831d61ab0b155",
+   "commit_date": "2026-11-22T13:00:30Z",
+   "rate": "3500",
+   "top_entries": 16,
+   "verification_entries": [
+    "deep:unittest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 2,
+    "kinds": [
+     "unittest"
+    ],
+    "samples": [
+     "tools/credential_broker_security_test.py",
+     "tools/credential_broker_test.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-soul-os",
+   "visibility": "public",
+   "commit": "1cb096477e5e218247beb0660b2f963f890061f5",
+   "commit_date": "2026-11-22T13:00:15Z",
+   "rate": "3503",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-memory-service",
+   "visibility": "public",
+   "commit": "d811c474690ef2d0f643b73966d12d36e3285af7",
+   "commit_date": "2026-11-22T13:23:59Z",
+   "rate": "3501",
+   "top_entries": 16,
+   "verification_entries": [
+    "deep:pytest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 6,
+    "kinds": [
+     "pytest"
+    ],
+    "samples": [
+     "service/test_event_time.py",
+     "service/test_limits.py",
+     "service/test_now_gate.py",
+     "service/test_period_affinity.py",
+     "service/test_person_scope.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/paper1-verifier-side-silent-failures",
+   "visibility": "public",
+   "commit": "651edafd399ec59fd17f4c926c55bd8bf5fb11d2",
+   "commit_date": "2026-11-22T14:04:05Z",
+   "rate": "3498",
+   "top_entries": 7,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/Nomos",
+   "visibility": "public",
+   "commit": "22f2c0e2f004c812ce40cc7a7f648657c30515a0",
+   "commit_date": "2026-11-22T14:03:57Z",
+   "rate": "3495",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/zhaoxinghua09-cell",
+   "visibility": "public",
+   "commit": "bc1ec3a3571e85e6a8018438c2d0117f29186e85",
+   "commit_date": "2026-11-22T13:04:43Z",
+   "rate": "3492",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-standards",
+   "visibility": "public",
+   "commit": "f32ac4bbefdfb34ee27ffc4d5dc24d5d8470602a",
+   "commit_date": "2026-11-22T14:10:04Z",
+   "rate": "3488",
+   "top_entries": 14,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/LGD",
+   "visibility": "public",
+   "commit": "63bc58a8dd34e436a90646c68d2befc9064b9ffd",
+   "commit_date": "2026-11-22T15:52:34Z",
+   "rate": "3487",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-medai-demo",
+   "visibility": "public",
+   "commit": "cc321807199619aa02bd30ae8bb858c579a05964",
+   "commit_date": "2026-11-22T15:52:40Z",
+   "rate": "3491",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-ai-gov-kb",
+   "visibility": "public",
+   "commit": "5cc0a6b70c2704ed137056fc55fa6373b3471986",
+   "commit_date": "2026-11-22T15:52:49Z",
+   "rate": "3486",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-standards-connector",
+   "visibility": "public",
+   "commit": "eba486a2ce1ecc0aeed5a661006f7764123e8206",
+   "commit_date": "2026-11-22T14:10:12Z",
+   "rate": "3485",
+   "top_entries": 20,
+   "verification_entries": [
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evidence-gated-medical-agent-demo",
+   "visibility": "public",
+   "commit": "4a0de69eaf4684167af821d98f1db592448dd7aa",
+   "commit_date": "2026-11-22T13:01:36Z",
+   "rate": "3482",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/conformance-surface-2026-11",
+   "visibility": "public",
+   "commit": "2f4cd965f774742a0ceab938b5aac098b2e20700",
+   "commit_date": "2026-11-22T14:03:34Z",
+   "rate": "3477",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/memory-interop-vectors",
+   "visibility": "public",
+   "commit": "7e8a56ff32535d4a6c4a72622c3097af4c0d12e2",
+   "commit_date": "2026-11-22T14:15:15Z",
+   "rate": "3478",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "retention/check_retention.py",
+     "retention_pack/check_pack.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 2,
+   "selfcheck_samples": [
+    "retention/check_retention.py",
+    "retention_pack/check_pack.py"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aps-conformance-suite",
+   "visibility": "public",
+   "commit": "4157ad4d79f9692c8b1b46ca49d48eda20b517cc",
+   "commit_date": "2026-11-05T11:10:47Z",
+   "rate": "3476",
+   "top_entries": 23,
+   "verification_entries": [
+    "tests/",
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ccs-independent-rerun",
+   "visibility": "public",
+   "commit": "3a39927019d06d8c5036ebd566a946616e6ee7f6",
+   "commit_date": "2026-11-22T14:20:57Z",
+   "rate": "3472",
+   "top_entries": 11,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/nti-spec",
+   "visibility": "public",
+   "commit": "090349c21e33f5ebd99f3c789997df652b250cf7",
+   "commit_date": "2026-11-05T01:29:23Z",
+   "rate": "3471",
+   "top_entries": 14,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "scripts/check_links.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 1,
+   "selfcheck_samples": [
+    "scripts/check_links.py"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-reg-connector",
+   "visibility": "public",
+   "commit": "ed790d4bdaf36d2b5821006c4b00ec871e11853f",
+   "commit_date": "2026-11-22T13:03:07Z",
+   "rate": "3464",
+   "top_entries": 33,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/awesome-trusted-agents",
+   "visibility": "public",
+   "commit": "8c46cde88aed98aa8c1d4c720ab7e2f5947eef99",
+   "commit_date": "2026-11-22T13:00:34Z",
+   "rate": "3466",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/nti-lgd-transition-contract",
+   "visibility": "public",
+   "commit": "be7c749371c20771822a2f7f9e44b01d7dbd3643",
+   "commit_date": "2026-11-22T13:03:30Z",
+   "rate": "3468",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/sf006-case7-fixture",
+   "visibility": "public",
+   "commit": "1c314477a2d9ef6acff1d8a628de9e7ac211c230",
+   "commit_date": "2026-11-22T14:15:23Z",
+   "rate": "3465",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/research-quality-gate",
+   "visibility": "public",
+   "commit": "5094aaeab5d886a18289266870ed457591bab480",
+   "commit_date": "2026-11-03T05:11:20Z",
+   "rate": "3462",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/rag-eval-harness",
+   "visibility": "public",
+   "commit": "184f514b30948772c3b425a6abf462da42352c31",
+   "commit_date": "2026-11-03T05:11:07Z",
+   "rate": "3461",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/publish-quality-gate",
+   "visibility": "public",
+   "commit": "ab022efe0ebd25df8ff4e673e9b03582b8780253",
+   "commit_date": "2026-11-03T05:10:51Z",
+   "rate": "3456",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "scripts/check_release.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 1,
+   "selfcheck_samples": [
+    "scripts/check_release.py"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/local-llm-eval-assist",
+   "visibility": "public",
+   "commit": "f68f27d60016e6e39c7c609863ee27ac697c2d5e",
+   "commit_date": "2026-11-03T05:10:41Z",
+   "rate": "3457",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/continuous-test-review-loop",
+   "visibility": "public",
+   "commit": "784829d9e067addf4485a22f9e615685190e739a",
+   "commit_date": "2026-11-03T05:10:03Z",
+   "rate": "3449",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ai-grader",
+   "visibility": "public",
+   "commit": "4d677126ecb3a34e79985d0bb06cfb9140bff564",
+   "commit_date": "2026-11-03T05:09:53Z",
+   "rate": "3451",
+   "top_entries": 20,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ai-governance-audit-chain",
+   "visibility": "public",
+   "commit": "d9f3a146bd2536a74ce8510a69f4d8d2ef7dc0e8",
+   "commit_date": "2026-11-03T05:09:39Z",
+   "rate": "3450",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-evidence-kit",
+   "visibility": "public",
+   "commit": "b1ce3365f88a0d0104b710d0bbc1a8d74d4660ee",
+   "commit_date": "2026-11-22T13:00:07Z",
+   "rate": "3446",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skillurgy",
+   "visibility": "public",
+   "commit": "d70b6e16e39a290c3ad277f604bef79f5c6f3092",
+   "commit_date": "2026-11-22T13:14:42Z",
+   "rate": "3448",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-skeleton-generator",
+   "visibility": "public",
+   "commit": "df032f0521d0ccd4869e09b3a27da152610dc30e",
+   "commit_date": "2026-11-22T13:14:34Z",
+   "rate": "3443",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-quality-gate",
+   "visibility": "public",
+   "commit": "df57539a71f8b150801cb4169821ca408a5e0634",
+   "commit_date": "2026-11-22T13:14:22Z",
+   "rate": "3441",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/silent-failure-scanner",
+   "visibility": "public",
+   "commit": "fa2e57177b2977de67339c01620d3f5d95567ee5",
+   "commit_date": "2026-11-22T14:04:20Z",
+   "rate": "3440",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/prompt-injection-guard",
+   "visibility": "public",
+   "commit": "7f1da7b67f991c9beb81963eec5f420297e5a550",
+   "commit_date": "2026-11-22T13:03:40Z",
+   "rate": "3438",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/MinisSkills",
+   "visibility": "public",
+   "commit": "8c33682cedb596438fc0bae3580149e3d878b7b8",
+   "commit_date": "2026-11-21T08:07:48Z",
+   "rate": "3436",
+   "top_entries": 58,
+   "verification_entries": [
+    "deep:pytest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 1,
+    "kinds": [
+     "pytest"
+    ],
+    "samples": [
+     "ytmusic-hub/scripts/test_auth.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/llms-generator",
+   "visibility": "public",
+   "commit": "2ea2cf5f0f6374a099ac6d3f482b169abdbbe7f2",
+   "commit_date": "2026-11-22T13:02:38Z",
+   "rate": "3432",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/badge-studio",
+   "visibility": "public",
+   "commit": "2150ac1bc4ede6120a0b1b9531e19453e279aade",
+   "commit_date": "2026-11-22T13:00:40Z",
+   "rate": "3425",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medical-device-reg-translator",
+   "visibility": "public",
+   "commit": "30026e85a2e5828c9bbb043d17d83a0fd6b05e1b",
+   "commit_date": "2026-11-22T13:02:47Z",
+   "rate": "3431",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/zhaoxinghua09-cell.github.io",
+   "visibility": "public",
+   "commit": "82691201688e682d02b37ecd5b41c1acc4c8544d",
+   "commit_date": "2026-11-22T14:15:27Z",
+   "rate": "3429",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/theme50-contribution-matrix",
+   "visibility": "public",
+   "commit": "2851e8d4d4ff7d305c50001b4267774d740b0cae",
+   "commit_date": "2026-11-22T14:04:39Z",
+   "rate": "3427",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/nomos-ai",
+   "visibility": "public",
+   "commit": "38148a05200e3d9cee451142dc385367948c42d0",
+   "commit_date": "2026-11-22T14:04:02Z",
+   "rate": "3422",
+   "top_entries": 25,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/awesome-claude-skills",
+   "visibility": "public",
+   "commit": "9a6fd52eaeb9dd7dec0cc3c05f75e8fc7f5cb356",
+   "commit_date": "2026-10-27T17:55:13Z",
+   "rate": "3424",
+   "top_entries": 34,
+   "verification_entries": [
+    "deep:unittest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 1,
+    "kinds": [
+     "unittest"
+    ],
+    "samples": [
+     "document-skills/pdf/scripts/check_bounding_boxes_test.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/.github",
+   "visibility": "public",
+   "commit": "1561312b02035838555af0d91472d3211174012f",
+   "commit_date": "2026-11-22T14:15:09Z",
+   "rate": "3416",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/oversight-record-vectors",
+   "visibility": "public",
+   "commit": "b0d8b15144aea7bc6e216ff27d7f9a3a608ae688",
+   "commit_date": "2026-11-22T14:15:18Z",
+   "rate": "3419",
+   "top_entries": 15,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ai-consciousness",
+   "visibility": "public",
+   "commit": "d83fbb21c7432dc27a97323b8d79e9e13cb663f1",
+   "commit_date": "2026-10-18T11:37:30Z",
+   "rate": "3417",
+   "top_entries": 12,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/video-watermark-anti-theft",
+   "visibility": "public",
+   "commit": "3384ca5b05f8ce78896e07d032f30eed84b10ed9",
+   "commit_date": "2026-09-27T01:25:06Z",
+   "rate": "3413",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/sec2-provenance",
+   "visibility": "public",
+   "commit": "bd67a27130482a44651a9633c9e8236c1a9598c0",
+   "commit_date": "2026-09-27T01:24:47Z",
+   "rate": "3409",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/didaskalos",
+   "visibility": "public",
+   "commit": "46ba3d84744dddbadab2570b59db6db4a7bc337c",
+   "commit_date": "2026-10-18T11:32:39Z",
+   "rate": "3410",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/iatros-medai",
+   "visibility": "public",
+   "commit": "21c3016ab18807639a3327de66f7eb907100338e",
+   "commit_date": "2026-09-27T01:23:56Z",
+   "rate": "3408",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/krites-eval",
+   "visibility": "public",
+   "commit": "786660226da4f99ac11915b5628956144e7afb8d",
+   "commit_date": "2026-09-27T01:24:00Z",
+   "rate": "3405",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/logos-ambassador",
+   "visibility": "public",
+   "commit": "0b2e4fc1a98680fc4de8cc61a4059184d8120125",
+   "commit_date": "2026-09-27T01:24:12Z",
+   "rate": "3406",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/awesome-mcp-servers",
+   "visibility": "public",
+   "commit": "b2487e31a3ac9745d29fb6153439393f7eaa6c63",
+   "commit_date": "2026-09-27T01:23:32Z",
+   "rate": "3400",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/claude-skills-directory",
+   "visibility": "public",
+   "commit": "b8bb66dea9bcaf868e856053245f5922430249a5",
+   "commit_date": "2026-09-27T01:23:36Z",
+   "rate": "3399",
+   "top_entries": 2,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aws-agents-for-humans",
+   "visibility": "public",
+   "commit": "c8c109a671f76da1adf65a35911e27e894a292b1",
+   "commit_date": "2026-09-27T01:23:34Z",
+   "rate": "3398",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ssot-content-management",
+   "visibility": "public",
+   "commit": "10fc63f0dc7aa844d32fd96280c9202ac53e16c4",
+   "commit_date": "2026-09-27T01:24:49Z",
+   "rate": "3392",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/content-publish-ops-swarm-skill",
+   "visibility": "public",
+   "commit": "2d9d02d532a05ba41e5e70ec928853b8c0ba8e1f",
+   "commit_date": "2026-09-27T01:23:41Z",
+   "rate": "3397",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/content-publish-lifecycle",
+   "visibility": "public",
+   "commit": "f3f3f3939a9bd41d37719bf3995072f3aed203dd",
+   "commit_date": "2026-10-18T11:34:23Z",
+   "rate": "3388",
+   "top_entries": 16,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/tencent-cos-static-site",
+   "visibility": "public",
+   "commit": "559a074abc69668b925d63a07e8923ed5242295f",
+   "commit_date": "2026-09-27T01:24:56Z",
+   "rate": "3391",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/summarize-file",
+   "visibility": "public",
+   "commit": "50e7f2de48e33cd61b6ed33e8f249988fe83a472",
+   "commit_date": "2026-09-27T01:24:52Z",
+   "rate": "3390",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/reminder",
+   "visibility": "public",
+   "commit": "526b1afe6efca150514151cd6dcc9bf8d730fced",
+   "commit_date": "2026-09-27T01:24:42Z",
+   "rate": "3389",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/project-planning-methodology",
+   "visibility": "public",
+   "commit": "5e86fcb89514dfed9a6636e35b36f1c0f5e96d9d",
+   "commit_date": "2026-09-27T01:24:38Z",
+   "rate": "3381",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/personal-assistant",
+   "visibility": "public",
+   "commit": "e5cfaec79a7d8a99f1453a714af97ed702f7665f",
+   "commit_date": "2026-09-27T01:24:35Z",
+   "rate": "3380",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/offline-knowledge-alignment",
+   "visibility": "public",
+   "commit": "b45f773e29e46781ae6f547404a3874b9c54969e",
+   "commit_date": "2026-09-27T01:24:33Z",
+   "rate": "3379",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-skill-panorama",
+   "visibility": "public",
+   "commit": "1c72a34bd24e4e17f4af53cb2e7fd47e8331a94a",
+   "commit_date": "2026-09-27T01:24:25Z",
+   "rate": "3377",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-l1-batch-study",
+   "visibility": "public",
+   "commit": "cbb54057aee2c99b8ab12f07f07317f25c22d565",
+   "commit_date": "2026-09-27T01:24:19Z",
+   "rate": "3378",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/md-to-epub",
+   "visibility": "public",
+   "commit": "31522081b47b2122cadc6807f18215954a97243c",
+   "commit_date": "2026-09-27T01:24:13Z",
+   "rate": "3374",
+   "top_entries": 7,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/local-agent-open",
+   "visibility": "public",
+   "commit": "bbae5482c1f7a54aebf38799f7b7a74491d2fa70",
+   "commit_date": "2026-09-27T01:24:09Z",
+   "rate": "3370",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/llm-gateway-hub",
+   "visibility": "public",
+   "commit": "b7076401c415962457ed7245420790f50be7f61d",
+   "commit_date": "2026-09-27T01:24:08Z",
+   "rate": "3369",
+   "top_entries": 11,
+   "verification_entries": [
+    "deep:unittest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 1,
+    "kinds": [
+     "unittest"
+    ],
+    "samples": [
+     "scripts/security_test.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lexiang-website-sync",
+   "visibility": "public",
+   "commit": "7df5f4f298cdd1e09da1936b1e78b5182a712a8d",
+   "commit_date": "2026-09-27T01:24:02Z",
+   "rate": "3368",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/doc-legacy-extract",
+   "visibility": "public",
+   "commit": "e3dca7b1568a104078cd68cc6fba774766b1dd6c",
+   "commit_date": "2026-10-18T15:32:28Z",
+   "rate": "3360",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/data-scientist",
+   "visibility": "public",
+   "commit": "6dc7777d9068dff03468d18bbc3cc751902966f3",
+   "commit_date": "2026-10-18T15:32:51Z",
+   "rate": "3367",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/cross-session-passphrase",
+   "visibility": "public",
+   "commit": "99c1ff866d1aebefbf58a7d403e1f71baff3709c",
+   "commit_date": "2026-10-18T15:32:58Z",
+   "rate": "3363",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/cross-machine-offline-taskbox",
+   "visibility": "public",
+   "commit": "b02b778fc374f7af3c0be43306ecd332114c01a3",
+   "commit_date": "2026-09-27T01:23:44Z",
+   "rate": "3362",
+   "top_entries": 7,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/coding-agent",
+   "visibility": "public",
+   "commit": "345a7d17835a0eee623a1f1ffa5d921955095c7b",
+   "commit_date": "2026-10-18T15:33:04Z",
+   "rate": "3359",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/code-mentor",
+   "visibility": "public",
+   "commit": "7f56627a2a770aac52f955867e947fd3d6477d10",
+   "commit_date": "2026-10-18T15:33:10Z",
+   "rate": "3357",
+   "top_entries": 11,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/brain-design-benchmark",
+   "visibility": "public",
+   "commit": "c58cdf4ba124f61073fc981adb1dc91d1931f50e",
+   "commit_date": "2026-10-18T11:22:01Z",
+   "rate": "3353",
+   "top_entries": 11,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/asset-controlled-export-pipeline",
+   "visibility": "public",
+   "commit": "545de08751dd3f0fb8df14c619a8ab4bca3e6b1d",
+   "commit_date": "2026-10-18T15:33:16Z",
+   "rate": "3350",
+   "top_entries": 11,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ardot-mobile-app-multi-screen",
+   "visibility": "public",
+   "commit": "181c399db20629174c5e480ef7855b083ddd2b53",
+   "commit_date": "2026-10-18T15:33:22Z",
+   "rate": "3349",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ai-brain-learning-memory-pro",
+   "visibility": "public",
+   "commit": "204826382d51baaf8de6befec03125d3198e8265",
+   "commit_date": "2026-10-18T11:31:23Z",
+   "rate": "3351",
+   "top_entries": 15,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ai-brain-learning-memory",
+   "visibility": "public",
+   "commit": "f1a0adf27912867a0a384041ff8e14e75d0cba93",
+   "commit_date": "2026-10-18T11:27:30Z",
+   "rate": "3348",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-learn-external-skill",
+   "visibility": "public",
+   "commit": "cb8c6963bbcbe18351f02ee13b2cef4e6854aca6",
+   "commit_date": "2026-09-27T01:23:13Z",
+   "rate": "3342",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/laopaidang-core",
+   "visibility": "public",
+   "commit": "57ba7d7285dff5a107b7e394f908388775098c41",
+   "commit_date": "2026-09-27T01:24:01Z",
+   "rate": "3339",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/research-methodology",
+   "visibility": "public",
+   "commit": "d0bc4bddcf858a5129780f08eb0b9dd41acc9aa5",
+   "commit_date": "2026-09-27T01:24:43Z",
+   "rate": "3340",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/premise-and-config-audit",
+   "visibility": "public",
+   "commit": "3e6b1e97d67068fb33c4b16af2275c47e9e52245",
+   "commit_date": "2026-09-27T01:24:36Z",
+   "rate": "3336",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/unified-task-ledger",
+   "visibility": "public",
+   "commit": "bdc0cb35df84f7b18b7d7c3b608e59d452617c55",
+   "commit_date": "2026-09-27T01:25:03Z",
+   "rate": "3338",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/todo-tracker",
+   "visibility": "public",
+   "commit": "a198c744f6565cb90e2ec53f2a97ff9704720338",
+   "commit_date": "2026-09-27T01:24:59Z",
+   "rate": "3334",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wechat-article-full-workflow",
+   "visibility": "public",
+   "commit": "adc4f3aa9a0f0d7d66edf86895e23fd45bf3506b",
+   "commit_date": "2026-09-27T01:25:07Z",
+   "rate": "3330",
+   "top_entries": 7,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wechat-qa-checklist",
+   "visibility": "public",
+   "commit": "0f471537d70d9a89656e6038bb2db97d6837a937",
+   "commit_date": "2026-09-27T01:25:08Z",
+   "rate": "3332",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/theoriturgy",
+   "visibility": "public",
+   "commit": "acd270ca68ceb048a12f89ad4d809b87b61bc892",
+   "commit_date": "2026-11-22T13:14:45Z",
+   "rate": "3326",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/standardurgy",
+   "visibility": "public",
+   "commit": "a71764db75de865aaaeae220a33cd50973eeed07",
+   "commit_date": "2026-11-22T14:04:23Z",
+   "rate": "3323",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/benchmarkurgy",
+   "visibility": "public",
+   "commit": "bb4c7a1733ee82ea25e111e031feb2ffacf80080",
+   "commit_date": "2026-11-22T13:00:44Z",
+   "rate": "3325",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/researchurgy",
+   "visibility": "public",
+   "commit": "a8feb66d8dc88c9a5b832302995ae55f637631d1",
+   "commit_date": "2026-11-22T13:03:56Z",
+   "rate": "3324",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/whois-agent",
+   "visibility": "public",
+   "commit": "7df602c7f154db6bbd9af6092be273fdb9edcb36",
+   "commit_date": "2026-11-22T13:04:29Z",
+   "rate": "3322",
+   "top_entries": 20,
+   "verification_entries": [
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/eureurgy",
+   "visibility": "public",
+   "commit": "e5680be5613f30d37b1de6f664a854e09475fdce",
+   "commit_date": "2026-11-22T13:01:31Z",
+   "rate": "3316",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/analogurgy",
+   "visibility": "public",
+   "commit": "414955f44d344800827ad7c0ab77d73aab7132a1",
+   "commit_date": "2026-11-22T13:00:18Z",
+   "rate": "3314",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/referurgy",
+   "visibility": "public",
+   "commit": "ee2902257aec60320c5551d44d4148add17e63c0",
+   "commit_date": "2026-11-22T13:03:52Z",
+   "rate": "3312",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synthesurgy",
+   "visibility": "public",
+   "commit": "c1bc471ace2dd2954a9a59f0829d595d2f0a7244",
+   "commit_date": "2026-11-22T13:04:19Z",
+   "rate": "3311",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/holurgy",
+   "visibility": "public",
+   "commit": "25759b9d9789de346329bf174dd1fdfe906789c6",
+   "commit_date": "2026-11-22T13:01:49Z",
+   "rate": "3310",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/brainstormurgy",
+   "visibility": "public",
+   "commit": "8821a3e6b7c751a4435ab0b8df5cdbece1f37b7f",
+   "commit_date": "2026-11-22T13:00:50Z",
+   "rate": "3313",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/ideurgy",
+   "visibility": "public",
+   "commit": "830a2277ac604941a802d5435cb399101398dc26",
+   "commit_date": "2026-11-22T13:01:57Z",
+   "rate": "3303",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/axiurgy",
+   "visibility": "public",
+   "commit": "003808a2ba83b9064794e0792919b540436160b7",
+   "commit_date": "2026-11-22T13:00:37Z",
+   "rate": "3305",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/genoship",
+   "visibility": "public",
+   "commit": "0f268afe072609030e4764df98da2c61f089b7ff",
+   "commit_date": "2026-11-22T13:01:42Z",
+   "rate": "3302",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/self-hosting-closure",
+   "visibility": "public",
+   "commit": "4ee3b940ea65e70a6d88c019fe00c3f65e93ce79",
+   "commit_date": "2026-11-22T13:04:03Z",
+   "rate": "3298",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/placeholdurgy",
+   "visibility": "public",
+   "commit": "7ffd2a76108883da6ec41d9eefa1302d7a2636b0",
+   "commit_date": "2026-11-22T13:03:36Z",
+   "rate": "3292",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fhir",
+   "visibility": "public",
+   "commit": "ef782bfa3e71ff717c528f2b0f4da1e09391c366",
+   "commit_date": "2026-10-07T14:04:16Z",
+   "rate": "3293",
+   "top_entries": 43,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/steven",
+   "visibility": "public",
+   "commit": "36e9106c46e936d5202af78d1b0530eefaab459c",
+   "commit_date": "2026-09-27T01:24:50Z",
+   "rate": "3296",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/themes",
+   "visibility": "public",
+   "commit": "2b77cb8cf68700eb8c66bdc2b50789c980cb39a5",
+   "commit_date": "2026-08-10T12:08:07Z",
+   "rate": "3290",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "zhaoxinghua09-cell/traceability-audit-team",
+   "visibility": "public",
+   "commit": "9302e4ba10b61614df0756ab2a6ee78944d3aca7",
+   "commit_date": "2026-08-31T19:02:41Z",
+   "rate": "3294",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-skills",
+   "visibility": "public",
+   "commit": "e0f7b79843afdfd62b5ee5e699d8ebebbc4b6c7a",
+   "commit_date": "2026-11-22T13:20:03Z",
+   "rate": "3291",
+   "top_entries": 11,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medical-ai-toolkit",
+   "visibility": "public",
+   "commit": "702a070739e79e7ff6eb22d8ac58d280bdd17173",
+   "commit_date": "2026-11-22T13:07:01Z",
+   "rate": "3283",
+   "top_entries": 36,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "scripts/check_portal.py",
+     "scripts/check_portal_sync.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 2,
+   "selfcheck_samples": [
+    "scripts/check_portal.py",
+    "scripts/check_portal_sync.py"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/samd-ra-toolkit",
+   "visibility": "public",
+   "commit": "2dd43d256e0362044743b36b0d3dc038b058c418",
+   "commit_date": "2026-11-22T13:13:09Z",
+   "rate": "3280",
+   "top_entries": 15,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/aitb",
+   "visibility": "public",
+   "commit": "f7647f88607f2cc83ba1c039bc4a4572d83478d8",
+   "commit_date": "2026-11-23T11:04:18Z",
+   "rate": "3281",
+   "top_entries": 19,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "stevenzhao07/verdict-record-checker",
+   "visibility": "public",
+   "commit": "efb4b8bf7d47ef41d01ba35850bb26400b10548c",
+   "commit_date": "2026-11-23T08:04:54Z",
+   "rate": "3282",
+   "top_entries": 15,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/delivery-guard",
+   "visibility": "public",
+   "commit": "1f5cf2167c79847eddfa38846679173ee1bfb84a",
+   "commit_date": "2026-11-22T13:06:48Z",
+   "rate": "3279",
+   "top_entries": 15,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-reg-hub",
+   "visibility": "public",
+   "commit": "660f0c9c5b79c075d5c1081653a61b1c1896bcb2",
+   "commit_date": "2026-11-22T13:07:08Z",
+   "rate": "3278",
+   "top_entries": 21,
+   "verification_entries": [
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "stevenzhao07/lgd-skills",
+   "visibility": "public",
+   "commit": "b2464ce13dbeae81a8fc5a049488367a2307241b",
+   "commit_date": "2026-11-21T08:43:21Z",
+   "rate": "3272",
+   "top_entries": 7,
+   "verification_entries": [
+    "deep:runner"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 4,
+    "kinds": [
+     "runner"
+    ],
+    "samples": [
+     "skills/debug-pro/tests/run_golden.py",
+     "skills/lgd-skill-review/tests/run_golden.py",
+     "skills/summarize-pro/tests/run_golden.py",
+     "skills/wechat-viral-topic/tests/run_golden.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "stevenzhao07/silent-failure-catalog",
+   "visibility": "public",
+   "commit": "86d038a1cd3c55e22a0d748d7ddbb442a8485c57",
+   "commit_date": "2026-11-09T19:45:16Z",
+   "rate": "3270",
+   "top_entries": 27,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "tools/check-catalog.py",
+     "tools/check-gate-parity.py",
+     "tools/check-line-endings.py",
+     "tools/verify_release_consistency.py",
+     "tools/verify_release_face.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 5,
+   "selfcheck_samples": [
+    "tools/check-catalog.py",
+    "tools/check-gate-parity.py",
+    "tools/check-line-endings.py"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/uibc-core",
+   "visibility": "public",
+   "commit": "507ee32427cff3bbbd48e3803fac7c711a6c55be",
+   "commit_date": "2026-11-21T13:46:35Z",
+   "rate": "3269",
+   "top_entries": 44,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "stevenzhao07/awesome-healthcare-agents",
+   "visibility": "public",
+   "commit": "232bb19e99b187c8c5b31b97c6ca9c0c9eb71436",
+   "commit_date": "2026-11-10T00:24:52Z",
+   "rate": "3268",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     ".github/link-check/check_links.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 1,
+   "selfcheck_samples": [
+    ".github/link-check/check_links.py"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/awesome-dsh-plugin",
+   "visibility": "public",
+   "commit": "a313b3671b1d25b47b5f26a6da35db600fcfad45",
+   "commit_date": "2026-11-10T00:12:58Z",
+   "rate": "3266",
+   "top_entries": 14,
+   "verification_entries": [
+    "deep:node"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 8,
+    "kinds": [
+     "node"
+    ],
+    "samples": [
+     "scripts/host-market/audit.test.mjs",
+     "scripts/host-market/candidates.test.mjs",
+     "scripts/host-market/discovery.test.mjs",
+     "scripts/host-market/expand-mappings.test.mjs",
+     "scripts/host-market/git.test.mjs"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "stevenzhao07/doc-translate-keep-layout",
+   "visibility": "public",
+   "commit": "78cc0563db95fd59aaf3abce07bd7286920fad77",
+   "commit_date": "2026-11-22T13:12:47Z",
+   "rate": "3262",
+   "top_entries": 16,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "stevenzhao07/medxpert-fhir",
+   "visibility": "public",
+   "commit": "63ebf4718e7867833009992d547c72a4aabb6a8c",
+   "commit_date": "2026-11-22T13:12:57Z",
+   "rate": "3263",
+   "top_entries": 13,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/multilingual-ifu",
+   "visibility": "public",
+   "commit": "1cd02e2058882b1033aff3ba81cf5c169dfe87a1",
+   "commit_date": "2026-11-22T13:13:01Z",
+   "rate": "3258",
+   "top_entries": 30,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/device-regulatory-map",
+   "visibility": "public",
+   "commit": "7631ae2df6e4560196eed7c99805337f90075eb8",
+   "commit_date": "2026-11-22T13:12:43Z",
+   "rate": "3255",
+   "top_entries": 15,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/ai-model-passport",
+   "visibility": "public",
+   "commit": "35b5feb75cb6c3e0355dee3a1427dca471b72ed4",
+   "commit_date": "2026-11-22T13:12:39Z",
+   "rate": "3259",
+   "top_entries": 16,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/ai-governance-checklist",
+   "visibility": "public",
+   "commit": "d5ab74aa2a8bce0566a938334784f8528648a423",
+   "commit_date": "2026-11-22T13:12:35Z",
+   "rate": "3252",
+   "top_entries": 16,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-reg-path-skill",
+   "visibility": "public",
+   "commit": "d66b66b77c54be483fe022470d7ec176cce9da80",
+   "commit_date": "2026-11-22T13:19:24Z",
+   "rate": "3253",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/stevenzhao07",
+   "visibility": "public",
+   "commit": "9a00796ce857bd286def91832ee83dca601d142a",
+   "commit_date": "2026-11-22T14:30:36Z",
+   "rate": "3250",
+   "top_entries": 7,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-pre-submission-check-skill",
+   "visibility": "public",
+   "commit": "499fcd103f841f95cd87e9f7e9967d65ee84d6d7",
+   "commit_date": "2026-11-22T13:16:31Z",
+   "rate": "3248",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-master-skill",
+   "visibility": "public",
+   "commit": "734e56529e536468d4047a72b2f1f55ed9923d0d",
+   "commit_date": "2026-11-22T13:16:21Z",
+   "rate": "3246",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-labeling-ifu-skill",
+   "visibility": "public",
+   "commit": "08ddc2bfe5046775f7e3afb85b421343c3b6f6ef",
+   "commit_date": "2026-11-22T13:16:17Z",
+   "rate": "3245",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-deficiency-reply-skill",
+   "visibility": "public",
+   "commit": "13a3b6fcc01b1f4a7758689d0a4bd976b6371c93",
+   "commit_date": "2026-11-22T13:16:02Z",
+   "rate": "3242",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-clinical-eval-skill",
+   "visibility": "public",
+   "commit": "54c99489d8a95b294842010b14c724e823ee7c8b",
+   "commit_date": "2026-11-22T13:15:58Z",
+   "rate": "3241",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-ai-samd-reg-skill",
+   "visibility": "public",
+   "commit": "bfc49e0e6a8aca60b5a68acbb97588464b0c3afd",
+   "commit_date": "2026-11-22T13:15:54Z",
+   "rate": "3236",
+   "top_entries": 6,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-test-lab-selection-skill",
+   "visibility": "public",
+   "commit": "d129d74df9b78a83621a9fe7c6b55d213e9864c4",
+   "commit_date": "2026-11-22T13:16:48Z",
+   "rate": "3235",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-risk-management-skill",
+   "visibility": "public",
+   "commit": "c70bbf8a0f2310628b8be4ff0a7a24bf413db1c7",
+   "commit_date": "2026-11-22T13:16:38Z",
+   "rate": "3234",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-postmarket-surveillance-skill",
+   "visibility": "public",
+   "commit": "11d4c950602543bc3dbe5dfc33385e0e57896038",
+   "commit_date": "2026-11-22T13:16:28Z",
+   "rate": "3233",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-oem-cmo-skill",
+   "visibility": "public",
+   "commit": "138743a27ebd0f7c62ead318888a588f6320298d",
+   "commit_date": "2026-11-22T13:16:24Z",
+   "rate": "3227",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/medxpert-hospital-bid-skill",
+   "visibility": "public",
+   "commit": "ac38f47db883a1e04f455ebcef9fcfe1f4e0e57a",
+   "commit_date": "2026-11-22T13:16:14Z",
+   "rate": "3226",
+   "top_entries": 5,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/.github",
+   "visibility": "public",
+   "commit": "1d69b0c368b28ceb95a533db18c801ae0237f1b3",
+   "commit_date": "2026-11-22T14:15:33Z",
+   "rate": "3225",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/sterilization-validation",
+   "visibility": "public",
+   "commit": "946cbb8c39dfb2564866547d253d66d62b70ac82",
+   "commit_date": "2026-11-22T13:13:16Z",
+   "rate": "3221",
+   "top_entries": 15,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/udi-assignment",
+   "visibility": "public",
+   "commit": "44ff660d1aefb50a50573bb2afbfaa388f91bb66",
+   "commit_date": "2026-11-22T13:13:22Z",
+   "rate": "3220",
+   "top_entries": 15,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/iso14971-risk-file",
+   "visibility": "public",
+   "commit": "c81272f850f316cee7121defbc5dda6c0622772c",
+   "commit_date": "2026-11-22T13:12:52Z",
+   "rate": "3222",
+   "top_entries": 16,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "stevenzhao07/regdoc-commons",
+   "visibility": "public",
+   "commit": "a8a79bd4e45fb31c9667bed6358347263890e515",
+   "commit_date": "2026-11-22T13:13:05Z",
+   "rate": "3217",
+   "top_entries": 15,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/lgd-gate",
+   "visibility": "public",
+   "commit": "2172261eea8dfb3cd4eb617fe6e19783cce60c0e",
+   "commit_date": "2026-11-22T13:06:36Z",
+   "rate": "3219",
+   "top_entries": 29,
+   "verification_entries": [
+    "deep:pytest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 4,
+    "kinds": [
+     "pytest"
+    ],
+    "samples": [
+     "audit/20261121/p01_review_gate/test_review_status.py",
+     "audit/20261121/p02_authorization/test_authorization.py",
+     "audit/20261121/p31_intent/test_intent.py",
+     "audit/20261121/reproduce/test_intent_conformance_20261121.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "LGD-Eval/LGD-Eval",
+   "visibility": "public",
+   "commit": "3ac73d0168779e2a0bfab56ea7d22ea2a70f1f05",
+   "commit_date": "2026-11-22T13:06:33Z",
+   "rate": "3208",
+   "top_entries": 59,
+   "verification_entries": [
+    "tests/",
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/skill-audit",
+   "visibility": "public",
+   "commit": "31a6fde24db3b8a7260f745d93000166893a905d",
+   "commit_date": "2026-11-22T13:15:46Z",
+   "rate": "3211",
+   "top_entries": 45,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/evaluation-protocol",
+   "visibility": "public",
+   "commit": "cf15abd5b17fe6a1cdeea9404402a006be3ecde8",
+   "commit_date": "2026-11-22T14:04:56Z",
+   "rate": "3212",
+   "top_entries": 51,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "reviews/verified-transition-loop/verify_vtl.mjs"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 1,
+   "selfcheck_samples": [
+    "reviews/verified-transition-loop/verify_vtl.mjs"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/competitor-comparison",
+   "visibility": "public",
+   "commit": "a252f4445843160019016cc52f8c913c38594125",
+   "commit_date": "2026-11-22T13:06:19Z",
+   "rate": "3210",
+   "top_entries": 9,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/skill-scout",
+   "visibility": "public",
+   "commit": "aa26f4195d8f11101400105bd22d4ab0e34d4a39",
+   "commit_date": "2026-11-22T13:15:51Z",
+   "rate": "3206",
+   "top_entries": 14,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/attestation",
+   "visibility": "public",
+   "commit": "5cedb0fa5f99d40949d5212d58727d8305c94263",
+   "commit_date": "2026-11-21T13:46:00Z",
+   "rate": "3203",
+   "top_entries": 24,
+   "verification_entries": [
+    "package.json",
+    "Makefile"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/medxpert-fhir",
+   "visibility": "public",
+   "commit": "d657dfdc10f82da3f46425cf56c617660265bfb8",
+   "commit_date": "2026-10-29T01:48:29Z",
+   "rate": "3201",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/uibc-core",
+   "visibility": "public",
+   "commit": "5dac2a2e7882e11e0b18a95920440ca93a1441f6",
+   "commit_date": "2026-11-05T10:41:30Z",
+   "rate": "3198",
+   "top_entries": 47,
+   "verification_entries": [
+    "tests/",
+    "pyproject.toml"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/silent-failure-catalog",
+   "visibility": "public",
+   "commit": "61edf758b0f4579677f2d987062c5d596eefcb56",
+   "commit_date": "2026-10-26T04:52:58Z",
+   "rate": "3196",
+   "top_entries": 25,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     "tools/check-catalog.py",
+     "tools/check-gate-parity.py",
+     "tools/check-line-endings.py",
+     "tools/verify_release_consistency.py",
+     "tools/verify_release_face.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 5,
+   "selfcheck_samples": [
+    "tools/check-catalog.py",
+    "tools/check-gate-parity.py",
+    "tools/check-line-endings.py"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/evaluation-reports",
+   "visibility": "public",
+   "commit": "39e0c789409bed7a81b0d40c8bb6b6e62f3d972b",
+   "commit_date": "2026-11-22T13:06:28Z",
+   "rate": "3197",
+   "top_entries": 57,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/evaluation-evidence",
+   "visibility": "public",
+   "commit": "1f8c529f32c34bb60e4bc8f1fb85aafaa1ca5919",
+   "commit_date": "2026-11-22T13:06:25Z",
+   "rate": "3195",
+   "top_entries": 54,
+   "verification_entries": [
+    "tests/"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/robot-identity-registry-eval",
+   "visibility": "public",
+   "commit": "b4cee68a6ba0cdd7cdd0cc5352080c43dbe4f2b0",
+   "commit_date": "2026-10-18T23:11:58Z",
+   "rate": "3191",
+   "top_entries": 1,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/robot-blackbox-replay-eval",
+   "visibility": "public",
+   "commit": "34d418cbf90096ae38df65ef754b55f0adb0dedc",
+   "commit_date": "2026-10-18T23:11:59Z",
+   "rate": "3189",
+   "top_entries": 1,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/robot-ota-regate-eval",
+   "visibility": "public",
+   "commit": "cce350584be1f8620a16f2fa361e2762b12be979",
+   "commit_date": "2026-10-18T23:12:00Z",
+   "rate": "3185",
+   "top_entries": 1,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/wg2-ibea-charter",
+   "visibility": "public",
+   "commit": "063a73f0f4ca44e759b236e99837893c617b963e",
+   "commit_date": "2026-11-09T23:49:07Z",
+   "rate": "3184",
+   "top_entries": 10,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     ".github/link-check/check_links.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 1,
+   "selfcheck_samples": [
+    ".github/link-check/check_links.py"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-skills",
+   "visibility": "public",
+   "commit": "a0297987c5726726c88c195c2513dc7b73ce9e24",
+   "commit_date": "2026-11-09T23:49:00Z",
+   "rate": "3186",
+   "top_entries": 34,
+   "verification_entries": [
+    "deep:unittest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 1,
+    "kinds": [
+     "unittest"
+    ],
+    "samples": [
+     "document-skills/pdf/scripts/check_bounding_boxes_test.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-code",
+   "visibility": "public",
+   "commit": "ea11db0a112f172b5112f03d37bdf45534c43d7e",
+   "commit_date": "2026-11-09T23:48:55Z",
+   "rate": "3182",
+   "top_entries": 22,
+   "verification_entries": [
+    "tests/",
+    "Makefile"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/awesome-agent-skills-1",
+   "visibility": "public",
+   "commit": "cfa168c1f49d72e0e733b273a6ff025d0b22d035",
+   "commit_date": "2026-11-09T23:48:49Z",
+   "rate": "3179",
+   "top_entries": 16,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [
+     ".github/link-check/check_links.py",
+     ".github/scripts/check_submission.py"
+    ],
+    "truncated": false
+   },
+   "selfcheck_only": true,
+   "selfcheck_files": 2,
+   "selfcheck_samples": [
+    ".github/link-check/check_links.py",
+    ".github/scripts/check_submission.py"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/dsh-plugin-lgd-trust",
+   "visibility": "public",
+   "commit": "d1602ef51f14c03b34bcec4377b351f2e391d5f3",
+   "commit_date": "2026-11-22T13:06:22Z",
+   "rate": "3176",
+   "top_entries": 15,
+   "verification_entries": [
+    "tests/",
+    "package.json"
+   ],
+   "measurable": true,
+   "verdict": "pass_has_entry"
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-skills-1",
+   "visibility": "public",
+   "commit": "c7e089ab4080debede69e28dbcc1e4b037f3a5c1",
+   "commit_date": "2026-10-28T03:40:50Z",
+   "rate": "3178",
+   "top_entries": 3,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/awesome-llm-skills",
+   "visibility": "public",
+   "commit": "f8f1225d755b1e39968476c03fa92772d1a4d9fa",
+   "commit_date": "2026-10-28T03:40:15Z",
+   "rate": "3173",
+   "top_entries": 30,
+   "verification_entries": [
+    "deep:unittest"
+   ],
+   "measurable": false,
+   "verdict": "pass_has_entry",
+   "deep": {
+    "test_files": 1,
+    "kinds": [
+     "unittest"
+    ],
+    "samples": [
+     "document-skills/pdf/scripts/check_bounding_boxes_test.py"
+    ],
+    "truncated": false
+   },
+   "evidence_layer": "deep"
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-code-toolkit",
+   "visibility": "public",
+   "commit": "09e8a8ed688087a024dfcea207dfd60c48a6c0cc",
+   "commit_date": "2026-10-28T03:39:56Z",
+   "rate": "3171",
+   "top_entries": 17,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/awesome-agent-skills",
+   "visibility": "public",
+   "commit": "c08ca27f5523b477659aa01f9570ee09784fee90",
+   "commit_date": "2026-10-28T03:29:29Z",
+   "rate": "3167",
+   "top_entries": 4,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  },
+  {
+   "repo": "LGD-Eval/.github",
+   "visibility": "public",
+   "commit": "ae941468c3859aa936355bc98738269e065b62a9",
+   "commit_date": "2026-11-22T14:15:30Z",
+   "rate": "3169",
+   "top_entries": 8,
+   "verification_entries": [],
+   "measurable": false,
+   "verdict": "pass_no_entry",
+   "deep": {
+    "test_files": 0,
+    "kinds": [],
+    "samples": [],
+    "truncated": false
+   }
+  }
+ ]
+}

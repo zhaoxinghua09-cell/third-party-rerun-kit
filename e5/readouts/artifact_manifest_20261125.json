@@ -1,0 +1,5931 @@
+{
+ "generated_at": "2026-11-26T00:58:57",
+ "generated_on": "赵兴华的台式机",
+ "owners": [
+  "zhaoxinghua09-cell",
+  "stevenzhao07",
+  "LGD-Eval"
+ ],
+ "per_owner": {
+  "zhaoxinghua09-cell": 193,
+  "stevenzhao07": 36,
+  "LGD-Eval": 25
+ },
+ "total": 254,
+ "probed": 254,
+ "pending": 0,
+ "notes": [
+  "枚举口径：三账号全部仓库（含归档），翻页到底，不设上限。",
+  "旧版 162 件为单页漏收，本版以 per_owner 为准。",
+  "E5 probe 2026-11-25: 254/254 probed structurally; runner executed on 15 repos (any repo with passed>0 and failed=0 counts as E5 satisfied for that repo).",
+  "E5 probe 2026-11-25: 254/254 probed structurally; runner executed on 15 repos (any repo with passed>0 and failed=0 counts as E5 satisfied for that repo).",
+  "E5 probe 2026-11-25: 254/254 probed structurally; runner executed on 48 repos (any repo with passed>0 and failed=0 counts as E5 satisfied for that repo).",
+  "E5 probe 2026-11-25: 254/254 probed structurally; runner executed on 48 repos (any repo with passed>0 and failed=0 counts as E5 satisfied for that repo).",
+  "E5 probe 2026-11-25: 254/254 probed structurally; runner executed on 61 repos (any repo with passed>0 and failed=0 counts as E5 satisfied for that repo).",
+  "E5 probe 2026-11-25: 254/254 probed structurally; runner executed on 61 repos (any repo with passed>0 and failed=0 counts as E5 satisfied for that repo)."
+ ],
+ "items": [
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "third-party-rerun-kit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T11:04:48Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "eafa5c61cd2f101593c1a3aaea8e0a1ef0e471a1",
+    "commit_date": "2026-11-25T16:59:10Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/third-party-rerun-kit"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "uibc-core",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T09:50:57Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "7ff56ab9581376651e24f6f9c2edea0b44278940",
+    "commit_date": "2026-11-25T16:58:18Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "partial",
+     "passed": 2090,
+     "failed": 2,
+     "errors": 0,
+     "seconds": 471.3
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/uibc-core",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/uibc-core"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "terminance",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T09:49:40Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "33d800a645ea4af3d0153a3ea4131e214ded53f6",
+    "commit_date": "2026-11-22T13:04:23Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/terminance"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "xcgs-manifesto",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T09:46:38Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "0366149befc2652b9278f6be07a0926189c7ed31",
+    "commit_date": "2026-11-22T13:04:33Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/xcgs-manifesto"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "independent-recomputations",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-24T05:50:51Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "6b14ed70a28709019d323438679b7b100b325022",
+    "commit_date": "2026-11-24T15:51:15Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/independent-recomputations"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-identity",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-24T01:24:19Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "7a3791b40fe634ce117018132da43e45be98decd",
+    "commit_date": "2026-11-24T00:32:16Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-identity"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "wimse-p5p6-fixtures",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-24T01:18:47Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "446e03e67ee2d07866d03f43ff1d508fd3159eec",
+    "commit_date": "2026-11-24T01:18:25Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/wimse-p5p6-fixtures"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "symbioship",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-22T15:51:28Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d7c7ada8241786a444ef83db6e6f69ae017dda75",
+    "commit_date": "2026-11-22T15:51:42Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/symbioship"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "d3-composition-cases",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-22T15:51:25Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "61b88aee5d25c59101c2a12028b469b5c588aa98",
+    "commit_date": "2026-11-22T15:51:39Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/d3-composition-cases"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "a28-behavioural-signals",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-22T12:04:56Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "e289b82e43f3d6611b5553c4a549a3fb69241aa5",
+    "commit_date": "2026-11-22T13:00:02Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/a28-behavioural-signals"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "a18-skill-supply-chain",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-22T12:04:51Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c2d9bb37aa9b6ed9f2f47ab667231c93a4b7b0be",
+    "commit_date": "2026-11-22T13:13:43Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/a18-skill-supply-chain"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "c45-skill-metrics",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-22T12:04:47Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "615dcb9156ee5d26b986f7562e91fb9c87d89f6e",
+    "commit_date": "2026-11-22T13:13:50Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/c45-skill-metrics"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "synomos-ai-skills",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-22T00:21:22Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "84ae3d40842c4e17ec20f6acc0df1ce1471d9619",
+    "commit_date": "2026-11-22T14:10:22Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 14,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 7.1
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/synomos-ai-skills",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/synomos-ai-skills"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-skills",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T20:33:08Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "d0398570768f617b3bac9e66ce3c4e9eb4114cb4",
+    "commit_date": "2026-11-25T03:00:52Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 14,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 7.4
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-skills",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/agent-skills"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skill-registry",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:24:05Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "a6fbb1dcd2c59b26e3586a4fb4d93b1dfd748a8d",
+    "commit_date": "2026-11-22T13:14:28Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skill-registry"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-skills",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:24:03Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "134f6465bd2ada4f2e7c4eaa33f8bc64c2d7f51b",
+    "commit_date": "2026-11-22T13:14:08Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 14,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 7.5
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-skills",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/lgd-skills"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skillgate",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:24:00Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "362c600dfdc386e327e70e1e70e28305139b4841",
+    "commit_date": "2026-11-24T01:18:27Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 60,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 14.9
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skillgate",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/skillgate"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "uibc-competition",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:23:57Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "94c2c6c85b8c5b2912cadac15884fd90c0edc95d",
+    "commit_date": "2026-11-22T14:30:40Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/uibc-competition"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-trust-identity-spec",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:23:55Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d5952f8ef481fd2156ef0fa3f4951a0651cb14b7",
+    "commit_date": "2026-11-22T14:03:30Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-trust-identity-spec"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "xlgd",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:23:52Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "dfff37fdbd1e3c03844328bf2cd321bd6c6da566",
+    "commit_date": "2026-11-22T13:04:39Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/xlgd"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-hub",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:23:50Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c6d333087f4ac191361d500b46a02a657d476c48",
+    "commit_date": "2026-11-25T14:52:55Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-hub"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-theory",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:23:44Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "f50e747ef2e53f3ab0fa6f2422fa787934785121",
+    "commit_date": "2026-11-25T05:40:35Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "partial",
+     "passed": 1,
+     "failed": 2,
+     "errors": 0,
+     "seconds": 1.3
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-theory",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/lgd-theory"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "silent-failure-catalog",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:23:42Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "1309e1a483227a1f6c61267abd4071f06d26caab",
+    "commit_date": "2026-11-22T14:11:02Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 11,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/silent-failure-catalog",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/silent-failure-catalog"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-governance-vocabulary",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T18:00:21Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "1ae602d530119c651a74ba1403036bbc940d9e41",
+    "commit_date": "2026-11-21T18:04:32Z",
+    "verification_entries": [
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "not_runnable",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 4.3
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-governance-vocabulary",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/agent-governance-vocabulary"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-guardrails",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:32:04Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "860be3425fa66e42e1edb146e7d1dcad0164e43a",
+    "commit_date": "2026-11-22T13:02:14Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-guardrails"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-xverify",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:32:00Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "7ca1b83a496d0276d92a42b7c0fcf5893b679456",
+    "commit_date": "2026-11-22T13:02:34Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 28,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 6.5
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-xverify",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/lgd-xverify"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skill-redteam-suite",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:31:57Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "e39ac448d8ec40f895584c6126df6f27856310b9",
+    "commit_date": "2026-11-22T13:14:25Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 14,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 7.2
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skill-redteam-suite",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/skill-redteam-suite"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skill-scorecard",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:31:53Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "954898516fd7acef71bbbb833eba3a00415b2897",
+    "commit_date": "2026-11-22T13:14:31Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skill-scorecard"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-skill-marketplace",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:31:47Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "992f7202f597ddeda87f4141fbfaf94ed4be47f1",
+    "commit_date": "2026-11-22T13:13:57Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-skill-marketplace"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-skeleton",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:31:44Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "f3aac86e9c562fa35569e7b4e123fc5e010db6f1",
+    "commit_date": "2026-11-22T13:02:29Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 14,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 10.5
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-skeleton",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/lgd-skeleton"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-control-standard",
+   "visibility": "public",
+   "default_branch": "integration",
+   "updated_at": "2026-11-21T11:31:35Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "a9af3defa9b87c235ef896c94e6467002cc305fc",
+    "commit_date": "2026-11-21T13:43:04Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "partial",
+     "passed": 794,
+     "failed": 20,
+     "errors": 0,
+     "seconds": 315.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-control-standard",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/agent-control-standard"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "synomosai-governance-mcp",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:31:32Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "dd3784f9a8b5461c3d025dc94b82af6d65eea9bc",
+    "commit_date": "2026-11-22T14:04:32Z",
+    "verification_entries": [
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/synomosai-governance-mcp",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/synomosai-governance-mcp"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "uibc-iverify",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:31:27Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "1b67f10dc5a7059843b3903fe56914f36e828107",
+    "commit_date": "2026-11-24T10:03:20Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 10,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 2.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/uibc-iverify",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/uibc-iverify"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-skill-review",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:31:22Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "7fe24c39c711b652933ee90e4cfd5f4daaa7589e",
+    "commit_date": "2026-11-22T14:38:07Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 5,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 2.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-skill-review",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/lgd-skill-review"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-skills",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T09:34:22Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "e5d4cf5aaf26852d3278b5a2ce3ea73a5e190ed8",
+    "commit_date": "2026-11-02T04:15:19Z",
+    "verification_entries": [
+     "deep:unittest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-skills",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/medxpert-skills"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skill-audit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:54Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "65b6470543ab24943177dbd0ed761f69a98590ff",
+    "commit_date": "2026-11-06T17:27:48Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 12,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.2
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skill-audit",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/skill-audit"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-gate",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:52Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "10b3a223dd78d2150bc186c999bc77682359a456",
+    "commit_date": "2026-11-06T17:48:17Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-gate"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "LGD-Eval",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:51Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "20c179f978717b292c9b27d9d37f380a6b249622",
+    "commit_date": "2026-11-06T17:48:30Z",
+    "verification_entries": [
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/LGD-Eval",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/LGD-Eval"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "evaluation-protocol",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:49Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "04e4cd1db198c9dda48c8615dd2c87657846ab97",
+    "commit_date": "2026-11-06T09:35:11Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/evaluation-protocol"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "evaluation-evidence",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:47Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "387ead9c0d42cdc80c6b544bd5122619d7b0dba0",
+    "commit_date": "2026-11-06T12:41:57Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 5,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.9
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/evaluation-evidence",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/evaluation-evidence"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "aikr",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-20T19:19:21Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "229d9fb4b24383dcc926353b5a34fed8e583fb43",
+    "commit_date": "2026-11-20T07:34:08Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/aikr"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "promptshield",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-20T10:37:28Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "9c395b86150caf91637929f1acb9800e4f7d0d26",
+    "commit_date": "2026-11-22T13:03:44Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/promptshield"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "governanceos",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-20T06:22:26Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "b9a6ac456655bd6898be62d7b06ff814585a3fc8",
+    "commit_date": "2026-11-22T13:01:46Z",
+    "verification_entries": [
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/governanceos",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/governanceos"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "wexp-check",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-19T10:34:54Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "cfe458b5f90c0a95ad1723b7a0dbba1b8d834fae",
+    "commit_date": "2026-11-18T14:46:44Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 37,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 2.1
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/wexp-check",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/wexp-check"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "examples",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-19T10:24:04Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "727ee03d86fa2c2ca8c534584b870235a1b252df",
+    "commit_date": "2026-06-26T06:26:13Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/examples"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "aer-1",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-19T04:37:50Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "0c6a69f6d9b3a90f09ddc1fcd5f2e3c808fbcbbf",
+    "commit_date": "2026-11-18T08:30:56Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/aer-1"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-loop-fixture",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-18T23:54:39Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "78849b2824e1f6213be35b721fc4ed2cbcd4c143",
+    "commit_date": "2026-11-22T13:31:57Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-loop-fixture"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "debug-pro",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-18T15:41:45Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "217d0609aac840f95a87c63ebe57354f4ed6d373",
+    "commit_date": "2026-11-22T13:01:22Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 10,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.2
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/debug-pro",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/debug-pro"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "wechat-viral-topic",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-18T15:41:41Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "6ef4647b9cadd08bc5e960ba6051fdd1319fff47",
+    "commit_date": "2026-11-22T13:04:26Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 11,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/wechat-viral-topic",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/wechat-viral-topic"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "summarize-pro",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-18T15:41:37Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "cbb0284e1aae3f996fd1daa2da6c342d50b13d8b",
+    "commit_date": "2026-11-22T13:04:11Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 24,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/summarize-pro",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/summarize-pro"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-hit-list",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-18T14:42:11Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "877620a966020481aa56c805cadb32124faede04",
+    "commit_date": "2026-11-22T13:02:20Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-hit-list"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "claim-audit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-18T11:08:41Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "c1b9ad3dc123d919b927326fe8f75fe9be115bcc",
+    "commit_date": "2026-11-22T13:00:58Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 9,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 2.6
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/claim-audit",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/claim-audit"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "evidence-anchor",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-18T10:54:23Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "7f6f2fa192639ee4efcf48d26be0207187231acb",
+    "commit_date": "2026-11-22T13:01:34Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 9,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.4
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/evidence-anchor",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/evidence-anchor"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skill-improver",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-18T10:45:12Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "2feaeeb97bcbc10431a964f534a05c81e4ac22ae",
+    "commit_date": "2026-11-22T13:14:19Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 9,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.5
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skill-improver",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/skill-improver"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "fgtida-contribution-discovery-evidence",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-17T05:00:26Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "8d1dea2f287bf92a4586b4d541059669a203cc07",
+    "commit_date": "2026-11-22T14:03:42Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/fgtida-contribution-discovery-evidence"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-library-connector",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-16T16:23:54Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "362cc0f5d044684d0fec97a775e4388b4050238a",
+    "commit_date": "2026-11-22T13:02:56Z",
+    "verification_entries": [
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-library-connector",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/medxpert-library-connector"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-ortho-mcp",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-16T12:51:40Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "adf68f3dbc90c6348ce6671e8124574784e32896",
+    "commit_date": "2026-11-22T13:03:04Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 30,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.2
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-ortho-mcp",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/medxpert-ortho-mcp"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "med-device-compliance-toolkit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-16T12:31:51Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2c19567f941cc702a898a12955e4fdfb06536385",
+    "commit_date": "2026-11-22T13:02:41Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/med-device-compliance-toolkit"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medical-device-testing-link",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-16T12:31:15Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "ee8cbe3acb229f8783021fa877095ede6d805bae",
+    "commit_date": "2026-11-22T13:02:50Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medical-device-testing-link"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "wg1-ra-aai",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-14T03:28:27Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "272198e0f3c85e28ba59611fda245c209c70a55a",
+    "commit_date": "2026-09-21T01:22:00Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/wg1-ra-aai"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-glossary",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-12T00:19:57Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "bdedb729d2405e3960821a174ec4d882e1339a94",
+    "commit_date": "2026-11-22T13:02:09Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-glossary"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "fgtida-paris-input-2026",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-11T08:38:11Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "3221884122909e1c66a9073704b7ad4f0256791f",
+    "commit_date": "2026-11-22T14:03:44Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 1,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.9
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/fgtida-paris-input-2026",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/fgtida-paris-input-2026"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "use-cases",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-09T15:54:20Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "80b2645757a04ba1cc742c9391c764d552878b0a",
+    "commit_date": "2026-09-27T13:49:22Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/use-cases"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-skills-index",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-08T22:14:48Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "a7e9ab9fb1803d253eed9899bae47c0e1aa3dc59",
+    "commit_date": "2026-11-22T13:14:12Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-skills-index"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "fg-tida-r04-contrib",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-08T15:53:06Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "221c597352395420a253a5ade295664ddb6c13ee",
+    "commit_date": "2026-11-22T14:03:38Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/fg-tida-r04-contrib"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "a22-trust-lifecycle",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-07T00:35:21Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "440c5dee052e5eb78ec09cf847a6cab6c87d14f0",
+    "commit_date": "2026-11-22T12:59:59Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/a22-trust-lifecycle"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "d4-evidence-authorization",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T22:18:55Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d70fec43fe3ac7170f850591505303ce8e7bfb37",
+    "commit_date": "2026-11-22T13:01:19Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/d4-evidence-authorization"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "runtigil",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:53:14Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "0b2f7a63d821f5d88236b86b35340b43c988f907",
+    "commit_date": "2026-11-22T13:04:00Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/runtigil"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "project-ops-protocol",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:52:53Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d0404074a72b15da3a4d3783d017abed4c3b931d",
+    "commit_date": "2026-11-22T14:04:11Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/project-ops-protocol"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "mnemoship",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:52:38Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "85ac16c82fa76b176e92acdef2b49b4e9b763a8c",
+    "commit_date": "2026-11-22T13:03:27Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/mnemoship"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-voice-kb",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:52:24Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "175751c3ad313e439912456b2d86d7944cea16cd",
+    "commit_date": "2026-11-22T13:03:21Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-voice-kb"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-registration-ops",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:52:09Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2797fd06bf752e2464e46dfe427c449e1033a25d",
+    "commit_date": "2026-11-22T13:03:15Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-registration-ops"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-reg-kb",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:51:54Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c80fa40ccc7ed1e710d064c3646c8a1267496bd9",
+    "commit_date": "2026-11-22T13:03:11Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-reg-kb"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-llm-library",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:51:43Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "ddc8ea447b9f5d78cf32c891fd6f8098c35cb608",
+    "commit_date": "2026-11-22T13:03:00Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-llm-library"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medical-device-reg-expert",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:51:14Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "35b8602eb34f569d70dd3592c48a0ef3dd3da387",
+    "commit_date": "2026-11-22T13:02:44Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medical-device-reg-expert"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-demo-organization",
+   "visibility": "public",
+   "default_branch": "master",
+   "updated_at": "2026-11-06T13:50:51Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "10ee1433c3984007d57a26837af92c99d287f751",
+    "commit_date": "2026-11-22T13:02:05Z",
+    "verification_entries": [
+     "deep:unittest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "not_runnable",
+     "passed": 0,
+     "failed": 0,
+     "errors": 1,
+     "seconds": 1.1
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-demo-organization",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/lgd-demo-organization"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "identity-verify",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:50:38Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "827904f38acc9c58b34af29c3bea01edd997fd82",
+    "commit_date": "2026-11-22T13:01:54Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/identity-verify"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "fingerprint-delivery",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:50:25Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d52cd831917e48ce1afd2d0dc2c37445b98c275b",
+    "commit_date": "2026-11-22T13:01:39Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/fingerprint-delivery"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "dsh-secret-leakage-scan",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:50:09Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "9f3fe08465ff838eed3b479062edca0bab0a5e33",
+    "commit_date": "2026-11-22T13:01:26Z",
+    "verification_entries": [
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.9
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/dsh-secret-leakage-scan",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/dsh-secret-leakage-scan"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "culpachain",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:49:33Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "01da4a6bdb9c308ce24e21a44563be246cfbea4e",
+    "commit_date": "2026-11-22T13:01:13Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/culpachain"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "credential-vault-design",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:49:19Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "6608d2afa123880d8bb045be91e95baf99f5582a",
+    "commit_date": "2026-11-22T13:01:06Z",
+    "verification_entries": [
+     "deep:pytest",
+     "deep:unittest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "not_runnable",
+     "passed": 0,
+     "failed": 0,
+     "errors": 1,
+     "seconds": 1.1
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/credential-vault-design",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/credential-vault-design"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "context-token-budget",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:49:05Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "ebebab9510654fc94021cf06cc05f05d9ecb9f30",
+    "commit_date": "2026-11-22T13:01:01Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/context-token-budget"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "a3-law-operational",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:48:08Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "1c568e0f181050db5d7bf72a2a35e43905ffae24",
+    "commit_date": "2026-11-22T13:00:04Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/a3-law-operational"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "assayance",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:47:51Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "cf2b4b540ce573ffd53f1ef3bc1705e7dfe2aed2",
+    "commit_date": "2026-11-22T13:00:24Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/assayance"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "assurability",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:47:37Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "7afb0a80303c2e8d68bd82b5b376b5d6ed89a5f4",
+    "commit_date": "2026-11-22T13:00:28Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/assurability"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "authz-code-design",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:47:22Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "fa016bb333774e150a915126f7a831d61ab0b155",
+    "commit_date": "2026-11-22T13:00:30Z",
+    "verification_entries": [
+     "deep:unittest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "not_runnable",
+     "passed": 0,
+     "failed": 0,
+     "errors": 2,
+     "seconds": 1.1
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/authz-code-design",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/authz-code-design"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-soul-os",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:46:53Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "1cb096477e5e218247beb0660b2f963f890061f5",
+    "commit_date": "2026-11-22T13:00:15Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-soul-os"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-memory-service",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:42:53Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "d811c474690ef2d0f643b73966d12d36e3285af7",
+    "commit_date": "2026-11-22T13:23:59Z",
+    "verification_entries": [
+     "deep:pytest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 2.7
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-memory-service",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/agent-memory-service"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "paper1-verifier-side-silent-failures",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:42:34Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "651edafd399ec59fd17f4c926c55bd8bf5fb11d2",
+    "commit_date": "2026-11-22T14:04:05Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/paper1-verifier-side-silent-failures"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "Nomos",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T13:26:46Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "22f2c0e2f004c812ce40cc7a7f648657c30515a0",
+    "commit_date": "2026-11-22T14:03:57Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/Nomos"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "zhaoxinghua09-cell",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T09:43:34Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "bc1ec3a3571e85e6a8018438c2d0117f29186e85",
+    "commit_date": "2026-11-22T13:04:43Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/zhaoxinghua09-cell"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-standards",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T08:50:48Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "f32ac4bbefdfb34ee27ffc4d5dc24d5d8470602a",
+    "commit_date": "2026-11-22T14:10:04Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-standards"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "LGD",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T07:23:32Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "63bc58a8dd34e436a90646c68d2befc9064b9ffd",
+    "commit_date": "2026-11-22T15:52:34Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/LGD"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lgd-medai-demo",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T07:21:10Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "cc321807199619aa02bd30ae8bb858c579a05964",
+    "commit_date": "2026-11-22T15:52:40Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lgd-medai-demo"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-ai-gov-kb",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T07:20:54Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "5cc0a6b70c2704ed137056fc55fa6373b3471986",
+    "commit_date": "2026-11-22T15:52:49Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-ai-gov-kb"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-standards-connector",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T07:19:49Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "eba486a2ce1ecc0aeed5a661006f7764123e8206",
+    "commit_date": "2026-11-22T14:10:12Z",
+    "verification_entries": [
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-standards-connector",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/medxpert-standards-connector"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "evidence-gated-medical-agent-demo",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T07:18:30Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "4a0de69eaf4684167af821d98f1db592448dd7aa",
+    "commit_date": "2026-11-22T13:01:36Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/evidence-gated-medical-agent-demo"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "conformance-surface-2026-11",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T05:28:23Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2f4cd965f774742a0ceab938b5aac098b2e20700",
+    "commit_date": "2026-11-22T14:03:34Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/conformance-surface-2026-11"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "memory-interop-vectors",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-05T11:27:32Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "7e8a56ff32535d4a6c4a72622c3097af4c0d12e2",
+    "commit_date": "2026-11-22T14:15:15Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/memory-interop-vectors"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "aps-conformance-suite",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-05T11:10:55Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "4157ad4d79f9692c8b1b46ca49d48eda20b517cc",
+    "commit_date": "2026-11-05T11:10:47Z",
+    "verification_entries": [
+     "tests/",
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 20,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 2.4
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/aps-conformance-suite",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/aps-conformance-suite"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ccs-independent-rerun",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-05T06:40:58Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "3a39927019d06d8c5036ebd566a946616e6ee7f6",
+    "commit_date": "2026-11-22T14:20:57Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ccs-independent-rerun"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "nti-spec",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-05T01:30:07Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "090349c21e33f5ebd99f3c789997df652b250cf7",
+    "commit_date": "2026-11-05T01:29:23Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/nti-spec"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-reg-connector",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-04T13:59:07Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "ed790d4bdaf36d2b5821006c4b00ec871e11853f",
+    "commit_date": "2026-11-22T13:03:07Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "not_runnable",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 15.6
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-reg-connector",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/medxpert-reg-connector"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "awesome-trusted-agents",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-04T07:32:37Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "8c46cde88aed98aa8c1d4c720ab7e2f5947eef99",
+    "commit_date": "2026-11-22T13:00:34Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/awesome-trusted-agents"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "nti-lgd-transition-contract",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T23:36:20Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "be7c749371c20771822a2f7f9e44b01d7dbd3643",
+    "commit_date": "2026-11-22T13:03:30Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/nti-lgd-transition-contract"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "sf006-case7-fixture",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T06:55:27Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "1c314477a2d9ef6acff1d8a628de9e7ac211c230",
+    "commit_date": "2026-11-22T14:15:23Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/sf006-case7-fixture"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "research-quality-gate",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T05:11:30Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "5094aaeab5d886a18289266870ed457591bab480",
+    "commit_date": "2026-11-03T05:11:20Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/research-quality-gate"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "rag-eval-harness",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T05:11:19Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "184f514b30948772c3b425a6abf462da42352c31",
+    "commit_date": "2026-11-03T05:11:07Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/rag-eval-harness"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "publish-quality-gate",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T05:11:02Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "ab022efe0ebd25df8ff4e673e9b03582b8780253",
+    "commit_date": "2026-11-03T05:10:51Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/publish-quality-gate"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "local-llm-eval-assist",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T05:10:51Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "f68f27d60016e6e39c7c609863ee27ac697c2d5e",
+    "commit_date": "2026-11-03T05:10:41Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/local-llm-eval-assist"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "continuous-test-review-loop",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T05:10:14Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "784829d9e067addf4485a22f9e615685190e739a",
+    "commit_date": "2026-11-03T05:10:03Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/continuous-test-review-loop"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ai-grader",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T05:10:03Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "4d677126ecb3a34e79985d0bb06cfb9140bff564",
+    "commit_date": "2026-11-03T05:09:53Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ai-grader"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ai-governance-audit-chain",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T05:09:50Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d9f3a146bd2536a74ce8510a69f4d8d2ef7dc0e8",
+    "commit_date": "2026-11-03T05:09:39Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ai-governance-audit-chain"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-evidence-kit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:58:48Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "b1ce3365f88a0d0104b710d0bbc1a8d74d4660ee",
+    "commit_date": "2026-11-22T13:00:07Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-evidence-kit"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skillurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:06:14Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d70b6e16e39a290c3ad277f604bef79f5c6f3092",
+    "commit_date": "2026-11-22T13:14:42Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skillurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skill-skeleton-generator",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:06:08Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "df032f0521d0ccd4869e09b3a27da152610dc30e",
+    "commit_date": "2026-11-22T13:14:34Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skill-skeleton-generator"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "skill-quality-gate",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:05:48Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "df57539a71f8b150801cb4169821ca408a5e0634",
+    "commit_date": "2026-11-22T13:14:22Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/skill-quality-gate"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "silent-failure-scanner",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:05:43Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "fa2e57177b2977de67339c01620d3f5d95567ee5",
+    "commit_date": "2026-11-22T14:04:20Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/silent-failure-scanner"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "prompt-injection-guard",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:05:19Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "7f1da7b67f991c9beb81963eec5f420297e5a550",
+    "commit_date": "2026-11-22T13:03:40Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/prompt-injection-guard"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "MinisSkills",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:05:14Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "8c33682cedb596438fc0bae3580149e3d878b7b8",
+    "commit_date": "2026-11-21T08:07:48Z",
+    "verification_entries": [
+     "deep:pytest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/MinisSkills",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/MinisSkills"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "llms-generator",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:05:04Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2ea2cf5f0f6374a099ac6d3f482b169abdbbe7f2",
+    "commit_date": "2026-11-22T13:02:38Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/llms-generator"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "badge-studio",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-03T04:03:42Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2150ac1bc4ede6120a0b1b9531e19453e279aade",
+    "commit_date": "2026-11-22T13:00:40Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/badge-studio"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medical-device-reg-translator",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-02T04:18:06Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "30026e85a2e5828c9bbb043d17d83a0fd6b05e1b",
+    "commit_date": "2026-11-22T13:02:47Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medical-device-reg-translator"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "zhaoxinghua09-cell.github.io",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-30T13:07:08Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "82691201688e682d02b37ecd5b41c1acc4c8544d",
+    "commit_date": "2026-11-22T14:15:27Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/zhaoxinghua09-cell.github.io"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "theme50-contribution-matrix",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-30T09:09:33Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2851e8d4d4ff7d305c50001b4267774d740b0cae",
+    "commit_date": "2026-11-22T14:04:39Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/theme50-contribution-matrix"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "nomos-ai",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-30T03:56:40Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "38148a05200e3d9cee451142dc385367948c42d0",
+    "commit_date": "2026-11-22T14:04:02Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/nomos-ai"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "awesome-claude-skills",
+   "visibility": "public",
+   "default_branch": "master",
+   "updated_at": "2026-10-27T17:55:19Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "9a6fd52eaeb9dd7dec0cc3c05f75e8fc7f5cb356",
+    "commit_date": "2026-10-27T17:55:13Z",
+    "verification_entries": [
+     "deep:unittest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 10,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.9
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/awesome-claude-skills",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/awesome-claude-skills"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": ".github",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-24T11:55:11Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "1561312b02035838555af0d91472d3211174012f",
+    "commit_date": "2026-11-22T14:15:09Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/.github"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "oversight-record-vectors",
+   "visibility": "public",
+   "default_branch": "master",
+   "updated_at": "2026-10-23T17:11:10Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "b0d8b15144aea7bc6e216ff27d7f9a3a608ae688",
+    "commit_date": "2026-11-22T14:15:18Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/oversight-record-vectors"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ai-consciousness",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:50Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d83fbb21c7432dc27a97323b8d79e9e13cb663f1",
+    "commit_date": "2026-10-18T11:37:30Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ai-consciousness"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "video-watermark-anti-theft",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:48Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "3384ca5b05f8ce78896e07d032f30eed84b10ed9",
+    "commit_date": "2026-09-27T01:25:06Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/video-watermark-anti-theft"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "sec2-provenance",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:46Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "bd67a27130482a44651a9633c9e8236c1a9598c0",
+    "commit_date": "2026-09-27T01:24:47Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/sec2-provenance"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "didaskalos",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:45Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "46ba3d84744dddbadab2570b59db6db4a7bc337c",
+    "commit_date": "2026-10-18T11:32:39Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/didaskalos"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "iatros-medai",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:44Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "21c3016ab18807639a3327de66f7eb907100338e",
+    "commit_date": "2026-09-27T01:23:56Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/iatros-medai"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "krites-eval",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:42Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "786660226da4f99ac11915b5628956144e7afb8d",
+    "commit_date": "2026-09-27T01:24:00Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/krites-eval"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "logos-ambassador",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:41Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "0b2e4fc1a98680fc4de8cc61a4059184d8120125",
+    "commit_date": "2026-09-27T01:24:12Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/logos-ambassador"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "awesome-mcp-servers",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:39Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "b2487e31a3ac9745d29fb6153439393f7eaa6c63",
+    "commit_date": "2026-09-27T01:23:32Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/awesome-mcp-servers"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "claude-skills-directory",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:38Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "b8bb66dea9bcaf868e856053245f5922430249a5",
+    "commit_date": "2026-09-27T01:23:36Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/claude-skills-directory"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "aws-agents-for-humans",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:36Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c8c109a671f76da1adf65a35911e27e894a292b1",
+    "commit_date": "2026-09-27T01:23:34Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/aws-agents-for-humans"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ssot-content-management",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:33Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "10fc63f0dc7aa844d32fd96280c9202ac53e16c4",
+    "commit_date": "2026-09-27T01:24:49Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ssot-content-management"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "content-publish-ops-swarm-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:32Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2d9d02d532a05ba41e5e70ec928853b8c0ba8e1f",
+    "commit_date": "2026-09-27T01:23:41Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/content-publish-ops-swarm-skill"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "content-publish-lifecycle",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:30Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "f3f3f3939a9bd41d37719bf3995072f3aed203dd",
+    "commit_date": "2026-10-18T11:34:23Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/content-publish-lifecycle"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "tencent-cos-static-site",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:29Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "559a074abc69668b925d63a07e8923ed5242295f",
+    "commit_date": "2026-09-27T01:24:56Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/tencent-cos-static-site"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "summarize-file",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:25Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "50e7f2de48e33cd61b6ed33e8f249988fe83a472",
+    "commit_date": "2026-09-27T01:24:52Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/summarize-file"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "reminder",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:22Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "526b1afe6efca150514151cd6dcc9bf8d730fced",
+    "commit_date": "2026-09-27T01:24:42Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/reminder"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "project-planning-methodology",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:19Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "5e86fcb89514dfed9a6636e35b36f1c0f5e96d9d",
+    "commit_date": "2026-09-27T01:24:38Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/project-planning-methodology"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "personal-assistant",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:17Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "e5cfaec79a7d8a99f1453a714af97ed702f7665f",
+    "commit_date": "2026-09-27T01:24:35Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/personal-assistant"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "offline-knowledge-alignment",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:16Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "b45f773e29e46781ae6f547404a3874b9c54969e",
+    "commit_date": "2026-09-27T01:24:33Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/offline-knowledge-alignment"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-skill-panorama",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:14Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "1c72a34bd24e4e17f4af53cb2e7fd47e8331a94a",
+    "commit_date": "2026-09-27T01:24:25Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-skill-panorama"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "medxpert-l1-batch-study",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:12Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "cbb54057aee2c99b8ab12f07f07317f25c22d565",
+    "commit_date": "2026-09-27T01:24:19Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/medxpert-l1-batch-study"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "md-to-epub",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:10Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "31522081b47b2122cadc6807f18215954a97243c",
+    "commit_date": "2026-09-27T01:24:13Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/md-to-epub"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "local-agent-open",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:04Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "bbae5482c1f7a54aebf38799f7b7a74491d2fa70",
+    "commit_date": "2026-09-27T01:24:09Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/local-agent-open"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "llm-gateway-hub",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:39:01Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "b7076401c415962457ed7245420790f50be7f61d",
+    "commit_date": "2026-09-27T01:24:08Z",
+    "verification_entries": [
+     "deep:unittest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.9
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/llm-gateway-hub",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/llm-gateway-hub"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "lexiang-website-sync",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:54Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "7df5f4f298cdd1e09da1936b1e78b5182a712a8d",
+    "commit_date": "2026-09-27T01:24:02Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/lexiang-website-sync"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "doc-legacy-extract",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:52Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "e3dca7b1568a104078cd68cc6fba774766b1dd6c",
+    "commit_date": "2026-10-18T15:32:28Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/doc-legacy-extract"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "data-scientist",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:49Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "6dc7777d9068dff03468d18bbc3cc751902966f3",
+    "commit_date": "2026-10-18T15:32:51Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/data-scientist"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "cross-session-passphrase",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:48Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "99c1ff866d1aebefbf58a7d403e1f71baff3709c",
+    "commit_date": "2026-10-18T15:32:58Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/cross-session-passphrase"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "cross-machine-offline-taskbox",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:46Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "b02b778fc374f7af3c0be43306ecd332114c01a3",
+    "commit_date": "2026-09-27T01:23:44Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/cross-machine-offline-taskbox"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "coding-agent",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:43Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "345a7d17835a0eee623a1f1ffa5d921955095c7b",
+    "commit_date": "2026-10-18T15:33:04Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/coding-agent"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "code-mentor",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:42Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "7f56627a2a770aac52f955867e947fd3d6477d10",
+    "commit_date": "2026-10-18T15:33:10Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/code-mentor"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "brain-design-benchmark",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:41Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c58cdf4ba124f61073fc981adb1dc91d1931f50e",
+    "commit_date": "2026-10-18T11:22:01Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/brain-design-benchmark"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "asset-controlled-export-pipeline",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:39Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "545de08751dd3f0fb8df14c619a8ab4bca3e6b1d",
+    "commit_date": "2026-10-18T15:33:16Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/asset-controlled-export-pipeline"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ardot-mobile-app-multi-screen",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:36Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "181c399db20629174c5e480ef7855b083ddd2b53",
+    "commit_date": "2026-10-18T15:33:22Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ardot-mobile-app-multi-screen"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ai-brain-learning-memory-pro",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:33Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "204826382d51baaf8de6befec03125d3198e8265",
+    "commit_date": "2026-10-18T11:31:23Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ai-brain-learning-memory-pro"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ai-brain-learning-memory",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:31Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "f1a0adf27912867a0a384041ff8e14e75d0cba93",
+    "commit_date": "2026-10-18T11:27:30Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ai-brain-learning-memory"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "agent-learn-external-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:29Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "cb8c6963bbcbe18351f02ee13b2cef4e6854aca6",
+    "commit_date": "2026-09-27T01:23:13Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/agent-learn-external-skill"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "laopaidang-core",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:28Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "57ba7d7285dff5a107b7e394f908388775098c41",
+    "commit_date": "2026-09-27T01:24:01Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/laopaidang-core"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "research-methodology",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:26Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d0bc4bddcf858a5129780f08eb0b9dd41acc9aa5",
+    "commit_date": "2026-09-27T01:24:43Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/research-methodology"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "premise-and-config-audit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:22Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "3e6b1e97d67068fb33c4b16af2275c47e9e52245",
+    "commit_date": "2026-09-27T01:24:36Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/premise-and-config-audit"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "unified-task-ledger",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:19Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "bdc0cb35df84f7b18b7d7c3b608e59d452617c55",
+    "commit_date": "2026-09-27T01:25:03Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/unified-task-ledger"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "todo-tracker",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:17Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "a198c744f6565cb90e2ec53f2a97ff9704720338",
+    "commit_date": "2026-09-27T01:24:59Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/todo-tracker"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "wechat-article-full-workflow",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:16Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "adc4f3aa9a0f0d7d66edf86895e23fd45bf3506b",
+    "commit_date": "2026-09-27T01:25:07Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/wechat-article-full-workflow"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "wechat-qa-checklist",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:38:13Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "0f471537d70d9a89656e6038bb2db97d6837a937",
+    "commit_date": "2026-09-27T01:25:08Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/wechat-qa-checklist"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "theoriturgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:37:22Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "acd270ca68ceb048a12f89ad4d809b87b61bc892",
+    "commit_date": "2026-11-22T13:14:45Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/theoriturgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "standardurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:34:32Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "a71764db75de865aaaeae220a33cd50973eeed07",
+    "commit_date": "2026-11-22T14:04:23Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/standardurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "benchmarkurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:28:30Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "bb4c7a1733ee82ea25e111e031feb2ffacf80080",
+    "commit_date": "2026-11-22T13:00:44Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/benchmarkurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "researchurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T15:25:23Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "a8feb66d8dc88c9a5b832302995ae55f637631d1",
+    "commit_date": "2026-11-22T13:03:56Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/researchurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "whois-agent",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-18T11:28:31Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "7df602c7f154db6bbd9af6092be273fdb9edcb36",
+    "commit_date": "2026-11-22T13:04:29Z",
+    "verification_entries": [
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/whois-agent",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/whois-agent"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "eureurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:47Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "e5680be5613f30d37b1de6f664a854e09475fdce",
+    "commit_date": "2026-11-22T13:01:31Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/eureurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "analogurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:46Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "414955f44d344800827ad7c0ab77d73aab7132a1",
+    "commit_date": "2026-11-22T13:00:18Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/analogurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "referurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:43Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "ee2902257aec60320c5551d44d4148add17e63c0",
+    "commit_date": "2026-11-22T13:03:52Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/referurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "synthesurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:42Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c1bc471ace2dd2954a9a59f0829d595d2f0a7244",
+    "commit_date": "2026-11-22T13:04:19Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/synthesurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "holurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:39Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "25759b9d9789de346329bf174dd1fdfe906789c6",
+    "commit_date": "2026-11-22T13:01:49Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/holurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "brainstormurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:38Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "8821a3e6b7c751a4435ab0b8df5cdbece1f37b7f",
+    "commit_date": "2026-11-22T13:00:50Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/brainstormurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "ideurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:38Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "830a2277ac604941a802d5435cb399101398dc26",
+    "commit_date": "2026-11-22T13:01:57Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/ideurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "axiurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:35Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "003808a2ba83b9064794e0792919b540436160b7",
+    "commit_date": "2026-11-22T13:00:37Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/axiurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "genoship",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:34Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "0f268afe072609030e4764df98da2c61f089b7ff",
+    "commit_date": "2026-11-22T13:01:42Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/genoship"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "self-hosting-closure",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:32Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "4ee3b940ea65e70a6d88c019fe00c3f65e93ce79",
+    "commit_date": "2026-11-22T13:04:03Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/self-hosting-closure"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "placeholdurgy",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-15T14:40:27Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "7ffd2a76108883da6ec41d9eefa1302d7a2636b0",
+    "commit_date": "2026-11-22T13:03:36Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/placeholdurgy"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "fhir",
+   "visibility": "public",
+   "default_branch": "master",
+   "updated_at": "2026-10-08T22:27:51Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "ef782bfa3e71ff717c528f2b0f4da1e09391c366",
+    "commit_date": "2026-10-07T14:04:16Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 2.3
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/fhir",
+    "e5_20261125/e5_runner.json#zhaoxinghua09-cell/fhir"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "steven",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-09-30T11:33:43Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "36e9106c46e936d5202af78d1b0530eefaab459c",
+    "commit_date": "2026-09-27T01:24:50Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/steven"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "themes",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-09-29T09:38:02Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2b77cb8cf68700eb8c66bdc2b50789c980cb39a5",
+    "commit_date": "2026-08-10T12:08:07Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/themes"
+   ]
+  },
+  {
+   "owner": "zhaoxinghua09-cell",
+   "repo": "traceability-audit-team",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-09-27T01:27:41Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "9302e4ba10b61614df0756ab2a6ee78944d3aca7",
+    "commit_date": "2026-08-31T19:02:41Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#zhaoxinghua09-cell/traceability-audit-team"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-skills",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T10:02:37Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "e0f7b79843afdfd62b5ee5e699d8ebebbc4b6c7a",
+    "commit_date": "2026-11-22T13:20:03Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-skills"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medical-ai-toolkit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T09:56:56Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "702a070739e79e7ff6eb22d8ac58d280bdd17173",
+    "commit_date": "2026-11-22T13:07:01Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medical-ai-toolkit"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "samd-ra-toolkit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T09:56:56Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "2dd43d256e0362044743b36b0d3dc038b058c418",
+    "commit_date": "2026-11-22T13:13:09Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/samd-ra-toolkit"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "aitb",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-23T10:33:47Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "f7647f88607f2cc83ba1c039bc4a4572d83478d8",
+    "commit_date": "2026-11-23T11:04:18Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 25,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 2.3
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/aitb",
+    "e5_20261125/e5_runner.json#stevenzhao07/aitb"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "verdict-record-checker",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-23T08:05:03Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "efb4b8bf7d47ef41d01ba35850bb26400b10548c",
+    "commit_date": "2026-11-23T08:04:54Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/verdict-record-checker"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "delivery-guard",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:32:38Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "1f5cf2167c79847eddfa38846679173ee1bfb84a",
+    "commit_date": "2026-11-22T13:06:48Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/delivery-guard"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-reg-hub",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:32:36Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "660f0c9c5b79c075d5c1081653a61b1c1896bcb2",
+    "commit_date": "2026-11-22T13:07:08Z",
+    "verification_entries": [
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-reg-hub",
+    "e5_20261125/e5_runner.json#stevenzhao07/medxpert-reg-hub"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "lgd-skills",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T09:34:20Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "b2464ce13dbeae81a8fc5a049488367a2307241b",
+    "commit_date": "2026-11-21T08:43:21Z",
+    "verification_entries": [
+     "deep:runner"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "not_runnable",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.3
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/lgd-skills",
+    "e5_20261125/e5_runner.json#stevenzhao07/lgd-skills"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "silent-failure-catalog",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:57Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "86d038a1cd3c55e22a0d748d7ddbb442a8485c57",
+    "commit_date": "2026-11-09T19:45:16Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/silent-failure-catalog"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "uibc-core",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:45Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "507ee32427cff3bbbd48e3803fac7c711a6c55be",
+    "commit_date": "2026-11-21T13:46:35Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 158,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 35.5
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/uibc-core",
+    "e5_20261125/e5_runner.json#stevenzhao07/uibc-core"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "awesome-healthcare-agents",
+   "visibility": "public",
+   "default_branch": "master",
+   "updated_at": "2026-11-10T00:24:58Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "232bb19e99b187c8c5b31b97c6ca9c0c9eb71436",
+    "commit_date": "2026-11-10T00:24:52Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/awesome-healthcare-agents"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "awesome-dsh-plugin",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-10T00:13:03Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "a313b3671b1d25b47b5f26a6da35db600fcfad45",
+    "commit_date": "2026-11-10T00:12:58Z",
+    "verification_entries": [
+     "deep:node"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "not_runnable",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.4
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/awesome-dsh-plugin",
+    "e5_20261125/e5_runner.json#stevenzhao07/awesome-dsh-plugin"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "doc-translate-keep-layout",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-09T20:49:22Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "78cc0563db95fd59aaf3abce07bd7286920fad77",
+    "commit_date": "2026-11-22T13:12:47Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 40,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 16.2
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/doc-translate-keep-layout",
+    "e5_20261125/e5_runner.json#stevenzhao07/doc-translate-keep-layout"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-fhir",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-09T19:32:11Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "63ebf4718e7867833009992d547c72a4aabb6a8c",
+    "commit_date": "2026-11-22T13:12:57Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-fhir"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "multilingual-ifu",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T23:07:34Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "1cd02e2058882b1033aff3ba81cf5c169dfe87a1",
+    "commit_date": "2026-11-22T13:13:01Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/multilingual-ifu"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "device-regulatory-map",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T09:37:28Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "7631ae2df6e4560196eed7c99805337f90075eb8",
+    "commit_date": "2026-11-22T13:12:43Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/device-regulatory-map"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "ai-model-passport",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T09:37:27Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "35b5feb75cb6c3e0355dee3a1427dca471b72ed4",
+    "commit_date": "2026-11-22T13:12:39Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/ai-model-passport"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "ai-governance-checklist",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T09:37:26Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d5ab74aa2a8bce0566a938334784f8528648a423",
+    "commit_date": "2026-11-22T13:12:35Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/ai-governance-checklist"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-reg-path-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-06T09:37:19Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d66b66b77c54be483fe022470d7ec176cce9da80",
+    "commit_date": "2026-11-22T13:19:24Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-reg-path-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "stevenzhao07",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-02T04:12:52Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "9a00796ce857bd286def91832ee83dca601d142a",
+    "commit_date": "2026-11-22T14:30:36Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/stevenzhao07"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-pre-submission-check-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T02:24:31Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "499fcd103f841f95cd87e9f7e9967d65ee84d6d7",
+    "commit_date": "2026-11-22T13:16:31Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-pre-submission-check-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-master-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T02:24:15Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "734e56529e536468d4047a72b2f1f55ed9923d0d",
+    "commit_date": "2026-11-22T13:16:21Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-master-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-labeling-ifu-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T02:24:10Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "08ddc2bfe5046775f7e3afb85b421343c3b6f6ef",
+    "commit_date": "2026-11-22T13:16:17Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-labeling-ifu-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-deficiency-reply-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T02:23:52Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "13a3b6fcc01b1f4a7758689d0a4bd976b6371c93",
+    "commit_date": "2026-11-22T13:16:02Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-deficiency-reply-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-clinical-eval-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T02:23:34Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "54c99489d8a95b294842010b14c724e823ee7c8b",
+    "commit_date": "2026-11-22T13:15:58Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-clinical-eval-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-ai-samd-reg-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T02:23:21Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "bfc49e0e6a8aca60b5a68acbb97588464b0c3afd",
+    "commit_date": "2026-11-22T13:15:54Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-ai-samd-reg-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-test-lab-selection-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T01:51:59Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d129d74df9b78a83621a9fe7c6b55d213e9864c4",
+    "commit_date": "2026-11-22T13:16:48Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-test-lab-selection-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-risk-management-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T01:51:47Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c70bbf8a0f2310628b8be4ff0a7a24bf413db1c7",
+    "commit_date": "2026-11-22T13:16:38Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-risk-management-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-postmarket-surveillance-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T01:50:26Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "11d4c950602543bc3dbe5dfc33385e0e57896038",
+    "commit_date": "2026-11-22T13:16:28Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-postmarket-surveillance-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-oem-cmo-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T01:50:11Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "138743a27ebd0f7c62ead318888a588f6320298d",
+    "commit_date": "2026-11-22T13:16:24Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-oem-cmo-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "medxpert-hospital-bid-skill",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-31T01:49:22Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "ac38f47db883a1e04f455ebcef9fcfe1f4e0e57a",
+    "commit_date": "2026-11-22T13:16:14Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/medxpert-hospital-bid-skill"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": ".github",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-24T13:23:04Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "1d69b0c368b28ceb95a533db18c801ae0237f1b3",
+    "commit_date": "2026-11-22T14:15:33Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/.github"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "sterilization-validation",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-24T13:14:18Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "946cbb8c39dfb2564866547d253d66d62b70ac82",
+    "commit_date": "2026-11-22T13:13:16Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/sterilization-validation"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "udi-assignment",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-24T13:05:30Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "44ff660d1aefb50a50573bb2afbfaa388f91bb66",
+    "commit_date": "2026-11-22T13:13:22Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/udi-assignment"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "iso14971-risk-file",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-24T13:05:26Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c81272f850f316cee7121defbc5dda6c0622772c",
+    "commit_date": "2026-11-22T13:12:52Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/iso14971-risk-file"
+   ]
+  },
+  {
+   "owner": "stevenzhao07",
+   "repo": "regdoc-commons",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-21T05:22:32Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "a8a79bd4e45fb31c9667bed6358347263890e515",
+    "commit_date": "2026-11-22T13:13:05Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 52,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.3
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#stevenzhao07/regdoc-commons",
+    "e5_20261125/e5_runner.json#stevenzhao07/regdoc-commons"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "lgd-gate",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T10:02:37Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "2172261eea8dfb3cd4eb617fe6e19783cce60c0e",
+    "commit_date": "2026-11-22T13:06:36Z",
+    "verification_entries": [
+     "deep:pytest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 10,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.9
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/lgd-gate",
+    "e5_20261125/e5_runner.json#LGD-Eval/lgd-gate"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "LGD-Eval",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T09:57:37Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "3ac73d0168779e2a0bfab56ea7d22ea2a70f1f05",
+    "commit_date": "2026-11-22T13:06:33Z",
+    "verification_entries": [
+     "tests/",
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 13,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 3.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/LGD-Eval",
+    "e5_20261125/e5_runner.json#LGD-Eval/LGD-Eval"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "skill-audit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T09:57:37Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "31a6fde24db3b8a7260f745d93000166893a905d",
+    "commit_date": "2026-11-22T13:15:46Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 12,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.0
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/skill-audit",
+    "e5_20261125/e5_runner.json#LGD-Eval/skill-audit"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "evaluation-protocol",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-25T03:11:55Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "cf15abd5b17fe6a1cdeea9404402a006be3ecde8",
+    "commit_date": "2026-11-22T14:04:56Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/evaluation-protocol"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "competitor-comparison",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:32:28Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "a252f4445843160019016cc52f8c913c38594125",
+    "commit_date": "2026-11-22T13:06:19Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/competitor-comparison"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "skill-scout",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:32:24Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "aa26f4195d8f11101400105bd22d4ab0e34d4a39",
+    "commit_date": "2026-11-22T13:15:51Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 1,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.4
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/skill-scout",
+    "e5_20261125/e5_runner.json#LGD-Eval/skill-scout"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "attestation",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T11:32:18Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "5cedb0fa5f99d40949d5212d58727d8305c94263",
+    "commit_date": "2026-11-21T13:46:00Z",
+    "verification_entries": [
+     "package.json",
+     "Makefile"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "no_tests_collected",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/attestation",
+    "e5_20261125/e5_runner.json#LGD-Eval/attestation"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "medxpert-fhir",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:59:01Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "d657dfdc10f82da3f46425cf56c617660265bfb8",
+    "commit_date": "2026-10-29T01:48:29Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/medxpert-fhir"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "uibc-core",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:59Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "5dac2a2e7882e11e0b18a95920440ca93a1441f6",
+    "commit_date": "2026-11-05T10:41:30Z",
+    "verification_entries": [
+     "tests/",
+     "pyproject.toml"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 158,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 34.1
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/uibc-core",
+    "e5_20261125/e5_runner.json#LGD-Eval/uibc-core"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "silent-failure-catalog",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:58:56Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "61edf758b0f4579677f2d987062c5d596eefcb56",
+    "commit_date": "2026-10-26T04:52:58Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/silent-failure-catalog"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "evaluation-reports",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:33:08Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "39e0c789409bed7a81b0d40c8bb6b6e62f3d972b",
+    "commit_date": "2026-11-22T13:06:28Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/evaluation-reports"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "evaluation-evidence",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:33:01Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "1f8c529f32c34bb60e4bc8f1fb85aafaa1ca5919",
+    "commit_date": "2026-11-22T13:06:25Z",
+    "verification_entries": [
+     "tests/"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 5,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.9
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/evaluation-evidence",
+    "e5_20261125/e5_runner.json#LGD-Eval/evaluation-evidence"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "robot-identity-registry-eval",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:00:42Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "b4cee68a6ba0cdd7cdd0cc5352080c43dbe4f2b0",
+    "commit_date": "2026-10-18T23:11:58Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/robot-identity-registry-eval"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "robot-blackbox-replay-eval",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:00:39Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "34d418cbf90096ae38df65ef754b55f0adb0dedc",
+    "commit_date": "2026-10-18T23:11:59Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/robot-blackbox-replay-eval"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "robot-ota-regate-eval",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-21T08:00:36Z",
+   "archived": true,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "cce350584be1f8620a16f2fa361e2762b12be979",
+    "commit_date": "2026-10-18T23:12:00Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/robot-ota-regate-eval"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "wg2-ibea-charter",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-09T23:49:13Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "063a73f0f4ca44e759b236e99837893c617b963e",
+    "commit_date": "2026-11-09T23:49:07Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/wg2-ibea-charter"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "awesome-claude-skills",
+   "visibility": "public",
+   "default_branch": "master",
+   "updated_at": "2026-11-09T23:49:07Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "a0297987c5726726c88c195c2513dc7b73ce9e24",
+    "commit_date": "2026-11-09T23:49:00Z",
+    "verification_entries": [
+     "deep:unittest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 10,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.3
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/awesome-claude-skills",
+    "e5_20261125/e5_runner.json#LGD-Eval/awesome-claude-skills"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "awesome-claude-code",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-09T23:49:04Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "ea11db0a112f172b5112f03d37bdf45534c43d7e",
+    "commit_date": "2026-11-09T23:48:55Z",
+    "verification_entries": [
+     "tests/",
+     "Makefile"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 112,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 3.4
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/awesome-claude-code",
+    "e5_20261125/e5_runner.json#LGD-Eval/awesome-claude-code"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "awesome-agent-skills-1",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-09T23:48:55Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "cfa168c1f49d72e0e733b273a6ff025d0b22d035",
+    "commit_date": "2026-11-09T23:48:49Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/awesome-agent-skills-1"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "dsh-plugin-lgd-trust",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-11-09T00:44:07Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "d1602ef51f14c03b34bcec4377b351f2e391d5f3",
+    "commit_date": "2026-11-22T13:06:22Z",
+    "verification_entries": [
+     "tests/",
+     "package.json"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "not_runnable",
+     "passed": 0,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 1.7
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/dsh-plugin-lgd-trust",
+    "e5_20261125/e5_runner.json#LGD-Eval/dsh-plugin-lgd-trust"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "awesome-claude-skills-1",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-28T03:41:11Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c7e089ab4080debede69e28dbcc1e4b037f3a5c1",
+    "commit_date": "2026-10-28T03:40:50Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/awesome-claude-skills-1"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "awesome-llm-skills",
+   "visibility": "public",
+   "default_branch": "master",
+   "updated_at": "2026-10-28T03:40:22Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top) + pytest-runner",
+    "commit": "f8f1225d755b1e39968476c03fa92772d1a4d9fa",
+    "commit_date": "2026-10-28T03:40:15Z",
+    "verification_entries": [
+     "deep:unittest"
+    ],
+    "structural": "pass_has_entry",
+    "runner": {
+     "verdict": "pass",
+     "passed": 10,
+     "failed": 0,
+     "errors": 0,
+     "seconds": 0.8
+    },
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/awesome-llm-skills",
+    "e5_20261125/e5_runner.json#LGD-Eval/awesome-llm-skills"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "awesome-claude-code-toolkit",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-28T03:40:07Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "09e8a8ed688087a024dfcea207dfd60c48a6c0cc",
+    "commit_date": "2026-10-28T03:39:56Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/awesome-claude-code-toolkit"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": "awesome-agent-skills",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-28T03:29:50Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "c08ca27f5523b477659aa01f9570ee09784fee90",
+    "commit_date": "2026-10-28T03:29:29Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/awesome-agent-skills"
+   ]
+  },
+  {
+   "owner": "LGD-Eval",
+   "repo": ".github",
+   "visibility": "public",
+   "default_branch": "main",
+   "updated_at": "2026-10-24T13:18:10Z",
+   "archived": false,
+   "probe": {
+    "at": "2026-11-26T01:58:35",
+    "method": "api commit + contents(top)",
+    "commit": "ae941468c3859aa936355bc98738269e065b62a9",
+    "commit_date": "2026-11-22T14:15:30Z",
+    "verification_entries": [],
+    "structural": "pass_no_entry",
+    "runner": null,
+    "tested_by": "outside (token holder, no repo rights used)"
+   },
+   "probe_evidence": [
+    "e5_20261125/e5_structural.json#LGD-Eval/.github"
+   ]
+  }
+ ],
+ "probe_generated_at": "2026-11-26T01:58:35"
+}

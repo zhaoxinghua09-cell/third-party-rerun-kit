@@ -1,0 +1,170 @@
+{
+ "summary": {
+  "generated_at": "2026-11-26T07:25:17",
+  "checked": 13,
+  "counts": {
+   "selfcheck_fail": 7,
+   "selfcheck_ok": 6
+  },
+  "note": "自检脚本实跑；通过不计入 E5 合格，仅证明'能被外人跑通'"
+ },
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/third-party-rerun-kit",
+   "script": "rerun/verify_chain.py",
+   "exit": 2,
+   "seconds": 0.2,
+   "tail": [
+    "usage: verify_chain.py [-h] --pkg PKG [--json JSON] [--online]",
+    "verify_chain.py: error: the following arguments are required: --pkg"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-protocol",
+   "script": "reviews/verified-transition-loop/verify_vtl.mjs",
+   "exit": 1,
+   "seconds": 0.2,
+   "tail": [
+    "  url: 'file:///C:/Users/ADMINI%7E1/AppData/Local/Temp/e5sc-49z9dmwh/zhaoxinghua09-cell-evaluation-protocol-04e4cd1/reviews/verified-transition-loop/canonical-runtime-v0.12.mjs'",
+    "}",
+    "",
+    "Node.js v22.23.2"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/assayance",
+   "script": "tools/check-doctrine.py",
+   "exit": 0,
+   "seconds": 0.2,
+   "tail": [
+    "  ok   C3 正文零品牌串（声明块已豁免）",
+    "  ok   C4 无占位残留",
+    "",
+    "check-doctrine: clean"
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/memory-interop-vectors",
+   "script": "retention/check_retention.py",
+   "exit": 1,
+   "seconds": 0.3,
+   "tail": [
+    "usage: python check_retention.py <record.yaml>"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/nti-spec",
+   "script": "scripts/check_links.py",
+   "exit": 1,
+   "seconds": 53.4,
+   "tail": [
+    "                                              ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^",
+    "  File \"C:\\Users\\Administrator\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\fa694f517e5995233c80a9a8db5212c2\\python\\Lib\\pathlib\\_local.py\", line 385, in relative_to",
+    "    raise ValueError(f\"{str(self)!r} is not in the subpath of {str(other)!r}\")",
+    "ValueError: 'C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\e5sc-5p4_q73t\\\\zhaoxinghua09-cell-nti-spec-090349c\\\\NTI-1.md' is not in the subpath of 'C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\e5sc-5p4_q73t\\\\zhaoxinghua09-cell-nti-spec-090349c'"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/publish-quality-gate",
+   "script": "scripts/check_release.py",
+   "exit": 2,
+   "seconds": 0.2,
+   "tail": [
+    "  L3 个人信息:     手机号/邮箱/身份证/微信/QQ/地址",
+    "  L4 机密信息:     API密钥/密码/平台账号/内部代号/外部IP",
+    "",
+    "输出: 命中列表 + 误报判定建议，退出码 0=零真实命中 1=有疑似命中"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "stevenzhao07/medical-ai-toolkit",
+   "script": "scripts/check_portal.py",
+   "exit": 0,
+   "seconds": 0.2,
+   "tail": [
+    "[check_portal] OK — 21 模块，skeleton/agent-card/teamai/llms 四向一致"
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "stevenzhao07/silent-failure-catalog",
+   "script": "tools/check-catalog.py",
+   "exit": 0,
+   "seconds": 0.6,
+   "tail": [
+    "  ids    : SF-001, SF-002, SF-003, SF-004, SF-005, SF-006, SF-007, SF-008, SF-009, SF-010, SF-011, SF-012, SF-013, SF-014",
+    "  entry pages (the only files allowed outbound self-links): docs/where-to-find-us.md, docs/start-here.md",
+    "",
+    "PASS — every required section present, every id indexed, every link resolves."
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "stevenzhao07/awesome-healthcare-agents",
+   "script": ".github/link-check/check_links.py",
+   "exit": 0,
+   "seconds": 41.8,
+   "tail": [
+    "entries: 52",
+    "unreachable-not-dead: 2 (network/rate-limit, not counted as dead)",
+    "OK: all 52 repo links open for an outsider"
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "LGD-Eval/evaluation-protocol",
+   "script": "reviews/verified-transition-loop/verify_vtl.mjs",
+   "exit": 1,
+   "seconds": 0.1,
+   "tail": [
+    "  url: 'file:///C:/Users/ADMINI%7E1/AppData/Local/Temp/e5sc-7hdhh8re/LGD-Eval-evaluation-protocol-cf15abd/reviews/verified-transition-loop/canonical-runtime-v0.12.mjs'",
+    "}",
+    "",
+    "Node.js v22.23.2"
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "LGD-Eval/silent-failure-catalog",
+   "script": "tools/check-catalog.py",
+   "exit": 1,
+   "seconds": 0.6,
+   "tail": [
+    "  1 problem(s):",
+    "    🔴 README.md                    line 1: outbound link to the account's static-hosting host ('https://zhaoxinghua09-cell.github.io/') — entry pages are docs/where-to-find-us.md and docs/start-here.md",
+    "",
+    "FAIL — a required item is absent or inconsistent."
+   ],
+   "verdict": "selfcheck_fail"
+  },
+  {
+   "repo": "LGD-Eval/wg2-ibea-charter",
+   "script": ".github/link-check/check_links.py",
+   "exit": 0,
+   "seconds": 0.2,
+   "tail": [
+    "entries: 0",
+    "OK: all 0 repo links open for an outsider"
+   ],
+   "verdict": "selfcheck_ok"
+  },
+  {
+   "repo": "LGD-Eval/awesome-agent-skills-1",
+   "script": ".github/link-check/check_links.py",
+   "exit": 0,
+   "seconds": 85.5,
+   "tail": [
+    "entries: 207",
+    "unreachable-not-dead: 207 (network/rate-limit, not counted as dead)",
+    "OK: all 207 repo links open for an outsider"
+   ],
+   "verdict": "selfcheck_ok"
+  }
+ ]
+}

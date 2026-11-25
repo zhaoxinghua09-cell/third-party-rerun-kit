@@ -1,0 +1,17 @@
+B0 baseline           verdict=PASS
+C1 豁免三件套          IO0=N/A verdict=PASS
+I1 未订阅地址发信                       REFUSE  OK IO0: IO0 发件地址 voucher@example.org 未订阅列表 public-agentprotocol@w3.org（轴 
+I2 已订阅但未取得归档授权                   REFUSE  OK IO0: IO0 地址 voucher@example.org 未取得列表 public-agentprotocol@w3.org 的归档授
+I3 正文出现禁语'已获认可'                  REFUSE  OK IO1: IO1 禁语命中 1 处: 14:已获认可
+I4 缺口只写附录                        REFUSE  OK IO2: IO2 缺口段只写在附录里（附录标题行 7 之前无缺口段）
+I5 数字缺时点与端点                      REFUSE  OK IO3: IO3 1 条数字断言缺 as of 时点或专用端点/命令: 行 14
+I6 回执无证据记通过                      REFUSE  OK IO4: IO4 回执 independent.reviewer@example.org 记为 'pass' 但缺读取证据（时间戳/端点/哈
+I7 P1 超三个工作日处置                   REFUSE  OK IO5: IO5 P1 T2 处置超三个工作日（5 个工作日）
+I8 扣件计入已发出                       REFUSE  OK IO6: IO6 扣件计入已发出: B1
+I9 引用只写域名不带协议                    REFUSE  OK E3: E3 非法 url: {'url': 'example.org/a', 'status': 200}
+I10 谎报 list_post:false 实为列表收件人   REFUSE  OK IO0: IO0 谎报 list_post:false：收件人实为列表地址 public-agentprotocol@w3.org；一经核对
+I11 内部自测数字缺限定语                   REFUSE  OK IO7: IO7 内部自测数字缺限定语（未标'内部/不可外部复现'，也无可复跑脚本/日志入口）: 行 14
+
+B1 restore baseline    verdict=PASS
+
+SUMMARY: 11/11 注入被拒；baseline PASS；豁免对照 PASS

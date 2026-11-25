@@ -93,6 +93,29 @@ def a8(pkg):
                       "sha256": sha_file(sp), "artifact": "outputs/result.txt"}
     json.dump(m, open(os.path.join(pkg, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
+def a9(pkg):
+    # 签名不动、把公布的公钥换成另一把 → 验签必须失败
+    import base64
+    from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+    from cryptography.hazmat.primitives import serialization
+    os.makedirs(os.path.join(pkg, "attest"), exist_ok=True)
+    art = os.path.join(pkg, "outputs/result.txt")
+    real = Ed25519PrivateKey.generate()
+    other = Ed25519PrivateKey.generate()
+    sig = real.sign(open(art, "rb").read())
+    other_pub = base64.b64encode(other.public_key().public_bytes(
+        encoding=serialization.Encoding.Raw, format=serialization.PublicFormat.Raw)).decode()
+    sp = os.path.join(pkg, "attest/swapped.sig.json")
+    json.dump({"alg": "ed25519", "target": "outputs/result.txt", "target_sha256": sha_file(art),
+               "public_key_b64": other_pub, "sig_b64": base64.b64encode(sig).decode()},
+              open(sp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    m = json.load(open(os.path.join(pkg, "manifest.json"), encoding="utf-8"))
+    m["files"]["attest/swapped.sig.json"] = sha_file(sp)
+    m["steps"].append({"n": 9, "op": "sha256_file", "path": "attest/swapped.sig.json", "expect": sha_file(sp)})
+    m["signature"] = {"type": "ed25519", "path": "attest/swapped.sig.json",
+                      "sha256": sha_file(sp), "artifact": "outputs/result.txt", "public_key_b64": other_pub}
+    json.dump(m, open(os.path.join(pkg, "manifest.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
 def main():
     print("baseline（未篡改）应先 PASS：")
     code, out = run(DEMO)
@@ -111,6 +134,7 @@ def main():
         attack("A6 抽走链式步骤", a6),
         attack("A7 声明签名但文件缺失", a7),
         attack("A8 签名自洽但无法验证（cosign 缺）", a8),
+        attack("A9 签名不动、公钥被换", a9),
     ]
     n = sum(caught)
     print(f"\nSUMMARY: {n}/{len(caught)} 攻击被拦下；baseline {'PASS' if ok_base else 'FAIL'}")

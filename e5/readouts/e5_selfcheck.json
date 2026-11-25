@@ -3,10 +3,16 @@
   "generated_at": "2026-11-26T07:25:17",
   "checked": 13,
   "counts": {
-   "selfcheck_fail": 7,
-   "selfcheck_ok": 6
+   "selfcheck_fail": 6,
+   "selfcheck_ok": 7
   },
-  "note": "自检脚本实跑；通过不计入 E5 合格，仅证明'能被外人跑通'"
+  "note": "自检脚本实跑；通过不计入 E5 合格，仅证明'能被外人跑通'。其中 1 件（LGD-Eval/silent-failure-catalog）为读数后修复并远端复核通过，原判 fail 保留在 original_* 字段。",
+  "fixed_after_readout": {
+   "repo": "LGD-Eval/silent-failure-catalog",
+   "pr": 2,
+   "commit": "a22d1a68",
+   "remote_check": "exit 0"
+  }
  },
  "records": [
   {
@@ -141,7 +147,27 @@
     "",
     "FAIL — a required item is absent or inconsistent."
    ],
-   "verdict": "selfcheck_fail"
+   "verdict": "selfcheck_ok_after_fix",
+   "original_verdict": "selfcheck_fail",
+   "original_exit": 1,
+   "original_tail": [
+    "  1 problem(s):",
+    "    🔴 README.md                    line 1: outbound link to the account's static-hosting host ('https://zhaoxinghua09-cell.github.io/') — entry pages are docs/where-to-find-us.md and docs/start-here.md",
+    "",
+    "FAIL — a required item is absent or inconsistent."
+   ],
+   "fix": {
+    "at": "2026-11-26",
+    "pr": 2,
+    "pr_url": "https://github.com/LGD-Eval/silent-failure-catalog/pull/2",
+    "commit": "a22d1a68bca5c6178332cab08912707cf1661d9b",
+    "method": "unarchive -> branch fix/readme-portal-link -> PR #2 -> squash merge -> re-archive",
+    "remote_check": "zipball of merged main -> tools/check-catalog.py -> exit 0, PASS, 15 entries SF-001..SF-015",
+    "tail": [
+     "  entries: 15",
+     "PASS — every required section present, every id indexed, every link resolves."
+    ]
+   }
   },
   {
    "repo": "LGD-Eval/wg2-ibea-charter",

@@ -1,0 +1,9 @@
+=== CMD ===
+-m pytest tests -q -p no:cacheprovider
+=== EXIT 0 ===
+=== STDOUT ===
+............................                                             [100%]
+28 passed in 5.96s
+
+=== STDERR ===
+

@@ -1,0 +1,240 @@
+{
+ "generated_at": "2026-11-26T08:44:47",
+ "machine": "company (client:582478:3880613324794288)",
+ "algorithm": "sha256 over sorted lines 'rel_path\\tsha256(file)'",
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/lgd-xverify",
+   "commit": "7ca1b83a496d0276d92a42b7c0fcf5893b679456",
+   "manifest_sha256": "2d37276de02102f7e46edbe4acad7ce0cf5c374a14cf34ec0fe43fbecf3cc7f4",
+   "files": 33,
+   "zip_bytes": 60970
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skeleton",
+   "commit": "f3aac86e9c562fa35569e7b4e123fc5e010db6f1",
+   "manifest_sha256": "b0b713b3a9ef59cc0cce97b8270b4bb017f7dba1e898046367a86980b51503bf",
+   "files": 53,
+   "zip_bytes": 102568
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-iverify",
+   "commit": "1b67f10dc5a7059843b3903fe56914f36e828107",
+   "manifest_sha256": "7f16b3d1c70688a506628aba8ad2cdb832cbedd2ad9b845df899e10cec79c6be",
+   "files": 33,
+   "zip_bytes": 33895
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wexp-check",
+   "commit": "cfe458b5f90c0a95ad1723b7a0dbba1b8d834fae",
+   "manifest_sha256": "fb450a4a8796eee6ddec3931cfd6dfcb05a2d9ad2766c5ee173bca855943a46c",
+   "files": 38,
+   "zip_bytes": 90125
+  },
+  {
+   "repo": "zhaoxinghua09-cell/debug-pro",
+   "commit": "217d0609aac840f95a87c63ebe57354f4ed6d373",
+   "manifest_sha256": "a026935f03ffd8490698b47d04a69d9afe5436c0cae4ff7fe1d4689cc00498e4",
+   "files": 28,
+   "zip_bytes": 110280
+  },
+  {
+   "repo": "zhaoxinghua09-cell/claim-audit",
+   "commit": "c1b9ad3dc123d919b927326fe8f75fe9be115bcc",
+   "manifest_sha256": "84e1b191498808a12e8338c7e8160a0146c0caa2448672044de2ff8aba5c3d08",
+   "files": 15,
+   "zip_bytes": 21373
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evidence-anchor",
+   "commit": "7f6f2fa192639ee4efcf48d26be0207187231acb",
+   "manifest_sha256": "a58d8da7470fa200fe0361b6f6bd09eef3685e79306d4d31b1c79b1b5723021a",
+   "files": 13,
+   "zip_bytes": 19153
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
+   "commit": "adf68f3dbc90c6348ce6671e8124574784e32896",
+   "manifest_sha256": "50e18875461e1503e399e520bfbda19447e82dbdf5743a64a2c9edbfdad72406",
+   "files": 24,
+   "zip_bytes": 41564
+  },
+  {
+   "repo": "stevenzhao07/doc-translate-keep-layout",
+   "commit": "78cc0563db95fd59aaf3abce07bd7286920fad77",
+   "manifest_sha256": "2450b202d80348f72f99882d2afef1bcaae30fcd82a46885012e4ba56b89bc93",
+   "files": 21,
+   "zip_bytes": 61059
+  },
+  {
+   "repo": "stevenzhao07/regdoc-commons",
+   "commit": "a8a79bd4e45fb31c9667bed6358347263890e515",
+   "manifest_sha256": "41c020e40ac0a122bbfd52a6a253d07d6f8b1d22faedf40072fc54728fa8430f",
+   "files": 22,
+   "zip_bytes": 117668
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synomos-ai-skills",
+   "commit": "84ae3d40842c4e17ec20f6acc0df1ce1471d9619",
+   "manifest_sha256": "21f5f6a8ffd7b1e134609e2d838c03acfcc10f1bbea7e180da0fb726792dee04",
+   "files": 403,
+   "zip_bytes": 1540121
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-skills",
+   "commit": "d0398570768f617b3bac9e66ce3c4e9eb4114cb4",
+   "manifest_sha256": "8b2f72a3295f658cc5c809631470b2a1c84fd767785caf10f685ae8663ce0a20",
+   "files": 955,
+   "zip_bytes": 18875928
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skills",
+   "commit": "134f6465bd2ada4f2e7c4eaa33f8bc64c2d7f51b",
+   "manifest_sha256": "8af7b36b92313c2cbe42095d5350fdcf83f017edec147fd61a8e46c6e8ea7d22",
+   "files": 208,
+   "zip_bytes": 1355342
+  },
+  {
+   "repo": "zhaoxinghua09-cell/silent-failure-catalog",
+   "commit": "1309e1a483227a1f6c61267abd4071f06d26caab",
+   "manifest_sha256": "e264eb19bc076c7188b6815fb0e7e7617c301d383f99e03da2188efe0d4edcda",
+   "files": 110,
+   "zip_bytes": 448720
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-redteam-suite",
+   "commit": "e39ac448d8ec40f895584c6126df6f27856310b9",
+   "manifest_sha256": "ae5a5fc1790ecbcf47f263f9de19f5b5be41bc1977455df00ba43c955e097fe4",
+   "files": 42,
+   "zip_bytes": 45588
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skill-review",
+   "commit": "7fe24c39c711b652933ee90e4cfd5f4daaa7589e",
+   "manifest_sha256": "14945c48b007c4190218e54f37085f07c7aea10c869ff148263ca249b0f38e6e",
+   "files": 104,
+   "zip_bytes": 581748
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-audit",
+   "commit": "65b6470543ab24943177dbd0ed761f69a98590ff",
+   "manifest_sha256": "43a68eaf79482d96e192a62fa1ad2ec4451fdeb3b4ce3981673d62688b7a1c01",
+   "files": 61,
+   "zip_bytes": 152226
+  },
+  {
+   "repo": "zhaoxinghua09-cell/summarize-pro",
+   "commit": "cbb0284e1aae3f996fd1daa2da6c342d50b13d8b",
+   "manifest_sha256": "d7c86aa5e7d2a3f4b2f3b828c736e6b6e5121e3c2af38ded13974a4bfe3147a1",
+   "files": 31,
+   "zip_bytes": 239661
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-evidence",
+   "commit": "387ead9c0d42cdc80c6b544bd5122619d7b0dba0",
+   "manifest_sha256": "fc690fc064ee683ebf641a751ad3e331ed9724f656818e6a807828db78abd3ba",
+   "files": 81,
+   "zip_bytes": 251030
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aps-conformance-suite",
+   "commit": "4157ad4d79f9692c8b1b46ca49d48eda20b517cc",
+   "manifest_sha256": "2092a4f6d75aef823ede1f0c42ae5e85a2628bd28268969a4e1d9a591c976380",
+   "files": 1294,
+   "zip_bytes": 3950531
+  },
+  {
+   "repo": "stevenzhao07/uibc-core",
+   "commit": "507ee32427cff3bbbd48e3803fac7c711a6c55be",
+   "manifest_sha256": "37303cadf302caa09b9594c3d5952c7b10b22e7cf3b03bd7a6b9a6621a47ff48",
+   "files": 196,
+   "zip_bytes": 425819
+  },
+  {
+   "repo": "LGD-Eval/skill-audit",
+   "commit": "31a6fde24db3b8a7260f745d93000166893a905d",
+   "manifest_sha256": "6990dd0116d9dc9d565f9675a0f3221499a0b2715d150cd9d15c365a9c31e583",
+   "files": 64,
+   "zip_bytes": 153400
+  },
+  {
+   "repo": "LGD-Eval/uibc-core",
+   "commit": "5dac2a2e7882e11e0b18a95920440ca93a1441f6",
+   "manifest_sha256": "6c839acca555fbf5dee830a687f8a4a286cbc912e12afb00f4c8d0c8e0792691",
+   "files": 202,
+   "zip_bytes": 432445
+  },
+  {
+   "repo": "LGD-Eval/evaluation-evidence",
+   "commit": "1f8c529f32c34bb60e4bc8f1fb85aafaa1ca5919",
+   "manifest_sha256": "60ba0627320cf8d099737b7e0ba74311c3ff2c8002a70f79d0e0bd6747a698de",
+   "files": 85,
+   "zip_bytes": 254616
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skillgate",
+   "commit": "362c600dfdc386e327e70e1e70e28305139b4841",
+   "manifest_sha256": "9f4672f4e5cef48aa40027b0358029d2f7388594cc671143ef75cd6380cc4063",
+   "files": 209,
+   "zip_bytes": 348539
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wechat-viral-topic",
+   "commit": "6ef4647b9cadd08bc5e960ba6051fdd1319fff47",
+   "manifest_sha256": "d4772fb06c76c7d0d6301e6b668363ed7e1ccad70806549ada958339127f2c3f",
+   "files": 33,
+   "zip_bytes": 400673
+  },
+  {
+   "repo": "stevenzhao07/aitb",
+   "commit": "f7647f88607f2cc83ba1c039bc4a4572d83478d8",
+   "manifest_sha256": "8b29f5e0b128b005e095641a030e3a8f2d99c924f30e326fecd0b060f4eb8bc3",
+   "files": 36,
+   "zip_bytes": 61206
+  },
+  {
+   "repo": "LGD-Eval/LGD-Eval",
+   "commit": "3ac73d0168779e2a0bfab56ea7d22ea2a70f1f05",
+   "manifest_sha256": "3732d132cfade4e36575d76dfb8135b1a49df3c1c59e18fc9fa8e64adea0a49f",
+   "files": 185,
+   "zip_bytes": 836239
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-code",
+   "commit": "ea11db0a112f172b5112f03d37bdf45534c43d7e",
+   "manifest_sha256": "1b22db253d7150f90eb17a6e7bc762d56c1e0995f6c9baea525ef964a2bc55b2",
+   "files": 58,
+   "zip_bytes": 2341673
+  },
+  {
+   "repo": "zhaoxinghua09-cell/awesome-claude-skills",
+   "commit": "9a6fd52eaeb9dd7dec0cc3c05f75e8fc7f5cb356",
+   "manifest_sha256": "b5d386bb632495082e30c8be0d9b810fe522cfcabee63996df720bf4c6e0f94a",
+   "files": 1142,
+   "zip_bytes": 5117035
+  },
+  {
+   "repo": "LGD-Eval/lgd-gate",
+   "commit": "2172261eea8dfb3cd4eb617fe6e19783cce60c0e",
+   "manifest_sha256": "96266ec96130624e6625304e0d0ee29ede19b5ec5f47b96eb8af8d6ab8026f08",
+   "files": 185,
+   "zip_bytes": 421267
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-skills",
+   "commit": "a0297987c5726726c88c195c2513dc7b73ce9e24",
+   "manifest_sha256": "4558baa82115defba5bfbc710299e5f0702952c9b5ec2ab5d8522261dd8a4ca4",
+   "files": 1144,
+   "zip_bytes": 5079627
+  },
+  {
+   "repo": "LGD-Eval/awesome-llm-skills",
+   "commit": "f8f1225d755b1e39968476c03fa92772d1a4d9fa",
+   "manifest_sha256": "08d19687f76deaada7df864685a96a73ddc553d1e94de024fa77ed5890ceba6c",
+   "files": 372,
+   "zip_bytes": 3581013
+  }
+ ],
+ "total": 33,
+ "ok": 33
+}

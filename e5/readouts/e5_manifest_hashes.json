@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T08:44:47",
+ "generated_at": "2026-11-26T09:48:09",
  "machine": "company (client:582478:3880613324794288)",
  "algorithm": "sha256 over sorted lines 'rel_path\\tsha256(file)'",
  "records": [
@@ -130,6 +130,13 @@
    "zip_bytes": 239661
   },
   {
+   "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
+   "commit": "3221884122909e1c66a9073704b7ad4f0256791f",
+   "manifest_sha256": "9f0a4d25d71f5cd8d217aaf3d0aba6e1304bf2854c749114bc50e22617a67c18",
+   "files": 75,
+   "zip_bytes": 998559
+  },
+  {
    "repo": "zhaoxinghua09-cell/evaluation-evidence",
    "commit": "387ead9c0d42cdc80c6b544bd5122619d7b0dba0",
    "manifest_sha256": "fc690fc064ee683ebf641a751ad3e331ed9724f656818e6a807828db78abd3ba",
@@ -186,6 +193,13 @@
    "zip_bytes": 400673
   },
   {
+   "repo": "zhaoxinghua09-cell/skill-improver",
+   "commit": "2feaeeb97bcbc10431a964f534a05c81e4ac22ae",
+   "manifest_sha256": "10bde996b3bd83c14571b97a33578e57861e69a1f6213214a4a93525088cef53",
+   "files": 13,
+   "zip_bytes": 24209
+  },
+  {
    "repo": "stevenzhao07/aitb",
    "commit": "f7647f88607f2cc83ba1c039bc4a4572d83478d8",
    "manifest_sha256": "8b29f5e0b128b005e095641a030e3a8f2d99c924f30e326fecd0b060f4eb8bc3",
@@ -198,6 +212,13 @@
    "manifest_sha256": "3732d132cfade4e36575d76dfb8135b1a49df3c1c59e18fc9fa8e64adea0a49f",
    "files": 185,
    "zip_bytes": 836239
+  },
+  {
+   "repo": "LGD-Eval/skill-scout",
+   "commit": "aa26f4195d8f11101400105bd22d4ab0e34d4a39",
+   "manifest_sha256": "c28edc95c069e961c278f34fa33f422e645d1a954eab5bfd25add2edb2070135",
+   "files": 17,
+   "zip_bytes": 32418
   },
   {
    "repo": "LGD-Eval/awesome-claude-code",
@@ -235,6 +256,6 @@
    "zip_bytes": 3581013
   }
  ],
- "total": 33,
- "ok": 33
+ "total": 36,
+ "ok": 36
 }

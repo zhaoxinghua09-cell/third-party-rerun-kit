@@ -1,0 +1,513 @@
+{
+ "summary": {
+  "generated_at": "2026-11-26T08:19:26",
+  "machine": "company (client:582478:3880613324794288)",
+  "pass_total": 36,
+  "strict": 33,
+  "thin": 3,
+  "strict_repos": [
+   "zhaoxinghua09-cell/lgd-xverify",
+   "zhaoxinghua09-cell/lgd-skeleton",
+   "zhaoxinghua09-cell/uibc-iverify",
+   "zhaoxinghua09-cell/wexp-check",
+   "zhaoxinghua09-cell/debug-pro",
+   "zhaoxinghua09-cell/claim-audit",
+   "zhaoxinghua09-cell/evidence-anchor",
+   "zhaoxinghua09-cell/medxpert-ortho-mcp",
+   "stevenzhao07/doc-translate-keep-layout",
+   "stevenzhao07/regdoc-commons",
+   "zhaoxinghua09-cell/synomos-ai-skills",
+   "zhaoxinghua09-cell/agent-skills",
+   "zhaoxinghua09-cell/lgd-skills",
+   "zhaoxinghua09-cell/silent-failure-catalog",
+   "zhaoxinghua09-cell/skill-redteam-suite",
+   "zhaoxinghua09-cell/lgd-skill-review",
+   "zhaoxinghua09-cell/skill-audit",
+   "zhaoxinghua09-cell/summarize-pro",
+   "zhaoxinghua09-cell/evaluation-evidence",
+   "zhaoxinghua09-cell/aps-conformance-suite",
+   "stevenzhao07/uibc-core",
+   "LGD-Eval/skill-audit",
+   "LGD-Eval/uibc-core",
+   "LGD-Eval/evaluation-evidence",
+   "zhaoxinghua09-cell/skillgate",
+   "zhaoxinghua09-cell/wechat-viral-topic",
+   "stevenzhao07/aitb",
+   "LGD-Eval/LGD-Eval",
+   "LGD-Eval/awesome-claude-code",
+   "zhaoxinghua09-cell/awesome-claude-skills",
+   "LGD-Eval/lgd-gate",
+   "LGD-Eval/awesome-claude-skills",
+   "LGD-Eval/awesome-llm-skills"
+  ],
+  "thin_repos": [
+   "zhaoxinghua09-cell/fgtida-paris-input-2026",
+   "zhaoxinghua09-cell/skill-improver",
+   "LGD-Eval/skill-scout"
+  ],
+  "rule": "passed>=3 且 (强断言>=1 或 状态比对>=1)；平凡断言(assert True/1/None)不计"
+ },
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/lgd-xverify",
+   "passed": 28,
+   "commit": "7ca1b83a496d",
+   "strong": 30,
+   "trivial": 0,
+   "cmp": 1,
+   "files_scanned": 3,
+   "samples": [
+    "tests/test_negative_controls.py: self.assertEqual(v, \"INCONCLUSIVE\")",
+    "tests/test_negative_controls.py: self.assertEqual(v1(doc), \"FAIL\")",
+    "tests/test_negative_controls.py: self.assertEqual(v1(doc), \"FAIL\")"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skeleton",
+   "passed": 14,
+   "commit": "f3aac86e9c56",
+   "strong": 40,
+   "trivial": 0,
+   "cmp": 61,
+   "files_scanned": 2,
+   "samples": [
+    "tests/test_skill_lock.py: assert run(\"generate\", tmp_path).returncode == 0",
+    "tests/test_skill_lock.py: assert (tmp_path / \"skills.lock.json\").exists()",
+    "tests/test_skill_lock.py: assert r.returncode == 0, r.stdout + r.stderr"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-iverify",
+   "passed": 10,
+   "commit": "1b67f10dc5a7",
+   "strong": 23,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 2,
+   "samples": [
+    "tests/test_fixtures.py: self.assertEqual(out.get(\"result\"), \"INCONCLUSIVE\")",
+    "tests/test_fixtures.py: self.assertEqual(code, 2)",
+    "tests/test_fixtures.py: self.assertEqual(out.get(\"result\"), \"FAIL\")"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wexp-check",
+   "passed": 37,
+   "commit": "cfe458b5f90c",
+   "strong": 52,
+   "trivial": 0,
+   "cmp": 2,
+   "files_scanned": 1,
+   "samples": [
+    "tests/test_wexp_check.py: self.assertEqual(canonical(appraise(data, PROFILES)), canonical(result))",
+    "tests/test_wexp_check.py: self.assertEqual(data, fixture(I, [\"intent\"]))  # the supplied file is the common context",
+    "tests/test_wexp_check.py: self.assertEqual(appraise(data, PROFILES)[\"verdict\"], \"accept\")"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/debug-pro",
+   "passed": 10,
+   "commit": "217d0609aac8",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 1,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "zhaoxinghua09-cell/claim-audit",
+   "passed": 9,
+   "commit": "c1b9ad3dc123",
+   "strong": 20,
+   "trivial": 0,
+   "cmp": 1,
+   "files_scanned": 1,
+   "samples": [
+    "tests/run_golden.py: assert code == 0, code",
+    "tests/run_golden.py: assert \"tests\" in out and \"OK\" in out",
+    "tests/run_golden.py: assert \"对不上 0\" in out"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evidence-anchor",
+   "passed": 9,
+   "commit": "7f6f2fa19263",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 8,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
+   "passed": 30,
+   "commit": "adf68f3dbc90",
+   "strong": 53,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": [
+    "tests/test_core.py: self.assertGreaterEqual(r[\"count\"], 1)",
+    "tests/test_core.py: self.assertEqual(r[\"matches\"][0][\"id\"], \"LAB-DEMO-01\")",
+    "tests/test_core.py: self.assertEqual(r[\"matches\"], [])"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/doc-translate-keep-layout",
+   "passed": 40,
+   "commit": "78cc0563db95",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 37,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "stevenzhao07/regdoc-commons",
+   "passed": 52,
+   "commit": "a8a79bd4e45f",
+   "strong": 2,
+   "trivial": 0,
+   "cmp": 14,
+   "files_scanned": 4,
+   "samples": [
+    "tests/rules.js: const assert = require('assert');",
+    "tests/rules.js: assert.ok(/确认/.test(msg), 'hint must ask for confirmation, not assert a class');"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synomos-ai-skills",
+   "passed": 14,
+   "commit": "84ae3d40842c",
+   "strong": 60,
+   "trivial": 0,
+   "cmp": 19,
+   "files_scanned": 13,
+   "samples": [
+    "skills/lexiang-knowledge-base/scripts/test_upload_files.py: assert len(results) == 3",
+    "skills/lexiang-knowledge-base/scripts/test_upload_files.py: assert success is True",
+    "skills/lexiang-knowledge-base/scripts/test_upload_files.py: assert len(results) == 3"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-skills",
+   "passed": 14,
+   "commit": "d0398570768f",
+   "strong": 40,
+   "trivial": 0,
+   "cmp": 6,
+   "files_scanned": 5,
+   "samples": [
+    "tests/test_skill_lock.py: assert run(\"generate\", tmp_path).returncode == 0",
+    "tests/test_skill_lock.py: assert (tmp_path / \"skills.lock.json\").exists()",
+    "tests/test_skill_lock.py: assert r.returncode == 0, r.stdout + r.stderr"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skills",
+   "passed": 14,
+   "commit": "134f6465bd2a",
+   "strong": 41,
+   "trivial": 0,
+   "cmp": 22,
+   "files_scanned": 16,
+   "samples": [
+    "skills/lgd-skill-review/tests/rubric_probe.py: \"\"\"Rubric conformance test: for every published check, break it on purpose and assert the score drops.",
+    "tests/test_skill_lock.py: assert run(\"generate\", tmp_path).returncode == 0",
+    "tests/test_skill_lock.py: assert (tmp_path / \"skills.lock.json\").exists()"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/silent-failure-catalog",
+   "passed": 11,
+   "commit": "1309e1a48322",
+   "strong": 16,
+   "trivial": 0,
+   "cmp": 3,
+   "files_scanned": 2,
+   "samples": [
+    "tests/test_catalog.py: self.assertGreater(len(self.entries), 0, \"no entries found — the catalog is empty\")",
+    "tests/test_catalog.py: self.assertEqual(proc.returncode, 0, \"checker failed:\\n%s\\n%s\" % (proc.stdout, proc.stderr))",
+    "tests/test_catalog.py: self.assertIn(\"PASS\", proc.stdout)"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-redteam-suite",
+   "passed": 14,
+   "commit": "e39ac448d8ec",
+   "strong": 41,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 3,
+   "samples": [
+    "probes/vacuity/tests/run_golden.py: assert actual == expected",
+    "tests/test_skill_lock.py: assert run(\"generate\", tmp_path).returncode == 0",
+    "tests/test_skill_lock.py: assert (tmp_path / \"skills.lock.json\").exists()"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skill-review",
+   "passed": 5,
+   "commit": "7fe24c39c711",
+   "strong": 1,
+   "trivial": 0,
+   "cmp": 36,
+   "files_scanned": 15,
+   "samples": [
+    "tests/rubric_probe.py: \"\"\"Rubric conformance test: for every published check, break it on purpose and assert the score drops."
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-audit",
+   "passed": 12,
+   "commit": "65b6470543ab",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 1,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "zhaoxinghua09-cell/summarize-pro",
+   "passed": 24,
+   "commit": "cbb0284e1aae",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 5,
+   "files_scanned": 2,
+   "samples": []
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
+   "passed": 1,
+   "commit": "322188412290",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-evidence",
+   "passed": 5,
+   "commit": "387ead9c0d42",
+   "strong": 10,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": [
+    "tests/test_verify_hash_manifest.py: self.assertTrue(ok)",
+    "tests/test_verify_hash_manifest.py: self.assertEqual([r[\"status\"] for r in results], [\"PASS\"])",
+    "tests/test_verify_hash_manifest.py: self.assertFalse(ok)"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aps-conformance-suite",
+   "passed": 20,
+   "commit": "4157ad4d79f9",
+   "strong": 134,
+   "trivial": 0,
+   "cmp": 30,
+   "files_scanned": 13,
+   "samples": [
+    "fixtures/lease-revocation-axes/mutation.test.mjs: import assert from 'node:assert/strict'",
+    "interop/cosai-odis-148dc41/adapter/py/test_timestamps.py: assert odis.validate_non_root(child(p, '2026-09-11T22:00:00+01:00'), [p])['result'] == 'pass'      # same inst",
+    "interop/cosai-odis-148dc41/adapter/py/test_timestamps.py: assert odis.validate_non_root(child(p, '2026-09-11T20:30:00-01:00'), [p])['check'] == 'expiry'    # 21:30Z, la"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/uibc-core",
+   "passed": 158,
+   "commit": "507ee32427cf",
+   "strong": 318,
+   "trivial": 0,
+   "cmp": 3,
+   "files_scanned": 12,
+   "samples": [
+    "lgd-core/TESTS/test_validator.py: self.assertEqual(problems, [], msg=f\"{name} 应通过，实际: {problems}\")",
+    "lgd-core/TESTS/test_validator.py: self.assertNotEqual(problems, [], msg=f\"{name} 应被拒\")",
+    "lgd-core/TESTS/test_validator.py: self.assertEqual(v.validate(base_manifest()), [])"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/skill-audit",
+   "passed": 12,
+   "commit": "31a6fde24db3",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 1,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "LGD-Eval/uibc-core",
+   "passed": 158,
+   "commit": "5dac2a2e7882",
+   "strong": 318,
+   "trivial": 0,
+   "cmp": 3,
+   "files_scanned": 12,
+   "samples": [
+    "lgd-core/TESTS/test_validator.py: self.assertEqual(problems, [], msg=f\"{name} 应通过，实际: {problems}\")",
+    "lgd-core/TESTS/test_validator.py: self.assertNotEqual(problems, [], msg=f\"{name} 应被拒\")",
+    "lgd-core/TESTS/test_validator.py: self.assertEqual(v.validate(base_manifest()), [])"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/evaluation-evidence",
+   "passed": 5,
+   "commit": "1f8c529f32c3",
+   "strong": 10,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": [
+    "tests/test_verify_hash_manifest.py: self.assertTrue(ok)",
+    "tests/test_verify_hash_manifest.py: self.assertEqual([r[\"status\"] for r in results], [\"PASS\"])",
+    "tests/test_verify_hash_manifest.py: self.assertFalse(ok)"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skillgate",
+   "passed": 60,
+   "commit": "362c600dfdc3",
+   "strong": 100,
+   "trivial": 0,
+   "cmp": 2,
+   "files_scanned": 17,
+   "samples": [
+    "tests/test_coverage.py: assert result is not None",
+    "tests/test_coverage.py: assert \"<svg\" in svg",
+    "tests/test_coverage.py: assert len(sbom) > 0"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wechat-viral-topic",
+   "passed": 11,
+   "commit": "6ef4647b9cad",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 1,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-improver",
+   "passed": 9,
+   "commit": "2feaeeb97bcb",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "stevenzhao07/aitb",
+   "passed": 25,
+   "commit": "f7647f88607f",
+   "strong": 50,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": [
+    "tests/test_engine.py: self.assertEqual(engine.validate_preset(p), [])",
+    "tests/test_engine.py: self.assertIn(\"E002\", [c for c, _ in engine.validate_preset(p)])",
+    "tests/test_engine.py: self.assertIn(\"E003\", [c for c, _ in engine.validate_preset(p)])"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/LGD-Eval",
+   "passed": 13,
+   "commit": "3ac73d016877",
+   "strong": 143,
+   "trivial": 0,
+   "cmp": 18,
+   "files_scanned": 21,
+   "samples": [
+    "skills/lgd-eval/tests/test_ast_analyzer.py: assert not [x for x in findings if \"硬编码凭证\" in x.message], findings",
+    "skills/lgd-eval/tests/test_ast_analyzer.py: assert not [x for x in findings if \"硬编码凭证\" in x.message], findings",
+    "skills/lgd-eval/tests/test_ast_analyzer.py: assert hits, findings"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/skill-scout",
+   "passed": 1,
+   "commit": "aa26f4195d8f",
+   "strong": 0,
+   "trivial": 0,
+   "cmp": 1,
+   "files_scanned": 1,
+   "samples": []
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-code",
+   "passed": 112,
+   "commit": "ea11db0a112f",
+   "strong": 218,
+   "trivial": 0,
+   "cmp": 3,
+   "files_scanned": 6,
+   "samples": [
+    "tests/test_badge_notification.py: assert bn.parse_repo(\"https://github.com/o/r\") == (\"o\", \"r\")",
+    "tests/test_badge_notification.py: assert bn.parse_repo(\"https://github.com/o/r.git\") == (\"o\", \"r\")",
+    "tests/test_badge_notification.py: assert bn.parse_repo(\"https://github.com/o/r/\") == (\"o\", \"r\")"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/awesome-claude-skills",
+   "passed": 10,
+   "commit": "9a6fd52eaeb9",
+   "strong": 21,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": [
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"SUCCESS\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertFalse(any(\"FAILURE\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"FAILURE\" in msg and \"intersection\" in msg for msg in messages))"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/lgd-gate",
+   "passed": 10,
+   "commit": "2172261eea8d",
+   "strong": 15,
+   "trivial": 0,
+   "cmp": 5,
+   "files_scanned": 4,
+   "samples": [
+    "audit/20261121/p02_authorization/test_authorization.py: self.assertEqual(d[\"decision\"], \"NOT_GRANTED\")",
+    "audit/20261121/p02_authorization/test_authorization.py: self.assertIn(\"CRITICAL\", \" \".join(d[\"reasons\"]))",
+    "audit/20261121/p02_authorization/test_authorization.py: self.assertEqual(d[\"decision\"], \"NOT_GRANTED\")"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-skills",
+   "passed": 10,
+   "commit": "a0297987c572",
+   "strong": 21,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": [
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"SUCCESS\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertFalse(any(\"FAILURE\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"FAILURE\" in msg and \"intersection\" in msg for msg in messages))"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/awesome-llm-skills",
+   "passed": 10,
+   "commit": "f8f1225d755b",
+   "strong": 21,
+   "trivial": 0,
+   "cmp": 0,
+   "files_scanned": 1,
+   "samples": [
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"SUCCESS\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertFalse(any(\"FAILURE\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"FAILURE\" in msg and \"intersection\" in msg for msg in messages))"
+   ]
+  }
+ ]
+}

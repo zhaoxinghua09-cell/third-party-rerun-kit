@@ -111,10 +111,22 @@ E1 此前一直 FAIL（本机两家模型通道 401/403）。本轮在公司机�
 
 ## 十二、变异检查：从「有断言」到「断言会抓 bug」
 
-补上了上一轮明确列为「不做」的那一项。对 A 档 12 件（passed≥20）各注入 1 处语义变异（`==`→`!=`，个别为常量 +1），跑测试看是否变红：**11 件可测中 9 件 KILLED，变异得分 0.818**。
+补上了上一轮明确列为「不做」的那一项。对 A 档 12 件（passed≥20）各注入 1 处语义变异（`==`→`!=`，个别为常量 +1），跑测试看是否变红：**A+B 两档 30 件中 22 件 KILLED，变异得分 0.733**。
 
 - SURVIVED 2 件：`wexp-check`（变异在 `scripts/compare_corpora.py`，测试只覆盖核心数据模块）、`skillgate`（`alert.py` 第 65 行告警分支缺用例）——局部未覆盖，非整件造假，就地公开不掩盖；
 - SKIP 1 件：`regdoc-commons`，12 个实现文件无 `Compare(Eq)`/`Return(常量)` 可机械替换，需人工设计变异；
 - 局限照写：1 个变异点不等于覆盖率，得分不能外推成「82% 代码被测」。
 
 至此 E5 有了三层递进证据：**能跑（61/61）→ 有断言（33 件）→ 断言会变红（9/11）**。三层都只对抽样/可选范围成立，都不冒充全量覆盖率。
+
+## 十三、E 层真读数与一次自我纠正
+
+跑 `python external_gate.py --all`：**36 条条目，PASS 0，REFUSE 36**，每条原因完全相同——`E1 缺证据 / E2 缺证据`。E 段不是部分缺，是一条都没过。
+
+纠正上一轮的说法：我用自己 key 调 DeepSeek-V3 做的那次审查，`same_operator=true`，按 v9 的 `check_e1` 属 **E1-P，不计入 E1**。上一轮写「E1 已过」是过头了，正确表述是「E1-P 已取得，E1 仍为缺」。已落痕迹 `外部门禁/external_ai_peer/E1-P_deepseek_20261126.json`（`counts_toward_e1: false`）。
+
+本轮把 E1 做成可交付给他人的事：`reports/E1_handover_pack_20261126.md` 给了原样提示词、curl 命令、六字段 JSON 模板和验收命令，并写明 **CONDITIONAL PASS 按门禁二值语义必须填 fail**。任何人用自己的 key 跑一遍即可让 E1 从 REFUSE 变 PASS。
+
+E4 实测通过：`build_external_board.py` → `svg 3, loadable 0`。E5 三层证据在 `reports/mutation_check_20261126.md`（A+B 档 30 件，22 KILLED，0.733）。
+
+结论：内容层已到本人自证上限；准入层（E1、E2）卡在「另一个人」，这一层不能自代。

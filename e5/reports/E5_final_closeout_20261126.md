@@ -65,6 +65,25 @@ Scorecard 只读 CI 痕迹，SLSA 只判产物血统，两者都不回答"外人
 - 镜像修复 PR：`https://github.com/LGD-Eval/silent-failure-catalog/pull/2`（合并 `a22d1a68`）
 - 复跑命令：`python e5_build_manifest.py` → `e5_probe.py` → `e5_deep.py --all` → `e5_deep_merge.py` → `e5_run.py` → `e5_selfcheck.py` → `e5_merge.py` → `e5_board.py`
 
+## 八、逐件证据附录（新增）
+
+`e5/board/E5_evidence_appendix_20261126.html`：61 张卡，每张一个仓库、一个 commit 前 12 位、入口文件、
+真实输出尾四行、passed/failed/errors/exit/耗时/解包字节。零外链、零 a 标签。
+作用：让"36 件合格"变成 36 条可以逐条核的证词，而不是一个数字。
+
+## 九、E1 外部 AI 通道：本轮实测不可用（不算通过）
+
+本机保险库里能用的两家模型通道都做了真实请求：
+
+| 通道 | 结果 |
+|---|---|
+| dashscope（qwen-plus） | HTTP 403 |
+| hunyuan（hunyuan-turbos-latest） | HTTP 401 |
+
+结论：**E1 仍是 FAIL**。不能因为"试过了"就写成"审过了"。
+另：hunyuan 那条在测试时因异常消息回显了凭证内容，已单独记在 `e5/reports/E5_credential_exposure_20261126.md`
+（仅本地日志、未外发、未进任何提交），并建议你轮换该 key、把多行合并存储的凭证拆成字段。
+
 ## 七、明确不做 / 不做假
 
 - 不把"仅自检通过"算进 36 件合格；

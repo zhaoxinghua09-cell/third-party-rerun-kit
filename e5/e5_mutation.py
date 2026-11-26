@@ -96,11 +96,12 @@ def run_rep(root, tests, py, env):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repos", nargs="*")
+    ap.add_argument("--tiers", nargs="*", default=["A"])
     ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args()
     h = {"Authorization": "token " + token(), "Accept": "application/vnd.github+json", "User-Agent": "e5-mut"}
     runner = json.load(open(os.path.join(E5, "e5_runner.json"), encoding="utf-8"))["records"]
-    cands = [x for x in runner if x.get("evidence_tier") == "A" and x["verdict"] == "pass"]
+    cands = [x for x in runner if x.get("evidence_tier") in a.tiers and x["verdict"] == "pass"]
     if a.repos:
         cands = [x for x in cands if x["repo"] in a.repos]
     if a.limit:

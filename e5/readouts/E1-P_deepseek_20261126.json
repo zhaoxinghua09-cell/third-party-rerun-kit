@@ -1,0 +1,23 @@
+{
+ "kind": "E1-P",
+ "kind_note": "同 operator、同机器的外部模型审查。按 v9 标准 external_gate.py 的 check_e1，same_operator=true 不计入 E1。此文件单独存放，不放入 外部门禁/external_ai/，避免被误认作准入证据。",
+ "independent": false,
+ "same_operator": true,
+ "vendor": "SiliconFlow",
+ "model": "deepseek-ai/DeepSeek-V3",
+ "endpoint": "api.siliconflow.cn/v1/chat/completions",
+ "operator": "zhaoxinghua (key holder on DESKTOP-IGJBTUB)",
+ "reviewed_at": "2026-11-26T08:12:36+08:00",
+ "prompt_ref": "E1交接包_20261126.md §三.2（原样）",
+ "response_chars": 1677,
+ "usage": {"prompt_tokens": 785, "completion_tokens": 854},
+ "verdict": "conditional_pass",
+ "verdict_gate_semantics": "门禁只认 pass/fail；conditional pass 视同未通过",
+ "verdict_summary": "CONDITIONAL PASS，五条件（10% 抽样日志 / 断言判定算法 / DRIFT 说明 / 依赖预装清单 / 两机差异 TOP3）已在 2026-11-26 全部闭环；但其自行指出 skill-improver 无断言，导致合格数 34→33。",
+ "artifacts": [
+  "e5_20261125/external_review_raw.txt",
+  "E1外部AI审查_20261126.md"
+ ],
+ "limitation": "审查者是基于被审方提供材料的 AI 模型，未独立下载仓库复核；给的是材料内部自洽性判断，不是仓库客观状态复核。",
+ "counts_toward_e1": false
+}

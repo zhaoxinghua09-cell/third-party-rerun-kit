@@ -1,12 +1,12 @@
 {
  "summary": {
-  "generated_at": "2026-11-26T08:29:01",
+  "generated_at": "2026-11-26T08:33:30",
   "machine": "company (client:582478:3880613324794288)",
-  "total": 12,
-  "killed": 9,
-  "survived": 2,
+  "total": 31,
+  "killed": 22,
+  "survived": 8,
   "skip": 1,
-  "mutation_score": 0.818,
+  "mutation_score": 0.733,
   "note": "每件 1 个变异点；KILLED=测试变红；SURVIVED=测试仍绿；只说明该点被覆盖与否，不代表整体覆盖率"
  },
  "records": [
@@ -19,7 +19,7 @@
    "exit": 3,
    "tail": [
     "",
-    "no tests ran in 0.09s",
+    "no tests ran in 0.08s",
     "mainloop: caught unexpected SystemExit!"
    ],
    "verdict": "KILLED",
@@ -35,7 +35,7 @@
    "tail": [
     ".................. [ 48%]",
     "...................                                                      [100%]",
-    "37 passed, 54 subtests passed in 0.76s"
+    "37 passed, 54 subtests passed in 0.68s"
    ],
    "verdict": "SURVIVED",
    "seconds": -0.0
@@ -48,7 +48,7 @@
    "mutation": "Eq->NotEq line 66",
    "exit": 5,
    "tail": [
-    "no tests ran in 0.08s"
+    "no tests ran in 0.10s"
    ],
    "verdict": "KILLED",
    "seconds": -0.0
@@ -63,7 +63,7 @@
    "tail": [
     "=========================== short test summary info ===========================",
     "FAILED tests/test_core.py::TestDataGuard::test_validate_passes_on_bundled_data",
-    "1 failed, 29 passed in 0.21s"
+    "1 failed, 29 passed in 0.24s"
    ],
    "verdict": "KILLED",
    "seconds": -0.0
@@ -99,7 +99,7 @@
    "tail": [
     "ERROR interop/sharif-aat-03/adapter/py/test_timestamps.py",
     "!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!",
-    "3 errors in 1.20s"
+    "3 errors in 1.17s"
    ],
    "verdict": "KILLED",
    "seconds": -0.0
@@ -114,7 +114,7 @@
    "tail": [
     "FAILED tests/test_a2a_adapter.py::A2AAdapterTests::test_05_gate_allow - KeyEr...",
     "!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 5 failures !!!!!!!!!!!!!!!!!!!!!!!!!!",
-    "5 failed, 35 passed, 16 subtests passed in 16.79s"
+    "5 failed, 35 passed, 16 subtests passed in 16.73s"
    ],
    "verdict": "KILLED",
    "seconds": -0.0
@@ -129,7 +129,7 @@
    "tail": [
     "FAILED tests/test_a2a_adapter.py::A2AAdapterTests::test_05_gate_allow - KeyEr...",
     "!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 5 failures !!!!!!!!!!!!!!!!!!!!!!!!!!",
-    "5 failed, 35 passed, 16 subtests passed in 16.38s"
+    "5 failed, 35 passed, 16 subtests passed in 16.18s"
    ],
    "verdict": "KILLED",
    "seconds": -0.0
@@ -144,7 +144,7 @@
    "tail": [
     "",
     "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
-    "64 passed, 4 warnings in 19.68s"
+    "64 passed, 4 warnings in 27.96s"
    ],
    "verdict": "SURVIVED",
    "seconds": -0.0
@@ -159,7 +159,7 @@
    "tail": [
     "FAILED tests/test_engine.py::DocsContract::test_license_and_spdx_headers - As...",
     "!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 5 failures !!!!!!!!!!!!!!!!!!!!!!!!!!",
-    "5 failed, 17 passed in 0.66s"
+    "5 failed, 17 passed in 0.64s"
    ],
    "verdict": "KILLED",
    "seconds": -0.0
@@ -174,9 +174,274 @@
    "tail": [
     "=========================== short test summary info ===========================",
     "FAILED tests/test_generate.py::test_empty_category_renders_no_heading - asser...",
-    "1 failed, 111 passed in 4.69s"
+    "1 failed, 111 passed in 4.41s"
    ],
    "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skeleton",
+   "commit": "f3aac86e9c56",
+   "baseline_passed": 14,
+   "impl_file": "scaffold.py",
+   "mutation": "return 0 -> 1 line 132",
+   "exit": 3,
+   "tail": [
+    "",
+    "no tests ran in 0.60s",
+    "mainloop: caught unexpected SystemExit!"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-iverify",
+   "commit": "1b67f10dc5a7",
+   "baseline_passed": 10,
+   "impl_file": "ivcli.py",
+   "mutation": "return 3 -> 4 line 28",
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.64s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/debug-pro",
+   "commit": "217d0609aac8",
+   "baseline_passed": 10,
+   "impl_file": "demo/prove_evidence.py",
+   "mutation": "Eq->NotEq line 66",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.03s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/claim-audit",
+   "commit": "c1b9ad3dc123",
+   "baseline_passed": 9,
+   "impl_file": "demo/run_demo.py",
+   "mutation": "Eq->NotEq line 36",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.03s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evidence-anchor",
+   "commit": "7f6f2fa19263",
+   "baseline_passed": 9,
+   "impl_file": "demo/run_demo.py",
+   "mutation": "Eq->NotEq line 51",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.02s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synomos-ai-skills",
+   "commit": "84ae3d40842c",
+   "baseline_passed": 14,
+   "impl_file": "skills/ai-brain-learning-memory/scripts/memory_eval_battery.py",
+   "mutation": "Eq->NotEq line 62",
+   "exit": 2,
+   "tail": [
+    "ERROR skills/unified-credential-vault/tools/security_test.py",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+    "7 warnings, 1 error in 0.84s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-skills",
+   "commit": "d0398570768f",
+   "baseline_passed": 14,
+   "impl_file": "scripts/drift-check.py",
+   "mutation": "return 2 -> 3 line 51",
+   "exit": 2,
+   "tail": [
+    "ERROR skills/wechat-viral-topic/tests/run_golden.py",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!",
+    "3 errors in 0.40s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skills",
+   "commit": "134f6465bd2a",
+   "baseline_passed": 14,
+   "impl_file": "skills/debug-pro/demo/prove_evidence.py",
+   "mutation": "Eq->NotEq line 66",
+   "exit": 2,
+   "tail": [
+    "ERROR skills/wechat-viral-topic/tests/run_golden.py",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!",
+    "4 errors in 0.49s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/silent-failure-catalog",
+   "commit": "1309e1a48322",
+   "baseline_passed": 11,
+   "impl_file": "evidence-gated-state-machine/demo_tamper_check.py",
+   "mutation": "Eq->NotEq line 31",
+   "exit": 0,
+   "tail": [
+    "...........                                                     [100%]",
+    "11 passed, 9 subtests passed in 0.39s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-redteam-suite",
+   "commit": "e39ac448d8ec",
+   "baseline_passed": 14,
+   "impl_file": "run_suite.py",
+   "mutation": "return 2 -> 3 line 84",
+   "exit": 2,
+   "tail": [
+    "ERROR probes/vacuity/tests/run_golden.py",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+    "1 error in 0.25s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-audit",
+   "commit": "65b6470543ab",
+   "baseline_passed": 12,
+   "impl_file": "scanner.py",
+   "mutation": "return 2 -> 3 line 476",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.08s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "LGD-Eval/skill-audit",
+   "commit": "31a6fde24db3",
+   "baseline_passed": 12,
+   "impl_file": "scanner.py",
+   "mutation": "return 2 -> 3 line 476",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.07s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wechat-viral-topic",
+   "commit": "6ef4647b9cad",
+   "baseline_passed": 11,
+   "impl_file": "demo/prove_hits.py",
+   "mutation": "Eq->NotEq line 89",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.02s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-improver",
+   "commit": "2feaeeb97bcb",
+   "baseline_passed": 9,
+   "impl_file": "demo/run_demo.py",
+   "mutation": "Eq->NotEq line 82",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.04s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "LGD-Eval/LGD-Eval",
+   "commit": "3ac73d016877",
+   "baseline_passed": 13,
+   "impl_file": ".github/scripts/pr-audit.py",
+   "mutation": "Eq->NotEq line 27",
+   "exit": 3,
+   "tail": [
+    "INTERNALERROR> SystemExit: 0",
+    "",
+    "mainloop: caught unexpected SystemExit!"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/awesome-claude-skills",
+   "commit": "9a6fd52eaeb9",
+   "baseline_passed": 10,
+   "impl_file": "document-skills/docx/ooxml/scripts/pack.py",
+   "mutation": "Eq->NotEq line 147",
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.06s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "LGD-Eval/lgd-gate",
+   "commit": "2172261eea8d",
+   "baseline_passed": 10,
+   "impl_file": "ast_analyzer.py",
+   "mutation": "Eq->NotEq line 89",
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.08s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-skills",
+   "commit": "a0297987c572",
+   "baseline_passed": 10,
+   "impl_file": ".github/link-check/check_links.py",
+   "mutation": "Eq->NotEq line 83",
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.07s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "LGD-Eval/awesome-llm-skills",
+   "commit": "f8f1225d755b",
+   "baseline_passed": 10,
+   "impl_file": "document-skills/docx/ooxml/scripts/pack.py",
+   "mutation": "Eq->NotEq line 147",
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.05s"
+   ],
+   "verdict": "SURVIVED",
    "seconds": -0.0
   }
  ]

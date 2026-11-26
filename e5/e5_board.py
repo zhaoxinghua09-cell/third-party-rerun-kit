@@ -7,11 +7,13 @@ import time
 ROOT = os.path.dirname(os.path.abspath(__file__))
 STRUCT = os.path.join(ROOT, "e5_20261125", "e5_structural.json")
 RUNNER = os.path.join(ROOT, "e5_20261125", "e5_runner.json")
+SELF = os.path.join(ROOT, "e5_20261125", "e5_selfcheck.json")
 OUT = os.path.join(ROOT, "e5_20261125", "E5外人全量实测看板_20261126.html")
 
 s = json.load(open(STRUCT, encoding="utf-8"))
 r = json.load(open(RUNNER, encoding="utf-8"))
 su, ru = s["summary"], r["summary"]
+sf = json.load(open(SELF, encoding="utf-8")) if os.path.exists(SELF) else None
 recs = r["records"]
 by_struct = {x["repo"]: x for x in s["records"]}
 passed_total = sum(x.get("passed", 0) for x in recs)
@@ -40,6 +42,21 @@ for x in sorted(recs, key=lambda z: (z["verdict"] != "pass", -z.get("passed", 0)
             v=html.escape(x["verdict"]), p=x.get("passed", 0), f=x.get("failed", 0),
             sec=x.get("seconds", ""), ent=html.escape(",".join(st.get("verification_entries", []))),
             url="https://github.com/" + x["repo"]))
+
+SC = {"selfcheck_ok": "#2e7d32", "selfcheck_ok_after_fix": "#1565c0", "selfcheck_fail": "#c62828"}
+srows = []
+if sf:
+    for x in sorted(sf["records"], key=lambda z: (z["verdict"] != "selfcheck_ok", z["repo"])):
+        tail = (x.get("tail") or [""])[-1] if x.get("tail") else ""
+        if x.get("fix"):
+            tail = "修复后远端复核：" + x["fix"].get("remote_check", "")
+        srows.append(
+            "<tr><td class=repo>{repo}</td><td class=small>{scr}</td>"
+            "<td><span class=tag style='background:{c}'>{v}</span></td>"
+            "<td class=small>{tail}</td><td class=url>{url}</td></tr>".format(
+                repo=html.escape(x["repo"]), scr=html.escape(x.get("script", "")),
+                c=SC.get(x["verdict"], "#555"), v=html.escape(x["verdict"]),
+                tail=html.escape(tail[:120]), url="https://github.com/" + x["repo"]))
 
 dist = "".join(bar(LABEL.get(k, k), v, ru["candidates"], COLOR.get(k, "#555"))
                for k, v in sorted(ru["counts"].items(), key=lambda kv: -kv[1]))
@@ -80,6 +97,7 @@ code{{background:#f5f5f5;padding:1px 5px;border-radius:4px;font-size:12px}}
   <div class="card"><b>{ru['candidates']}</b><span>真下载真解包真跑</span></div>
   <div class="card"><b>{ru['counts'].get('pass',0)}</b><span>通过 E5 合格线</span></div>
   <div class="card"><b>{passed_total:,}</b><span>实测通过的测试条数</span></div>
+  <div class="card"><b>{sf['summary']['counts'].get('selfcheck_ok',0)+sf['summary']['counts'].get('selfcheck_ok_after_fix',0) if sf else 0}<i>/{len(sf['records']) if sf else 0}</i></b><span>仅自检档真跑通过（不计合格，含修复后通过）</span></div>
 </div>
 
 <h2>一、结构层：能不能跑（全量 {su['probed']} 件）</h2>
@@ -95,6 +113,12 @@ code{{background:#f5f5f5;padding:1px 5px;border-radius:4px;font-size:12px}}
 <table><thead><tr><th>仓库</th><th>结论</th><th>passed</th><th>failed</th><th>秒</th><th>入口</th><th>直达地址</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table>
 
+<h2>三·五、仅自检档：跑了，但不计合格（{len(sf['records']) if sf else 0} 件）</h2>
+<div class="note" style="border-left-color:#ef6c00;background:#fffdf7"><strong>为什么单列</strong>：<code>check_links.py</code> 一类脚本通过，只说明链接/目录结构没坏，
+不证明被测代码正确。把这类算成「合格」，等于用「文件都在」冒充「功能正确」。</div>
+<table><thead><tr><th>仓库</th><th>自检脚本</th><th>结论</th><th>末行 / 修复说明</th><th>直达地址</th></tr></thead>
+<tbody>{''.join(srows)}</tbody></table>
+
 <h2>四、失败读数（不掩盖）</h2>
 <div class="note"><strong>zhaoxinghua09-cell/uibc-core · 2090 passed / 2 failed</strong><br>
 失败项：<code>test_resolve_generated.py::test_outside_a_rebase_it_touches_nothing</code>（<code>FileNotFoundError</code>，本机 subprocess 环境）、
@@ -107,7 +131,16 @@ code{{background:#f5f5f5;padding:1px 5px;border-radius:4px;font-size:12px}}
 <h2>五、复现</h2>
 <p class="small"><code>python e5_build_manifest.py</code> → <code>python e5_probe.py</code> →
 <code>python e5_run.py --repos &lt;owner/repo ...&gt;</code> → <code>python e5_merge.py</code> → <code>python e5_board.py</code>。
-原件：<code>e5_20261125/e5_structural.json</code>、<code>e5_20261125/e5_runner.json</code>、<code>artifact_manifest_20261125.json</code>。</p>
+原件：<code>e5_20261125/e5_structural.json</code>、<code>e5_20261125/e5_runner.json</code>、<code>e5_20261125/e5_selfcheck.json</code>、<code>artifact_manifest_20261125.json</code>。</p>
+
+<h2>六、写动作后的复核（2026-11-26）</h2>
+<div class="note" style="border-left-color:#1565c0;background:#f6faff">
+<strong>uibc-core 收据</strong>：由 <code>tools/outsider_rerun.py</code> 在无 <code>.git</code> 的干净树里重新生成（<code>files_hashed</code> 2244 → 2248），
+推到 main 后重新拉远端 zipball 复核 <code>OUTSIDER OK: receipt matches this disk, 4 steps passed</code>（exit 0）；
+本地 <code>pytest tests/test_outsider_rerun.py</code> 5 passed（含「改一字节即失配」负控）。<br>
+<strong>LGD-Eval/silent-failure-catalog</strong>：解除归档 → 分支 <code>fix/readme-portal-link</code> → PR #2 → squash merge（<code>a22d1a68</code>）→ 恢复归档；
+远端 zipball 跑 <code>tools/check-catalog.py</code> exit 0，15 条 SF-001..SF-015 全索引。原判 fail 保留在 <code>original_*</code> 字段，未洗白读数。
+</div>
 """
 open(OUT, "w", encoding="utf-8").write(doc)
 print(OUT, len(doc))

@@ -1,0 +1,142 @@
+{
+ "generated_at": "2026-11-26T08:41:11",
+ "machine": {
+  "python": "3.13.18",
+  "platform": "win32"
+ },
+ "sample": 8,
+ "match": 8,
+ "comparable": 8,
+ "match_rate": 1.0,
+ "conclusion": "读数一致，可当同一份基线",
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/lgd-xverify",
+   "tier": "A",
+   "commit": "7ca1b83a496d",
+   "baseline_passed": 28,
+   "baseline_verdict": "pass",
+   "local_passed": 28,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "28 passed in 5.64s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wexp-check",
+   "tier": "A",
+   "commit": "cfe458b5f90c",
+   "baseline_passed": 37,
+   "baseline_verdict": "pass",
+   "local_passed": 37,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "37 passed, 54 subtests passed in 0.76s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skeleton",
+   "tier": "B",
+   "commit": "f3aac86e9c56",
+   "baseline_passed": 14,
+   "baseline_verdict": "pass",
+   "local_passed": 14,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "14 passed in 4.81s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-iverify",
+   "tier": "B",
+   "commit": "1b67f10dc5a7",
+   "baseline_passed": 10,
+   "baseline_verdict": "pass",
+   "local_passed": 10,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "10 passed in 0.61s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/debug-pro",
+   "tier": "B",
+   "commit": "217d0609aac8",
+   "baseline_passed": 10,
+   "baseline_verdict": "pass",
+   "local_passed": 10,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "--- 10/10 PASS"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skill-review",
+   "tier": "C",
+   "commit": "7fe24c39c711",
+   "baseline_passed": 5,
+   "baseline_verdict": "pass",
+   "local_passed": 5,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "---- 5/5 PASS ----"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-evidence",
+   "tier": "C",
+   "commit": "387ead9c0d42",
+   "baseline_passed": 5,
+   "baseline_verdict": "pass",
+   "local_passed": 5,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "5 passed in 0.05s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
+   "tier": "D",
+   "commit": "322188412290",
+   "baseline_passed": 1,
+   "baseline_verdict": "pass",
+   "local_passed": 1,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/test_package_integrity.py",
+   "status": "MATCH",
+   "tail": [
+    "OK: 9 份成品均有可重建副本；3 个 WG 源/版本/证据包齐全"
+   ]
+  }
+ ]
+}

@@ -1,12 +1,12 @@
 {
  "summary": {
-  "generated_at": "2026-11-26T08:33:30",
+  "generated_at": "2026-11-26T08:36:13",
   "machine": "company (client:582478:3880613324794288)",
-  "total": 31,
-  "killed": 22,
-  "survived": 8,
+  "total": 34,
+  "killed": 23,
+  "survived": 10,
   "skip": 1,
-  "mutation_score": 0.733,
+  "mutation_score": 0.697,
   "note": "每件 1 个变异点；KILLED=测试变红；SURVIVED=测试仍绿；只说明该点被覆盖与否，不代表整体覆盖率"
  },
  "records": [
@@ -440,6 +440,49 @@
    "tail": [
     "..........                                                               [100%]",
     "10 passed in 0.05s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skill-review",
+   "commit": "7fe24c39c711",
+   "baseline_passed": 5,
+   "impl_file": "bench/bench.py",
+   "mutation": "Eq->NotEq line 117",
+   "exit": 3,
+   "tail": [
+    "",
+    "no tests ran in 0.93s",
+    "mainloop: caught unexpected SystemExit!"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-evidence",
+   "commit": "387ead9c0d42",
+   "baseline_passed": 5,
+   "impl_file": "verify_hash_manifest.py",
+   "mutation": "return 2 -> 3 line 103",
+   "exit": 0,
+   "tail": [
+    ".....                                                                    [100%]",
+    "5 passed in 0.06s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "LGD-Eval/evaluation-evidence",
+   "commit": "1f8c529f32c3",
+   "baseline_passed": 5,
+   "impl_file": "verify_hash_manifest.py",
+   "mutation": "return 2 -> 3 line 103",
+   "exit": 0,
+   "tail": [
+    ".....                                                                    [100%]",
+    "5 passed in 0.08s"
    ],
    "verdict": "SURVIVED",
    "seconds": -0.0

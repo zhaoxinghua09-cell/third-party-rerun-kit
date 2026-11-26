@@ -1,0 +1,75 @@
+{
+ "generated_at": "2026-11-26T09:49:52",
+ "machine": {
+  "python": "3.13.18",
+  "platform": "win32"
+ },
+ "sample": 3,
+ "match": 3,
+ "comparable": 3,
+ "match_rate": 1.0,
+ "hash_algorithm": "sha256(sorted 'rel_path\\tsha256(file)' lines, skip=.git,.tox,.venv,__pycache__,build,dist,node_modules,venv)",
+ "hash_compared": 3,
+ "hash_same": 3,
+ "tree_diff": [],
+ "conclusion": "读数一致，且树指纹逐件相同——可当同一份基线",
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
+   "tier": "D",
+   "commit": "322188412290",
+   "baseline_passed": 1,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "9f0a4d25d71f5cd8d217aaf3d0aba6e1304bf2854c749114bc50e22617a67c18",
+   "files": 75,
+   "hash_status": "SAME",
+   "local_passed": 1,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/test_package_integrity.py",
+   "status": "MATCH",
+   "tail": [
+    "OK: 9 份成品均有可重建副本；3 个 WG 源/版本/证据包齐全"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-improver",
+   "tier": "B",
+   "commit": "2feaeeb97bcb",
+   "baseline_passed": 9,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "10bde996b3bd83c14571b97a33578e57861e69a1f6213214a4a93525088cef53",
+   "files": 13,
+   "hash_status": "SAME",
+   "local_passed": 9,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "---- 9/9 PASS ----"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/skill-scout",
+   "tier": "D",
+   "commit": "aa26f4195d8f",
+   "baseline_passed": 1,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "c28edc95c069e961c278f34fa33f422e645d1a954eab5bfd25add2edb2070135",
+   "files": 17,
+   "hash_status": "SAME",
+   "local_passed": 1,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/selftest.py",
+   "status": "MATCH",
+   "tail": [
+    "自测全部通过"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,853 @@
+{
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "name": "用专家（S1 双角色 + S10 独立身份 + S11 终审）"
+    },
+    {
+      "id": "REQ-2",
+      "name": "走流程（S2 L0–L3 + L3 授权原话）"
+    },
+    {
+      "id": "REQ-3",
+      "name": "全面调研（S3，含‘最好的’+ 至少一行‘不如’）"
+    },
+    {
+      "id": "REQ-4",
+      "name": "红队测试（S4，≥1 条打中并已改）"
+    },
+    {
+      "id": "REQ-5",
+      "name": "外人全量实跑（S5 + S9，分母>0）"
+    },
+    {
+      "id": "REQ-6",
+      "name": "外部 AI 全量实跑（S6，与 S1 不同供应商）"
+    },
+    {
+      "id": "REQ-7",
+      "name": "引用可直达（S7，200 + 内容标记，分母>0）"
+    },
+    {
+      "id": "REQ-8",
+      "name": "可视化做到最好（S8，≥3 图、0 外链）"
+    }
+  ],
+  "rows": [
+    {
+      "id": "QUEUE",
+      "status": "draft",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=NOT RUN S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "QUEUE",
+      "status": "draft",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=NOT RUN S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "QUEUE",
+      "status": "draft",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=NOT RUN S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "QUEUE",
+      "status": "draft",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=NOT RUN S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-01",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-02",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-03",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-04",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-05",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-06",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-07",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-08",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-09",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-10",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-11",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261124-12",
+      "status": "blocked",
+      "reqs": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "gap": "S1=PASS S10=BLOCKED l3=False S11=BLOCKED",
+      "fails": [
+        "REQ-1"
+      ],
+      "n_fail": 1
+    },
+    {
+      "id": "OUT-20261124-13",
+      "status": "sent",
+      "reqs": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "gap": "S1=FAIL S10=EXEMPT-BY-L3 l3=True S11=EXEMPT-BY-L3",
+      "fails": [
+        "REQ-1",
+        "REQ-7"
+      ],
+      "n_fail": 2
+    },
+    {
+      "id": "OUT-20261124-14",
+      "status": "sent",
+      "reqs": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "gap": "S1=FAIL S10=EXEMPT-BY-L3 l3=True S11=EXEMPT-BY-L3",
+      "fails": [
+        "REQ-1",
+        "REQ-7"
+      ],
+      "n_fail": 2
+    },
+    {
+      "id": "OUT-20261124-15",
+      "status": "sent",
+      "reqs": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "gap": null,
+      "fails": [],
+      "n_fail": 0
+    },
+    {
+      "id": "OUT-20261124-16",
+      "status": "sent",
+      "reqs": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "gap": null,
+      "fails": [],
+      "n_fail": 0
+    },
+    {
+      "id": "OUT-20261124-17",
+      "status": "sent",
+      "reqs": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "gap": null,
+      "fails": [],
+      "n_fail": 0
+    },
+    {
+      "id": "QUEUE",
+      "status": "dropped",
+      "reqs": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": "dropped（写了理由，不参与判）"
+    },
+    {
+      "id": "QUEUE",
+      "status": "dropped",
+      "reqs": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": "dropped（写了理由，不参与判）"
+    },
+    {
+      "id": "QUEUE",
+      "status": "dropped",
+      "reqs": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": "dropped（写了理由，不参与判）"
+    },
+    {
+      "id": "QUEUE",
+      "status": "dropped",
+      "reqs": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": "dropped（写了理由，不参与判）"
+    },
+    {
+      "id": "QUEUE",
+      "status": "dropped",
+      "reqs": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": "dropped（写了理由，不参与判）"
+    },
+    {
+      "id": "QUEUE",
+      "status": "dropped",
+      "reqs": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": "dropped（写了理由，不参与判）"
+    },
+    {
+      "id": "QUEUE",
+      "status": "dropped",
+      "reqs": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "gap": "dropped（写了理由，不参与判）"
+    },
+    {
+      "id": "OUT-20261126-01",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=N/A S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261126-02",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=N/A S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261126-03",
+      "status": "sent",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=N/A S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261126-04",
+      "status": "posted",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261126-05",
+      "status": "posted",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261126-06",
+      "status": "posted",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261126-07",
+      "status": "posted",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    },
+    {
+      "id": "OUT-20261126-08",
+      "status": "posted",
+      "reqs": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "gap": "S1=PASS S10=None l3=False S11=None",
+      "fails": [
+        "REQ-1",
+        "REQ-2",
+        "REQ-3",
+        "REQ-4",
+        "REQ-5",
+        "REQ-6",
+        "REQ-7",
+        "REQ-8"
+      ],
+      "n_fail": 8
+    }
+  ],
+  "sent": 19,
+  "fully": 3
+}

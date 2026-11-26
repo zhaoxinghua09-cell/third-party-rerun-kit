@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>E5 全量复跑看板 2026-11-26</title><style>
+body{margin:0;background:#f8fafc;color:#0f172a;font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:1060px;margin:0 auto;padding:32px 24px 64px}
+h1{font-size:26px;margin:0 0 6px}h2{font-size:17px;margin:34px 0 12px;padding-left:10px;border-left:4px solid #2563eb}
+.sub{color:#64748b;font-size:13px;margin-bottom:24px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.k{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:16px}
+.k b{display:block;font-size:26px;line-height:1.2}
+.k span{font-size:12px;color:#64748b}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;margin-top:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #eef2f7}
+th{background:#f1f5f9;font-weight:600}
+.note{font-size:12.5px;color:#64748b;margin-top:10px}
+</style></head><body><div class="wrap">
+<h1>E5 全量复跑看板</h1>
+<div class="sub">2026-11-26 · 公司机 DESKTOP-IGJBTUB + 家机赵兴华的台式机 · Python 3.13.18 / Node v22.23.2 · 数据取自 e5_20261125/*.json</div>
+<div class="kpis">
+<div class="k"><b>36/36</b><span>指纹基线覆盖（33 严格 + 3 薄）</span></div>
+<div class="k"><b>33/33</b><span>公司机 A 遍读数</span></div>
+<div class="k"><b>32/33</b><span>公司机 B 遍（1 件 flaky）</span></div>
+<div class="k"><b>0</b><span>树指纹差异（三遍合计）</span></div>
+</div>
+
+<h2>一、三遍读数</h2>
+<div class="card"><svg viewBox="0 0 520 300" width="100%" style="max-width:520px" role="img" aria-label="三遍读数匹配率"><line x1="40" y1="230" x2="490" y2="230" stroke="#cbd5e1"/><rect x="60" y="50" width="70" height="180" rx="4" fill="#16a34a"/><text x="95" y="40" text-anchor="middle" font-size="14" fill="#0f172a">33/33</text><text x="95" y="252" text-anchor="middle" font-size="13" fill="#475569">公司机 A</text><rect x="210" y="56" width="70" height="174" rx="4" fill="#f59e0b"/><text x="245" y="46" text-anchor="middle" font-size="14" fill="#0f172a">32/33</text><text x="245" y="252" text-anchor="middle" font-size="13" fill="#475569">公司机 B</text><rect x="360" y="50" width="70" height="180" rx="4" fill="#16a34a"/><text x="395" y="40" text-anchor="middle" font-size="14" fill="#0f172a">33/33</text><text x="395" y="252" text-anchor="middle" font-size="13" fill="#475569">家机 C</text><text x="40" y="24" font-size="13" fill="#64748b">读数匹配率（分母 = 33 件）</text></svg><div class="note">分母为严格合格 33 件。三遍的 tree_diff 均为空：没有任何一件的源码树在两次下载之间变过。</div></div>
+
+<h2>二、唯一不稳定件</h2>
+<div class="card"><svg viewBox="0 0 500 300" width="100%" style="max-width:500px" role="img" aria-label="aps 观测序列"><text x="20" y="20" font-size="13" fill="#64748b">aps-conformance-suite：同一棵树跑 8 次</text><line x1="30" y1="240" x2="470" y2="240" stroke="#cbd5e1"/><text x="4" y="245" font-size="11" fill="#94a3b8">15</text><text x="4" y="85" font-size="11" fill="#94a3b8">20</text><circle cx="50" cy="40" r="7" fill="#16a34a"/><text x="50" y="26" font-size="11" fill="#334155" text-anchor="middle">20</text><circle cx="105" cy="160" r="7" fill="#dc2626"/><text x="105" y="146" font-size="11" fill="#334155" text-anchor="middle">17</text><circle cx="160" cy="80" r="7" fill="#dc2626"/><text x="160" y="66" font-size="11" fill="#334155" text-anchor="middle">19</text><circle cx="215" cy="160" r="7" fill="#dc2626"/><text x="215" y="146" font-size="11" fill="#334155" text-anchor="middle">17</text><circle cx="270" cy="40" r="7" fill="#16a34a"/><text x="270" y="26" font-size="11" fill="#334155" text-anchor="middle">20</text><circle cx="325" cy="40" r="7" fill="#16a34a"/><text x="325" y="26" font-size="11" fill="#334155" text-anchor="middle">20</text><circle cx="380" cy="120" r="7" fill="#dc2626"/><text x="380" y="106" font-size="11" fill="#334155" text-anchor="middle">18</text><circle cx="435" cy="40" r="7" fill="#16a34a"/><text x="435" y="26" font-size="11" fill="#334155" text-anchor="middle">20</text></svg><div class="note">8 次观测值域 17–20，其中 5 次为 20。环境差异会稳定复现，这里每次都不一样——是用例自身 flaky。</div></div>
+
+<h2>三、三个坑与归因</h2>
+<div class="card"><svg viewBox="0 0 700 300" width="100%" style="max-width:700px" role="img" aria-label="三个坑"><text x="10" y="24" font-size="13" fill="#64748b">同一棵树：基线 vs 第一版复跑（条数按 5px/条）</text><text x="10" y="60" font-size="13" fill="#0f172a">doc-translate</text><rect x="10" y="84" width="200" height="16" rx="3" fill="#cbd5e1"/><text x="218" y="97" font-size="11" fill="#475569">基线 40</text><rect x="10" y="106" width="6" height="16" rx="3" fill="#dc2626"/><text x="16" y="119" font-size="11" fill="#ffffff">复跑 0</text><text x="290" y="119" font-size="12" fill="#475569">测试名含 FAIL → 被判失败 · 复跑器</text><text x="10" y="148" font-size="13" fill="#0f172a">regdoc-commons</text><rect x="10" y="172" width="260" height="16" rx="3" fill="#cbd5e1"/><text x="278" y="185" font-size="11" fill="#475569">基线 52</text><rect x="10" y="194" width="65" height="16" rx="3" fill="#dc2626"/><text x="16" y="207" font-size="11" fill="#ffffff">复跑 13</text><text x="290" y="207" font-size="12" fill="#475569">只认 .py，漏掉 run.js 总入口 · 复跑器</text><text x="10" y="236" font-size="13" fill="#0f172a">aps</text><rect x="10" y="260" width="100" height="16" rx="3" fill="#cbd5e1"/><text x="118" y="273" font-size="11" fill="#475569">基线 20</text><rect x="10" y="282" width="85" height="16" rx="3" fill="#dc2626"/><text x="16" y="295" font-size="11" fill="#ffffff">复跑 17</text><text x="290" y="295" font-size="12" fill="#475569">用例自身不稳 · 仓库</text></svg><div class="note">前两个是复跑器的错（已修），第三个是仓库自身的错（单列、不计入稳定集合）。</div></div>
+
+<h2>四、扩到 36 件：薄证据也能复跑</h2>
+<div class="card"><table><tr><th>仓库</th><th>基线 passed</th><th>复跑 passed</th><th>树指纹</th></tr><tr><td>zhaoxinghua09-cell/fgtida-paris-input-2026</td><td>1</td><td>1</td><td>SAME</td></tr><tr><td>zhaoxinghua09-cell/skill-improver</td><td>9</td><td>9</td><td>SAME</td></tr><tr><td>LGD-Eval/skill-scout</td><td>1</td><td>1</td><td>SAME</td></tr></table>
+<div class="note">薄证据件能复跑、能对上，但证据强度仍低（脚本自报、无断言比对）。可复现不等于有证据。</div></div>
+
+<h2>五、必须写在读数旁边的话</h2>
+<div class="card"><table>
+<tr><th>能说</th><th>不能说</th></tr>
+<tr><td>源树一致（33/33 指纹同）、读数可在两机两时点复现</td><td>没做到构建产物字节一致（Reproducible Builds 的核心）</td></tr>
+<tr><td>32 件逐条对齐基线</td><td>指纹覆盖 202/2248 文件（uibc-core，排除 node_modules 等）</td></tr>
+<tr><td>漏入口、误判都能被负控与指纹抓出</td><td>只覆盖严格合格层，180 件全树零校验未纳入</td></tr>
+<tr><td>flaky 件单列并给观测序列</td><td>未验证 Linux / 其它 Python 版本</td></tr>
+</table><div class="note">E1 外部 AI、E2 非协作者实跑、S10/S11、L3 授权仍缺：这四项需要另一个人，本轮未触碰。</div></div>
+</div></body></html>

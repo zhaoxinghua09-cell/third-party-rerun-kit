@@ -51,7 +51,7 @@ def manifest(root):
 def main():
     h = {"Authorization": "token " + token(), "Accept": "application/vnd.github+json", "User-Agent": "e5-mh"}
     runner = [x for x in json.load(open(os.path.join(E5, "e5_runner.json"), encoding="utf-8"))["records"]
-              if x.get("strict_verdict") == "pass_strict"]
+              if x.get("strict_verdict") in ("pass_strict", "pass_thin")]
     out = {"generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
            "machine": "company (client:582478:3880613324794288)",
            "algorithm": "sha256 over sorted lines 'rel_path\\tsha256(file)'",

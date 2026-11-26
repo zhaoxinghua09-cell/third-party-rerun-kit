@@ -83,6 +83,7 @@ python e5_verify_all.py --n 8
 - `e5_manifest_hash.py` — 重算 33 件指纹基线 → `readouts/e5_manifest_hashes.json`
 - `e5_verify_all.py --all` — 全量跑：读数 + 指纹双比对，任一 DIFF 或指纹不一致即 exit 1
 - 跨机全量：公司机 A 33/33、B 32/33，家机 33/33；三遍指纹均 33/33 SAME（`readouts/e5_verify_full33_home.json`、`reports/cross_machine_full33_20261126.md`）
+- 指纹基线已扩到 **36 件**（33 严格 + 3 薄证据）；薄证据 3/3 亦复跑一致，但**可复现不等于有证据**，合格口径仍是 33（`reports/36item_scope_20261126.md`、`board/E5_full33_board_20261126.html`）
 
 **入口规则（唯一口径，别按字母序猜）**：`tests/run*.js` → `node` 跑；否则 `pytest tests`（传目录，不传文件列表）；pytest 收不到用例 → `run*` > `selftest*` > 其它脚本。JS 总入口不是 pytest 覆盖得到的：`regdoc-commons` 的 `run.js` 52 条，而 pytest 只收到 13 条 py 用例。
 

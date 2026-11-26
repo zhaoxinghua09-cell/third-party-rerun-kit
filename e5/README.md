@@ -75,6 +75,18 @@ python e5_verify_all.py --n 8
 
 按 A2/B3/C2/薄1 分层抽样，下载 zipball 真跑，与 `readouts/e5_runner.json` 基线逐件比对，输出 MATCH/DIFF 与匹配率。公司机与家机各跑 8 件，均 **8/8 MATCH（1.0）**；两机样本名单略有不同（分层取前 N 个），差异件（uibc-core 2092/2090、agent-control-standard 901/794）仍会报 DIFF。关键教训：入口写法是最大变量——`pytest <文件列表>` 会收集为空，必须 `pytest tests`；上一版仅因此把 28 条通过变成 0 条。详见 `reports/verify_all_20261126.md`。
 
+## 全量复跑与内容指纹（2026-11-26）
+
+全量 33 件连跑两遍：**树指纹 33/33 SAME（`tree_diff: []`）**，读数 A 遍 33/33、B 遍 32/33；稳定 32 件，flaky 1 件（`aps-conformance-suite`，7 次观测 17/18/19/20）。详见 `reports/full33_fingerprint_20261126.md`。
+
+- `e5_fingerprint.py` — 树指纹：`sha256(sorted "rel_path\tsha256(file)" lines)`，整枝跳过 `.git/node_modules/venv/.venv/dist/build/__pycache__/.tox`
+- `e5_manifest_hash.py` — 重算 33 件指纹基线 → `readouts/e5_manifest_hashes.json`
+- `e5_verify_all.py --all` — 全量跑：读数 + 指纹双比对，任一 DIFF 或指纹不一致即 exit 1
+
+**入口规则（唯一口径，别按字母序猜）**：`tests/run*.js` → `node` 跑；否则 `pytest tests`（传目录，不传文件列表）；pytest 收不到用例 → `run*` > `selftest*` > 其它脚本。JS 总入口不是 pytest 覆盖得到的：`regdoc-commons` 的 `run.js` 52 条，而 pytest 只收到 13 条 py 用例。
+
+**负控**：把某件基线指纹改 1 位 → `MATCH_READING_TREE_DIFF` + exit 1（证明指纹比对不是摆设）。
+
 ## 已知限制（必须写在读数旁边，不能省）
 
 - **archived 仓库不可写**：`LGD-Eval/silent-failure-catalog` 已归档，自检 fail 的修复只能本地验证（`check-catalog` 已 PASS，15 条），远端需 unarchive 才能落地（本轮已走 PR 后恢复归档）。
@@ -104,6 +116,7 @@ python e5_verify_all.py --n 8
 - `reports/four_layer_ledger_20261126.md` — 四层总账（S/REQ/E/IO 全部 REFUSE，缺口定位到字段）。
 - `reports/verify_all_20261126.md` — 一键复跑器（8/8 MATCH 及两次 DIFF 的入口教训）。
 - `reports/cross_machine_verify_20261126.md` — 跨机复跑（两机各 8/8，含差异件对照）。
+- `reports/full33_fingerprint_20261126.md` — 全量 33 件 + 内容指纹（33/33 同树、三坑归因、32 稳 1 flaky）。
 - `reports/E1_handover_pack_20261126.md` — E1 交接包（别人照抄即过，含 prompt 与 JSON 模板）。
 - `reports/e_layer_status_20261126.md` — E 层门禁真读数（36 条 REFUSE / 0 PASS）。
 - `reports/E5_strict_pass_line_20261126.md` — 严格合格线执行报告。

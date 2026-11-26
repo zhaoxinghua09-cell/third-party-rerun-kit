@@ -55,7 +55,7 @@ python e5_board.py               # 8. 生成看板 HTML（零外链）
 
 - 分母：三账号 254 件（zhaoxinghua09-cell 193 / stevenzhao07 36 / LGD-Eval 25）。
 - 四档：61 有测试（48 顶层 + 13 深层）/ 13 仅自检 / 180 无校验 / 0 缺失。
-- 执行：61/61 已跑；原始合格 36；**严格合格 33**（变异得分 0.818，9/11 KILLED）（薄证据 3 件：`fgtida-paris-input-2026`、`skill-improver`、`LGD-Eval/skill-scout`）。
+- 执行：61/61 已跑；原始合格 36；**严格合格 33**（变异得分 0.733，22/30 KILLED）（薄证据 3 件：`fgtida-paris-input-2026`、`skill-improver`、`LGD-Eval/skill-scout`）。
 - 累计 passed：3971（公司机）、3862（家机）。两机不跨机加总。
 - 严格合格取**两机交集 33**：家机曾判 34，多出的 `skill-improver` 经公司机全树定位 + 人工实核确认 135 行零断言，改判薄。
 - 自检档：公司机 6/13（5 ok + 1 经 PR #2 修复后远端复核通过）、家机 7/13。
@@ -63,7 +63,7 @@ python e5_board.py               # 8. 生成看板 HTML（零外链）
 
 ## 变异检查：断言会不会抓到 bug
 
-抽样对 A 档 12 件各注入 1 处语义变异（`==`→`!=` 为主），跑测试看是否变红：**11 件可测中 9 件 KILLED，得分 0.818**，2 件 SURVIVED（`wexp-check` 的 `scripts/compare_corpora.py`、`skillgate` 的 `alert.py` 分支缺用例），1 件 SKIP（`regdoc-commons` 无可机械替换节点）。详见 `reports/mutation_check_20261126.md`，原始读数 `readouts/e5_mutation.json`。这是「测试不是摆设」目前唯一可机械复现的证据；但它只覆盖抽样点，不等于整体覆盖率。
+抽样对 A 档 12 件各注入 1 处语义变异（`==`→`!=` 为主），跑测试看是否变红：**A+B 两档 30 件中 22 件 KILLED，得分 0.733**，8 件 SURVIVED，其中 6 件的变异落在 demo / CLI / vendored 第三方脚本 / CI 脚本上，1 件 SKIP（`regdoc-commons` 无可机械替换节点）。详见 `reports/mutation_check_20261126.md`，原始读数 `readouts/e5_mutation.json`。这是「测试不是摆设」目前唯一可机械复现的证据；但它只覆盖抽样点，不等于整体覆盖率。
 
 ## 已知限制（必须写在读数旁边，不能省）
 
@@ -90,7 +90,9 @@ python e5_board.py               # 8. 生成看板 HTML（零外链）
 - `reports/assert_decision_algorithm_20261126.md` — 断言判定算法（可复算）。
 - `reports/two_machine_failure_top3_20261126.md` — 两机差异 TOP3 根因。
 - `reports/uibc_core_drift_20261126.md` — 版本 DRIFT 说明与解除条件。
-- `reports/mutation_check_20261126.md` — A 档 12 件变异检查（9/11 KILLED）。
+- `reports/mutation_check_20261126.md` — A+B 档 30 件变异检查（22/30 KILLED）。
+- `reports/E1_handover_pack_20261126.md` — E1 交接包（别人照抄即过，含 prompt 与 JSON 模板）。
+- `reports/e_layer_status_20261126.md` — E 层门禁真读数（36 条 REFUSE / 0 PASS）。
 - `reports/E5_strict_pass_line_20261126.md` — 严格合格线执行报告。
 - `readouts/` — 原始 JSON 读数（含 `e5_assert_audit_company.json` 逐件断言样本）。
 - `RUNBOOK_FOR_THIRD_PARTY.md` — 第三方照单复跑的执行单。

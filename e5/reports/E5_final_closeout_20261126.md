@@ -19,13 +19,13 @@ E5 从"0 件通过"推进到 **254 件全量入册、61 件可验、61/61 实跑
 | 执行层 | **61/61（100%）** | zipball 解包真跑，无 `.git`、无凭证 |
 | 合格 | **36** | passed>0 且 failed=0 且 errors=0 且 exit=0 |
 | 累计 passed | **3971** | 公司机；家机 3862 |
-| 自检档 | **6/13 通过**（5 + 1 修复后通过） | 本机实测；家机 7/13 |
+| 自检档 | **6/13 通过**（5 + 1 修复后通过） | 公司机实测；家机 7/13（6 + 1） | 两机均为实跑，结构已统一为 ok / ok_after_fix / fail |
 
 ## 三、四项写动作（全部已落地）
 
 | # | 动作 | 结果 | 证据 |
 |---|---|---|---|
-| 1 | uibc-core 收据 | main 已更新，`files_hashed` 2244 → 2248 | `6cdde5468a` / `87738fe978`；本地 `test_outsider_rerun` 5 passed；远端 zipball `--check` exit 0 |
+| 1 | uibc-core 收据 | main 已更新，`files_hashed` 2244 → 2248 | `6cdde5468a` / `87738fe978`；本地 `test_outsider_rerun` 5 passed（家机 20.71s、公司机同项亦 5 passed，两机各跑一次）；远端 zipball `--check` exit 0 |
 | 2 | fastmcp 依赖 | 无需改仓库（早已声明 `fastmcp>=3.4,<5`） | 本机 fastmcp 4.2.0；`tests/selftest_stdio.py` exit 0（7 tools / 27 hubs / 15 sources） |
 | 3 | LGD-Eval 镜像 | 解除归档 → 分支 → **PR #2** → squash `a22d1a68` → 恢复归档 | 本机对合并后 main 跑 `check-catalog` exit 0，15 条全索引 |
 | 4 | 八件套与报告 | 已推送 | `third-party-rerun-kit` 的 `e5/` 目录，最新 `0c1dc2f1` |

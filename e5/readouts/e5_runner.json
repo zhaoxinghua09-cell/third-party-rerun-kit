@@ -1,273 +1,142 @@
 {
  "summary": {
-  "generated_at": "2026-11-26T01:54:05",
+  "generated_at": "2026-11-26T01:56:17",
   "candidates": 61,
   "counts": {
    "pass": 36,
    "partial": 3,
-   "not_runnable": 8,
-   "no_tests_collected": 14
+   "no_tests_collected": 13,
+   "not_runnable": 9
   },
   "note": "runner 实跑；pass 需 passed>0 且 failed=0 且 error=0 且 exit=0",
-  "evidence_tiers_of_pass": {
-   "B": 19,
-   "D": 2,
-   "A": 12,
-   "C": 3
-  },
-  "note_tiers": "合格件按 passed 条数分层：A>=20 / B 6-19 / C 3-5 / D 1-2；D 档为薄证据，建议人工复核",
   "strict_counts": {
-   "pass_strict": 34,
-   "pass_thin": 2
+   "pass_strict": 33,
+   "pass_thin": 3
   },
-  "strict_note": "严格合格线=passed>=3 且 测试文件内至少一处断言或状态比对；薄证据(pass_thin)不计入合格"
+  "strict_note": "严格合格 = passed>=3 且测试文件内至少一处非平凡断言或状态比对；薄证据不计入合格。算法见 断言判定算法_20261126.md",
+  "strict_generated_at": "2026-11-26T08:20:09",
+  "strict_machine": "company (client:582478:3880613324794288)"
  },
  "records": [
-  {
-   "repo": "zhaoxinghua09-cell/uibc-iverify",
-   "commit": "1b67f10dc5a7059843b3903fe56914f36e828107",
-   "bytes": 33895,
-   "seconds": 2.0,
-   "exit": 0,
-   "tail": [
-    "..........                                                               [100%]",
-    "10 passed in 1.04s"
-   ],
-   "passed": 10,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 2,
-    "asserts": 2,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/skill-improver",
-   "commit": "2feaeeb97bcbc10431a964f534a05c81e4ac22ae",
-   "bytes": 24209,
-   "fallback_entry": "tests/run_golden.py",
-   "seconds": 1.5,
-   "exit": 0,
-   "tail": [
-    "  PASS  G06  缺同系列标识且有兄弟时追加  (已追加)",
-    "  PASS  G07  文档漂移行被替换且不留参数名  (已移除参数名)",
-    "  PASS  G08  非技能目录直接拒绝  (退出码 1（预期非 0）)",
-    "  PASS  G09  新增文件行尾为 LF  (LF only)",
-    "",
-    "---- 9/9 PASS ----"
-   ],
-   "passed": 9,
-   "failed": 0,
-   "errors": 0,
-   "native_runner": "all-green",
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 0,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "LGD-Eval/skill-scout",
-   "commit": "aa26f4195d8f11101400105bd22d4ab0e34d4a39",
-   "bytes": 32418,
-   "fallback_entry": "tests/selftest.py",
-   "seconds": 1.4,
-   "exit": 0,
-   "tail": [
-    "  PASS  检出外发判别装",
-    "  PASS  合格包给出三档结论",
-    "  PASS  无引擎时明确声明不是 LGD 分数",
-    "  PASS  无引擎时不产出 100 分制",
-    "",
-    "自测全部通过"
-   ],
-   "passed": 1,
-   "failed": 0,
-   "errors": 0,
-   "native_runner": "all-green",
-   "verdict": "pass",
-   "evidence_tier": "D",
-   "manual_review_note": "127 行行为自测，无 assert，靠 subprocess 比对输出；1 条通过，证据薄，建议人工复核",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 0,
-    "cmp": true
-   },
-   "strict_verdict": "pass_thin"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/agent-control-standard",
-   "commit": "a9af3defa9b87c235ef896c94e6467002cc305fc",
-   "bytes": 16239238,
-   "seconds": 315.0,
-   "exit": 1,
-   "tail": [
-    "FAILED tests/test_publish_schemas.py::test_a_symlink_out_of_the_source_tree_is_refused",
-    "FAILED tests/test_publish_schemas.py::test_a_symlinked_directory_does_not_leak_its_contents",
-    "FAILED tests/test_roadmap_sync_promotion.py::test_integration_work_is_pending_from_its_oldest_commit",
-    "FAILED tests/test_roadmap_sync_promotion.py::test_squashed_sync_from_main_is_not_pending",
-    "!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 20 failures !!!!!!!!!!!!!!!!!!!!!!!!!!",
-    "20 failed, 794 passed, 1 skipped, 7 warnings in 314.07s (0:05:14)"
-   ],
-   "passed": 794,
-   "failed": 20,
-   "errors": 0,
-   "verdict": "partial",
-   "evidence_tier": "A",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/wexp-check",
-   "commit": "cfe458b5f90c0a95ad1723b7a0dbba1b8d834fae",
-   "bytes": 90125,
-   "seconds": 2.1,
-   "exit": 0,
-   "tail": [
-    ".................. [ 48%]",
-    "...................                                                      [100%]",
-    "37 passed, 54 subtests passed in 1.21s"
-   ],
-   "passed": 37,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 2,
-    "asserts": 1,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
-   "commit": "adf68f3dbc90c6348ce6671e8124574784e32896",
-   "bytes": 41564,
-   "seconds": 1.2,
-   "exit": 0,
-   "tail": [
-    "..............................                                           [100%]",
-    "30 passed in 0.22s"
-   ],
-   "passed": 30,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 2,
-    "asserts": 1,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
   {
    "repo": "zhaoxinghua09-cell/lgd-xverify",
    "commit": "7ca1b83a496d0276d92a42b7c0fcf5893b679456",
    "bytes": 60970,
-   "seconds": 6.5,
+   "seconds": 6.4,
    "exit": 0,
    "tail": [
     "............................                                             [100%]",
-    "28 passed in 3.32s"
+    "28 passed in 5.55s"
    ],
    "passed": 28,
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
    "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 3,
-    "asserts": 3,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 30,
+    "trivial": 0,
+    "cmp": 1,
+    "files": 3
    },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "stevenzhao07/aitb",
-   "commit": "f7647f88607f2cc83ba1c039bc4a4572d83478d8",
-   "bytes": 61206,
-   "seconds": 2.3,
-   "exit": 0,
-   "tail": [
-    ".........................                                                [100%]",
-    "25 passed in 1.27s"
-   ],
-   "passed": 25,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 2,
-    "asserts": 1,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "stevenzhao07/regdoc-commons",
-   "commit": "a8a79bd4e45fb31c9667bed6358347263890e515",
-   "bytes": 117668,
-   "fallback_entry": "tests/run.js",
-   "seconds": 1.3,
-   "exit": 0,
-   "tail": [
-    "  consistency finding tables                                    5",
-    "  GSPR rows                                                    23",
-    "  workbook column claim                                       \"Fourteen columns\"",
-    "  gitignore keeps templates tracked                           yes",
-    "  gitignore excludes test artefacts                           yes",
-    "PASS  52 checks"
-   ],
-   "passed": 52,
-   "failed": 0,
-   "errors": 0,
-   "native_runner": "all-green",
-   "verdict": "pass",
-   "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 4,
-    "asserts": 2,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": [
+    "tests/test_negative_controls.py: self.assertEqual(v, \"INCONCLUSIVE\")",
+    "tests/test_negative_controls.py: self.assertEqual(v1(doc), \"FAIL\")",
+    "tests/test_negative_controls.py: self.assertEqual(v1(doc), \"FAIL\")"
+   ]
   },
   {
    "repo": "zhaoxinghua09-cell/lgd-skeleton",
    "commit": "f3aac86e9c562fa35569e7b4e123fc5e010db6f1",
    "bytes": 102568,
-   "seconds": 10.5,
+   "seconds": 5.1,
    "exit": 0,
    "tail": [
     "..............                                                           [100%]",
-    "14 passed in 9.62s"
+    "14 passed in 4.56s"
    ],
    "passed": 14,
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
    "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 2,
-    "asserts": 40,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 40,
+    "trivial": 0,
+    "cmp": 61,
+    "files": 2
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": [
+    "tests/test_skill_lock.py: assert run(\"generate\", tmp_path).returncode == 0",
+    "tests/test_skill_lock.py: assert (tmp_path / \"skills.lock.json\").exists()",
+    "tests/test_skill_lock.py: assert r.returncode == 0, r.stdout + r.stderr"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-iverify",
+   "commit": "1b67f10dc5a7059843b3903fe56914f36e828107",
+   "bytes": 33895,
+   "seconds": 1.2,
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.58s"
+   ],
+   "passed": 10,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 23,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 2
+   },
+   "assert_evidence": [
+    "tests/test_fixtures.py: self.assertEqual(out.get(\"result\"), \"INCONCLUSIVE\")",
+    "tests/test_fixtures.py: self.assertEqual(code, 2)",
+    "tests/test_fixtures.py: self.assertEqual(out.get(\"result\"), \"FAIL\")"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wexp-check",
+   "commit": "cfe458b5f90c0a95ad1723b7a0dbba1b8d834fae",
+   "bytes": 90125,
+   "seconds": 1.3,
+   "exit": 0,
+   "tail": [
+    ".................. [ 48%]",
+    "...................                                                      [100%]",
+    "37 passed, 54 subtests passed in 0.68s"
+   ],
+   "passed": 37,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "A",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 52,
+    "trivial": 0,
+    "cmp": 2,
+    "files": 1
+   },
+   "assert_evidence": [
+    "tests/test_wexp_check.py: self.assertEqual(canonical(appraise(data, PROFILES)), canonical(result))",
+    "tests/test_wexp_check.py: self.assertEqual(data, fixture(I, [\"intent\"]))  # the supplied file is the common context",
+    "tests/test_wexp_check.py: self.assertEqual(appraise(data, PROFILES)[\"verdict\"], \"accept\")"
+   ]
   },
   {
    "repo": "zhaoxinghua09-cell/debug-pro",
    "commit": "217d0609aac840f95a87c63ebe57354f4ed6d373",
    "bytes": 110280,
    "fallback_entry": "tests/run_golden.py",
-   "seconds": 1.2,
+   "seconds": 1.0,
    "exit": 0,
    "tail": [
     "D06-not-a-log          PASS",
@@ -283,19 +152,21 @@
    "native_runner": "all-green",
    "verdict": "pass",
    "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 0,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 1,
+    "files": 1
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": []
   },
   {
    "repo": "zhaoxinghua09-cell/claim-audit",
    "commit": "c1b9ad3dc123d919b927326fe8f75fe9be115bcc",
    "bytes": 21373,
    "fallback_entry": "tests/run_golden.py",
-   "seconds": 2.6,
+   "seconds": 1.7,
    "exit": 0,
    "tail": [
     "PASS  G06  G06 正文举例里的路径不算声明 → 不产生 MISMATCH",
@@ -311,19 +182,25 @@
    "native_runner": "all-green",
    "verdict": "pass",
    "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 20,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 20,
+    "trivial": 0,
+    "cmp": 1,
+    "files": 1
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": [
+    "tests/run_golden.py: assert code == 0, code",
+    "tests/run_golden.py: assert \"tests\" in out and \"OK\" in out",
+    "tests/run_golden.py: assert \"对不上 0\" in out"
+   ]
   },
   {
    "repo": "zhaoxinghua09-cell/evidence-anchor",
    "commit": "7f6f2fa192639ee4efcf48d26be0207187231acb",
    "bytes": 19153,
    "fallback_entry": "tests/run_golden.py",
-   "seconds": 1.4,
+   "seconds": 0.9,
    "exit": 0,
    "tail": [
     "PASS  G06  纯叙述文档 → 无锚点，不判错  (NO_ANCHOR)",
@@ -339,585 +216,49 @@
    "native_runner": "all-green",
    "verdict": "pass",
    "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 0,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 8,
+    "files": 1
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": []
   },
   {
-   "repo": "zhaoxinghua09-cell/uibc-core",
-   "commit": "7ff56ab9581376651e24f6f9c2edea0b44278940",
-   "bytes": 4948127,
-   "seconds": 471.3,
-   "exit": 1,
-   "tail": [
-    "",
-    "C:\\Users\\Administrator\\AppData\\Local\\Doubao\\User Data\\sandbox_runtime\\bases\\fa694f517e5995233c80a9a8db5212c2\\python\\Lib\\subprocess.py:1555: FileNotFoundError",
-    "=========================== short test summary info ===========================",
-    "FAILED tests/test_resolve_generated.py::TestItRefusesOutsideARebase::test_outside_a_rebase_it_touches_nothing",
-    "FAILED tests/test_verify_external_node_report.py::TestItRecomputes::test_quick_run_matches_the_receipt",
-    "2 failed, 2090 passed, 32 skipped, 272 subtests passed in 470.21s (0:07:50)"
-   ],
-   "passed": 2090,
-   "failed": 2,
-   "errors": 0,
-   "verdict": "partial",
-   "evidence_tier": "A",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/skillgate",
-   "commit": "362c600dfdc386e327e70e1e70e28305139b4841",
-   "bytes": 348539,
-   "seconds": 14.9,
+   "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
+   "commit": "adf68f3dbc90c6348ce6671e8124574784e32896",
+   "bytes": 41564,
+   "seconds": 0.7,
    "exit": 0,
    "tail": [
-    "............................................................             [100%]",
-    "60 passed in 14.04s"
+    "..............................                                           [100%]",
+    "30 passed in 0.11s"
    ],
-   "passed": 60,
+   "passed": 30,
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
    "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 12,
-    "asserts": 101,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 53,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
    },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/synomos-ai-skills",
-   "commit": "84ae3d40842c4e17ec20f6acc0df1ce1471d9619",
-   "bytes": 1540121,
-   "seconds": 7.1,
-   "exit": 0,
-   "tail": [
-    "..............                                                           [100%]",
-    "14 passed in 6.27s"
-   ],
-   "passed": 14,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 40,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/agent-skills",
-   "commit": "d0398570768f617b3bac9e66ce3c4e9eb4114cb4",
-   "bytes": 18875928,
-   "seconds": 7.4,
-   "exit": 0,
-   "tail": [
-    "..............                                                           [100%]",
-    "14 passed in 6.50s"
-   ],
-   "passed": 14,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 40,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/lgd-skills",
-   "commit": "134f6465bd2ada4f2e7c4eaa33f8bc64c2d7f51b",
-   "bytes": 1355342,
-   "seconds": 7.5,
-   "exit": 0,
-   "tail": [
-    "..............                                                           [100%]",
-    "14 passed in 6.69s"
-   ],
-   "passed": 14,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 40,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/lgd-theory",
-   "commit": "f50e747ef2e53f3ab0fa6f2422fa787934785121",
-   "bytes": 5572855,
-   "seconds": 1.3,
-   "exit": 1,
-   "tail": [
-    "",
-    "tests\\test_text_contract.py:44: AssertionError",
-    "=========================== short test summary info ===========================",
-    "FAILED tests/test_text_contract.py::TextContract::test_docs_md_have_heading",
-    "FAILED tests/test_text_contract.py::TextContract::test_source_toml_parses_and_paths_exist",
-    "2 failed, 1 passed in 0.40s"
-   ],
-   "passed": 1,
-   "failed": 2,
-   "errors": 0,
-   "verdict": "partial",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/silent-failure-catalog",
-   "commit": "1309e1a483227a1f6c61267abd4071f06d26caab",
-   "bytes": 448720,
-   "seconds": 1.8,
-   "exit": 0,
-   "tail": [
-    "...........                                                     [100%]",
-    "11 passed, 9 subtests passed in 0.94s"
-   ],
-   "passed": 11,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 2,
-    "asserts": 2,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/agent-governance-vocabulary",
-   "commit": "1ae602d530119c651a74ba1403036bbc940d9e41",
-   "bytes": 554535,
-   "fallback_entry": "npm test",
-   "seconds": 4.3,
-   "exit": 1,
-   "tail": [
-    "  requireStack: [",
-    "    'C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\e5run-x9mrp75n\\\\zhaoxinghua09-cell-agent-governance-vocabulary-1ae602d\\\\scripts\\\\validate-crosswalks.js'",
-    "  ]",
-    "}",
-    "",
-    "Node.js v22.23.2"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "not_runnable",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/skill-redteam-suite",
-   "commit": "e39ac448d8ec40f895584c6126df6f27856310b9",
-   "bytes": 45588,
-   "seconds": 7.2,
-   "exit": 0,
-   "tail": [
-    "..............                                                           [100%]",
-    "14 passed in 6.37s"
-   ],
-   "passed": 14,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 40,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/synomosai-governance-mcp",
-   "commit": "dd3784f9a8b5461c3d025dc94b82af6d65eea9bc",
-   "bytes": 54138,
-   "seconds": 1.0,
-   "exit": 4,
-   "tail": [
-    "no tests ran in 0.00s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/lgd-skill-review",
-   "commit": "7fe24c39c711b652933ee90e4cfd5f4daaa7589e",
-   "bytes": 581748,
-   "fallback_entry": "tests/run_golden.py",
-   "seconds": 2.0,
-   "exit": 0,
-   "tail": [
-    "PASS T1-no-skill-md-blocks                  verdict=BLOCK total=None",
-    "PASS T2-good-package-passes                 verdict=PASS  total=96",
-    "PASS T3-secret-leak-blocks                  verdict=BLOCK total=88",
-    "PASS T4-declared-command-missing-blocks     verdict=BLOCK total=91",
-    "PASS T5-self-scores-100                     verdict=PASS  total=96",
-    "---- 5/5 PASS ----"
-   ],
-   "passed": 5,
-   "failed": 0,
-   "errors": 0,
-   "native_runner": "all-green",
-   "verdict": "pass",
-   "evidence_tier": "C",
-   "assert_evidence": {
-    "files": 15,
-    "asserts": 1,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/skill-audit",
-   "commit": "65b6470543ab24943177dbd0ed761f69a98590ff",
-   "bytes": 152226,
-   "fallback_entry": "tests/adversarial_regression.py",
-   "seconds": 1.2,
-   "exit": 0,
-   "tail": [
-    "PASS  zero_width (obfus_zero_width P1)",
-    "PASS  mojibake (obfus_mojibake P1)",
-    "PASS  fake_claim (poison_fake_claim P1)",
-    "PASS  clean_control (clean, no hit)",
-    "PASS  clean_policy (clean, no hit)",
-    "ADVERSARIAL REGRESSION OK — 12/12 passed (P0 命中即阻断原则合规)"
-   ],
-   "passed": 12,
-   "failed": 0,
-   "errors": 0,
-   "native_runner": "all-green",
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 2,
-    "asserts": 0,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/LGD-Eval",
-   "commit": "20c179f978717b292c9b27d9d37f380a6b249622",
-   "bytes": 395550,
-   "seconds": 0.8,
-   "exit": 4,
-   "tail": [
-    "no tests ran in 0.00s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/evaluation-evidence",
-   "commit": "387ead9c0d42cdc80c6b544bd5122619d7b0dba0",
-   "bytes": 251030,
-   "seconds": 0.9,
-   "exit": 0,
-   "tail": [
-    ".....                                                                    [100%]",
-    "5 passed in 0.14s"
-   ],
-   "passed": 5,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "C",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 1,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/governanceos",
-   "commit": "b9a6ac456655bd6898be62d7b06ff814585a3fc8",
-   "bytes": 53804,
-   "seconds": 0.8,
-   "exit": 4,
-   "tail": [
-    "no tests ran in 0.00s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/wechat-viral-topic",
-   "commit": "6ef4647b9cadd08bc5e960ba6051fdd1319fff47",
-   "bytes": 400673,
-   "fallback_entry": "tests/run_golden.py",
-   "seconds": 1.0,
-   "exit": 0,
-   "tail": [
-    "W07-risk-absolute          PASS",
-    "W08-risk-income            PASS",
-    "W09-risk-unsourced         PASS",
-    "W10-title-long-and-red     PASS",
-    "W11-title-good             PASS",
-    "--- 11/11 PASS"
-   ],
-   "passed": 11,
-   "failed": 0,
-   "errors": 0,
-   "native_runner": "all-green",
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 0,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/summarize-pro",
-   "commit": "cbb0284e1aae3f996fd1daa2da6c342d50b13d8b",
-   "bytes": 239661,
-   "fallback_entry": "tests/run_golden.py",
-   "seconds": 1.0,
-   "exit": 0,
-   "tail": [
-    "PASS G20-dept-owner-not-person",
-    "PASS G21-adapt-tencent-fold",
-    "PASS G22-render-html-selfcontained",
-    "PASS G23-adapt-teams-fold",
-    "PASS G24-adapt-zoom-inline",
-    "---- 24/24 PASS ----"
-   ],
-   "passed": 24,
-   "failed": 0,
-   "errors": 0,
-   "native_runner": "all-green",
-   "verdict": "pass",
-   "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 0,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/medxpert-library-connector",
-   "commit": "362cc0f5d044684d0fec97a775e4388b4050238a",
-   "bytes": 49969,
-   "seconds": 0.8,
-   "exit": 4,
-   "tail": [
-    "no tests ran in 0.00s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
-   "commit": "3221884122909e1c66a9073704b7ad4f0256791f",
-   "bytes": 998559,
-   "fallback_entry": "tests/test_package_integrity.py",
-   "seconds": 0.9,
-   "exit": 0,
-   "tail": [
-    "OK: 9 份成品均有可重建副本；3 个 WG 源/版本/证据包齐全"
-   ],
-   "passed": 1,
-   "failed": 0,
-   "errors": 0,
-   "native_runner": "all-green",
-   "verdict": "pass",
-   "evidence_tier": "D",
-   "manual_review_note": "测试文件自述「只验结构与可重建性前提，不验内容是否正确」，1 条通过，证据薄，建议不计入强合格",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 0,
-    "cmp": true
-   },
-   "strict_verdict": "pass_thin"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/dsh-secret-leakage-scan",
-   "commit": "9f3fe08465ff838eed3b479062edca0bab0a5e33",
-   "bytes": 10686,
-   "seconds": 0.9,
-   "exit": 4,
-   "tail": [
-    "no tests ran in 0.00s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/medxpert-standards-connector",
-   "commit": "eba486a2ce1ecc0aeed5a661006f7764123e8206",
-   "bytes": 89621,
-   "seconds": 0.8,
-   "exit": 4,
-   "tail": [
-    "no tests ran in 0.00s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/aps-conformance-suite",
-   "commit": "4157ad4d79f9692c8b1b46ca49d48eda20b517cc",
-   "bytes": 3950531,
-   "seconds": 2.4,
-   "exit": 0,
-   "tail": [
-    "....................    [100%]",
-    "20 passed, 49 subtests passed in 1.62s"
-   ],
-   "passed": 20,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 5,
-    "asserts": 1,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/medxpert-reg-connector",
-   "commit": "ed790d4bdaf36d2b5821006c4b00ec871e11853f",
-   "bytes": 200523,
-   "fallback_entry": "tests/selftest_stdio.py",
-   "seconds": 15.6,
-   "exit": 0,
-   "tail": [
-    "+-----------------------------------------------------------------------------+",
-    "",
-    "",
-    "[11/26/26 01:31:26] INFO     Starting MCP server               transport.py:241",
-    "                             'medxpert-reg-connector' with                     ",
-    "                             transport 'stdio'"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "not_runnable",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/whois-agent",
-   "commit": "7df602c7f154db6bbd9af6092be273fdb9edcb36",
-   "bytes": 22586,
-   "seconds": 0.8,
-   "exit": 4,
-   "tail": [
-    "no tests ran in 0.00s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/fhir",
-   "commit": "ef782bfa3e71ff717c528f2b0f4da1e09391c366",
-   "bytes": 107200563,
-   "seconds": 2.3,
-   "exit": 5,
-   "tail": [
-    "no tests ran in 0.02s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "stevenzhao07/medxpert-reg-hub",
-   "commit": "660f0c9c5b79c075d5c1081653a61b1c1896bcb2",
-   "bytes": 485891,
-   "seconds": 0.8,
-   "exit": 4,
-   "tail": [
-    "no tests ran in 0.00s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "stevenzhao07/uibc-core",
-   "commit": "507ee32427cff3bbbd48e3803fac7c711a6c55be",
-   "bytes": 425819,
-   "seconds": 35.5,
-   "exit": 0,
-   "tail": [
-    "................................................................. [ 41%]",
-    "........................................................................ [ 86%]",
-    ".....................                                                    [100%]",
-    "158 passed, 7 subtests passed in 34.65s"
-   ],
-   "passed": 158,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 12,
-    "asserts": 11,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": [
+    "tests/test_core.py: self.assertGreaterEqual(r[\"count\"], 1)",
+    "tests/test_core.py: self.assertEqual(r[\"matches\"][0][\"id\"], \"LAB-DEMO-01\")",
+    "tests/test_core.py: self.assertEqual(r[\"matches\"], [])"
+   ]
   },
   {
    "repo": "stevenzhao07/doc-translate-keep-layout",
    "commit": "78cc0563db95fd59aaf3abce07bd7286920fad77",
    "bytes": 61059,
    "fallback_entry": "tests/run_tests.py",
-   "seconds": 16.2,
+   "seconds": 14.1,
    "exit": 0,
    "tail": [
     "t39_status_with_annotation_parsed              PASS  rc=0 GATE=pass blocking=0 warning=0 planned=1",
@@ -933,41 +274,245 @@
    "native_runner": "all-green",
    "verdict": "pass",
    "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 0,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 37,
+    "files": 1
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": []
   },
   {
-   "repo": "LGD-Eval/LGD-Eval",
-   "commit": "3ac73d0168779e2a0bfab56ea7d22ea2a70f1f05",
-   "bytes": 836239,
-   "seconds": 3.8,
+   "repo": "stevenzhao07/regdoc-commons",
+   "commit": "a8a79bd4e45fb31c9667bed6358347263890e515",
+   "bytes": 117668,
+   "fallback_entry": "tests/run.js",
+   "seconds": 0.7,
    "exit": 0,
    "tail": [
-    ".............                                                            [100%]",
-    "13 passed in 2.98s"
+    "  consistency finding tables                                    5",
+    "  GSPR rows                                                    23",
+    "  workbook column claim                                       \"Fourteen columns\"",
+    "  gitignore keeps templates tracked                           yes",
+    "  gitignore excludes test artefacts                           yes",
+    "PASS  52 checks"
    ],
-   "passed": 13,
+   "passed": 52,
+   "failed": 0,
+   "errors": 0,
+   "native_runner": "all-green",
+   "verdict": "pass",
+   "evidence_tier": "A",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 2,
+    "trivial": 0,
+    "cmp": 14,
+    "files": 4
+   },
+   "assert_evidence": [
+    "tests/rules.js: const assert = require('assert');",
+    "tests/rules.js: assert.ok(/确认/.test(msg), 'hint must ask for confirmation, not assert a class');"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synomos-ai-skills",
+   "commit": "84ae3d40842c4e17ec20f6acc0df1ce1471d9619",
+   "bytes": 1540121,
+   "seconds": 8.7,
+   "exit": 0,
+   "tail": [
+    "..............                                                           [100%]",
+    "14 passed in 7.75s"
+   ],
+   "passed": 14,
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
    "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 4,
-    "asserts": 2,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 60,
+    "trivial": 0,
+    "cmp": 19,
+    "files": 13
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": [
+    "skills/lexiang-knowledge-base/scripts/test_upload_files.py: assert len(results) == 3",
+    "skills/lexiang-knowledge-base/scripts/test_upload_files.py: assert success is True",
+    "skills/lexiang-knowledge-base/scripts/test_upload_files.py: assert len(results) == 3"
+   ]
   },
   {
-   "repo": "LGD-Eval/skill-audit",
-   "commit": "31a6fde24db3b8a7260f745d93000166893a905d",
-   "bytes": 153400,
-   "fallback_entry": "tests/adversarial_regression.py",
+   "repo": "zhaoxinghua09-cell/agent-skills",
+   "commit": "d0398570768f617b3bac9e66ce3c4e9eb4114cb4",
+   "bytes": 18875928,
+   "seconds": 5.8,
+   "exit": 0,
+   "tail": [
+    "..............                                                           [100%]",
+    "14 passed in 5.17s"
+   ],
+   "passed": 14,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 40,
+    "trivial": 0,
+    "cmp": 6,
+    "files": 5
+   },
+   "assert_evidence": [
+    "tests/test_skill_lock.py: assert run(\"generate\", tmp_path).returncode == 0",
+    "tests/test_skill_lock.py: assert (tmp_path / \"skills.lock.json\").exists()",
+    "tests/test_skill_lock.py: assert r.returncode == 0, r.stdout + r.stderr"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skills",
+   "commit": "134f6465bd2ada4f2e7c4eaa33f8bc64c2d7f51b",
+   "bytes": 1355342,
+   "seconds": 5.4,
+   "exit": 0,
+   "tail": [
+    "..............                                                           [100%]",
+    "14 passed in 4.79s"
+   ],
+   "passed": 14,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 41,
+    "trivial": 0,
+    "cmp": 22,
+    "files": 16
+   },
+   "assert_evidence": [
+    "skills/lgd-skill-review/tests/rubric_probe.py: \"\"\"Rubric conformance test: for every published check, break it on purpose and assert the score drops.",
+    "tests/test_skill_lock.py: assert run(\"generate\", tmp_path).returncode == 0",
+    "tests/test_skill_lock.py: assert (tmp_path / \"skills.lock.json\").exists()"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/silent-failure-catalog",
+   "commit": "1309e1a483227a1f6c61267abd4071f06d26caab",
+   "bytes": 448720,
    "seconds": 1.0,
+   "exit": 0,
+   "tail": [
+    "...........                                                     [100%]",
+    "11 passed, 9 subtests passed in 0.39s"
+   ],
+   "passed": 11,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 16,
+    "trivial": 0,
+    "cmp": 3,
+    "files": 2
+   },
+   "assert_evidence": [
+    "tests/test_catalog.py: self.assertGreater(len(self.entries), 0, \"no entries found — the catalog is empty\")",
+    "tests/test_catalog.py: self.assertEqual(proc.returncode, 0, \"checker failed:\\n%s\\n%s\" % (proc.stdout, proc.stderr))",
+    "tests/test_catalog.py: self.assertIn(\"PASS\", proc.stdout)"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-redteam-suite",
+   "commit": "e39ac448d8ec40f895584c6126df6f27856310b9",
+   "bytes": 45588,
+   "seconds": 7.3,
+   "exit": 0,
+   "tail": [
+    "..............                                                           [100%]",
+    "14 passed in 6.66s"
+   ],
+   "passed": 14,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 41,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 3
+   },
+   "assert_evidence": [
+    "probes/vacuity/tests/run_golden.py: assert actual == expected",
+    "tests/test_skill_lock.py: assert run(\"generate\", tmp_path).returncode == 0",
+    "tests/test_skill_lock.py: assert (tmp_path / \"skills.lock.json\").exists()"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-control-standard",
+   "commit": "a9af3defa9b87c235ef896c94e6467002cc305fc",
+   "bytes": 16239238,
+   "seconds": 187.1,
+   "exit": 1,
+   "tail": [
+    "FAILED tests/test_pr_intake_workflow.py::test_failed_accepted_listing_queues_the_pull_request_and_exits_zero",
+    "FAILED tests/test_publish_schemas.py::test_a_symlink_out_of_the_source_tree_is_refused",
+    "FAILED tests/test_publish_schemas.py::test_a_symlinked_directory_does_not_leak_its_contents",
+    "FAILED tests/test_roadmap_sync_workflow.py::test_steps_are_exact - AssertionE...",
+    "FAILED tests/test_site_config.py::test_only_scripts_the_pinned_theme_ships_reach_the_site",
+    "17 failed, 901 passed, 1 skipped in 186.41s (0:03:06)"
+   ],
+   "passed": 901,
+   "failed": 17,
+   "errors": 0,
+   "verdict": "partial"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skill-review",
+   "commit": "7fe24c39c711b652933ee90e4cfd5f4daaa7589e",
+   "bytes": 581748,
+   "fallback_entry": "tests/run_golden.py",
+   "seconds": 1.1,
+   "exit": 0,
+   "tail": [
+    "PASS T1-no-skill-md-blocks                  verdict=BLOCK total=None",
+    "PASS T2-good-package-passes                 verdict=PASS  total=96",
+    "PASS T3-secret-leak-blocks                  verdict=BLOCK total=88",
+    "PASS T4-declared-command-missing-blocks     verdict=BLOCK total=91",
+    "PASS T5-self-scores-100                     verdict=PASS  total=96",
+    "---- 5/5 PASS ----"
+   ],
+   "passed": 5,
+   "failed": 0,
+   "errors": 0,
+   "native_runner": "all-green",
+   "verdict": "pass",
+   "evidence_tier": "C",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 1,
+    "trivial": 0,
+    "cmp": 36,
+    "files": 15
+   },
+   "assert_evidence": [
+    "tests/rubric_probe.py: \"\"\"Rubric conformance test: for every published check, break it on purpose and assert the score drops."
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-audit",
+   "commit": "65b6470543ab24943177dbd0ed761f69a98590ff",
+   "bytes": 152226,
+   "fallback_entry": "tests/adversarial_regression.py",
+   "seconds": 0.8,
    "exit": 0,
    "tail": [
     "PASS  zero_width (obfus_zero_width P1)",
@@ -983,17 +528,94 @@
    "native_runner": "all-green",
    "verdict": "pass",
    "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 2,
-    "asserts": 0,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 1,
+    "files": 1
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": []
   },
   {
-   "repo": "LGD-Eval/attestation",
-   "commit": "5cedb0fa5f99d40949d5212d58727d8305c94263",
-   "bytes": 737137,
+   "repo": "zhaoxinghua09-cell/summarize-pro",
+   "commit": "cbb0284e1aae3f996fd1daa2da6c342d50b13d8b",
+   "bytes": 239661,
+   "fallback_entry": "tests/run_golden.py",
+   "seconds": 0.8,
+   "exit": 0,
+   "tail": [
+    "PASS G20-dept-owner-not-person",
+    "PASS G21-adapt-tencent-fold",
+    "PASS G22-render-html-selfcontained",
+    "PASS G23-adapt-teams-fold",
+    "PASS G24-adapt-zoom-inline",
+    "---- 24/24 PASS ----"
+   ],
+   "passed": 24,
+   "failed": 0,
+   "errors": 0,
+   "native_runner": "all-green",
+   "verdict": "pass",
+   "evidence_tier": "A",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 5,
+    "files": 2
+   },
+   "assert_evidence": []
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
+   "commit": "3221884122909e1c66a9073704b7ad4f0256791f",
+   "bytes": 998559,
+   "fallback_entry": "tests/test_package_integrity.py",
+   "seconds": 0.7,
+   "exit": 0,
+   "tail": [
+    "OK: 9 份成品均有可重建副本；3 个 WG 源/版本/证据包齐全"
+   ],
+   "passed": 1,
+   "failed": 0,
+   "errors": 0,
+   "native_runner": "all-green",
+   "verdict": "pass",
+   "evidence_tier": "D",
+   "strict_verdict": "pass_thin",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
+   },
+   "assert_evidence": [],
+   "manual_review_note": "测试文件内无断言/无状态比对，或 passed<3；计数为脚本自报，不计入合格"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-theory",
+   "commit": "f50e747ef2e53f3ab0fa6f2422fa787934785121",
+   "bytes": 5572855,
+   "seconds": 0.9,
+   "exit": 1,
+   "tail": [
+    "",
+    "tests\\test_text_contract.py:44: AssertionError",
+    "=========================== short test summary info ===========================",
+    "FAILED tests/test_text_contract.py::TextContract::test_docs_md_have_heading",
+    "FAILED tests/test_text_contract.py::TextContract::test_source_toml_parses_and_paths_exist",
+    "2 failed, 1 passed in 0.15s"
+   ],
+   "passed": 1,
+   "failed": 2,
+   "errors": 0,
+   "verdict": "partial"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synomosai-governance-mcp",
+   "commit": "dd3784f9a8b5461c3d025dc94b82af6d65eea9bc",
+   "bytes": 54138,
    "seconds": 0.8,
    "exit": 4,
    "tail": [
@@ -1002,85 +624,576 @@
    "passed": 0,
    "failed": 0,
    "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
+   "verdict": "no_tests_collected"
   },
   {
-   "repo": "LGD-Eval/uibc-core",
-   "commit": "5dac2a2e7882e11e0b18a95920440ca93a1441f6",
-   "bytes": 432445,
-   "seconds": 34.1,
-   "exit": 0,
-   "tail": [
-    "................................................................. [ 41%]",
-    "........................................................................ [ 86%]",
-    ".....................                                                    [100%]",
-    "158 passed, 7 subtests passed in 33.34s"
-   ],
-   "passed": 158,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 12,
-    "asserts": 11,
-    "cmp": true
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "LGD-Eval/evaluation-evidence",
-   "commit": "1f8c529f32c34bb60e4bc8f1fb85aafaa1ca5919",
-   "bytes": 254616,
-   "seconds": 0.9,
+   "repo": "zhaoxinghua09-cell/evaluation-evidence",
+   "commit": "387ead9c0d42cdc80c6b544bd5122619d7b0dba0",
+   "bytes": 251030,
+   "seconds": 0.8,
    "exit": 0,
    "tail": [
     ".....                                                                    [100%]",
-    "5 passed in 0.09s"
+    "5 passed in 0.07s"
    ],
    "passed": 5,
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
    "evidence_tier": "C",
-   "assert_evidence": {
-    "files": 1,
-    "asserts": 1,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 10,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": [
+    "tests/test_verify_hash_manifest.py: self.assertTrue(ok)",
+    "tests/test_verify_hash_manifest.py: self.assertEqual([r[\"status\"] for r in results], [\"PASS\"])",
+    "tests/test_verify_hash_manifest.py: self.assertFalse(ok)"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-library-connector",
+   "commit": "362cc0f5d044684d0fec97a775e4388b4050238a",
+   "bytes": 49969,
+   "seconds": 0.6,
+   "exit": 4,
+   "tail": [
+    "no tests ran in 0.00s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-standards-connector",
+   "commit": "eba486a2ce1ecc0aeed5a661006f7764123e8206",
+   "bytes": 89621,
+   "seconds": 0.7,
+   "exit": 4,
+   "tail": [
+    "no tests ran in 0.00s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aps-conformance-suite",
+   "commit": "4157ad4d79f9692c8b1b46ca49d48eda20b517cc",
+   "bytes": 3950531,
+   "seconds": 3.9,
+   "exit": 0,
+   "tail": [
+    "....................    [100%]",
+    "20 passed, 49 subtests passed in 3.25s"
+   ],
+   "passed": 20,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "A",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 134,
+    "trivial": 0,
+    "cmp": 30,
+    "files": 13
+   },
+   "assert_evidence": [
+    "fixtures/lease-revocation-axes/mutation.test.mjs: import assert from 'node:assert/strict'",
+    "interop/cosai-odis-148dc41/adapter/py/test_timestamps.py: assert odis.validate_non_root(child(p, '2026-09-11T22:00:00+01:00'), [p])['result'] == 'pass'      # same inst",
+    "interop/cosai-odis-148dc41/adapter/py/test_timestamps.py: assert odis.validate_non_root(child(p, '2026-09-11T20:30:00-01:00'), [p])['check'] == 'expiry'    # 21:30Z, la"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-reg-connector",
+   "commit": "ed790d4bdaf36d2b5821006c4b00ec871e11853f",
+   "bytes": 200523,
+   "fallback_entry": "tests/selftest_stdio.py",
+   "seconds": 1.1,
+   "exit": 1,
+   "tail": [
+    "Traceback (most recent call last):",
+    "  File \"C:\\Users\\SZYL\\AppData\\Local\\Temp\\e5run-coqwz3wt\\zhaoxinghua09-cell-medxpert-reg-connector-ed790d4\\tests\\selftest_stdio.py\", line 20, in <module>",
+    "    from fastmcp import Client",
+    "ModuleNotFoundError: No module named 'fastmcp'"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "not_runnable"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/fhir",
+   "commit": "ef782bfa3e71ff717c528f2b0f4da1e09391c366",
+   "bytes": 107200563,
+   "seconds": 0.7,
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.02s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "stevenzhao07/uibc-core",
+   "commit": "507ee32427cff3bbbd48e3803fac7c711a6c55be",
+   "bytes": 425819,
+   "seconds": 24.1,
+   "exit": 0,
+   "tail": [
+    "................................................................. [ 41%]",
+    "........................................................................ [ 86%]",
+    ".....................                                                    [100%]",
+    "158 passed, 7 subtests passed in 23.51s"
+   ],
+   "passed": 158,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "A",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 318,
+    "trivial": 0,
+    "cmp": 3,
+    "files": 12
+   },
+   "assert_evidence": [
+    "lgd-core/TESTS/test_validator.py: self.assertEqual(problems, [], msg=f\"{name} 应通过，实际: {problems}\")",
+    "lgd-core/TESTS/test_validator.py: self.assertNotEqual(problems, [], msg=f\"{name} 应被拒\")",
+    "lgd-core/TESTS/test_validator.py: self.assertEqual(v.validate(base_manifest()), [])"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/skill-audit",
+   "commit": "31a6fde24db3b8a7260f745d93000166893a905d",
+   "bytes": 153400,
+   "fallback_entry": "tests/adversarial_regression.py",
+   "seconds": 1.1,
+   "exit": 0,
+   "tail": [
+    "PASS  zero_width (obfus_zero_width P1)",
+    "PASS  mojibake (obfus_mojibake P1)",
+    "PASS  fake_claim (poison_fake_claim P1)",
+    "PASS  clean_control (clean, no hit)",
+    "PASS  clean_policy (clean, no hit)",
+    "ADVERSARIAL REGRESSION OK — 12/12 passed (P0 命中即阻断原则合规)"
+   ],
+   "passed": 12,
+   "failed": 0,
+   "errors": 0,
+   "native_runner": "all-green",
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 1,
+    "files": 1
+   },
+   "assert_evidence": []
+  },
+  {
+   "repo": "LGD-Eval/uibc-core",
+   "commit": "5dac2a2e7882e11e0b18a95920440ca93a1441f6",
+   "bytes": 432445,
+   "seconds": 23.7,
+   "exit": 0,
+   "tail": [
+    "................................................................. [ 41%]",
+    "........................................................................ [ 86%]",
+    ".....................                                                    [100%]",
+    "158 passed, 7 subtests passed in 23.02s"
+   ],
+   "passed": 158,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "A",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 318,
+    "trivial": 0,
+    "cmp": 3,
+    "files": 12
+   },
+   "assert_evidence": [
+    "lgd-core/TESTS/test_validator.py: self.assertEqual(problems, [], msg=f\"{name} 应通过，实际: {problems}\")",
+    "lgd-core/TESTS/test_validator.py: self.assertNotEqual(problems, [], msg=f\"{name} 应被拒\")",
+    "lgd-core/TESTS/test_validator.py: self.assertEqual(v.validate(base_manifest()), [])"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/evaluation-evidence",
+   "commit": "1f8c529f32c34bb60e4bc8f1fb85aafaa1ca5919",
+   "bytes": 254616,
+   "seconds": 0.7,
+   "exit": 0,
+   "tail": [
+    ".....                                                                    [100%]",
+    "5 passed in 0.05s"
+   ],
+   "passed": 5,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "C",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 10,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
+   },
+   "assert_evidence": [
+    "tests/test_verify_hash_manifest.py: self.assertTrue(ok)",
+    "tests/test_verify_hash_manifest.py: self.assertEqual([r[\"status\"] for r in results], [\"PASS\"])",
+    "tests/test_verify_hash_manifest.py: self.assertFalse(ok)"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-core",
+   "commit": "939cc2e5cb83bc3137bdb03752c6c441963701c4",
+   "bytes": 4940548,
+   "seconds": 347.8,
+   "exit": 1,
+   "tail": [
+    "FAIL file count moved: receipt 2244, tree 2248",
+    "",
+    "OUTSIDER FAIL (2 problem(s))",
+    "=========================== short test summary info ===========================",
+    "FAILED tests/test_outsider_rerun.py::test_receipt_matches_this_tree - Asserti...",
+    "1 failed, 2092 passed, 30 skipped, 272 subtests passed in 346.94s (0:05:46)"
+   ],
+   "passed": 2092,
+   "failed": 1,
+   "errors": 0,
+   "verdict": "partial"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skillgate",
+   "commit": "362c600dfdc386e327e70e1e70e28305139b4841",
+   "bytes": 348539,
+   "seconds": 16.8,
+   "exit": 0,
+   "tail": [
+    "............................................................             [100%]",
+    "60 passed in 16.21s"
+   ],
+   "passed": 60,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "A",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 100,
+    "trivial": 0,
+    "cmp": 2,
+    "files": 17
+   },
+   "assert_evidence": [
+    "tests/test_coverage.py: assert result is not None",
+    "tests/test_coverage.py: assert \"<svg\" in svg",
+    "tests/test_coverage.py: assert len(sbom) > 0"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-governance-vocabulary",
+   "commit": "1ae602d530119c651a74ba1403036bbc940d9e41",
+   "bytes": 554535,
+   "fallback_entry": "npm test",
+   "seconds": 1.9,
+   "exit": 1,
+   "tail": [
+    "  requireStack: [",
+    "    'C:\\\\Users\\\\SZYL\\\\AppData\\\\Local\\\\Temp\\\\e5run-l9ov43t6\\\\zhaoxinghua09-cell-agent-governance-vocabulary-1ae602d\\\\scripts\\\\validate-crosswalks.js'",
+    "  ]",
+    "}",
+    "",
+    "Node.js v22.23.2"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "not_runnable"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/LGD-Eval",
+   "commit": "20c179f978717b292c9b27d9d37f380a6b249622",
+   "bytes": 395550,
+   "seconds": 0.6,
+   "exit": 4,
+   "tail": [
+    "no tests ran in 0.00s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/governanceos",
+   "commit": "b9a6ac456655bd6898be62d7b06ff814585a3fc8",
+   "bytes": 53804,
+   "seconds": 0.6,
+   "exit": 4,
+   "tail": [
+    "no tests ran in 0.00s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wechat-viral-topic",
+   "commit": "6ef4647b9cadd08bc5e960ba6051fdd1319fff47",
+   "bytes": 400673,
+   "fallback_entry": "tests/run_golden.py",
+   "seconds": 0.7,
+   "exit": 0,
+   "tail": [
+    "W07-risk-absolute          PASS",
+    "W08-risk-income            PASS",
+    "W09-risk-unsourced         PASS",
+    "W10-title-long-and-red     PASS",
+    "W11-title-good             PASS",
+    "--- 11/11 PASS"
+   ],
+   "passed": 11,
+   "failed": 0,
+   "errors": 0,
+   "native_runner": "all-green",
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 1,
+    "files": 1
+   },
+   "assert_evidence": []
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-improver",
+   "commit": "2feaeeb97bcbc10431a964f534a05c81e4ac22ae",
+   "bytes": 24209,
+   "fallback_entry": "tests/run_golden.py",
+   "seconds": 0.8,
+   "exit": 0,
+   "tail": [
+    "  PASS  G06  缺同系列标识且有兄弟时追加  (已追加)",
+    "  PASS  G07  文档漂移行被替换且不留参数名  (已移除参数名)",
+    "  PASS  G08  非技能目录直接拒绝  (退出码 1（预期非 0）)",
+    "  PASS  G09  新增文件行尾为 LF  (LF only)",
+    "",
+    "---- 9/9 PASS ----"
+   ],
+   "passed": 9,
+   "failed": 0,
+   "errors": 0,
+   "native_runner": "all-green",
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_thin",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
+   },
+   "assert_evidence": [],
+   "manual_review_note": "测试文件内无断言/无状态比对，或 passed<3；计数为脚本自报，不计入合格"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/dsh-secret-leakage-scan",
+   "commit": "9f3fe08465ff838eed3b479062edca0bab0a5e33",
+   "bytes": 10686,
+   "seconds": 0.6,
+   "exit": 4,
+   "tail": [
+    "no tests ran in 0.00s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/whois-agent",
+   "commit": "7df602c7f154db6bbd9af6092be273fdb9edcb36",
+   "bytes": 22586,
+   "seconds": 0.6,
+   "exit": 4,
+   "tail": [
+    "no tests ran in 0.00s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "stevenzhao07/aitb",
+   "commit": "f7647f88607f2cc83ba1c039bc4a4572d83478d8",
+   "bytes": 61206,
+   "seconds": 1.2,
+   "exit": 0,
+   "tail": [
+    ".........................                                                [100%]",
+    "25 passed in 0.57s"
+   ],
+   "passed": 25,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "A",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 50,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
+   },
+   "assert_evidence": [
+    "tests/test_engine.py: self.assertEqual(engine.validate_preset(p), [])",
+    "tests/test_engine.py: self.assertIn(\"E002\", [c for c, _ in engine.validate_preset(p)])",
+    "tests/test_engine.py: self.assertIn(\"E003\", [c for c, _ in engine.validate_preset(p)])"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/medxpert-reg-hub",
+   "commit": "660f0c9c5b79c075d5c1081653a61b1c1896bcb2",
+   "bytes": 485891,
+   "seconds": 0.6,
+   "exit": 4,
+   "tail": [
+    "no tests ran in 0.00s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "LGD-Eval/LGD-Eval",
+   "commit": "3ac73d0168779e2a0bfab56ea7d22ea2a70f1f05",
+   "bytes": 836239,
+   "seconds": 2.4,
+   "exit": 0,
+   "tail": [
+    ".............                                                            [100%]",
+    "13 passed in 1.82s"
+   ],
+   "passed": 13,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 143,
+    "trivial": 0,
+    "cmp": 18,
+    "files": 21
+   },
+   "assert_evidence": [
+    "skills/lgd-eval/tests/test_ast_analyzer.py: assert not [x for x in findings if \"硬编码凭证\" in x.message], findings",
+    "skills/lgd-eval/tests/test_ast_analyzer.py: assert not [x for x in findings if \"硬编码凭证\" in x.message], findings",
+    "skills/lgd-eval/tests/test_ast_analyzer.py: assert hits, findings"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/skill-scout",
+   "commit": "aa26f4195d8f11101400105bd22d4ab0e34d4a39",
+   "bytes": 32418,
+   "fallback_entry": "tests/selftest.py",
+   "seconds": 0.9,
+   "exit": 0,
+   "tail": [
+    "  PASS  检出外发判别装",
+    "  PASS  合格包给出三档结论",
+    "  PASS  无引擎时明确声明不是 LGD 分数",
+    "  PASS  无引擎时不产出 100 分制",
+    "",
+    "自测全部通过"
+   ],
+   "passed": 1,
+   "failed": 0,
+   "errors": 0,
+   "native_runner": "all-green",
+   "verdict": "pass",
+   "evidence_tier": "D",
+   "strict_verdict": "pass_thin",
+   "assert_stats": {
+    "strong": 0,
+    "trivial": 0,
+    "cmp": 1,
+    "files": 1
+   },
+   "assert_evidence": [],
+   "manual_review_note": "测试文件内无断言/无状态比对，或 passed<3；计数为脚本自报，不计入合格"
+  },
+  {
+   "repo": "LGD-Eval/attestation",
+   "commit": "5cedb0fa5f99d40949d5212d58727d8305c94263",
+   "bytes": 737137,
+   "seconds": 0.6,
+   "exit": 4,
+   "tail": [
+    "no tests ran in 0.00s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
   },
   {
    "repo": "LGD-Eval/awesome-claude-code",
    "commit": "ea11db0a112f172b5112f03d37bdf45534c43d7e",
    "bytes": 2341673,
-   "seconds": 3.4,
+   "seconds": 2.4,
    "exit": 0,
    "tail": [
     "........................................................................ [ 64%]",
     "........................................                                 [100%]",
-    "112 passed in 2.54s"
+    "112 passed in 1.82s"
    ],
    "passed": 112,
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
    "evidence_tier": "A",
-   "assert_evidence": {
-    "files": 7,
-    "asserts": 211,
-    "cmp": true
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 218,
+    "trivial": 0,
+    "cmp": 3,
+    "files": 6
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": [
+    "tests/test_badge_notification.py: assert bn.parse_repo(\"https://github.com/o/r\") == (\"o\", \"r\")",
+    "tests/test_badge_notification.py: assert bn.parse_repo(\"https://github.com/o/r.git\") == (\"o\", \"r\")",
+    "tests/test_badge_notification.py: assert bn.parse_repo(\"https://github.com/o/r/\") == (\"o\", \"r\")"
+   ]
   },
   {
    "repo": "LGD-Eval/dsh-plugin-lgd-trust",
    "commit": "d1602ef51f14c03b34bcec4377b351f2e391d5f3",
    "bytes": 56243,
    "fallback_entry": "npm test",
-   "seconds": 1.7,
+   "seconds": 1.3,
    "exit": 0,
    "tail": [
     "# pass 4",
@@ -1088,158 +1201,17 @@
     "# cancelled 0",
     "# skipped 0",
     "# todo 0",
-    "# duration_ms 138.9348"
+    "# duration_ms 125.8041"
    ],
    "passed": 0,
    "failed": 0,
    "errors": 0,
-   "verdict": "not_runnable",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
+   "verdict": "not_runnable"
   },
   {
    "repo": "zhaoxinghua09-cell/medxpert-skills",
    "commit": "e5d4cf5aaf26852d3278b5a2ce3ea73a5e190ed8",
    "bytes": 435221,
-   "seconds": 1.0,
-   "exit": 5,
-   "tail": [
-    "no tests ran in 0.13s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/lgd-demo-organization",
-   "commit": "10ee1433c3984007d57a26837af92c99d287f751",
-   "bytes": 68163,
-   "seconds": 1.1,
-   "exit": 2,
-   "tail": [
-    "    ???",
-    "E   OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: '<internal-path>'",
-    "=========================== short test summary info ===========================",
-    "ERROR evidence/tools/matrix_test.py - OSError: [WinError 123] 文件名、目录名...",
-    "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
-    "1 error in 0.33s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 1,
-   "verdict": "not_runnable",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/credential-vault-design",
-   "commit": "6608d2afa123880d8bb045be91e95baf99f5582a",
-   "bytes": 511140,
-   "seconds": 1.1,
-   "exit": 2,
-   "tail": [
-    "    from pykeepass import create_database, PyKeePass",
-    "E   ModuleNotFoundError: No module named 'pykeepass'",
-    "=========================== short test summary info ===========================",
-    "ERROR tools/security_test.py",
-    "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
-    "1 error in 0.29s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 1,
-   "verdict": "not_runnable",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/authz-code-design",
-   "commit": "fa016bb333774e150a915126f7a831d61ab0b155",
-   "bytes": 38036,
-   "seconds": 1.1,
-   "exit": 2,
-   "tail": [
-    "E   ModuleNotFoundError: No module named 'pykeepass'",
-    "=========================== short test summary info ===========================",
-    "ERROR tools/credential_broker_security_test.py",
-    "ERROR tools/credential_broker_test.py",
-    "!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!",
-    "2 errors in 0.27s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 2,
-   "verdict": "not_runnable",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/agent-memory-service",
-   "commit": "d811c474690ef2d0f643b73966d12d36e3285af7",
-   "bytes": 89837,
-   "seconds": 2.7,
-   "exit": 3,
-   "tail": [
-    "INTERNALERROR>   File \"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\e5run-j_k7kke3\\zhaoxinghua09-cell-agent-memory-service-d811c47\\service\\test_event_time.py\", line 76, in <module>",
-    "INTERNALERROR>     sys.exit(1 if fails else 0)",
-    "INTERNALERROR>     ~~~~~~~~^^^^^^^^^^^^^^^^^^^",
-    "INTERNALERROR> SystemExit: 0",
-    "",
-    "no tests ran in 1.79s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/MinisSkills",
-   "commit": "8c33682cedb596438fc0bae3580149e3d878b7b8",
-   "bytes": 856808,
-   "seconds": 1.0,
-   "exit": 5,
-   "tail": [
-    "no tests ran in 0.19s"
-   ],
-   "passed": 0,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/awesome-claude-skills",
-   "commit": "9a6fd52eaeb9dd7dec0cc3c05f75e8fc7f5cb356",
-   "bytes": 5117035,
-   "seconds": 0.9,
-   "exit": 0,
-   "tail": [
-    "..........                                                               [100%]",
-    "10 passed in 0.07s"
-   ],
-   "passed": 10,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 3,
-    "asserts": 0,
-    "cmp": true,
-    "source": "tree-scan"
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "zhaoxinghua09-cell/llm-gateway-hub",
-   "commit": "b7076401c415962457ed7245420790f50be7f61d",
-   "bytes": 36402,
    "seconds": 0.9,
    "exit": 5,
    "tail": [
@@ -1248,9 +1220,139 @@
    "passed": 0,
    "failed": 0,
    "errors": 0,
-   "verdict": "no_tests_collected",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-demo-organization",
+   "commit": "10ee1433c3984007d57a26837af92c99d287f751",
+   "bytes": 68163,
+   "seconds": 0.8,
+   "exit": 2,
+   "tail": [
+    "    ???",
+    "E   OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: '<internal-path>'",
+    "=========================== short test summary info ===========================",
+    "ERROR evidence/tools/matrix_test.py - OSError: [WinError 123] 文件名、目录名...",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+    "1 error in 0.22s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 1,
+   "verdict": "not_runnable"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/credential-vault-design",
+   "commit": "6608d2afa123880d8bb045be91e95baf99f5582a",
+   "bytes": 511140,
+   "seconds": 1.0,
+   "exit": 2,
+   "tail": [
+    "    from pykeepass import create_database, PyKeePass",
+    "E   ModuleNotFoundError: No module named 'pykeepass'",
+    "=========================== short test summary info ===========================",
+    "ERROR tools/security_test.py",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+    "1 error in 0.31s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 1,
+   "verdict": "not_runnable"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/authz-code-design",
+   "commit": "fa016bb333774e150a915126f7a831d61ab0b155",
+   "bytes": 38036,
+   "seconds": 0.9,
+   "exit": 2,
+   "tail": [
+    "E   ModuleNotFoundError: No module named 'pykeepass'",
+    "=========================== short test summary info ===========================",
+    "ERROR tools/credential_broker_security_test.py",
+    "ERROR tools/credential_broker_test.py",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!",
+    "2 errors in 0.28s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 2,
+   "verdict": "not_runnable"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-memory-service",
+   "commit": "d811c474690ef2d0f643b73966d12d36e3285af7",
+   "bytes": 89837,
+   "seconds": 0.9,
+   "exit": 2,
+   "tail": [
+    "ERROR service/test_event_time.py",
+    "ERROR service/test_now_gate.py",
+    "ERROR service/test_period_affinity.py",
+    "ERROR service/test_person_scope.py",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!",
+    "4 errors in 0.28s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 4,
+   "verdict": "not_runnable"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/MinisSkills",
+   "commit": "8c33682cedb596438fc0bae3580149e3d878b7b8",
+   "bytes": 856808,
+   "seconds": 0.9,
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.14s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
+  },
+  {
+   "repo": "zhaoxinghua09-cell/awesome-claude-skills",
+   "commit": "9a6fd52eaeb9dd7dec0cc3c05f75e8fc7f5cb356",
+   "bytes": 5117035,
+   "seconds": 0.7,
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.05s"
+   ],
+   "passed": 10,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 21,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
+   },
+   "assert_evidence": [
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"SUCCESS\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertFalse(any(\"FAILURE\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"FAILURE\" in msg and \"intersection\" in msg for msg in messages))"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/llm-gateway-hub",
+   "commit": "b7076401c415962457ed7245420790f50be7f61d",
+   "bytes": 36402,
+   "seconds": 0.7,
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.08s"
+   ],
+   "passed": 0,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "no_tests_collected"
   },
   {
    "repo": "stevenzhao07/lgd-skills",
@@ -1269,15 +1371,13 @@
    "passed": 0,
    "failed": 0,
    "errors": 0,
-   "verdict": "not_runnable",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
+   "verdict": "not_runnable"
   },
   {
    "repo": "stevenzhao07/awesome-dsh-plugin",
    "commit": "a313b3671b1d25b47b5f26a6da35db600fcfad45",
    "bytes": 10290103,
-   "seconds": 0.4,
+   "seconds": 0.5,
    "exit": 1,
    "tail": [
     "# pass 1",
@@ -1285,66 +1385,18 @@
     "# cancelled 0",
     "# skipped 0",
     "# todo 0",
-    "# duration_ms 365.2165"
+    "# duration_ms 382.2319"
    ],
    "passed": 0,
    "failed": 0,
    "errors": 0,
-   "verdict": "not_runnable",
-   "evidence_tier": "D",
-   "strict_verdict": "n/a"
+   "verdict": "not_runnable"
   },
   {
    "repo": "LGD-Eval/lgd-gate",
    "commit": "2172261eea8dfb3cd4eb617fe6e19783cce60c0e",
    "bytes": 421267,
-   "seconds": 0.9,
-   "exit": 0,
-   "tail": [
-    "..........                                                               [100%]",
-    "10 passed in 0.16s"
-   ],
-   "passed": 10,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 3,
-    "asserts": 0,
-    "cmp": true,
-    "source": "tree-scan"
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "LGD-Eval/awesome-claude-skills",
-   "commit": "a0297987c5726726c88c195c2513dc7b73ce9e24",
-   "bytes": 5079627,
-   "seconds": 1.3,
-   "exit": 0,
-   "tail": [
-    "..........                                                               [100%]",
-    "10 passed in 0.09s"
-   ],
-   "passed": 10,
-   "failed": 0,
-   "errors": 0,
-   "verdict": "pass",
-   "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 3,
-    "asserts": 0,
-    "cmp": true,
-    "source": "tree-scan"
-   },
-   "strict_verdict": "pass_strict"
-  },
-  {
-   "repo": "LGD-Eval/awesome-llm-skills",
-   "commit": "f8f1225d755b1e39968476c03fa92772d1a4d9fa",
-   "bytes": 3581013,
-   "seconds": 0.8,
+   "seconds": 0.7,
    "exit": 0,
    "tail": [
     "..........                                                               [100%]",
@@ -1355,13 +1407,74 @@
    "errors": 0,
    "verdict": "pass",
    "evidence_tier": "B",
-   "assert_evidence": {
-    "files": 3,
-    "asserts": 0,
-    "cmp": true,
-    "source": "tree-scan"
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 15,
+    "trivial": 0,
+    "cmp": 5,
+    "files": 4
    },
-   "strict_verdict": "pass_strict"
+   "assert_evidence": [
+    "audit/20261121/p02_authorization/test_authorization.py: self.assertEqual(d[\"decision\"], \"NOT_GRANTED\")",
+    "audit/20261121/p02_authorization/test_authorization.py: self.assertIn(\"CRITICAL\", \" \".join(d[\"reasons\"]))",
+    "audit/20261121/p02_authorization/test_authorization.py: self.assertEqual(d[\"decision\"], \"NOT_GRANTED\")"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-skills",
+   "commit": "a0297987c5726726c88c195c2513dc7b73ce9e24",
+   "bytes": 5079627,
+   "seconds": 0.7,
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.06s"
+   ],
+   "passed": 10,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 21,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
+   },
+   "assert_evidence": [
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"SUCCESS\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertFalse(any(\"FAILURE\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"FAILURE\" in msg and \"intersection\" in msg for msg in messages))"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/awesome-llm-skills",
+   "commit": "f8f1225d755b1e39968476c03fa92772d1a4d9fa",
+   "bytes": 3581013,
+   "seconds": 0.7,
+   "exit": 0,
+   "tail": [
+    "..........                                                               [100%]",
+    "10 passed in 0.06s"
+   ],
+   "passed": 10,
+   "failed": 0,
+   "errors": 0,
+   "verdict": "pass",
+   "evidence_tier": "B",
+   "strict_verdict": "pass_strict",
+   "assert_stats": {
+    "strong": 21,
+    "trivial": 0,
+    "cmp": 0,
+    "files": 1
+   },
+   "assert_evidence": [
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"SUCCESS\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertFalse(any(\"FAILURE\" in msg for msg in messages))",
+    "document-skills/pdf/scripts/check_bounding_boxes_test.py: self.assertTrue(any(\"FAILURE\" in msg and \"intersection\" in msg for msg in messages))"
+   ]
   }
  ]
 }

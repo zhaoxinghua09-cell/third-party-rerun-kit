@@ -65,6 +65,16 @@ python e5_board.py               # 8. 生成看板 HTML（零外链）
 
 抽样对 A 档 12 件各注入 1 处语义变异（`==`→`!=` 为主），跑测试看是否变红：**全部 33 件严格合格中 32 件可测，22 件 KILLED，得分 0.688**，10 件 SURVIVED，其中 5 件落在 vendored / CI / demo / CLI 脚本上，1 件 SKIP（`regdoc-commons` 无可机械替换节点）。详见 `reports/mutation_check_20261126.md`，原始读数 `readouts/e5_mutation.json`。这是「测试不是摆设」目前唯一可机械复现的证据；但它只覆盖抽样点，不等于整体覆盖率。
 
+## 一键复跑（第三方最短路径）
+
+```bash
+pip install pytest
+export GH_TOKEN=<只读 token>
+python e5_verify_all.py --n 8
+```
+
+按 A2/B3/C2/薄1 分层抽样，下载 zipball 真跑，与 `readouts/e5_runner.json` 基线逐件比对，输出 MATCH/DIFF 与匹配率。本机实测 **8/8 MATCH（1.0）**。关键教训：入口写法是最大变量——`pytest <文件列表>` 会收集为空，必须 `pytest tests`；上一版仅因此把 28 条通过变成 0 条。详见 `reports/verify_all_20261126.md`。
+
 ## 已知限制（必须写在读数旁边，不能省）
 
 - **archived 仓库不可写**：`LGD-Eval/silent-failure-catalog` 已归档，自检 fail 的修复只能本地验证（`check-catalog` 已 PASS，15 条），远端需 unarchive 才能落地（本轮已走 PR 后恢复归档）。
@@ -92,6 +102,7 @@ python e5_board.py               # 8. 生成看板 HTML（零外链）
 - `reports/uibc_core_drift_20261126.md` — 版本 DRIFT 说明与解除条件。
 - `reports/mutation_check_20261126.md` — 全部 33 件变异检查（22/32 KILLED，0.688）。
 - `reports/four_layer_ledger_20261126.md` — 四层总账（S/REQ/E/IO 全部 REFUSE，缺口定位到字段）。
+- `reports/verify_all_20261126.md` — 一键复跑器（8/8 MATCH 及两次 DIFF 的入口教训）。
 - `reports/E1_handover_pack_20261126.md` — E1 交接包（别人照抄即过，含 prompt 与 JSON 模板）。
 - `reports/e_layer_status_20261126.md` — E 层门禁真读数（36 条 REFUSE / 0 PASS）。
 - `reports/E5_strict_pass_line_20261126.md` — 严格合格线执行报告。

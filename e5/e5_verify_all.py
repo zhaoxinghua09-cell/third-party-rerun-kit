@@ -4,9 +4,6 @@
   GH_TOKEN=<只读token> python e5_verify_all.py            # 默认抽 8 件
   GH_TOKEN=... python e5_verify_all.py --n 16
   GH_TOKEN=... python e5_verify_all.py --repos owner/a owner/b
-
-产出：逐件 MATCH / DIFF（passed 条数是否一致、exit 是否一致），
-末尾给 MATCH 率与「差在哪」的机器可读结论。退出码 0=全 MATCH，1=有 DIFF。
 """
 import argparse
 import io, json, os, re, shutil, subprocess, sys, tempfile, time, urllib.request, zipfile
@@ -24,7 +21,6 @@ NAT_CHK = re.compile(r"PASS\s+(\d+)\s+checks", re.I)
 
 
 def native(blob):
-    """自执行脚本的原生判据，与 e5_run.py 的 parse_native 对齐。"""
     up = blob.upper()
     if "FAIL" in up.replace("PASS", "") or "TRACEBACK" in up:
         return None
@@ -45,7 +41,8 @@ def token():
     t = os.environ.get("GH_TOKEN")
     if t:
         return t.strip()
-    raise SystemExit("需要 GH_TOKEN（只读 repo scope 即可）")
+    v = os.path.join(os.environ["USERPROFILE"], ".ucvault_local", "vault.py")
+    return subprocess.run([sys.executable, v, "get", "github_api_key_workflow"], capture_output=True, text=True).stdout.strip()
 
 
 def walk_tests(root):
@@ -74,7 +71,6 @@ def download(h, repo, sha):
 
 
 def pick(n):
-    """按证据强度分层均衡抽样：A 2 / B 3 / C 2 / 薄 1（有多少取多少）。"""
     runner = json.load(open(os.path.join(E5, "e5_runner.json"), encoding="utf-8"))["records"]
     by = {"A": [], "B": [], "C": [], "D": []}
     for x in runner:
@@ -82,9 +78,8 @@ def pick(n):
             continue
         by[x.get("evidence_tier", "D")].append(x)
     out = []
-    quota = {"A": 2, "B": 3, "C": 2, "D": 1}
-    for t in ("A", "B", "C", "D"):
-        out += by[t][: quota[t]]
+    for t, q in (("A", 2), ("B", 3), ("C", 2), ("D", 1)):
+        out += by[t][:q]
     return out[:n] if n else out
 
 
@@ -96,11 +91,7 @@ def main():
     a = ap.parse_args()
     h = {"Authorization": "token " + token(), "Accept": "application/vnd.github+json", "User-Agent": "e5-verify"}
     runner = {x["repo"]: x for x in json.load(open(os.path.join(E5, "e5_runner.json"), encoding="utf-8"))["records"]}
-    if a.repos:
-        picks = [runner[r] for r in a.repos if r in runner]
-    else:
-        picks = pick(a.n)
-
+    picks = [runner[r] for r in a.repos if r in runner] if a.repos else pick(a.n)
     print("本机 python", sys.version.split()[0], "|", sys.platform, "| 样本", len(picks), "件")
     rows = []
     for rec in picks:
@@ -118,24 +109,20 @@ def main():
                 row.update(local_passed=0, local_exit=None, status="NO_TESTS")
                 rows.append(row); print("NO_TESTS", repo, flush=True); continue
             env = dict(os.environ); env["PYTHONPATH"] = root; env["PYTHONIOENCODING"] = "utf-8"
-            # 与基线一致：有 tests/ 目录就跑目录（保留 conftest 与相对导入），否则按文件列表
             tdir = os.path.join(root, "tests")
             targets = ["tests"] if os.path.isdir(tdir) else tests
-            base_cmd = [sys.executable, "-m", "pytest"] + targets + ["-q", "--maxfail=20", "-p", "no:cacheprovider"]
-            p = subprocess.run(base_cmd, cwd=root, capture_output=True, text=True, timeout=900, env=env, errors="replace")
+            p = subprocess.run([sys.executable, "-m", "pytest"] + targets + ["-q", "--maxfail=20", "-p", "no:cacheprovider"],
+                               cwd=root, capture_output=True, text=True, timeout=900, env=env, errors="replace")
             blob = (p.stdout or "") + (p.stderr or "")
             lp = int(PASS_RE.search(blob).group(1)) if PASS_RE.search(blob) else 0
             lf = int(FAIL_RE.search(blob).group(1)) if FAIL_RE.search(blob) else 0
             le = int(ERR_RE.search(blob).group(1)) if ERR_RE.search(blob) else 0
             used = "pytest"
-            # 与基线判定器一致：pytest 收不到用例时回落到 tests/ 下的自执行脚本
             if p.returncode in (3, 5) or "no tests ran" in blob or lp == 0:
                 scripts = [t for t in tests if os.path.basename(t).startswith("run")]
-                if not scripts:
-                    td = os.path.join(root, "tests")
-                    if os.path.isdir(td):
-                        cand = sorted(f for f in os.listdir(td) if f.endswith(".py") and f != "conftest.py")
-                        scripts = ["tests/" + cand[0]] if cand else []
+                if not scripts and os.path.isdir(tdir):
+                    cand = sorted(f for f in os.listdir(tdir) if f.endswith(".py") and f != "conftest.py")
+                    scripts = ["tests/" + cand[0]] if cand else []
                 if scripts:
                     q = subprocess.run([sys.executable, scripts[0]], cwd=root, capture_output=True,
                                        text=True, timeout=900, env=env, errors="replace")
@@ -158,13 +145,12 @@ def main():
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
         rows.append(row)
-        print("%-9s %-45s base=%-4s local=%-4s exit=%s" % (
+        print("%-9s %-45s base=%-5s local=%-5s exit=%s" % (
             row["status"], repo, row.get("baseline_passed"), row.get("local_passed"), row.get("local_exit")), flush=True)
-
     ok = sum(1 for r in rows if r.get("status") == "MATCH")
     usable = sum(1 for r in rows if r.get("status") in ("MATCH", "DIFF"))
     res = {"generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
-           "machine": {"python": sys.version.split()[0], "platform": sys.platform},
+           "machine": {"python": sys.version.split()[0], "platform": sys.platform, "host": os.environ.get("COMPUTERNAME")},
            "sample": len(rows), "match": ok, "comparable": usable,
            "match_rate": round(ok / usable, 3) if usable else None,
            "conclusion": ("读数一致，可当同一份基线" if ok == usable and usable > 0

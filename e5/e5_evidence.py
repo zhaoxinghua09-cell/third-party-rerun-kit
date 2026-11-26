@@ -27,16 +27,19 @@ for i, x in enumerate(sorted(recs, key=lambda z: (z["verdict"] != "pass", -z.get
     st = by_struct.get(x["repo"], {})
     ent = st.get("verification_entries") or []
     tail = (x.get("tail") or [])[-4:]
+    note = x.get("manual_review_note")
     cards.append(f"""
 <div class="card">
   <div class="hd"><span class="no">{i:02d}</span>
     <span class="repo">{html.escape(x["repo"])}</span>
     <span class="tag" style="background:{COLOR.get(x['verdict'],'#555')}">{html.escape(x['verdict'])}</span>
+    <span class="tier">强度 {html.escape(x.get("evidence_tier","-"))}</span>
   </div>
   <div class="meta">commit <code>{html.escape((x.get("commit") or "")[:12])}</code>
     · passed <b>{x.get("passed",0)}</b> · failed <b>{x.get("failed",0)}</b> · errors <b>{x.get("errors",0)}</b>
     · exit <b>{x.get("exit","")}</b> · {x.get("seconds","")}s · 解包 {(x.get("bytes") or 0)//1024} KB</div>
   <div class="meta">入口：<code>{html.escape(", ".join(ent) if ent else "(未记录)")}</code></div>
+  {f'<div class="note">{html.escape(note)}</div>' if note else ''}
   <pre class="out">{html.escape("\n".join(tail) if tail else "(无输出)")}</pre>
 </div>""")
 
@@ -54,6 +57,8 @@ h1{{font-size:24px;margin:0 0 6px}} .sub{{color:#666;margin-bottom:22px}}
 .no{{color:#9e9e9e;font-variant-numeric:tabular-nums;font-size:12px}}
 .repo{{font-family:Consolas,monospace;font-size:14px;font-weight:600}}
 .tag{{color:#fff;border-radius:4px;padding:1px 7px;font-size:11px}}
+.tier{{border:1px solid #ccc;border-radius:4px;padding:1px 6px;font-size:11px;color:#444}}
+.note{{border-left:3px solid #c62828;background:#fff6f6;padding:6px 10px;margin:8px 0 0;font-size:12px;color:#7a1f1f}}
 .meta{{color:#555;font-size:12px;margin-top:5px}}
 code{{background:#f5f5f5;padding:1px 5px;border-radius:4px;font-size:11px}}
 .out{{background:#fbfbfb;border:1px solid #eee;border-radius:6px;padding:8px 10px;margin:8px 0 0;
@@ -68,6 +73,8 @@ font-family:Consolas,monospace;font-size:11px;color:#333;white-space:pre-wrap;wo
   <div class="k"><b>{ru["counts"].get("partial",0)}</b><span>有失败</span></div>
   <div class="k"><b>{ru["counts"].get("no_tests_collected",0)}</b><span>入口在但收集 0</span></div>
   <div class="k"><b>{ru["counts"].get("not_runnable",0)}</b><span>跑不起来</span></div>
+  <div class="k"><b>{npass - ru.get("evidence_tiers_of_pass",{}).get("D",0)}</b><span>强合格（≥3 条通过）</span></div>
+  <div class="k"><b>{ru.get("evidence_tiers_of_pass",{}).get("D",0)}</b><span>薄证据（1-2 条，待人工复核）</span></div>
   <div class="k"><b>{sum(x.get("passed",0) for x in recs):,}</b><span>累计通过条数</span></div>
 </div>
 

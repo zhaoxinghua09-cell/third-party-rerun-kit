@@ -36,9 +36,9 @@ for x in sorted(recs, key=lambda z: (z["verdict"] != "pass", -z.get("passed", 0)
     st = by_struct.get(x["repo"], {})
     rows.append(
         "<tr><td class=repo>{repo}</td><td><span class=tag style='background:{c}'>{v}</span></td>"
-        "<td class=num2>{p}</td><td class=num2>{f}</td><td class=num2>{sec}</td>"
+        "<td class=num2>{t}</td><td class=num2>{p}</td><td class=num2>{f}</td><td class=num2>{sec}</td>"
         "<td class=small>{ent}</td><td class=url>{url}</td></tr>".format(
-            repo=html.escape(x["repo"]), c=COLOR.get(x["verdict"], "#555"),
+            repo=html.escape(x["repo"]), c=COLOR.get(x["verdict"], "#555"), t=x.get("evidence_tier", ""),
             v=html.escape(x["verdict"]), p=x.get("passed", 0), f=x.get("failed", 0),
             sec=x.get("seconds", ""), ent=html.escape(",".join(st.get("verification_entries", []))),
             url="https://github.com/" + x["repo"]))
@@ -98,6 +98,7 @@ code{{background:#f5f5f5;padding:1px 5px;border-radius:4px;font-size:12px}}
   <div class="card"><b>{ru['counts'].get('pass',0)}</b><span>通过 E5 合格线</span></div>
   <div class="card"><b>{passed_total:,}</b><span>实测通过的测试条数</span></div>
   <div class="card"><b>{sf['summary']['counts'].get('selfcheck_ok',0)+sf['summary']['counts'].get('selfcheck_ok_after_fix',0) if sf else 0}<i>/{len(sf['records']) if sf else 0}</i></b><span>仅自检档真跑通过（不计合格，含修复后通过）</span></div>
+  <div class="card"><b>{ru.get('evidence_tiers_of_pass',{}).get('A',0)+ru.get('evidence_tiers_of_pass',{}).get('B',0)+ru.get('evidence_tiers_of_pass',{}).get('C',0)}<i>/{ru['counts'].get('pass',0)}</i></b><span>强合格（≥3 条通过）；薄证据 {ru.get('evidence_tiers_of_pass',{}).get('D',0)} 件待人工复核</span></div>
 </div>
 
 <h2>一、结构层：能不能跑（全量 {su['probed']} 件）</h2>
@@ -110,7 +111,7 @@ code{{background:#f5f5f5;padding:1px 5px;border-radius:4px;font-size:12px}}
 <strong>必须两台分别记录，只报一台就是抽样冒充全量</strong>。</div>
 
 <h2>三、逐件读数（{len(recs)} 件）</h2>
-<table><thead><tr><th>仓库</th><th>结论</th><th>passed</th><th>failed</th><th>秒</th><th>入口</th><th>直达地址</th></tr></thead>
+<table><thead><tr><th>仓库</th><th>结论</th><th>强度</th><th>passed</th><th>failed</th><th>秒</th><th>入口</th><th>直达地址</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table>
 
 <h2>三·五、仅自检档：跑了，但不计合格（{len(sf['records']) if sf else 0} 件）</h2>

@@ -12,13 +12,15 @@ h1{font-size:24px;margin:0 0 6px} .sub{color:#666;margin-bottom:22px}
 .no{color:#9e9e9e;font-variant-numeric:tabular-nums;font-size:12px}
 .repo{font-family:Consolas,monospace;font-size:14px;font-weight:600}
 .tag{color:#fff;border-radius:4px;padding:1px 7px;font-size:11px}
+.tier{border:1px solid #ccc;border-radius:4px;padding:1px 6px;font-size:11px;color:#444}
+.note{border-left:3px solid #c62828;background:#fff6f6;padding:6px 10px;margin:8px 0 0;font-size:12px;color:#7a1f1f}
 .meta{color:#555;font-size:12px;margin-top:5px}
 code{background:#f5f5f5;padding:1px 5px;border-radius:4px;font-size:11px}
 .out{background:#fbfbfb;border:1px solid #eee;border-radius:6px;padding:8px 10px;margin:8px 0 0;
 font-family:Consolas,monospace;font-size:11px;color:#333;white-space:pre-wrap;word-break:break-all}
 </style>
 <h1>E5 逐件证据附录：61 件，36 件合格</h1>
-<div class="sub">生成 2026-11-26 08:02 · 家机 · 每件 = 一个 commit + 一组入口 + 一段真实输出尾 · 无外链、无 a 标签</div>
+<div class="sub">生成 2026-11-26 08:06 · 家机 · 每件 = 一个 commit + 一组入口 + 一段真实输出尾 · 无外链、无 a 标签</div>
 
 <div class="kpi">
   <div class="k"><b>61</b><span>实跑件数</span></div>
@@ -26,6 +28,8 @@ font-family:Consolas,monospace;font-size:11px;color:#333;white-space:pre-wrap;wo
   <div class="k"><b>3</b><span>有失败</span></div>
   <div class="k"><b>14</b><span>入口在但收集 0</span></div>
   <div class="k"><b>8</b><span>跑不起来</span></div>
+  <div class="k"><b>34</b><span>强合格（≥3 条通过）</span></div>
+  <div class="k"><b>2</b><span>薄证据（1-2 条，待人工复核）</span></div>
   <div class="k"><b>3,862</b><span>累计通过条数</span></div>
 </div>
 
@@ -37,11 +41,13 @@ font-family:Consolas,monospace;font-size:11px;color:#333;white-space:pre-wrap;wo
   <div class="hd"><span class="no">01</span>
     <span class="repo">stevenzhao07/uibc-core</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>507ee32427cf</code>
     · passed <b>158</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 35.5s · 解包 415 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">................................................................. [ 41%]
 ........................................................................ [ 86%]
 .....................                                                    [100%]
@@ -51,11 +57,13 @@ font-family:Consolas,monospace;font-size:11px;color:#333;white-space:pre-wrap;wo
   <div class="hd"><span class="no">02</span>
     <span class="repo">LGD-Eval/uibc-core</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>5dac2a2e7882</code>
     · passed <b>158</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 34.1s · 解包 422 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">................................................................. [ 41%]
 ........................................................................ [ 86%]
 .....................                                                    [100%]
@@ -65,11 +73,13 @@ font-family:Consolas,monospace;font-size:11px;color:#333;white-space:pre-wrap;wo
   <div class="hd"><span class="no">03</span>
     <span class="repo">LGD-Eval/awesome-claude-code</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>ea11db0a112f</code>
     · passed <b>112</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 3.4s · 解包 2286 KB</div>
   <div class="meta">入口：<code>tests/, Makefile</code></div>
+  
   <pre class="out">........................................................................ [ 64%]
 ........................................                                 [100%]
 112 passed in 2.54s</pre>
@@ -78,11 +88,13 @@ font-family:Consolas,monospace;font-size:11px;color:#333;white-space:pre-wrap;wo
   <div class="hd"><span class="no">04</span>
     <span class="repo">zhaoxinghua09-cell/skillgate</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>362c600dfdc3</code>
     · passed <b>60</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 14.9s · 解包 340 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">............................................................             [100%]
 60 passed in 14.04s</pre>
 </div>
@@ -90,11 +102,13 @@ font-family:Consolas,monospace;font-size:11px;color:#333;white-space:pre-wrap;wo
   <div class="hd"><span class="no">05</span>
     <span class="repo">stevenzhao07/regdoc-commons</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>a8a79bd4e45f</code>
     · passed <b>52</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.3s · 解包 114 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">  workbook column claim                                       &quot;Fourteen columns&quot;
   gitignore keeps templates tracked                           yes
   gitignore excludes test artefacts                           yes
@@ -104,11 +118,13 @@ PASS  52 checks</pre>
   <div class="hd"><span class="no">06</span>
     <span class="repo">stevenzhao07/doc-translate-keep-layout</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>78cc0563db95</code>
     · passed <b>40</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 16.2s · 解包 59 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">t40_unknown_status_still_blocks                PASS  rc=1 GATE=blocked blocking=1 warning=0 planned=1
   x [GATE-003] 待确认术语被翻译: 喷
 
@@ -118,11 +134,13 @@ PASS  52 checks</pre>
   <div class="hd"><span class="no">07</span>
     <span class="repo">zhaoxinghua09-cell/wexp-check</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>cfe458b5f90c</code>
     · passed <b>37</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 2.1s · 解包 88 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">.................. [ 48%]
 ...................                                                      [100%]
 37 passed, 54 subtests passed in 1.21s</pre>
@@ -131,11 +149,13 @@ PASS  52 checks</pre>
   <div class="hd"><span class="no">08</span>
     <span class="repo">zhaoxinghua09-cell/medxpert-ortho-mcp</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>adf68f3dbc90</code>
     · passed <b>30</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.2s · 解包 40 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">..............................                                           [100%]
 30 passed in 0.22s</pre>
 </div>
@@ -143,11 +163,13 @@ PASS  52 checks</pre>
   <div class="hd"><span class="no">09</span>
     <span class="repo">zhaoxinghua09-cell/lgd-xverify</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>7ca1b83a496d</code>
     · passed <b>28</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 6.5s · 解包 59 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">............................                                             [100%]
 28 passed in 3.32s</pre>
 </div>
@@ -155,11 +177,13 @@ PASS  52 checks</pre>
   <div class="hd"><span class="no">10</span>
     <span class="repo">stevenzhao07/aitb</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>f7647f88607f</code>
     · passed <b>25</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 2.3s · 解包 59 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">.........................                                                [100%]
 25 passed in 1.27s</pre>
 </div>
@@ -167,11 +191,13 @@ PASS  52 checks</pre>
   <div class="hd"><span class="no">11</span>
     <span class="repo">zhaoxinghua09-cell/summarize-pro</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>cbb0284e1aae</code>
     · passed <b>24</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.0s · 解包 234 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">PASS G22-render-html-selfcontained
 PASS G23-adapt-teams-fold
 PASS G24-adapt-zoom-inline
@@ -181,11 +207,13 @@ PASS G24-adapt-zoom-inline
   <div class="hd"><span class="no">12</span>
     <span class="repo">zhaoxinghua09-cell/aps-conformance-suite</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>4157ad4d79f9</code>
     · passed <b>20</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 2.4s · 解包 3857 KB</div>
   <div class="meta">入口：<code>tests/, package.json</code></div>
+  
   <pre class="out">....................    [100%]
 20 passed, 49 subtests passed in 1.62s</pre>
 </div>
@@ -193,11 +221,13 @@ PASS G24-adapt-zoom-inline
   <div class="hd"><span class="no">13</span>
     <span class="repo">zhaoxinghua09-cell/lgd-skeleton</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>f3aac86e9c56</code>
     · passed <b>14</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 10.5s · 解包 100 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">..............                                                           [100%]
 14 passed in 9.62s</pre>
 </div>
@@ -205,11 +235,13 @@ PASS G24-adapt-zoom-inline
   <div class="hd"><span class="no">14</span>
     <span class="repo">zhaoxinghua09-cell/synomos-ai-skills</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>84ae3d40842c</code>
     · passed <b>14</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 7.1s · 解包 1504 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">..............                                                           [100%]
 14 passed in 6.27s</pre>
 </div>
@@ -217,11 +249,13 @@ PASS G24-adapt-zoom-inline
   <div class="hd"><span class="no">15</span>
     <span class="repo">zhaoxinghua09-cell/agent-skills</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>d0398570768f</code>
     · passed <b>14</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 7.4s · 解包 18433 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">..............                                                           [100%]
 14 passed in 6.50s</pre>
 </div>
@@ -229,11 +263,13 @@ PASS G24-adapt-zoom-inline
   <div class="hd"><span class="no">16</span>
     <span class="repo">zhaoxinghua09-cell/lgd-skills</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>134f6465bd2a</code>
     · passed <b>14</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 7.5s · 解包 1323 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">..............                                                           [100%]
 14 passed in 6.69s</pre>
 </div>
@@ -241,11 +277,13 @@ PASS G24-adapt-zoom-inline
   <div class="hd"><span class="no">17</span>
     <span class="repo">zhaoxinghua09-cell/skill-redteam-suite</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>e39ac448d8ec</code>
     · passed <b>14</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 7.2s · 解包 44 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">..............                                                           [100%]
 14 passed in 6.37s</pre>
 </div>
@@ -253,11 +291,13 @@ PASS G24-adapt-zoom-inline
   <div class="hd"><span class="no">18</span>
     <span class="repo">LGD-Eval/LGD-Eval</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>3ac73d016877</code>
     · passed <b>13</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 3.8s · 解包 816 KB</div>
   <div class="meta">入口：<code>tests/, package.json</code></div>
+  
   <pre class="out">.............                                                            [100%]
 13 passed in 2.98s</pre>
 </div>
@@ -265,11 +305,13 @@ PASS G24-adapt-zoom-inline
   <div class="hd"><span class="no">19</span>
     <span class="repo">zhaoxinghua09-cell/skill-audit</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>65b6470543ab</code>
     · passed <b>12</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.2s · 解包 148 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">PASS  fake_claim (poison_fake_claim P1)
 PASS  clean_control (clean, no hit)
 PASS  clean_policy (clean, no hit)
@@ -279,11 +321,13 @@ ADVERSARIAL REGRESSION OK — 12/12 passed (P0 命中即阻断原则合规)</pre
   <div class="hd"><span class="no">20</span>
     <span class="repo">LGD-Eval/skill-audit</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>31a6fde24db3</code>
     · passed <b>12</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.0s · 解包 149 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">PASS  fake_claim (poison_fake_claim P1)
 PASS  clean_control (clean, no hit)
 PASS  clean_policy (clean, no hit)
@@ -293,11 +337,13 @@ ADVERSARIAL REGRESSION OK — 12/12 passed (P0 命中即阻断原则合规)</pre
   <div class="hd"><span class="no">21</span>
     <span class="repo">zhaoxinghua09-cell/silent-failure-catalog</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>1309e1a48322</code>
     · passed <b>11</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.8s · 解包 438 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">...........                                                     [100%]
 11 passed, 9 subtests passed in 0.94s</pre>
 </div>
@@ -305,11 +351,13 @@ ADVERSARIAL REGRESSION OK — 12/12 passed (P0 命中即阻断原则合规)</pre
   <div class="hd"><span class="no">22</span>
     <span class="repo">zhaoxinghua09-cell/wechat-viral-topic</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>6ef4647b9cad</code>
     · passed <b>11</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.0s · 解包 391 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">W09-risk-unsourced         PASS
 W10-title-long-and-red     PASS
 W11-title-good             PASS
@@ -319,11 +367,13 @@ W11-title-good             PASS
   <div class="hd"><span class="no">23</span>
     <span class="repo">zhaoxinghua09-cell/uibc-iverify</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>1b67f10dc5a7</code>
     · passed <b>10</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 2.0s · 解包 33 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">..........                                                               [100%]
 10 passed in 1.04s</pre>
 </div>
@@ -331,11 +381,13 @@ W11-title-good             PASS
   <div class="hd"><span class="no">24</span>
     <span class="repo">zhaoxinghua09-cell/debug-pro</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>217d0609aac8</code>
     · passed <b>10</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.2s · 解包 107 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">D08-repro-no-env       PASS
 D09-repro-no-expect    PASS
 D10-envsnap-redact     PASS
@@ -345,11 +397,13 @@ D10-envsnap-redact     PASS
   <div class="hd"><span class="no">25</span>
     <span class="repo">zhaoxinghua09-cell/awesome-claude-skills</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>9a6fd52eaeb9</code>
     · passed <b>10</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 0.9s · 解包 4997 KB</div>
   <div class="meta">入口：<code>deep:unittest</code></div>
+  
   <pre class="out">..........                                                               [100%]
 10 passed in 0.07s</pre>
 </div>
@@ -357,11 +411,13 @@ D10-envsnap-redact     PASS
   <div class="hd"><span class="no">26</span>
     <span class="repo">LGD-Eval/lgd-gate</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>2172261eea8d</code>
     · passed <b>10</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 0.9s · 解包 411 KB</div>
   <div class="meta">入口：<code>deep:pytest</code></div>
+  
   <pre class="out">..........                                                               [100%]
 10 passed in 0.16s</pre>
 </div>
@@ -369,11 +425,13 @@ D10-envsnap-redact     PASS
   <div class="hd"><span class="no">27</span>
     <span class="repo">LGD-Eval/awesome-claude-skills</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>a0297987c572</code>
     · passed <b>10</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.3s · 解包 4960 KB</div>
   <div class="meta">入口：<code>deep:unittest</code></div>
+  
   <pre class="out">..........                                                               [100%]
 10 passed in 0.09s</pre>
 </div>
@@ -381,11 +439,13 @@ D10-envsnap-redact     PASS
   <div class="hd"><span class="no">28</span>
     <span class="repo">LGD-Eval/awesome-llm-skills</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>f8f1225d755b</code>
     · passed <b>10</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 0.8s · 解包 3497 KB</div>
   <div class="meta">入口：<code>deep:unittest</code></div>
+  
   <pre class="out">..........                                                               [100%]
 10 passed in 0.07s</pre>
 </div>
@@ -393,11 +453,13 @@ D10-envsnap-redact     PASS
   <div class="hd"><span class="no">29</span>
     <span class="repo">zhaoxinghua09-cell/skill-improver</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>2feaeeb97bcb</code>
     · passed <b>9</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.5s · 解包 23 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">  PASS  G08  非技能目录直接拒绝  (退出码 1（预期非 0）)
   PASS  G09  新增文件行尾为 LF  (LF only)
 
@@ -407,11 +469,13 @@ D10-envsnap-redact     PASS
   <div class="hd"><span class="no">30</span>
     <span class="repo">zhaoxinghua09-cell/claim-audit</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>c1b9ad3dc123</code>
     · passed <b>9</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 2.6s · 解包 20 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">PASS  G08  G08 加 --strict 后 UNVERIFIABLE 也算失败
 PASS  G09  G09 list 只列不跑；根目录不存在时退出码 2
 
@@ -421,11 +485,13 @@ PASS  G09  G09 list 只列不跑；根目录不存在时退出码 2
   <div class="hd"><span class="no">31</span>
     <span class="repo">zhaoxinghua09-cell/evidence-anchor</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 B</span>
   </div>
   <div class="meta">commit <code>7f6f2fa19263</code>
     · passed <b>9</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.4s · 解包 18 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">PASS  G08  根目录不存在时退出码 2  (退出码 2)
 PASS  G09  写出的报告与包内新增文件行尾为 LF  (LF only)
 
@@ -435,11 +501,13 @@ PASS  G09  写出的报告与包内新增文件行尾为 LF  (LF only)
   <div class="hd"><span class="no">32</span>
     <span class="repo">zhaoxinghua09-cell/lgd-skill-review</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 C</span>
   </div>
   <div class="meta">commit <code>7fe24c39c711</code>
     · passed <b>5</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 2.0s · 解包 568 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">PASS T3-secret-leak-blocks                  verdict=BLOCK total=88
 PASS T4-declared-command-missing-blocks     verdict=BLOCK total=91
 PASS T5-self-scores-100                     verdict=PASS  total=96
@@ -449,11 +517,13 @@ PASS T5-self-scores-100                     verdict=PASS  total=96
   <div class="hd"><span class="no">33</span>
     <span class="repo">zhaoxinghua09-cell/evaluation-evidence</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 C</span>
   </div>
   <div class="meta">commit <code>387ead9c0d42</code>
     · passed <b>5</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 0.9s · 解包 245 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">.....                                                                    [100%]
 5 passed in 0.14s</pre>
 </div>
@@ -461,11 +531,13 @@ PASS T5-self-scores-100                     verdict=PASS  total=96
   <div class="hd"><span class="no">34</span>
     <span class="repo">LGD-Eval/evaluation-evidence</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 C</span>
   </div>
   <div class="meta">commit <code>1f8c529f32c3</code>
     · passed <b>5</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 0.9s · 解包 248 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">.....                                                                    [100%]
 5 passed in 0.09s</pre>
 </div>
@@ -473,11 +545,13 @@ PASS T5-self-scores-100                     verdict=PASS  total=96
   <div class="hd"><span class="no">35</span>
     <span class="repo">LGD-Eval/skill-scout</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>aa26f4195d8f</code>
     · passed <b>1</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.4s · 解包 31 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  <div class="note">127 行行为自测，无 assert，靠 subprocess 比对输出；1 条通过，证据薄，建议人工复核</div>
   <pre class="out">  PASS  无引擎时明确声明不是 LGD 分数
   PASS  无引擎时不产出 100 分制
 
@@ -487,22 +561,26 @@ PASS T5-self-scores-100                     verdict=PASS  total=96
   <div class="hd"><span class="no">36</span>
     <span class="repo">zhaoxinghua09-cell/fgtida-paris-input-2026</span>
     <span class="tag" style="background:#2e7d32">pass</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>322188412290</code>
     · passed <b>1</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 0.9s · 解包 975 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  <div class="note">测试文件自述「只验结构与可重建性前提，不验内容是否正确」，1 条通过，证据薄，建议不计入强合格</div>
   <pre class="out">OK: 9 份成品均有可重建副本；3 个 WG 源/版本/证据包齐全</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">37</span>
     <span class="repo">zhaoxinghua09-cell/uibc-core</span>
     <span class="tag" style="background:#c62828">partial</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>7ff56ab95813</code>
     · passed <b>2090</b> · failed <b>2</b> · errors <b>0</b>
     · exit <b>1</b> · 471.3s · 解包 4832 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">=========================== short test summary info ===========================
 FAILED tests/test_resolve_generated.py::TestItRefusesOutsideARebase::test_outside_a_rebase_it_touches_nothing
 FAILED tests/test_verify_external_node_report.py::TestItRecomputes::test_quick_run_matches_the_receipt
@@ -512,11 +590,13 @@ FAILED tests/test_verify_external_node_report.py::TestItRecomputes::test_quick_r
   <div class="hd"><span class="no">38</span>
     <span class="repo">zhaoxinghua09-cell/agent-control-standard</span>
     <span class="tag" style="background:#c62828">partial</span>
+    <span class="tier">强度 A</span>
   </div>
   <div class="meta">commit <code>a9af3defa9b8</code>
     · passed <b>794</b> · failed <b>20</b> · errors <b>0</b>
     · exit <b>1</b> · 315.0s · 解包 15858 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">FAILED tests/test_roadmap_sync_promotion.py::test_integration_work_is_pending_from_its_oldest_commit
 FAILED tests/test_roadmap_sync_promotion.py::test_squashed_sync_from_main_is_not_pending
 !!!!!!!!!!!!!!!!!!!!!!!!! stopping after 20 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -526,11 +606,13 @@ FAILED tests/test_roadmap_sync_promotion.py::test_squashed_sync_from_main_is_not
   <div class="hd"><span class="no">39</span>
     <span class="repo">zhaoxinghua09-cell/lgd-theory</span>
     <span class="tag" style="background:#c62828">partial</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>f50e747ef2e5</code>
     · passed <b>1</b> · failed <b>2</b> · errors <b>0</b>
     · exit <b>1</b> · 1.3s · 解包 5442 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">=========================== short test summary info ===========================
 FAILED tests/test_text_contract.py::TextContract::test_docs_md_have_heading
 FAILED tests/test_text_contract.py::TextContract::test_source_toml_parses_and_paths_exist
@@ -540,11 +622,13 @@ FAILED tests/test_text_contract.py::TextContract::test_source_toml_parses_and_pa
   <div class="hd"><span class="no">40</span>
     <span class="repo">zhaoxinghua09-cell/agent-governance-vocabulary</span>
     <span class="tag" style="background:#b71c1c">not_runnable</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>1ae602d53011</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>1</b> · 4.3s · 解包 541 KB</div>
   <div class="meta">入口：<code>package.json</code></div>
+  
   <pre class="out">  ]
 }
 
@@ -554,77 +638,91 @@ Node.js v22.23.2</pre>
   <div class="hd"><span class="no">41</span>
     <span class="repo">zhaoxinghua09-cell/synomosai-governance-mcp</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>dd3784f9a8b5</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 1.0s · 解包 52 KB</div>
   <div class="meta">入口：<code>pyproject.toml</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">42</span>
     <span class="repo">zhaoxinghua09-cell/LGD-Eval</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>20c179f97871</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 0.8s · 解包 386 KB</div>
   <div class="meta">入口：<code>package.json</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">43</span>
     <span class="repo">zhaoxinghua09-cell/governanceos</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>b9a6ac456655</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 0.8s · 解包 52 KB</div>
   <div class="meta">入口：<code>package.json</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">44</span>
     <span class="repo">zhaoxinghua09-cell/medxpert-library-connector</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>362cc0f5d044</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 0.8s · 解包 48 KB</div>
   <div class="meta">入口：<code>pyproject.toml</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">45</span>
     <span class="repo">zhaoxinghua09-cell/dsh-secret-leakage-scan</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>9f3fe08465ff</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 0.9s · 解包 10 KB</div>
   <div class="meta">入口：<code>package.json</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">46</span>
     <span class="repo">zhaoxinghua09-cell/medxpert-standards-connector</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>eba486a2ce1e</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 0.8s · 解包 87 KB</div>
   <div class="meta">入口：<code>pyproject.toml</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">47</span>
     <span class="repo">zhaoxinghua09-cell/medxpert-reg-connector</span>
     <span class="tag" style="background:#b71c1c">not_runnable</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>ed790d4bdaf3</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 15.6s · 解包 195 KB</div>
   <div class="meta">入口：<code>tests/, pyproject.toml</code></div>
+  
   <pre class="out">
 [11/26/26 01:31:26] INFO     Starting MCP server               transport.py:241
                              &#x27;medxpert-reg-connector&#x27; with                     
@@ -634,55 +732,65 @@ Node.js v22.23.2</pre>
   <div class="hd"><span class="no">48</span>
     <span class="repo">zhaoxinghua09-cell/whois-agent</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>7df602c7f154</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 0.8s · 解包 22 KB</div>
   <div class="meta">入口：<code>package.json</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">49</span>
     <span class="repo">zhaoxinghua09-cell/fhir</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>ef782bfa3e71</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>5</b> · 2.3s · 解包 104688 KB</div>
   <div class="meta">入口：<code>tests/</code></div>
+  
   <pre class="out">no tests ran in 0.02s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">50</span>
     <span class="repo">stevenzhao07/medxpert-reg-hub</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>660f0c9c5b79</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 0.8s · 解包 474 KB</div>
   <div class="meta">入口：<code>package.json</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">51</span>
     <span class="repo">LGD-Eval/attestation</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>5cedb0fa5f99</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>4</b> · 0.8s · 解包 719 KB</div>
   <div class="meta">入口：<code>package.json, Makefile</code></div>
+  
   <pre class="out">no tests ran in 0.00s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">52</span>
     <span class="repo">LGD-Eval/dsh-plugin-lgd-trust</span>
     <span class="tag" style="background:#b71c1c">not_runnable</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>d1602ef51f14</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 1.7s · 解包 54 KB</div>
   <div class="meta">入口：<code>tests/, package.json</code></div>
+  
   <pre class="out"># cancelled 0
 # skipped 0
 # todo 0
@@ -692,22 +800,26 @@ Node.js v22.23.2</pre>
   <div class="hd"><span class="no">53</span>
     <span class="repo">zhaoxinghua09-cell/medxpert-skills</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>e5d4cf5aaf26</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>5</b> · 1.0s · 解包 425 KB</div>
   <div class="meta">入口：<code>deep:unittest</code></div>
+  
   <pre class="out">no tests ran in 0.13s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">54</span>
     <span class="repo">zhaoxinghua09-cell/lgd-demo-organization</span>
     <span class="tag" style="background:#b71c1c">not_runnable</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>10ee1433c398</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>1</b>
     · exit <b>2</b> · 1.1s · 解包 66 KB</div>
   <div class="meta">入口：<code>deep:unittest</code></div>
+  
   <pre class="out">=========================== short test summary info ===========================
 ERROR evidence/tools/matrix_test.py - OSError: [WinError 123] 文件名、目录名...
 !!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
@@ -717,11 +829,13 @@ ERROR evidence/tools/matrix_test.py - OSError: [WinError 123] 文件名、目录
   <div class="hd"><span class="no">55</span>
     <span class="repo">zhaoxinghua09-cell/credential-vault-design</span>
     <span class="tag" style="background:#b71c1c">not_runnable</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>6608d2afa123</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>1</b>
     · exit <b>2</b> · 1.1s · 解包 499 KB</div>
   <div class="meta">入口：<code>deep:pytest, deep:unittest</code></div>
+  
   <pre class="out">=========================== short test summary info ===========================
 ERROR tools/security_test.py
 !!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
@@ -731,11 +845,13 @@ ERROR tools/security_test.py
   <div class="hd"><span class="no">56</span>
     <span class="repo">zhaoxinghua09-cell/authz-code-design</span>
     <span class="tag" style="background:#b71c1c">not_runnable</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>fa016bb33377</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>2</b>
     · exit <b>2</b> · 1.1s · 解包 37 KB</div>
   <div class="meta">入口：<code>deep:unittest</code></div>
+  
   <pre class="out">ERROR tools/credential_broker_security_test.py
 ERROR tools/credential_broker_test.py
 !!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!
@@ -745,11 +861,13 @@ ERROR tools/credential_broker_test.py
   <div class="hd"><span class="no">57</span>
     <span class="repo">zhaoxinghua09-cell/agent-memory-service</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>d811c474690e</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>3</b> · 2.7s · 解包 87 KB</div>
   <div class="meta">入口：<code>deep:pytest</code></div>
+  
   <pre class="out">INTERNALERROR&gt;     ~~~~~~~~^^^^^^^^^^^^^^^^^^^
 INTERNALERROR&gt; SystemExit: 0
 
@@ -759,33 +877,39 @@ no tests ran in 1.79s</pre>
   <div class="hd"><span class="no">58</span>
     <span class="repo">zhaoxinghua09-cell/MinisSkills</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>8c33682cedb5</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>5</b> · 1.0s · 解包 836 KB</div>
   <div class="meta">入口：<code>deep:pytest</code></div>
+  
   <pre class="out">no tests ran in 0.19s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">59</span>
     <span class="repo">zhaoxinghua09-cell/llm-gateway-hub</span>
     <span class="tag" style="background:#ef6c00">no_tests_collected</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>b7076401c415</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>5</b> · 0.9s · 解包 35 KB</div>
   <div class="meta">入口：<code>deep:unittest</code></div>
+  
   <pre class="out">no tests ran in 0.10s</pre>
 </div>
 <div class="card">
   <div class="hd"><span class="no">60</span>
     <span class="repo">stevenzhao07/lgd-skills</span>
     <span class="tag" style="background:#b71c1c">not_runnable</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>b2464ce13dbe</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>0</b> · 0.3s · 解包 1297 KB</div>
   <div class="meta">入口：<code>deep:runner</code></div>
+  
   <pre class="out">D08-repro-no-env       PASS
 D09-repro-no-expect    PASS
 D10-envsnap-redact     PASS
@@ -795,11 +919,13 @@ D10-envsnap-redact     PASS
   <div class="hd"><span class="no">61</span>
     <span class="repo">stevenzhao07/awesome-dsh-plugin</span>
     <span class="tag" style="background:#b71c1c">not_runnable</span>
+    <span class="tier">强度 D</span>
   </div>
   <div class="meta">commit <code>a313b3671b1d</code>
     · passed <b>0</b> · failed <b>0</b> · errors <b>0</b>
     · exit <b>1</b> · 0.4s · 解包 10048 KB</div>
   <div class="meta">入口：<code>deep:node</code></div>
+  
   <pre class="out"># cancelled 0
 # skipped 0
 # todo 0

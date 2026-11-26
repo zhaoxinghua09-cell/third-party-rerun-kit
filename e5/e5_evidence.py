@@ -34,6 +34,7 @@ for i, x in enumerate(sorted(recs, key=lambda z: (z["verdict"] != "pass", -z.get
     <span class="repo">{html.escape(x["repo"])}</span>
     <span class="tag" style="background:{COLOR.get(x['verdict'],'#555')}">{html.escape(x['verdict'])}</span>
     <span class="tier">强度 {html.escape(x.get("evidence_tier","-"))}</span>
+    {f'<span class="tag" style="background:#8e24aa">薄，不计合格</span>' if x.get("strict_verdict")=="pass_thin" else ''}
   </div>
   <div class="meta">commit <code>{html.escape((x.get("commit") or "")[:12])}</code>
     · passed <b>{x.get("passed",0)}</b> · failed <b>{x.get("failed",0)}</b> · errors <b>{x.get("errors",0)}</b>

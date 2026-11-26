@@ -1,0 +1,290 @@
+[
+ {
+  "repo": "zhaoxinghua09-cell/uibc-iverify",
+  "passed": 10,
+  "tier": "B",
+  "files": 2,
+  "asserts": 2,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/skill-improver",
+  "passed": 9,
+  "tier": "B",
+  "files": 1,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "LGD-Eval/skill-scout",
+  "passed": 1,
+  "tier": "D",
+  "files": 1,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/wexp-check",
+  "passed": 37,
+  "tier": "A",
+  "files": 2,
+  "asserts": 1,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
+  "passed": 30,
+  "tier": "A",
+  "files": 2,
+  "asserts": 1,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/lgd-xverify",
+  "passed": 28,
+  "tier": "A",
+  "files": 3,
+  "asserts": 3,
+  "cmp": true
+ },
+ {
+  "repo": "stevenzhao07/aitb",
+  "passed": 25,
+  "tier": "A",
+  "files": 2,
+  "asserts": 1,
+  "cmp": true
+ },
+ {
+  "repo": "stevenzhao07/regdoc-commons",
+  "passed": 52,
+  "tier": "A",
+  "files": 4,
+  "asserts": 2,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/lgd-skeleton",
+  "passed": 14,
+  "tier": "B",
+  "files": 2,
+  "asserts": 40,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/debug-pro",
+  "passed": 10,
+  "tier": "B",
+  "files": 1,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/claim-audit",
+  "passed": 9,
+  "tier": "B",
+  "files": 1,
+  "asserts": 20,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/evidence-anchor",
+  "passed": 9,
+  "tier": "B",
+  "files": 1,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/skillgate",
+  "passed": 60,
+  "tier": "A",
+  "files": 12,
+  "asserts": 101,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/synomos-ai-skills",
+  "passed": 14,
+  "tier": "B",
+  "files": 1,
+  "asserts": 40,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/agent-skills",
+  "passed": 14,
+  "tier": "B",
+  "files": 1,
+  "asserts": 40,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/lgd-skills",
+  "passed": 14,
+  "tier": "B",
+  "files": 1,
+  "asserts": 40,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/silent-failure-catalog",
+  "passed": 11,
+  "tier": "B",
+  "files": 2,
+  "asserts": 2,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/skill-redteam-suite",
+  "passed": 14,
+  "tier": "B",
+  "files": 1,
+  "asserts": 40,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/lgd-skill-review",
+  "passed": 5,
+  "tier": "C",
+  "files": 15,
+  "asserts": 1,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/skill-audit",
+  "passed": 12,
+  "tier": "B",
+  "files": 2,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/evaluation-evidence",
+  "passed": 5,
+  "tier": "C",
+  "files": 1,
+  "asserts": 1,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/wechat-viral-topic",
+  "passed": 11,
+  "tier": "B",
+  "files": 1,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/summarize-pro",
+  "passed": 24,
+  "tier": "A",
+  "files": 1,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
+  "passed": 1,
+  "tier": "D",
+  "files": 1,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/aps-conformance-suite",
+  "passed": 20,
+  "tier": "A",
+  "files": 5,
+  "asserts": 1,
+  "cmp": true
+ },
+ {
+  "repo": "stevenzhao07/uibc-core",
+  "passed": 158,
+  "tier": "A",
+  "files": 12,
+  "asserts": 11,
+  "cmp": true
+ },
+ {
+  "repo": "stevenzhao07/doc-translate-keep-layout",
+  "passed": 40,
+  "tier": "A",
+  "files": 1,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "LGD-Eval/LGD-Eval",
+  "passed": 13,
+  "tier": "B",
+  "files": 4,
+  "asserts": 2,
+  "cmp": true
+ },
+ {
+  "repo": "LGD-Eval/skill-audit",
+  "passed": 12,
+  "tier": "B",
+  "files": 2,
+  "asserts": 0,
+  "cmp": true
+ },
+ {
+  "repo": "LGD-Eval/uibc-core",
+  "passed": 158,
+  "tier": "A",
+  "files": 12,
+  "asserts": 11,
+  "cmp": true
+ },
+ {
+  "repo": "LGD-Eval/evaluation-evidence",
+  "passed": 5,
+  "tier": "C",
+  "files": 1,
+  "asserts": 1,
+  "cmp": true
+ },
+ {
+  "repo": "LGD-Eval/awesome-claude-code",
+  "passed": 112,
+  "tier": "A",
+  "files": 7,
+  "asserts": 211,
+  "cmp": true
+ },
+ {
+  "repo": "zhaoxinghua09-cell/awesome-claude-skills",
+  "passed": 10,
+  "tier": "B",
+  "files": 0,
+  "asserts": 0,
+  "cmp": false
+ },
+ {
+  "repo": "LGD-Eval/lgd-gate",
+  "passed": 10,
+  "tier": "B",
+  "files": 0,
+  "asserts": 0,
+  "cmp": false
+ },
+ {
+  "repo": "LGD-Eval/awesome-claude-skills",
+  "passed": 10,
+  "tier": "B",
+  "files": 0,
+  "asserts": 0,
+  "cmp": false
+ },
+ {
+  "repo": "LGD-Eval/awesome-llm-skills",
+  "passed": 10,
+  "tier": "B",
+  "files": 0,
+  "asserts": 0,
+  "cmp": false
+ }
+]

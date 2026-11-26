@@ -15,7 +15,12 @@
    "A": 12,
    "C": 3
   },
-  "note_tiers": "合格件按 passed 条数分层：A>=20 / B 6-19 / C 3-5 / D 1-2；D 档为薄证据，建议人工复核"
+  "note_tiers": "合格件按 passed 条数分层：A>=20 / B 6-19 / C 3-5 / D 1-2；D 档为薄证据，建议人工复核",
+  "strict_counts": {
+   "pass_strict": 34,
+   "pass_thin": 2
+  },
+  "strict_note": "严格合格线=passed>=3 且 测试文件内至少一处断言或状态比对；薄证据(pass_thin)不计入合格"
  },
  "records": [
   {
@@ -32,7 +37,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 2,
+    "asserts": 2,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/skill-improver",
@@ -54,7 +65,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/skill-scout",
@@ -77,7 +94,13 @@
    "native_runner": "all-green",
    "verdict": "pass",
    "evidence_tier": "D",
-   "manual_review_note": "127 行行为自测，无 assert，靠 subprocess 比对输出；1 条通过，证据薄，建议人工复核"
+   "manual_review_note": "127 行行为自测，无 assert，靠 subprocess 比对输出；1 条通过，证据薄，建议人工复核",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_thin"
   },
   {
    "repo": "zhaoxinghua09-cell/agent-control-standard",
@@ -97,7 +120,8 @@
    "failed": 20,
    "errors": 0,
    "verdict": "partial",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/wexp-check",
@@ -114,7 +138,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 2,
+    "asserts": 1,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
@@ -130,7 +160,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 2,
+    "asserts": 1,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/lgd-xverify",
@@ -146,7 +182,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 3,
+    "asserts": 3,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "stevenzhao07/aitb",
@@ -162,7 +204,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 2,
+    "asserts": 1,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "stevenzhao07/regdoc-commons",
@@ -184,7 +232,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 4,
+    "asserts": 2,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/lgd-skeleton",
@@ -200,7 +254,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 2,
+    "asserts": 40,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/debug-pro",
@@ -222,7 +282,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/claim-audit",
@@ -244,7 +310,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 20,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/evidence-anchor",
@@ -266,7 +338,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/uibc-core",
@@ -286,7 +364,8 @@
    "failed": 2,
    "errors": 0,
    "verdict": "partial",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/skillgate",
@@ -302,7 +381,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 12,
+    "asserts": 101,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/synomos-ai-skills",
@@ -318,7 +403,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 40,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/agent-skills",
@@ -334,7 +425,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 40,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/lgd-skills",
@@ -350,7 +447,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 40,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/lgd-theory",
@@ -370,7 +473,8 @@
    "failed": 2,
    "errors": 0,
    "verdict": "partial",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/silent-failure-catalog",
@@ -386,7 +490,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 2,
+    "asserts": 2,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/agent-governance-vocabulary",
@@ -407,7 +517,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "not_runnable",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/skill-redteam-suite",
@@ -423,7 +534,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 40,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/synomosai-governance-mcp",
@@ -438,7 +555,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/lgd-skill-review",
@@ -460,7 +578,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "C"
+   "evidence_tier": "C",
+   "assert_evidence": {
+    "files": 15,
+    "asserts": 1,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/skill-audit",
@@ -482,7 +606,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 2,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/LGD-Eval",
@@ -497,7 +627,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/evaluation-evidence",
@@ -513,7 +644,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "C"
+   "evidence_tier": "C",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 1,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/governanceos",
@@ -528,7 +665,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/wechat-viral-topic",
@@ -550,7 +688,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/summarize-pro",
@@ -572,7 +716,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/medxpert-library-connector",
@@ -587,7 +737,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/fgtida-paris-input-2026",
@@ -605,7 +756,13 @@
    "native_runner": "all-green",
    "verdict": "pass",
    "evidence_tier": "D",
-   "manual_review_note": "测试文件自述「只验结构与可重建性前提，不验内容是否正确」，1 条通过，证据薄，建议不计入强合格"
+   "manual_review_note": "测试文件自述「只验结构与可重建性前提，不验内容是否正确」，1 条通过，证据薄，建议不计入强合格",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_thin"
   },
   {
    "repo": "zhaoxinghua09-cell/dsh-secret-leakage-scan",
@@ -620,7 +777,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/medxpert-standards-connector",
@@ -635,7 +793,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/aps-conformance-suite",
@@ -651,7 +810,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 5,
+    "asserts": 1,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/medxpert-reg-connector",
@@ -672,7 +837,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "not_runnable",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/whois-agent",
@@ -687,7 +853,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/fhir",
@@ -702,7 +869,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "stevenzhao07/medxpert-reg-hub",
@@ -717,7 +885,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "stevenzhao07/uibc-core",
@@ -735,7 +904,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 12,
+    "asserts": 11,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "stevenzhao07/doc-translate-keep-layout",
@@ -757,7 +932,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/LGD-Eval",
@@ -773,7 +954,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 4,
+    "asserts": 2,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/skill-audit",
@@ -795,7 +982,13 @@
    "errors": 0,
    "native_runner": "all-green",
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 2,
+    "asserts": 0,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/attestation",
@@ -810,7 +1003,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "LGD-Eval/uibc-core",
@@ -828,7 +1022,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 12,
+    "asserts": 11,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/evaluation-evidence",
@@ -844,7 +1044,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "C"
+   "evidence_tier": "C",
+   "assert_evidence": {
+    "files": 1,
+    "asserts": 1,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/awesome-claude-code",
@@ -861,7 +1067,13 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "A"
+   "evidence_tier": "A",
+   "assert_evidence": {
+    "files": 7,
+    "asserts": 211,
+    "cmp": true
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/dsh-plugin-lgd-trust",
@@ -882,7 +1094,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "not_runnable",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/medxpert-skills",
@@ -897,7 +1110,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/lgd-demo-organization",
@@ -917,7 +1131,8 @@
    "failed": 0,
    "errors": 1,
    "verdict": "not_runnable",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/credential-vault-design",
@@ -937,7 +1152,8 @@
    "failed": 0,
    "errors": 1,
    "verdict": "not_runnable",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/authz-code-design",
@@ -957,7 +1173,8 @@
    "failed": 0,
    "errors": 2,
    "verdict": "not_runnable",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/agent-memory-service",
@@ -977,7 +1194,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/MinisSkills",
@@ -992,7 +1210,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "zhaoxinghua09-cell/awesome-claude-skills",
@@ -1008,7 +1227,14 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 3,
+    "asserts": 0,
+    "cmp": true,
+    "source": "tree-scan"
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "zhaoxinghua09-cell/llm-gateway-hub",
@@ -1023,7 +1249,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "no_tests_collected",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "stevenzhao07/lgd-skills",
@@ -1043,7 +1270,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "not_runnable",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "stevenzhao07/awesome-dsh-plugin",
@@ -1063,7 +1291,8 @@
    "failed": 0,
    "errors": 0,
    "verdict": "not_runnable",
-   "evidence_tier": "D"
+   "evidence_tier": "D",
+   "strict_verdict": "n/a"
   },
   {
    "repo": "LGD-Eval/lgd-gate",
@@ -1079,7 +1308,14 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 3,
+    "asserts": 0,
+    "cmp": true,
+    "source": "tree-scan"
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/awesome-claude-skills",
@@ -1095,7 +1331,14 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 3,
+    "asserts": 0,
+    "cmp": true,
+    "source": "tree-scan"
+   },
+   "strict_verdict": "pass_strict"
   },
   {
    "repo": "LGD-Eval/awesome-llm-skills",
@@ -1111,7 +1354,14 @@
    "failed": 0,
    "errors": 0,
    "verdict": "pass",
-   "evidence_tier": "B"
+   "evidence_tier": "B",
+   "assert_evidence": {
+    "files": 3,
+    "asserts": 0,
+    "cmp": true,
+    "source": "tree-scan"
+   },
+   "strict_verdict": "pass_strict"
   }
  ]
 }

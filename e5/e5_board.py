@@ -95,7 +95,7 @@ code{{background:#f5f5f5;padding:1px 5px;border-radius:4px;font-size:12px}}
   <div class="card"><b>{su['measurable']}</b><span>有可执行验证入口（测试）</span></div>
   <div class="card"><b>{su.get('selfcheck_only', 0)}</b><span>仅自检脚本（不计合格）</span></div>
   <div class="card"><b>{ru['candidates']}</b><span>真下载真解包真跑</span></div>
-  <div class="card"><b>{ru['counts'].get('pass',0)}</b><span>通过 E5 合格线</span></div>
+  <div class="card"><b>{ru.get('strict_counts',{}).get('pass_strict',0)}</b><span>严格合格（passed≥3 且测试内含断言/状态比对）；薄证据 {ru.get('strict_counts',{}).get('pass_thin',0)} 件不计</span></div>
   <div class="card"><b>{passed_total:,}</b><span>实测通过的测试条数</span></div>
   <div class="card"><b>{sf['summary']['counts'].get('selfcheck_ok',0)+sf['summary']['counts'].get('selfcheck_ok_after_fix',0) if sf else 0}<i>/{len(sf['records']) if sf else 0}</i></b><span>仅自检档真跑通过（不计合格，含修复后通过）</span></div>
   <div class="card"><b>{ru.get('evidence_tiers_of_pass',{}).get('A',0)+ru.get('evidence_tiers_of_pass',{}).get('B',0)+ru.get('evidence_tiers_of_pass',{}).get('C',0)}<i>/{ru['counts'].get('pass',0)}</i></b><span>强合格（≥3 条通过）；薄证据 {ru.get('evidence_tiers_of_pass',{}).get('D',0)} 件待人工复核</span></div>

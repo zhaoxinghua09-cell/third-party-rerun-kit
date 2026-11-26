@@ -1,0 +1,75 @@
+{
+ "generated_at": "2026-11-26T09:13:26",
+ "machine": "company (client:582478:3880613324794288)",
+ "tree_fingerprint": {
+  "run_A": [
+   33,
+   33
+  ],
+  "run_B": [
+   33,
+   33
+  ],
+  "tree_diff": []
+ },
+ "reading": {
+  "run_A_match": "33/33",
+  "run_B_match": "32/33"
+ },
+ "stable_count": 32,
+ "flaky_count": 1,
+ "stable": [
+  "LGD-Eval/LGD-Eval",
+  "LGD-Eval/awesome-claude-code",
+  "LGD-Eval/awesome-claude-skills",
+  "LGD-Eval/awesome-llm-skills",
+  "LGD-Eval/evaluation-evidence",
+  "LGD-Eval/lgd-gate",
+  "LGD-Eval/skill-audit",
+  "LGD-Eval/uibc-core",
+  "stevenzhao07/aitb",
+  "stevenzhao07/doc-translate-keep-layout",
+  "stevenzhao07/regdoc-commons",
+  "stevenzhao07/uibc-core",
+  "zhaoxinghua09-cell/agent-skills",
+  "zhaoxinghua09-cell/awesome-claude-skills",
+  "zhaoxinghua09-cell/claim-audit",
+  "zhaoxinghua09-cell/debug-pro",
+  "zhaoxinghua09-cell/evaluation-evidence",
+  "zhaoxinghua09-cell/evidence-anchor",
+  "zhaoxinghua09-cell/lgd-skeleton",
+  "zhaoxinghua09-cell/lgd-skill-review",
+  "zhaoxinghua09-cell/lgd-skills",
+  "zhaoxinghua09-cell/lgd-xverify",
+  "zhaoxinghua09-cell/medxpert-ortho-mcp",
+  "zhaoxinghua09-cell/silent-failure-catalog",
+  "zhaoxinghua09-cell/skill-audit",
+  "zhaoxinghua09-cell/skill-redteam-suite",
+  "zhaoxinghua09-cell/skillgate",
+  "zhaoxinghua09-cell/summarize-pro",
+  "zhaoxinghua09-cell/synomos-ai-skills",
+  "zhaoxinghua09-cell/uibc-iverify",
+  "zhaoxinghua09-cell/wechat-viral-topic",
+  "zhaoxinghua09-cell/wexp-check"
+ ],
+ "flaky": [
+  {
+   "repo": "zhaoxinghua09-cell/aps-conformance-suite",
+   "observations": [
+    20,
+    17,
+    19,
+    17,
+    20,
+    20,
+    18
+   ],
+   "distinct": [
+    17,
+    18,
+    19,
+    20
+   ]
+  }
+ ]
+}

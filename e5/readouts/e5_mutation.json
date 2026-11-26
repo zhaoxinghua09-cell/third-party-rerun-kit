@@ -2,12 +2,13 @@
  "summary": {
   "generated_at": "2026-11-26T08:36:13",
   "machine": "company (client:582478:3880613324794288)",
-  "total": 34,
-  "killed": 23,
+  "total": 33,
+  "killed": 22,
   "survived": 10,
   "skip": 1,
-  "mutation_score": 0.697,
-  "note": "每件 1 个变异点；KILLED=测试变红；SURVIVED=测试仍绿；只说明该点被覆盖与否，不代表整体覆盖率"
+  "mutation_score": 0.688,
+  "note": "严格合格 33 件全量；1 件薄证据已剔除；1 件无可机械变异点 SKIP",
+  "strict_scope": true
  },
  "records": [
   {

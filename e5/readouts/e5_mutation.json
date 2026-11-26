@@ -1,0 +1,183 @@
+{
+ "summary": {
+  "generated_at": "2026-11-26T08:29:01",
+  "machine": "company (client:582478:3880613324794288)",
+  "total": 12,
+  "killed": 9,
+  "survived": 2,
+  "skip": 1,
+  "mutation_score": 0.818,
+  "note": "每件 1 个变异点；KILLED=测试变红；SURVIVED=测试仍绿；只说明该点被覆盖与否，不代表整体覆盖率"
+ },
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/lgd-xverify",
+   "commit": "7ca1b83a496d",
+   "baseline_passed": 28,
+   "impl_file": "lgd_ed25519.py",
+   "mutation": "Eq->NotEq line 31",
+   "exit": 3,
+   "tail": [
+    "",
+    "no tests ran in 0.09s",
+    "mainloop: caught unexpected SystemExit!"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wexp-check",
+   "commit": "cfe458b5f90c",
+   "baseline_passed": 37,
+   "impl_file": "scripts/compare_corpora.py",
+   "mutation": "Eq->NotEq line 23",
+   "exit": 0,
+   "tail": [
+    ".................. [ 48%]",
+    "...................                                                      [100%]",
+    "37 passed, 54 subtests passed in 0.76s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/summarize-pro",
+   "commit": "cbb0284e1aae",
+   "baseline_passed": 24,
+   "impl_file": "demo/run_demo.py",
+   "mutation": "Eq->NotEq line 66",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.08s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
+   "commit": "adf68f3dbc90",
+   "baseline_passed": 30,
+   "impl_file": "medxpert_ortho/core.py",
+   "mutation": "Eq->NotEq line 110",
+   "exit": 1,
+   "tail": [
+    "=========================== short test summary info ===========================",
+    "FAILED tests/test_core.py::TestDataGuard::test_validate_passes_on_bundled_data",
+    "1 failed, 29 passed in 0.21s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "stevenzhao07/doc-translate-keep-layout",
+   "commit": "78cc0563db95",
+   "baseline_passed": 40,
+   "impl_file": "scripts/glossary_build.py",
+   "mutation": "Eq->NotEq line 166",
+   "exit": 5,
+   "tail": [
+    "no tests ran in 0.03s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "stevenzhao07/regdoc-commons",
+   "commit": "a8a79bd4e45f",
+   "baseline_passed": 52,
+   "verdict": "SKIP",
+   "note": "no mutable node in impl files",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aps-conformance-suite",
+   "commit": "4157ad4d79f9",
+   "baseline_passed": 20,
+   "impl_file": "candidates/aeoess-oauth-actor-profile/check.py",
+   "mutation": "Eq->NotEq line 41",
+   "exit": 2,
+   "tail": [
+    "ERROR interop/sharif-aat-03/adapter/py/test_timestamps.py",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!",
+    "3 errors in 1.20s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "stevenzhao07/uibc-core",
+   "commit": "507ee32427cf",
+   "baseline_passed": 158,
+   "impl_file": "adapters/a2a/server.py",
+   "mutation": "Eq->NotEq line 59",
+   "exit": 1,
+   "tail": [
+    "FAILED tests/test_a2a_adapter.py::A2AAdapterTests::test_05_gate_allow - KeyEr...",
+    "!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 5 failures !!!!!!!!!!!!!!!!!!!!!!!!!!",
+    "5 failed, 35 passed, 16 subtests passed in 16.79s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "LGD-Eval/uibc-core",
+   "commit": "5dac2a2e7882",
+   "baseline_passed": 158,
+   "impl_file": "adapters/a2a/server.py",
+   "mutation": "Eq->NotEq line 59",
+   "exit": 1,
+   "tail": [
+    "FAILED tests/test_a2a_adapter.py::A2AAdapterTests::test_05_gate_allow - KeyEr...",
+    "!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 5 failures !!!!!!!!!!!!!!!!!!!!!!!!!!",
+    "5 failed, 35 passed, 16 subtests passed in 16.38s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skillgate",
+   "commit": "362c600dfdc3",
+   "baseline_passed": 60,
+   "impl_file": "alert.py",
+   "mutation": "Eq->NotEq line 65",
+   "exit": 0,
+   "tail": [
+    "",
+    "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+    "64 passed, 4 warnings in 19.68s"
+   ],
+   "verdict": "SURVIVED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "stevenzhao07/aitb",
+   "commit": "f7647f88607f",
+   "baseline_passed": 25,
+   "impl_file": "src/aitb/adapters.py",
+   "mutation": "Eq->NotEq line 92",
+   "exit": 1,
+   "tail": [
+    "FAILED tests/test_engine.py::DocsContract::test_license_and_spdx_headers - As...",
+    "!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 5 failures !!!!!!!!!!!!!!!!!!!!!!!!!!",
+    "5 failed, 17 passed in 0.66s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-code",
+   "commit": "ea11db0a112f",
+   "baseline_passed": 112,
+   "impl_file": "generate_readme.py",
+   "mutation": "Eq->NotEq line 154",
+   "exit": 1,
+   "tail": [
+    "=========================== short test summary info ===========================",
+    "FAILED tests/test_generate.py::test_empty_category_renders_no_heading - asser...",
+    "1 failed, 111 passed in 4.69s"
+   ],
+   "verdict": "KILLED",
+   "seconds": -0.0
+  }
+ ]
+}

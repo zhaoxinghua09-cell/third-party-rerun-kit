@@ -1,0 +1,15 @@
+=== CMD ===
+python tests/selftest.py  (direct script, not pytest)
+=== EXIT 0 ===
+=== STDOUT ===
+[无引擎模式]
+  PASS  无 SKILL.md 判别装
+  PASS  检出外发判别装
+  PASS  合格包给出三档结论
+  PASS  无引擎时明确声明不是 LGD 分数
+  PASS  无引擎时不产出 100 分制
+
+自测全部通过
+
+=== STDERR ===
+

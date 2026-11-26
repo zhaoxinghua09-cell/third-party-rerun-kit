@@ -73,7 +73,7 @@ export GH_TOKEN=<只读 token>
 python e5_verify_all.py --n 8
 ```
 
-按 A2/B3/C2/薄1 分层抽样，下载 zipball 真跑，与 `readouts/e5_runner.json` 基线逐件比对，输出 MATCH/DIFF 与匹配率。本机实测 **8/8 MATCH（1.0）**。关键教训：入口写法是最大变量——`pytest <文件列表>` 会收集为空，必须 `pytest tests`；上一版仅因此把 28 条通过变成 0 条。详见 `reports/verify_all_20261126.md`。
+按 A2/B3/C2/薄1 分层抽样，下载 zipball 真跑，与 `readouts/e5_runner.json` 基线逐件比对，输出 MATCH/DIFF 与匹配率。公司机与家机各跑 8 件，均 **8/8 MATCH（1.0）**；两机样本名单略有不同（分层取前 N 个），差异件（uibc-core 2092/2090、agent-control-standard 901/794）仍会报 DIFF。关键教训：入口写法是最大变量——`pytest <文件列表>` 会收集为空，必须 `pytest tests`；上一版仅因此把 28 条通过变成 0 条。详见 `reports/verify_all_20261126.md`。
 
 ## 已知限制（必须写在读数旁边，不能省）
 
@@ -103,6 +103,7 @@ python e5_verify_all.py --n 8
 - `reports/mutation_check_20261126.md` — 全部 33 件变异检查（22/32 KILLED，0.688）。
 - `reports/four_layer_ledger_20261126.md` — 四层总账（S/REQ/E/IO 全部 REFUSE，缺口定位到字段）。
 - `reports/verify_all_20261126.md` — 一键复跑器（8/8 MATCH 及两次 DIFF 的入口教训）。
+- `reports/cross_machine_verify_20261126.md` — 跨机复跑（两机各 8/8，含差异件对照）。
 - `reports/E1_handover_pack_20261126.md` — E1 交接包（别人照抄即过，含 prompt 与 JSON 模板）。
 - `reports/e_layer_status_20261126.md` — E 层门禁真读数（36 条 REFUSE / 0 PASS）。
 - `reports/E5_strict_pass_line_20261126.md` — 严格合格线执行报告。

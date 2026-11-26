@@ -1,0 +1,645 @@
+{
+ "generated_at": "2026-11-26T09:06:59",
+ "machine": {
+  "python": "3.13.18",
+  "platform": "win32"
+ },
+ "sample": 33,
+ "match": 33,
+ "comparable": 33,
+ "match_rate": 1.0,
+ "hash_algorithm": "sha256(sorted 'rel_path\\tsha256(file)' lines, skip=.git,.tox,.venv,__pycache__,build,dist,node_modules,venv)",
+ "hash_compared": 33,
+ "hash_same": 33,
+ "tree_diff": [],
+ "conclusion": "读数一致，且树指纹逐件相同——可当同一份基线",
+ "records": [
+  {
+   "repo": "zhaoxinghua09-cell/lgd-xverify",
+   "tier": "A",
+   "commit": "7ca1b83a496d",
+   "baseline_passed": 28,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "2d37276de02102f7e46edbe4acad7ce0cf5c374a14cf34ec0fe43fbecf3cc7f4",
+   "files": 33,
+   "hash_status": "SAME",
+   "local_passed": 28,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "28 passed in 5.76s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skeleton",
+   "tier": "B",
+   "commit": "f3aac86e9c56",
+   "baseline_passed": 14,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "b0b713b3a9ef59cc0cce97b8270b4bb017f7dba1e898046367a86980b51503bf",
+   "files": 53,
+   "hash_status": "SAME",
+   "local_passed": 14,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "14 passed in 10.38s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/uibc-iverify",
+   "tier": "B",
+   "commit": "1b67f10dc5a7",
+   "baseline_passed": 10,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "7f16b3d1c70688a506628aba8ad2cdb832cbedd2ad9b845df899e10cec79c6be",
+   "files": 33,
+   "hash_status": "SAME",
+   "local_passed": 10,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "10 passed in 0.70s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wexp-check",
+   "tier": "A",
+   "commit": "cfe458b5f90c",
+   "baseline_passed": 37,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "fb450a4a8796eee6ddec3931cfd6dfcb05a2d9ad2766c5ee173bca855943a46c",
+   "files": 38,
+   "hash_status": "SAME",
+   "local_passed": 37,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "37 passed, 54 subtests passed in 0.78s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/debug-pro",
+   "tier": "B",
+   "commit": "217d0609aac8",
+   "baseline_passed": 10,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "a026935f03ffd8490698b47d04a69d9afe5436c0cae4ff7fe1d4689cc00498e4",
+   "files": 28,
+   "hash_status": "SAME",
+   "local_passed": 10,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "--- 10/10 PASS"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/claim-audit",
+   "tier": "B",
+   "commit": "c1b9ad3dc123",
+   "baseline_passed": 9,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "84e1b191498808a12e8338c7e8160a0146c0caa2448672044de2ff8aba5c3d08",
+   "files": 15,
+   "hash_status": "SAME",
+   "local_passed": 9,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "---- 9/9 PASS ----"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evidence-anchor",
+   "tier": "B",
+   "commit": "7f6f2fa19263",
+   "baseline_passed": 9,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "a58d8da7470fa200fe0361b6f6bd09eef3685e79306d4d31b1c79b1b5723021a",
+   "files": 13,
+   "hash_status": "SAME",
+   "local_passed": 9,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "---- 9/9 PASS ----"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/medxpert-ortho-mcp",
+   "tier": "A",
+   "commit": "adf68f3dbc90",
+   "baseline_passed": 30,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "50e18875461e1503e399e520bfbda19447e82dbdf5743a64a2c9edbfdad72406",
+   "files": 24,
+   "hash_status": "SAME",
+   "local_passed": 30,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "30 passed in 0.12s"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/doc-translate-keep-layout",
+   "tier": "A",
+   "commit": "78cc0563db95",
+   "baseline_passed": 40,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "2450b202d80348f72f99882d2afef1bcaae30fcd82a46885012e4ba56b89bc93",
+   "files": 21,
+   "hash_status": "SAME",
+   "local_passed": 40,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_tests.py",
+   "status": "MATCH",
+   "tail": [
+    "40/40 通过"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/regdoc-commons",
+   "tier": "A",
+   "commit": "a8a79bd4e45f",
+   "baseline_passed": 52,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "41c020e40ac0a122bbfd52a6a253d07d6f8b1d22faedf40072fc54728fa8430f",
+   "files": 22,
+   "hash_status": "SAME",
+   "local_passed": 52,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run.js",
+   "status": "MATCH",
+   "tail": [
+    "PASS  52 checks"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/synomos-ai-skills",
+   "tier": "B",
+   "commit": "84ae3d40842c",
+   "baseline_passed": 14,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "21f5f6a8ffd7b1e134609e2d838c03acfcc10f1bbea7e180da0fb726792dee04",
+   "files": 403,
+   "hash_status": "SAME",
+   "local_passed": 14,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "14 passed in 5.98s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/agent-skills",
+   "tier": "B",
+   "commit": "d0398570768f",
+   "baseline_passed": 14,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "8b2f72a3295f658cc5c809631470b2a1c84fd767785caf10f685ae8663ce0a20",
+   "files": 955,
+   "hash_status": "SAME",
+   "local_passed": 14,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "14 passed in 6.07s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skills",
+   "tier": "B",
+   "commit": "134f6465bd2a",
+   "baseline_passed": 14,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "8af7b36b92313c2cbe42095d5350fdcf83f017edec147fd61a8e46c6e8ea7d22",
+   "files": 208,
+   "hash_status": "SAME",
+   "local_passed": 14,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "14 passed in 4.88s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/silent-failure-catalog",
+   "tier": "B",
+   "commit": "1309e1a48322",
+   "baseline_passed": 11,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "e264eb19bc076c7188b6815fb0e7e7617c301d383f99e03da2188efe0d4edcda",
+   "files": 110,
+   "hash_status": "SAME",
+   "local_passed": 11,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "11 passed, 9 subtests passed in 0.47s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-redteam-suite",
+   "tier": "B",
+   "commit": "e39ac448d8ec",
+   "baseline_passed": 14,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "ae5a5fc1790ecbcf47f263f9de19f5b5be41bc1977455df00ba43c955e097fe4",
+   "files": 42,
+   "hash_status": "SAME",
+   "local_passed": 14,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "14 passed in 7.43s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/lgd-skill-review",
+   "tier": "C",
+   "commit": "7fe24c39c711",
+   "baseline_passed": 5,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "14945c48b007c4190218e54f37085f07c7aea10c869ff148263ca249b0f38e6e",
+   "files": 104,
+   "hash_status": "SAME",
+   "local_passed": 5,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "---- 5/5 PASS ----"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skill-audit",
+   "tier": "B",
+   "commit": "65b6470543ab",
+   "baseline_passed": 12,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "43a68eaf79482d96e192a62fa1ad2ec4451fdeb3b4ce3981673d62688b7a1c01",
+   "files": 61,
+   "hash_status": "SAME",
+   "local_passed": 12,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/adversarial_regression.py",
+   "status": "MATCH",
+   "tail": [
+    "ADVERSARIAL REGRESSION OK — 12/12 passed (P0 命中即阻断原则合规)"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/summarize-pro",
+   "tier": "A",
+   "commit": "cbb0284e1aae",
+   "baseline_passed": 24,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "d7c86aa5e7d2a3f4b2f3b828c736e6b6e5121e3c2af38ded13974a4bfe3147a1",
+   "files": 31,
+   "hash_status": "SAME",
+   "local_passed": 24,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "---- 24/24 PASS ----"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/evaluation-evidence",
+   "tier": "C",
+   "commit": "387ead9c0d42",
+   "baseline_passed": 5,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "fc690fc064ee683ebf641a751ad3e331ed9724f656818e6a807828db78abd3ba",
+   "files": 81,
+   "hash_status": "SAME",
+   "local_passed": 5,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "5 passed in 0.11s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/aps-conformance-suite",
+   "tier": "A",
+   "commit": "4157ad4d79f9",
+   "baseline_passed": 20,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "2092a4f6d75aef823ede1f0c42ae5e85a2628bd28268969a4e1d9a591c976380",
+   "files": 1294,
+   "hash_status": "SAME",
+   "local_passed": 20,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "20 passed, 49 subtests passed in 1.19s"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/uibc-core",
+   "tier": "A",
+   "commit": "507ee32427cf",
+   "baseline_passed": 158,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "37303cadf302caa09b9594c3d5952c7b10b22e7cf3b03bd7a6b9a6621a47ff48",
+   "files": 196,
+   "hash_status": "SAME",
+   "local_passed": 158,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "158 passed, 7 subtests passed in 24.87s"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/skill-audit",
+   "tier": "B",
+   "commit": "31a6fde24db3",
+   "baseline_passed": 12,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "6990dd0116d9dc9d565f9675a0f3221499a0b2715d150cd9d15c365a9c31e583",
+   "files": 64,
+   "hash_status": "SAME",
+   "local_passed": 12,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/adversarial_regression.py",
+   "status": "MATCH",
+   "tail": [
+    "ADVERSARIAL REGRESSION OK — 12/12 passed (P0 命中即阻断原则合规)"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/uibc-core",
+   "tier": "A",
+   "commit": "5dac2a2e7882",
+   "baseline_passed": 158,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "6c839acca555fbf5dee830a687f8a4a286cbc912e12afb00f4c8d0c8e0792691",
+   "files": 202,
+   "hash_status": "SAME",
+   "local_passed": 158,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "158 passed, 7 subtests passed in 24.66s"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/evaluation-evidence",
+   "tier": "C",
+   "commit": "1f8c529f32c3",
+   "baseline_passed": 5,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "60ba0627320cf8d099737b7e0ba74311c3ff2c8002a70f79d0e0bd6747a698de",
+   "files": 85,
+   "hash_status": "SAME",
+   "local_passed": 5,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "5 passed in 0.06s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/skillgate",
+   "tier": "A",
+   "commit": "362c600dfdc3",
+   "baseline_passed": 60,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "9f4672f4e5cef48aa40027b0358029d2f7388594cc671143ef75cd6380cc4063",
+   "files": 209,
+   "hash_status": "SAME",
+   "local_passed": 60,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "60 passed in 12.14s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/wechat-viral-topic",
+   "tier": "B",
+   "commit": "6ef4647b9cad",
+   "baseline_passed": 11,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "d4772fb06c76c7d0d6301e6b668363ed7e1ccad70806549ada958339127f2c3f",
+   "files": 33,
+   "hash_status": "SAME",
+   "local_passed": 11,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "script:tests/run_golden.py",
+   "status": "MATCH",
+   "tail": [
+    "--- 11/11 PASS"
+   ]
+  },
+  {
+   "repo": "stevenzhao07/aitb",
+   "tier": "A",
+   "commit": "f7647f88607f",
+   "baseline_passed": 25,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "8b29f5e0b128b005e095641a030e3a8f2d99c924f30e326fecd0b060f4eb8bc3",
+   "files": 36,
+   "hash_status": "SAME",
+   "local_passed": 25,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "25 passed in 0.62s"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/LGD-Eval",
+   "tier": "B",
+   "commit": "3ac73d016877",
+   "baseline_passed": 13,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "3732d132cfade4e36575d76dfb8135b1a49df3c1c59e18fc9fa8e64adea0a49f",
+   "files": 185,
+   "hash_status": "SAME",
+   "local_passed": 13,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "13 passed in 1.94s"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-code",
+   "tier": "A",
+   "commit": "ea11db0a112f",
+   "baseline_passed": 112,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "1b22db253d7150f90eb17a6e7bc762d56c1e0995f6c9baea525ef964a2bc55b2",
+   "files": 58,
+   "hash_status": "SAME",
+   "local_passed": 112,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "112 passed in 1.82s"
+   ]
+  },
+  {
+   "repo": "zhaoxinghua09-cell/awesome-claude-skills",
+   "tier": "B",
+   "commit": "9a6fd52eaeb9",
+   "baseline_passed": 10,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "b5d386bb632495082e30c8be0d9b810fe522cfcabee63996df720bf4c6e0f94a",
+   "files": 1142,
+   "hash_status": "SAME",
+   "local_passed": 10,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "10 passed in 0.07s"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/lgd-gate",
+   "tier": "B",
+   "commit": "2172261eea8d",
+   "baseline_passed": 10,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "96266ec96130624e6625304e0d0ee29ede19b5ec5f47b96eb8af8d6ab8026f08",
+   "files": 185,
+   "hash_status": "SAME",
+   "local_passed": 10,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "10 passed in 0.08s"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/awesome-claude-skills",
+   "tier": "B",
+   "commit": "a0297987c572",
+   "baseline_passed": 10,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "4558baa82115defba5bfbc710299e5f0702952c9b5ec2ab5d8522261dd8a4ca4",
+   "files": 1144,
+   "hash_status": "SAME",
+   "local_passed": 10,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "10 passed in 0.07s"
+   ]
+  },
+  {
+   "repo": "LGD-Eval/awesome-llm-skills",
+   "tier": "B",
+   "commit": "f8f1225d755b",
+   "baseline_passed": 10,
+   "baseline_verdict": "pass",
+   "manifest_sha256": "08d19687f76deaada7df864685a96a73ddc553d1e94de024fa77ed5890ceba6c",
+   "files": 372,
+   "hash_status": "SAME",
+   "local_passed": 10,
+   "local_failed": 0,
+   "local_errors": 0,
+   "local_exit": 0,
+   "entry": "pytest",
+   "status": "MATCH",
+   "tail": [
+    "10 passed in 0.06s"
+   ]
+  }
+ ]
+}

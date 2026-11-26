@@ -6,12 +6,19 @@
 
 | 档 | 判定 | 是否计入 E5 合格 |
 |---|---|---|
-| 有测试 | 树里存在 pytest / 自研 runner（`tests/run_*.py`、`tests/run.js`）/ JS `test` 脚本 / 可自执行测试脚本 | 是（需真跑通） |
+| 有测试 | 树里存在 pytest / 自研 runner（`tests/run_*.py`、`tests/run.js`）/ JS `test` 脚本 / 可自执行测试脚本 | 是（需真跑通，且测试内有断言或状态比对） |
 | 仅自检 | 只有 `check_links.py`、`verify_chain.py` 一类完整性脚本 | **否**：链接没坏不等于被测代码正确 |
 | 无校验 | 全树零校验文件 | 否 |
 | 缺失/错误 | 无法探测 | 否 |
 
 「有测试」的判定必须扫**全树**，不能只看顶层：测试放在 `service/`、`tools/`、`skills/*/tests/`、`audit/*/` 的仓库会被顶层枚举漏掉。
+
+## 合格线（两条，都满足才算合格）
+
+1. **跑通**：`passed > 0` 且 `failed = 0` 且 `errors = 0` 且 `exit = 0`；
+2. **有断言证据**：`passed >= 3` 且测试文件内至少一处非平凡断言（`assert`、`assertEqual` 等）或状态比对（`==`/`!=`）。
+
+只有第 1 条的是「薄证据」——脚本自报通过、测试里零断言，不计入合格。判定算法逐条写在 `reports/assert_decision_algorithm_20261126.md`，第三方可按它独立复算。
 
 ## 八件套执行顺序
 
@@ -26,30 +33,59 @@ python e5_merge.py               # 7. 回写 manifest
 python e5_board.py               # 8. 生成看板 HTML（零外链）
 ```
 
-## 复跑前置
+证据侧补充脚本：`e5_assert_audit.py`（逐件读测试文件、统计断言并输出样本）、`e5_strict_apply.py`（把严格结论写回 runner）、`e5_sample_log.py`（抽样件完整日志）。
 
-- Python 3.9+、`pytest`；JS 仓库需要 Node。
-- 一个只读 GitHub token（`repo` scope 足够，只读不写）：清单与全树扫描走 `api.github.com`，限流 4000/h（认证后）。
-- 不需要 `github.com` 的 git 通道：zipball 与 tree 都走 API，因此在只放通 `api.github.com` 的网络里也能跑完。
-- `e5_run.py` 每件仓库解包到临时目录，跑完即弃；**不 clone、不 push、不改被测仓库**。
+## 复跑前置：依赖预装清单
+
+外部审查要求把「机器上到底要装什么」写明白，否则外人拿到的失败是环境错误，不是代码结论。
+
+| 组件 | 要求 | 不做会怎样 |
+|---|---|---|
+| Python | 3.9 及以上（本轮实测 3.11.x） | — |
+| pytest | 任意近期版本（本轮 8.x） | 测试入口全部失效 |
+| Node / npm | Node 22.x（含 `node --test` 支持） | JS 仓库判 not_runnable，如 `agent-governance-vocabulary` |
+| 第三方包 | **可变**：按各仓库 `pyproject.toml` / `requirements.txt` 现装（如 `fastmcp>=3.4,<5`、`mcp`、`requests`） | `ModuleNotFoundError`，如 `medxpert-reg-connector` |
+| GitHub token | 只读 `repo` scope，仅访问 `api.github.com` | 清单与 zipball 取不到 |
+| 网络 | 需要 `api.github.com`；`github.com`/`raw.githubusercontent.com` 可不通 | git 通道不可用，全部改走 REST API |
+| 激活虚拟环境 | 建议 `python -m venv` 隔离，避免宿主 pytest 配置干扰 | 裸 `pytest` 可能被树内 `sys.exit(0)` 脚本打断 |
+
+不预装第三方包也能跑：判定器对 `not_runnable` 如实记，不伪装 PASS。但若想让读数可跨机比较，第三方包版本必须两边一致。
 
 ## 最新读数（2026-11-26）
 
 - 分母：三账号 254 件（zhaoxinghua09-cell 193 / stevenzhao07 36 / LGD-Eval 25）。
 - 四档：61 有测试（48 顶层 + 13 深层）/ 13 仅自检 / 180 无校验 / 0 缺失。
-- 执行：61/61 已跑；**36 合格**；累计 3971 passed（公司机）、3862 passed（家机）。
-- 自检档：公司机 5 ok / 8 fail；家机 6 ok / 7 fail。
-- 两机构成只差 1 件归因；同一 commit 同一 zipball，两机失败项不同 —— 这是「外人复跑必须多环境」的直接证据。
+- 执行：61/61 已跑；原始合格 36；**严格合格 33**（薄证据 3 件：`fgtida-paris-input-2026`、`skill-improver`、`LGD-Eval/skill-scout`）。
+- 累计 passed：3971（公司机）、3862（家机）。两机不跨机加总。
+- 严格合格取**两机交集 33**：家机曾判 34，多出的 `skill-improver` 经公司机全树定位 + 人工实核确认 135 行零断言，改判薄。
+- 自检档：公司机 6/13（5 ok + 1 经 PR #2 修复后远端复核通过）、家机 7/13。
+- 同一 commit 同一 zipball 上，两机有 4 件读数不同，TOP3 根因见 `reports/two_machine_failure_top3_20261126.md`。
 
 ## 已知限制（必须写在读数旁边，不能省）
 
-- **archived 仓库不可写**：`LGD-Eval/silent-failure-catalog` 已归档，自检 fail 的修复只能本地验证（`check-catalog` 已 PASS，15 条），远端需要 unarchive 才能落地。
+- **archived 仓库不可写**：`LGD-Eval/silent-failure-catalog` 已归档，自检 fail 的修复只能本地验证（`check-catalog` 已 PASS，15 条），远端需 unarchive 才能落地（本轮已走 PR 后恢复归档）。
 - 链接类自检依赖外网：网络受限的机器会把 `check_links` 判成 fail（如 `LGD-Eval/awesome-agent-skills-1`，公司机 fail / 家机 ok）。
 - 宿主 pytest 配置可能干扰：树上存在会 `sys.exit(0)` 的脚本时，裸 `pytest` 会被打断，须显式 `pytest tests`。
+- 入口假设影响结论：同一件 `LGD-Eval/skill-scout`，走 pytest 是 `no tests ran`（exit 5），直跑 `tests/selftest.py` 是 exit 0。RUNBOOK 已写明必须落入口。
 - 「仅自检通过」永远不计合格 —— 否则等于用「文件都在」冒充「代码正确」。
+- 断言审计是静态正则：能证明「文件里有断言」，不能证明「断言覆盖了被测逻辑」。变异测试未做。
 
 ## 与竞品口径的关系
 
-- OpenSSF Scorecard `CI-Tests` 只读 GitHub `CheckRuns`/`Statuses` 的历史痕迹，**不本地跑**。
-- SLSA `verifying-artifacts` 验的是 provenance 签名与 builder 绑定，判「产物出自谁」，**不判外人能否跑通**。
-- 本工具补的正是这两者都不覆盖的一层：在无 `.git`、无凭证的干净副本里，由外部机器重跑并留读数。三者并列，不互相冒充。
+- **OpenSSF Scorecard `CI-Tests`**：只读 GitHub `CheckRuns`/`Statuses` 的历史痕迹，**不本地跑**。E5 补的是「历史有没有跑过」之外的「现在能不能在外部机器上跑通」。
+- **SLSA `verifying-artifacts`**：验 provenance 签名与 builder 绑定，判「产物出自谁」，**不判外人能否跑通**。
+- **Reproducible Builds**：验构建确定性（同源码同产物字节）。与 E5 互补——E5 验「跑得出结果」，RB 验「构建得出同一份字节」，E5 未做字节级复现。
+- **OpenSSF Best Practices Badge**：自评问卷（是否有测试、是否 CI），不是运行测量。E5 与它的差别就是「填表」与「实跑」。
+- **TUF / RFC 6962 CT / C2PA**：分别管更新框架、可审计 Merkle 日志、内容凭证，E5 均未覆盖。
+
+结论：E5 在「外人本地复跑可执行测试」这一格补空白；在 SLSA provenance、TUF、CT 日志、C2PA、RB 字节复现五处明确落后，不冒充。
+
+## 外部审查与相关材料
+
+- `reports/E1_external_ai_review_20261126.md` — 外部 AI（DeepSeek-V3）独立审查，判决 CONDITIONAL PASS，五条件已闭环。
+- `reports/assert_decision_algorithm_20261126.md` — 断言判定算法（可复算）。
+- `reports/two_machine_failure_top3_20261126.md` — 两机差异 TOP3 根因。
+- `reports/uibc_core_drift_20261126.md` — 版本 DRIFT 说明与解除条件。
+- `reports/E5_strict_pass_line_20261126.md` — 严格合格线执行报告。
+- `readouts/` — 原始 JSON 读数（含 `e5_assert_audit_company.json` 逐件断言样本）。
+- `RUNBOOK_FOR_THIRD_PARTY.md` — 第三方照单复跑的执行单。
